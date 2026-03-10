@@ -1,0 +1,215 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Bitchain | Opeyemi Ajimati</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,300;0,14..32,400;0,14..32,500;0,14..32,600;0,14..32,700;1,14..32,400&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#fff;--sf:#FAFAFA;--sf2:#F5F5F5;--tx:#0A0A0A;--tx2:#555;--tx3:#999;--bd:#EBEBEB;--bd2:#D4D4D4;--r:12px;--f:'Inter',system-ui,-apple-system,'Helvetica Neue',Helvetica,sans-serif}
+html{scroll-behavior:smooth}
+body{font-family:var(--f);background:var(--bg);color:var(--tx);-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;font-feature-settings:'ss01','ss02','cv01';line-height:1.55}
+a{color:inherit;text-decoration:none}img{display:block;max-width:100%}
+
+/* Nav */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;height:56px;display:flex;align-items:center;justify-content:space-between;padding:0 32px;background:rgba(255,255,255,0.82);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid var(--bd)}
+.back{font-size:13px;color:var(--tx2);display:flex;align-items:center;gap:6px;transition:color 0.2s}.back:hover{color:var(--tx)}
+
+/* Layout */
+.w{max-width:760px;margin:0 auto;padding:0 32px}
+.ww{max-width:1040px;margin:0 auto;padding:0 32px}
+
+/* Hero */
+.hero{padding:120px 0 48px}
+.tags{display:flex;gap:6px;margin-bottom:20px;flex-wrap:wrap}
+.tg{font-size:11px;font-weight:500;padding:4px 10px;border-radius:6px;background:var(--sf2);color:var(--tx2)}
+.hero h1{font-size:clamp(28px,4vw,40px);font-weight:700;letter-spacing:-0.035em;line-height:1.15;margin-bottom:16px}
+.lead{font-size:16px;color:var(--tx2);line-height:1.65;margin-bottom:32px}
+.mg{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.mc{padding:14px 16px;background:var(--sf);border-radius:10px;border:1px solid var(--bd)}
+.mc dt{font-size:9px;font-weight:600;text-transform:uppercase;letter-spacing:1.2px;color:var(--tx3);margin-bottom:2px}
+.mc dd{font-size:13px;font-weight:500}
+
+/* Metrics */
+.metrics{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--bd);border:1px solid var(--bd);border-radius:var(--r);overflow:hidden;margin:48px 0}
+.mt{background:var(--bg);padding:24px;text-align:center}
+.mt .n{font-size:26px;font-weight:700;letter-spacing:-0.03em}
+.mt .l{font-size:11px;color:var(--tx3);margin-top:3px}
+
+hr{border:none;height:1px;background:var(--bd);margin:48px 0}
+
+/* Section text */
+.sl{font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:1.5px;color:var(--tx3);margin-bottom:6px}
+.sh{font-size:clamp(20px,2.5vw,24px);font-weight:700;letter-spacing:-0.02em;line-height:1.25;margin-bottom:10px}
+.sp{font-size:14px;color:var(--tx2);line-height:1.7;margin-bottom:20px}
+
+/* Cards */
+.cg{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:20px 0}
+.cd{background:var(--sf);border:1px solid var(--bd);border-radius:10px;padding:22px}
+.cd h4{font-size:13px;font-weight:600;margin-bottom:5px}
+.cd p{font-size:12.5px;color:var(--tx2);line-height:1.55}
+.cd .stat{font-size:22px;font-weight:700;margin-bottom:5px}
+
+/* 5W1H */
+.wh{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;margin:20px 0}
+.wh-item{padding:18px;background:var(--sf);border:1px solid var(--bd);border-radius:10px}
+.wh-item strong{display:block;font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:1px;color:var(--tx3);margin-bottom:4px}
+.wh-item p{font-size:12.5px;color:var(--tx2);line-height:1.5}
+
+/* Images */
+.img-box{margin:24px 0;border-radius:var(--r);overflow:hidden;border:1px solid var(--bd);padding:20px}
+.img-box img{width:100%;border-radius:8px}
+.img-dark{background:#0A0A0F;border-color:#1a1a1a}
+.img-row{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:24px 0}
+.img-row img{border-radius:var(--r);border:1px solid var(--bd);width:100%}
+.img-row-3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;margin:24px 0}
+.img-row-3 img{border-radius:var(--r);border:1px solid var(--bd);width:100%}
+.img-caption{font-size:11px;color:var(--tx3);text-align:center;margin-top:8px}
+
+/* Personas */
+.pr{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;margin:20px 0}
+.pc{background:var(--sf);border:1px solid var(--bd);border-radius:10px;padding:22px}
+.pc h4{font-size:14px;font-weight:600;margin-bottom:2px}
+.pc .rl{font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:1px;color:var(--tx3);margin-bottom:10px}
+.pc blockquote{font-style:italic;font-size:12.5px;color:var(--tx2);border-left:2px solid var(--bd2);padding-left:10px;margin-bottom:12px;line-height:1.5}
+.pc dl dt{font-size:9px;font-weight:600;text-transform:uppercase;letter-spacing:1px;color:var(--tx3);margin-top:10px}
+.pc dl dd{font-size:12px;color:var(--tx2);line-height:1.5}
+
+/* Flow */
+.flow{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin:20px 0;padding:28px;background:var(--sf);border:1px solid var(--bd);border-radius:10px}
+.fn{padding:7px 13px;border-radius:7px;font-size:11.5px;font-weight:500;white-space:nowrap}
+.fn-s{background:var(--tx);color:#fff}
+.fn-a{background:var(--bg);border:1px solid var(--bd)}
+.fn-e{background:#DCFCE7;color:#166534}
+.fa{color:var(--tx3);font-size:12px}
+
+/* Testing */
+.tg2{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:20px 0}
+.tc{background:var(--sf);border:1px solid var(--bd);border-radius:10px;padding:22px}
+.tc h4{font-size:13px;font-weight:600;margin-bottom:14px}
+.br{margin-bottom:12px}
+.bl{display:flex;justify-content:space-between;font-size:12px;margin-bottom:3px}
+.bl .v{font-weight:600}
+.bar{height:5px;background:var(--sf2);border-radius:3px;overflow:hidden}
+.bf{height:100%;border-radius:3px}
+.bg{background:#34D399}.ba{background:#0A0A0A}.by{background:#FBBF24}
+
+/* Findings */
+.fd{background:var(--sf);border-radius:0 10px 10px 0;padding:18px 22px;margin-bottom:10px;border-left:3px solid}
+.fd.c{border-color:#F87171}.fd.i{border-color:var(--tx)}.fd.s{border-color:#34D399}
+.fd .sv{font-size:9px;font-weight:600;text-transform:uppercase;letter-spacing:1px;margin-bottom:2px}
+.fd.c .sv{color:#F87171}.fd.i .sv{color:var(--tx)}.fd.s .sv{color:#34D399}
+.fd h4{font-size:13px;font-weight:600;margin-bottom:2px}
+.fd p{font-size:12px;color:var(--tx2);line-height:1.5}
+
+/* Back */
+.bk{padding:48px;text-align:center}
+.bk-btn{display:inline-flex;align-items:center;gap:6px;padding:10px 20px;border:1px solid var(--bd);border-radius:8px;font-size:13px;font-weight:500;transition:border-color 0.2s}
+.bk-btn:hover{border-color:var(--tx)}
+
+/* NDA */
+.nda{background:var(--sf);border:1px solid var(--bd);border-radius:10px;padding:18px 22px;display:flex;align-items:flex-start;gap:10px;margin:20px 0}
+.nda-icon{font-size:16px;margin-top:1px}
+.nda h4{font-size:12px;font-weight:600;margin-bottom:2px}
+.nda p{font-size:11.5px;color:var(--tx2);line-height:1.5}
+
+@media(max-width:900px){.pr{grid-template-columns:1fr}.wh{grid-template-columns:1fr 1fr}}
+@media(max-width:768px){.w,.ww{padding:0 20px}.mg,.metrics{grid-template-columns:1fr 1fr}.cg,.tg2,.img-row{grid-template-columns:1fr}.img-row-3{grid-template-columns:1fr 1fr}.wh{grid-template-columns:1fr}nav{padding:0 20px}}
+</style>
+</head><body>
+<nav><a href="../index.html" class="back">← Portfolio</a></nav>
+<section class="hero"><div class="w">
+<div class="tags"><span class="tg">Fintech</span><span class="tg">Crypto Wallet</span><span class="tg">Mobile App</span><span class="tg">B2C</span></div>
+<h1>Bitchain: a crypto wallet for everyday people</h1>
+<p class="lead">As cryptocurrency moves beyond speculation into daily payments, the next wave of users needs wallets that feel as simple as banking apps. Bitchain is a mobile crypto wallet designed for managing, sending, and tracking digital assets without the complexity of traditional exchanges.</p>
+<div class="mg"><div class="mc"><dt>Role</dt><dd>Lead Product Designer</dd></div><div class="mc"><dt>Platform</dt><dd>iOS + Android</dd></div><div class="mc"><dt>Timeline</dt><dd>10 Weeks</dd></div><div class="mc"><dt>Users Tested</dt><dd>12</dd></div></div>
+</div></section>
+
+<div class="w"><div class="metrics">
+<div class="mt"><div class="n">92%</div><div class="l">Onboarding completion</div></div>
+<div class="mt"><div class="n">18s</div><div class="l">Avg. first transaction</div></div>
+<div class="mt"><div class="n">4.6/5</div><div class="l">Usability score</div></div>
+<div class="mt"><div class="n">+38%</div><div class="l">Trade completion rate</div></div>
+</div></div>
+
+<div class="ww"><div class="img-box img-dark"><img src="../assets/bitchain-hero.png" alt="Bitchain"></div></div>
+
+<div class="w"><hr>
+<div class="sl">01 Framing the Problem</div>
+<h2 class="sh">5W1H: Defining the design challenge</h2>
+<div class="wh">
+<div class="wh-item"><strong>Who</strong><p>Crypto-curious users aged 18-35 who hold or want to hold digital assets but find current wallets intimidating</p></div>
+<div class="wh-item"><strong>What</strong><p>A mobile wallet that makes crypto management feel as natural as checking a bank balance</p></div>
+<div class="wh-item"><strong>When</strong><p>As crypto adoption grows beyond early adopters into mainstream payments and savings</p></div>
+<div class="wh-item"><strong>Where</strong><p>Mobile-first (iOS + Android), used on the go, at point of sale, and for peer-to-peer transfers</p></div>
+<div class="wh-item"><strong>Why</strong><p>74% of new crypto users abandon wallet setup. Current tools assume blockchain literacy that mainstream users lack</p></div>
+<div class="wh-item"><strong>How</strong><p>Simplified onboarding, plain-language UI, real-time portfolio views, and transparent fee structures</p></div>
+</div>
+</div>
+
+<div class="w"><hr>
+<div class="sl">02 Research</div>
+<h2 class="sh">Understanding crypto-curious users</h2>
+<p class="sp">I conducted 8 in-depth interviews with people who either hold crypto casually or are interested but intimidated. I also ran a competitive audit of Coinbase Wallet, MetaMask, Trust Wallet, and Phantom to identify UX gaps.</p>
+<div class="cg">
+<div class="cd"><h4>Interview findings</h4><p>Users wanted three things: see total balance in their local currency, send crypto as easily as a bank transfer, and understand fees before confirming anything.</p></div>
+<div class="cd"><h4>Competitive gaps</h4><p>All competitors use blockchain jargon in their UI. None show fees upfront. Onboarding flows average 8+ steps. No competitor effectively explains what users are doing at each step.</p></div>
+</div></div>
+
+<div class="w"><hr>
+<div class="sl">03 Personas</div>
+<h2 class="sh">Three user types, one wallet</h2>
+<div class="pr">
+<div class="pc"><h4>Maria, 26</h4><div class="rl">Freelance Designer</div><blockquote>"I get paid in ETH sometimes but I have no idea what my actual balance is in euros."</blockquote><dl><dt>Goals</dt><dd>See balance in fiat, send to clients, track income</dd><dt>Frustrations</dt><dd>Confusing interfaces, hidden fees, no expense categories</dd></dl></div>
+<div class="pc"><h4>Daniel, 31</h4><div class="rl">Small Business Owner</div><blockquote>"I want to accept crypto payments but the wallet apps feel like they are made for developers."</blockquote><dl><dt>Goals</dt><dd>Accept payments, convert to fiat, simple bookkeeping</dd><dt>Frustrations</dt><dd>Complex setup, jargon-heavy, no receipt features</dd></dl></div>
+<div class="pc"><h4>Amina, 23</h4><div class="rl">Student</div><blockquote>"My friends told me to buy Bitcoin but the apps scared me away."</blockquote><dl><dt>Goals</dt><dd>Buy first crypto, understand what she owns, feel safe</dd><dt>Frustrations</dt><dd>Intimidating onboarding, fear of mistakes, no guidance</dd></dl></div>
+</div></div>
+
+<div class="w"><hr>
+<div class="sl">04 User Flow</div>
+<h2 class="sh">Download to first transaction in under 60 seconds</h2>
+<div class="flow">
+<div class="fn fn-s">Download</div><span class="fa">→</span><div class="fn fn-a">Onboarding</div><span class="fa">→</span><div class="fn fn-a">Create account</div><span class="fa">→</span><div class="fn fn-a">Set PIN</div><span class="fa">→</span><div class="fn fn-a">Verify</div><span class="fa">→</span><div class="fn fn-a">Fund wallet</div><span class="fa">→</span><div class="fn fn-e">First transaction</div>
+</div></div>
+
+<div class="w"><hr>
+<div class="sl">05 Final Designs</div>
+<h2 class="sh">Dark, clean, confidence-building</h2>
+<p class="sp">The dark theme signals premium and security. Every screen prioritizes the user's balance and recent activity. Blockchain jargon is replaced with plain language. Fees are shown upfront, never hidden.</p>
+</div>
+<div class="ww">
+<div class="img-box img-dark"><img src="../assets/bitchain-onboard.png" alt="Onboarding"></div>
+<div class="img-row" style="margin-top:12px">
+<div class="img-box img-dark" style="margin:0"><img src="../assets/bitchain-auth.png" alt="Authentication"></div>
+<div class="img-box img-dark" style="margin:0"><img src="../assets/bitchain-detail.png" alt="Coin detail"></div>
+</div>
+<div class="img-box img-dark" style="margin-top:12px"><img src="../assets/bitchain-screens.png" alt="All screens"></div>
+</div>
+
+<div class="w"><hr>
+<div class="sl">06 Usability Testing</div>
+<h2 class="sh">Validated with 12 participants</h2>
+<div class="tg2">
+<div class="tc"><h4>Task completion</h4>
+<div class="br"><div class="bl"><span>Complete onboarding</span><span class="v">92%</span></div><div class="bar"><div class="bf bg" style="width:92%"></div></div></div>
+<div class="br"><div class="bl"><span>Check portfolio balance</span><span class="v">100%</span></div><div class="bar"><div class="bf bg" style="width:100%"></div></div></div>
+<div class="br"><div class="bl"><span>Send crypto</span><span class="v">85%</span></div><div class="bar"><div class="bf ba" style="width:85%"></div></div></div>
+<div class="br"><div class="bl"><span>View transaction history</span><span class="v">94%</span></div><div class="bar"><div class="bf bg" style="width:94%"></div></div></div>
+</div>
+<div class="tc"><h4>Key metrics</h4>
+<div class="br"><div class="bl"><span>SUS Score</span><span class="v">84 / 100</span></div><div class="bar"><div class="bf bg" style="width:84%"></div></div></div>
+<div class="br"><div class="bl"><span>Time to first transaction</span><span class="v">18 seconds</span></div><div class="bar"><div class="bf bg" style="width:25%"></div></div></div>
+<div class="br"><div class="bl"><span>Trust perception</span><span class="v">4.3 / 5</span></div><div class="bar"><div class="bf ba" style="width:86%"></div></div></div>
+<div class="br"><div class="bl"><span>Would recommend</span><span class="v">88%</span></div><div class="bar"><div class="bf bg" style="width:88%"></div></div></div>
+</div></div>
+<div class="fd s"><div class="sv">Validation</div><h4>Dark theme increased trust perception</h4><p>10/12 users said the dark interface felt "more secure" and "more professional" compared to light-themed competitors.</p></div>
+<div class="fd i"><div class="sv">Improvement</div><h4>Send flow needed address validation</h4><p>3 users entered invalid wallet addresses. Added real-time validation and a QR scanner as the primary input.</p></div>
+<div class="fd c"><div class="sv">Critical</div><h4>"Gas fees" confused everyone</h4><p>Renamed to "Network fee" with a plain-language tooltip. Showed fee amount before confirming, not after.</p></div>
+</div>
+
+<div class="w"><hr>
+<div class="sl">07 Reflections</div>
+<h2 class="sh">What I learned</h2>
+<div class="cg">
+<div class="cd"><h4>Simplicity is the hardest crypto problem</h4><p>"Send crypto" should feel exactly like "Send money." The design challenge is not hiding complexity but translating it into familiar patterns.</p></div>
+<div class="cd"><h4>Trust is built in the first 30 seconds</h4><p>The onboarding sequence does more for trust than any security badge. A clean, guided, no-surprises first experience tells users: this app respects your time and your money.</p></div>
+</div></div>
+<div class="bk"><a href="../index.html" class="bk-btn">← Back to portfolio</a></div>
+</body></html>

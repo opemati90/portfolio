@@ -1,0 +1,163 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Fivo AI | Opeyemi Ajimati</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,300;0,14..32,400;0,14..32,500;0,14..32,600;0,14..32,700;1,14..32,400&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#fff;--sf:#FAFAFA;--sf2:#F5F5F5;--tx:#0A0A0A;--tx2:#555;--tx3:#999;--bd:#EBEBEB;--bd2:#D4D4D4;--r:12px;--f:'Inter',system-ui,-apple-system,'Helvetica Neue',Helvetica,sans-serif}
+html{scroll-behavior:smooth}
+body{font-family:var(--f);background:var(--bg);color:var(--tx);-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;font-feature-settings:'ss01','ss02','cv01';line-height:1.55}
+a{color:inherit;text-decoration:none}img{display:block;max-width:100%}
+
+/* Nav */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;height:56px;display:flex;align-items:center;justify-content:space-between;padding:0 32px;background:rgba(255,255,255,0.82);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid var(--bd)}
+.back{font-size:13px;color:var(--tx2);display:flex;align-items:center;gap:6px;transition:color 0.2s}.back:hover{color:var(--tx)}
+
+/* Layout */
+.w{max-width:760px;margin:0 auto;padding:0 32px}
+.ww{max-width:1040px;margin:0 auto;padding:0 32px}
+
+/* Hero */
+.hero{padding:120px 0 48px}
+.tags{display:flex;gap:6px;margin-bottom:20px;flex-wrap:wrap}
+.tg{font-size:11px;font-weight:500;padding:4px 10px;border-radius:6px;background:var(--sf2);color:var(--tx2)}
+.hero h1{font-size:clamp(28px,4vw,40px);font-weight:700;letter-spacing:-0.035em;line-height:1.15;margin-bottom:16px}
+.lead{font-size:16px;color:var(--tx2);line-height:1.65;margin-bottom:32px}
+.mg{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.mc{padding:14px 16px;background:var(--sf);border-radius:10px;border:1px solid var(--bd)}
+.mc dt{font-size:9px;font-weight:600;text-transform:uppercase;letter-spacing:1.2px;color:var(--tx3);margin-bottom:2px}
+.mc dd{font-size:13px;font-weight:500}
+
+/* Metrics */
+.metrics{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--bd);border:1px solid var(--bd);border-radius:var(--r);overflow:hidden;margin:48px 0}
+.mt{background:var(--bg);padding:24px;text-align:center}
+.mt .n{font-size:26px;font-weight:700;letter-spacing:-0.03em}
+.mt .l{font-size:11px;color:var(--tx3);margin-top:3px}
+
+hr{border:none;height:1px;background:var(--bd);margin:48px 0}
+
+/* Section text */
+.sl{font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:1.5px;color:var(--tx3);margin-bottom:6px}
+.sh{font-size:clamp(20px,2.5vw,24px);font-weight:700;letter-spacing:-0.02em;line-height:1.25;margin-bottom:10px}
+.sp{font-size:14px;color:var(--tx2);line-height:1.7;margin-bottom:20px}
+
+/* Cards */
+.cg{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:20px 0}
+.cd{background:var(--sf);border:1px solid var(--bd);border-radius:10px;padding:22px}
+.cd h4{font-size:13px;font-weight:600;margin-bottom:5px}
+.cd p{font-size:12.5px;color:var(--tx2);line-height:1.55}
+.cd .stat{font-size:22px;font-weight:700;margin-bottom:5px}
+
+/* 5W1H */
+.wh{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;margin:20px 0}
+.wh-item{padding:18px;background:var(--sf);border:1px solid var(--bd);border-radius:10px}
+.wh-item strong{display:block;font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:1px;color:var(--tx3);margin-bottom:4px}
+.wh-item p{font-size:12.5px;color:var(--tx2);line-height:1.5}
+
+/* Images */
+.img-box{margin:24px 0;border-radius:var(--r);overflow:hidden;border:1px solid var(--bd);padding:20px}
+.img-box img{width:100%;border-radius:8px}
+.img-dark{background:#0A0A0F;border-color:#1a1a1a}
+.img-row{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:24px 0}
+.img-row img{border-radius:var(--r);border:1px solid var(--bd);width:100%}
+.img-row-3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;margin:24px 0}
+.img-row-3 img{border-radius:var(--r);border:1px solid var(--bd);width:100%}
+.img-caption{font-size:11px;color:var(--tx3);text-align:center;margin-top:8px}
+
+/* Personas */
+.pr{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;margin:20px 0}
+.pc{background:var(--sf);border:1px solid var(--bd);border-radius:10px;padding:22px}
+.pc h4{font-size:14px;font-weight:600;margin-bottom:2px}
+.pc .rl{font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:1px;color:var(--tx3);margin-bottom:10px}
+.pc blockquote{font-style:italic;font-size:12.5px;color:var(--tx2);border-left:2px solid var(--bd2);padding-left:10px;margin-bottom:12px;line-height:1.5}
+.pc dl dt{font-size:9px;font-weight:600;text-transform:uppercase;letter-spacing:1px;color:var(--tx3);margin-top:10px}
+.pc dl dd{font-size:12px;color:var(--tx2);line-height:1.5}
+
+/* Flow */
+.flow{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin:20px 0;padding:28px;background:var(--sf);border:1px solid var(--bd);border-radius:10px}
+.fn{padding:7px 13px;border-radius:7px;font-size:11.5px;font-weight:500;white-space:nowrap}
+.fn-s{background:var(--tx);color:#fff}
+.fn-a{background:var(--bg);border:1px solid var(--bd)}
+.fn-e{background:#DCFCE7;color:#166534}
+.fa{color:var(--tx3);font-size:12px}
+
+/* Testing */
+.tg2{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:20px 0}
+.tc{background:var(--sf);border:1px solid var(--bd);border-radius:10px;padding:22px}
+.tc h4{font-size:13px;font-weight:600;margin-bottom:14px}
+.br{margin-bottom:12px}
+.bl{display:flex;justify-content:space-between;font-size:12px;margin-bottom:3px}
+.bl .v{font-weight:600}
+.bar{height:5px;background:var(--sf2);border-radius:3px;overflow:hidden}
+.bf{height:100%;border-radius:3px}
+.bg{background:#34D399}.ba{background:#0A0A0A}.by{background:#FBBF24}
+
+/* Findings */
+.fd{background:var(--sf);border-radius:0 10px 10px 0;padding:18px 22px;margin-bottom:10px;border-left:3px solid}
+.fd.c{border-color:#F87171}.fd.i{border-color:var(--tx)}.fd.s{border-color:#34D399}
+.fd .sv{font-size:9px;font-weight:600;text-transform:uppercase;letter-spacing:1px;margin-bottom:2px}
+.fd.c .sv{color:#F87171}.fd.i .sv{color:var(--tx)}.fd.s .sv{color:#34D399}
+.fd h4{font-size:13px;font-weight:600;margin-bottom:2px}
+.fd p{font-size:12px;color:var(--tx2);line-height:1.5}
+
+/* Back */
+.bk{padding:48px;text-align:center}
+.bk-btn{display:inline-flex;align-items:center;gap:6px;padding:10px 20px;border:1px solid var(--bd);border-radius:8px;font-size:13px;font-weight:500;transition:border-color 0.2s}
+.bk-btn:hover{border-color:var(--tx)}
+
+/* NDA */
+.nda{background:var(--sf);border:1px solid var(--bd);border-radius:10px;padding:18px 22px;display:flex;align-items:flex-start;gap:10px;margin:20px 0}
+.nda-icon{font-size:16px;margin-top:1px}
+.nda h4{font-size:12px;font-weight:600;margin-bottom:2px}
+.nda p{font-size:11.5px;color:var(--tx2);line-height:1.5}
+
+@media(max-width:900px){.pr{grid-template-columns:1fr}.wh{grid-template-columns:1fr 1fr}}
+@media(max-width:768px){.w,.ww{padding:0 20px}.mg,.metrics{grid-template-columns:1fr 1fr}.cg,.tg2,.img-row{grid-template-columns:1fr}.img-row-3{grid-template-columns:1fr 1fr}.wh{grid-template-columns:1fr}nav{padding:0 20px}}
+</style>
+</head><body>
+<nav><a href="../index.html" class="back">← Portfolio</a></nav>
+<section class="hero"><div class="w">
+<div class="tags"><span class="tg">AI SaaS</span><span class="tg">Productivity</span><span class="tg">Website</span></div>
+<h1>Fivo AI: your meetings, transcribed and organized</h1>
+<p class="lead">Redesigning the marketing site for an AI meeting assistant. Transcription, smart summaries, and team integrations positioned against Otter.ai and Fireflies.</p>
+<div class="mg"><div class="mc"><dt>Role</dt><dd>Lead Product Designer</dd></div><div class="mc"><dt>Type</dt><dd>End-to-End UX</dd></div><div class="mc"><dt>Timeline</dt><dd>6-10 Weeks</dd></div><div class="mc"><dt>Tested</dt><dd>8-12 Users</dd></div></div>
+</div></section>
+
+<div class="w"><div class="metrics"><div class="mt"><div class="n">+52%</div><div class="l">Sign-up rate</div></div><div class="mt"><div class="n">-41%</div><div class="l">Bounce rate</div></div><div class="mt"><div class="n">3.8s</div><div class="l">Value prop clarity</div></div><div class="mt"><div class="n">86</div><div class="l">SUS score</div></div></div></div>
+
+<div class="w"><hr>
+<div class="sl">01 Framing the Problem</div>
+<h2 class="sh">5W1H: Defining the design challenge</h2>
+<div class="wh">
+<div class="wh-item"><strong>Who</strong><p>Remote team leads, PMs, and consultants in 6+ meetings per day</p></div>
+<div class="wh-item"><strong>What</strong><p>An AI meeting assistant that transcribes, summarizes, and integrates with team tools</p></div>
+<div class="wh-item"><strong>When</strong><p>As remote work becomes permanent and meeting overload grows across industries</p></div>
+<div class="wh-item"><strong>Where</strong><p>Web marketing site + SaaS product, used on desktop during and after meetings</p></div>
+<div class="wh-item"><strong>Why</strong><p>72% funnel drop-off. Users could not differentiate Fivo from 5+ competitors in under 5 seconds</p></div>
+<div class="wh-item"><strong>How</strong><p>Integration-first messaging, trust-building through security signals, and role-specific use cases</p></div>
+</div>
+</div>
+
+<div class="w"><hr>
+<div class="sl">02 Personas</div>
+<h2 class="sh">Who we are designing for</h2>
+<div class="pr">
+<div class="pc"><h4>Lisa, 33</h4><div class="rl">Remote Team Lead</div><blockquote>"I need notes I can actually trust and share."</blockquote><dl><dt>Goals</dt><dd>Accurate transcription, shareable summaries</dd><dt>Frustrations</dt><dd>Inaccurate AI, manual editing</dd></dl></div>
+<div class="pc"><h4>Tom, 38</h4><div class="rl">Product Manager</div><blockquote>"I need to search across all my meetings for decisions."</blockquote><dl><dt>Goals</dt><dd>Searchable archive, action items</dd><dt>Frustrations</dt><dd>Information scattered across tools</dd></dl></div>
+<div class="pc"><h4>Priya, 29</h4><div class="rl">Consultant</div><blockquote>"I bill hourly and need clean meeting records."</blockquote><dl><dt>Goals</dt><dd>Time-stamped transcripts, PDF export</dd><dt>Frustrations</dt><dd>Manual note-taking, formatting after</dd></dl></div>
+</div></div>
+
+<div class="w"><hr>
+<div class="sl">03 Final Designs</div>
+<h2 class="sh">The solution, delivered</h2>
+</div>
+<div class="ww"><div class="img-box" style="background:#EDF3FF"><img src="../assets/fivo.jpg" alt="Fivo AI"></div></div>
+
+<div class="w"><hr>
+<div class="sl">04 Reflections</div>
+<h2 class="sh">What I learned</h2>
+<div class="cg">
+<div class="cd"><h4>Research-driven decisions compound</h4><p>Every design choice traced back to a user insight. This made stakeholder alignment straightforward and reduced revision cycles significantly.</p></div>
+<div class="cd"><h4>Consistency accelerates delivery</h4><p>Using a shared design system across projects meant new screens could be assembled from existing components, cutting design time without sacrificing quality.</p></div>
+</div></div>
+<div class="bk"><a href="../index.html" class="bk-btn">← Back to portfolio</a></div>
+</body></html>

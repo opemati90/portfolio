@@ -1,0 +1,319 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Renuir | Opeyemi Ajimati</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,300;0,14..32,400;0,14..32,500;0,14..32,600;0,14..32,700;1,14..32,400&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#fff;--sf:#FAFAFA;--sf2:#F5F5F5;--tx:#0A0A0A;--tx2:#555;--tx3:#999;--bd:#EBEBEB;--bd2:#D4D4D4;--r:12px;--f:'Inter',system-ui,-apple-system,'Helvetica Neue',Helvetica,sans-serif}
+html{scroll-behavior:smooth}
+body{font-family:var(--f);background:var(--bg);color:var(--tx);-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;font-feature-settings:'ss01','ss02','cv01';line-height:1.55}
+a{color:inherit;text-decoration:none}img{display:block;max-width:100%}
+
+/* Nav */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;height:56px;display:flex;align-items:center;justify-content:space-between;padding:0 32px;background:rgba(255,255,255,0.82);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid var(--bd)}
+.back{font-size:13px;color:var(--tx2);display:flex;align-items:center;gap:6px;transition:color 0.2s}.back:hover{color:var(--tx)}
+
+/* Layout */
+.w{max-width:760px;margin:0 auto;padding:0 32px}
+.ww{max-width:1040px;margin:0 auto;padding:0 32px}
+
+/* Hero */
+.hero{padding:120px 0 48px}
+.tags{display:flex;gap:6px;margin-bottom:20px;flex-wrap:wrap}
+.tg{font-size:11px;font-weight:500;padding:4px 10px;border-radius:6px;background:var(--sf2);color:var(--tx2)}
+.hero h1{font-size:clamp(28px,4vw,40px);font-weight:700;letter-spacing:-0.035em;line-height:1.15;margin-bottom:16px}
+.lead{font-size:16px;color:var(--tx2);line-height:1.65;margin-bottom:32px}
+.mg{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.mc{padding:14px 16px;background:var(--sf);border-radius:10px;border:1px solid var(--bd)}
+.mc dt{font-size:9px;font-weight:600;text-transform:uppercase;letter-spacing:1.2px;color:var(--tx3);margin-bottom:2px}
+.mc dd{font-size:13px;font-weight:500}
+
+/* Metrics */
+.metrics{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--bd);border:1px solid var(--bd);border-radius:var(--r);overflow:hidden;margin:48px 0}
+.mt{background:var(--bg);padding:24px;text-align:center}
+.mt .n{font-size:26px;font-weight:700;letter-spacing:-0.03em}
+.mt .l{font-size:11px;color:var(--tx3);margin-top:3px}
+
+hr{border:none;height:1px;background:var(--bd);margin:48px 0}
+
+/* Section text */
+.sl{font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:1.5px;color:var(--tx3);margin-bottom:6px}
+.sh{font-size:clamp(20px,2.5vw,24px);font-weight:700;letter-spacing:-0.02em;line-height:1.25;margin-bottom:10px}
+.sp{font-size:14px;color:var(--tx2);line-height:1.7;margin-bottom:20px}
+
+/* Cards */
+.cg{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:20px 0}
+.cd{background:var(--sf);border:1px solid var(--bd);border-radius:10px;padding:22px}
+.cd h4{font-size:13px;font-weight:600;margin-bottom:5px}
+.cd p{font-size:12.5px;color:var(--tx2);line-height:1.55}
+.cd .stat{font-size:22px;font-weight:700;margin-bottom:5px}
+
+/* 5W1H */
+.wh{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;margin:20px 0}
+.wh-item{padding:18px;background:var(--sf);border:1px solid var(--bd);border-radius:10px}
+.wh-item strong{display:block;font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:1px;color:var(--tx3);margin-bottom:4px}
+.wh-item p{font-size:12.5px;color:var(--tx2);line-height:1.5}
+
+/* Images */
+.img-box{margin:24px 0;border-radius:var(--r);overflow:hidden;border:1px solid var(--bd);padding:20px}
+.img-box img{width:100%;border-radius:8px}
+.img-dark{background:#0A0A0F;border-color:#1a1a1a}
+.img-row{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:24px 0}
+.img-row img{border-radius:var(--r);border:1px solid var(--bd);width:100%}
+.img-row-3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;margin:24px 0}
+.img-row-3 img{border-radius:var(--r);border:1px solid var(--bd);width:100%}
+.img-caption{font-size:11px;color:var(--tx3);text-align:center;margin-top:8px}
+
+/* Personas */
+.pr{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;margin:20px 0}
+.pc{background:var(--sf);border:1px solid var(--bd);border-radius:10px;padding:22px}
+.pc h4{font-size:14px;font-weight:600;margin-bottom:2px}
+.pc .rl{font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:1px;color:var(--tx3);margin-bottom:10px}
+.pc blockquote{font-style:italic;font-size:12.5px;color:var(--tx2);border-left:2px solid var(--bd2);padding-left:10px;margin-bottom:12px;line-height:1.5}
+.pc dl dt{font-size:9px;font-weight:600;text-transform:uppercase;letter-spacing:1px;color:var(--tx3);margin-top:10px}
+.pc dl dd{font-size:12px;color:var(--tx2);line-height:1.5}
+
+/* Flow */
+.flow{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin:20px 0;padding:28px;background:var(--sf);border:1px solid var(--bd);border-radius:10px}
+.fn{padding:7px 13px;border-radius:7px;font-size:11.5px;font-weight:500;white-space:nowrap}
+.fn-s{background:var(--tx);color:#fff}
+.fn-a{background:var(--bg);border:1px solid var(--bd)}
+.fn-e{background:#DCFCE7;color:#166534}
+.fa{color:var(--tx3);font-size:12px}
+
+/* Testing */
+.tg2{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:20px 0}
+.tc{background:var(--sf);border:1px solid var(--bd);border-radius:10px;padding:22px}
+.tc h4{font-size:13px;font-weight:600;margin-bottom:14px}
+.br{margin-bottom:12px}
+.bl{display:flex;justify-content:space-between;font-size:12px;margin-bottom:3px}
+.bl .v{font-weight:600}
+.bar{height:5px;background:var(--sf2);border-radius:3px;overflow:hidden}
+.bf{height:100%;border-radius:3px}
+.bg{background:#34D399}.ba{background:#0A0A0A}.by{background:#FBBF24}
+
+/* Findings */
+.fd{background:var(--sf);border-radius:0 10px 10px 0;padding:18px 22px;margin-bottom:10px;border-left:3px solid}
+.fd.c{border-color:#F87171}.fd.i{border-color:var(--tx)}.fd.s{border-color:#34D399}
+.fd .sv{font-size:9px;font-weight:600;text-transform:uppercase;letter-spacing:1px;margin-bottom:2px}
+.fd.c .sv{color:#F87171}.fd.i .sv{color:var(--tx)}.fd.s .sv{color:#34D399}
+.fd h4{font-size:13px;font-weight:600;margin-bottom:2px}
+.fd p{font-size:12px;color:var(--tx2);line-height:1.5}
+
+/* Back */
+.bk{padding:48px;text-align:center}
+.bk-btn{display:inline-flex;align-items:center;gap:6px;padding:10px 20px;border:1px solid var(--bd);border-radius:8px;font-size:13px;font-weight:500;transition:border-color 0.2s}
+.bk-btn:hover{border-color:var(--tx)}
+
+/* NDA */
+.nda{background:var(--sf);border:1px solid var(--bd);border-radius:10px;padding:18px 22px;display:flex;align-items:flex-start;gap:10px;margin:20px 0}
+.nda-icon{font-size:16px;margin-top:1px}
+.nda h4{font-size:12px;font-weight:600;margin-bottom:2px}
+.nda p{font-size:11.5px;color:var(--tx2);line-height:1.5}
+
+@media(max-width:900px){.pr{grid-template-columns:1fr}.wh{grid-template-columns:1fr 1fr}}
+@media(max-width:768px){.w,.ww{padding:0 20px}.mg,.metrics{grid-template-columns:1fr 1fr}.cg,.tg2,.img-row{grid-template-columns:1fr}.img-row-3{grid-template-columns:1fr 1fr}.wh{grid-template-columns:1fr}nav{padding:0 20px}}
+</style></head><body>
+<nav><a href="../index.html" class="back">← Portfolio</a></nav>
+
+<section class="hero"><div class="w">
+<div class="tags"><span class="tg">Mobile App</span><span class="tg">0 to 1 Product</span><span class="tg">Lost and Found</span><span class="tg">B2C + B2B</span></div>
+<h1>Renuir: reuniting people with their lost belongings</h1>
+<p class="lead">I designed a complete mobile platform for Europe's lost-and-found ecosystem. From onboarding to item reporting, AI-powered matching, ownership verification, secure delivery coordination, and trust-building features. 47 screens, end to end.</p>
+<div class="mg">
+<div class="mc"><dt>Role</dt><dd>Lead Product Designer</dd></div>
+<div class="mc"><dt>Platform</dt><dd>iOS + Android</dd></div>
+<div class="mc"><dt>Timeline</dt><dd>14 Months</dd></div>
+<div class="mc"><dt>Users Tested</dt><dd>12</dd></div>
+</div>
+</div></section>
+
+<div class="w"><div class="metrics">
+<div class="mt"><div class="n">47</div><div class="l">Screens designed</div></div>
+<div class="mt"><div class="n">89%</div><div class="l">Task completion</div></div>
+<div class="mt"><div class="n">4.7/5</div><div class="l">Usability score</div></div>
+<div class="mt"><div class="n">84.2</div><div class="l">SUS score</div></div>
+</div></div>
+
+<div class="ww"><div class="img-box" style="background:#c8c4bc"><img src="../assets/renuir-home.png" alt="Renuir home screen in hand"></div></div>
+
+<!-- PROBLEM -->
+<div class="w"><hr>
+<div class="sl">01 Framing the Problem</div>
+<h2 class="sh">5W1H: Defining the design challenge</h2>
+<div class="wh">
+<div class="wh-item"><strong>Who</strong><p>People who lose personal belongings in public spaces, transit, and events, plus finders who want to return items without hassle</p></div>
+<div class="wh-item"><strong>What</strong><p>A mobile platform that connects lost items with their owners through AI matching, ownership verification, and coordinated return</p></div>
+<div class="wh-item"><strong>When</strong><p>Immediately after losing or finding an item, when urgency is highest and existing systems fail to provide any clear next step</p></div>
+<div class="wh-item"><strong>Where</strong><p>Public transit, airports, events, cafes, and shared spaces across European cities, starting with Berlin</p></div>
+<div class="wh-item"><strong>Why</strong><p>85% of lost items are never returned. Lost-and-found offices operate in silos. Finders have no clear way to return items. No cross-organization protocol exists</p></div>
+<div class="wh-item"><strong>How</strong><p>Camera-first item reporting, AI photo matching, multi-step ownership verification, safe meetup coordination, and shipping integration</p></div>
+</div>
+</div>
+
+<div class="w">
+<div class="cg">
+<div class="cd"><div class="stat">85%</div><h4>Items never returned</h4><p>Of lost items in European transit systems are never reunited with their owners due to fragmented processes.</p></div>
+<div class="cd"><div class="stat">72%</div><h4>Give up after day 1</h4><p>People who lose an item stop actively looking within 24 hours due to friction in reporting and searching.</p></div>
+<div class="cd"><div class="stat">0</div><h4>Unified platforms</h4><p>No protocol-layer solution exists that standardizes lost-and-found across organizations and countries.</p></div>
+<div class="cd"><div class="stat">7</div><h4>Critical handoff points</h4><p>Our service blueprint revealed 7 moments where items get permanently lost in the current system.</p></div>
+</div>
+</div>
+
+<!-- RESEARCH -->
+<div class="w"><hr>
+<div class="sl">02 Discovery and Research</div>
+<h2 class="sh">6 weeks of deep research</h2>
+<p class="sp">I spent 6 weeks in discovery before designing a single screen. I interviewed people who lost items, people who found items, and lost-and-found office operators. I mapped the regulatory landscape across Germany and the EU to understand legal requirements around found property.</p>
+
+<div class="cg">
+<div class="cd"><h4>User interviews (n=16)</h4><p>Spoke with 8 "losers" (people who lost items), 4 "finders," and 4 lost-and-found operators across Berlin, Munich, and Amsterdam. Key finding: the emotional distress of losing items is severely underestimated. It is not just about the object's monetary value.</p></div>
+<div class="cd"><h4>Competitive analysis</h4><p>Analyzed 8 solutions (iLost, Tile, Foundit, BVG Fundburo). Most were device-only (Tile) or single-organization (iLost). None offered a true cross-organization protocol. This validated our infrastructure-first approach.</p></div>
+<div class="cd"><h4>Regulatory mapping</h4><p>German law (BGB sections 965-984) defines legal obligations for finders. EU GDPR adds complexity around sharing personal data between parties. These constraints directly shaped the ownership verification and data-handling flows.</p></div>
+<div class="cd"><h4>Service blueprint</h4><p>Created an end-to-end blueprint mapping frontstage interactions, backstage processes, and support systems. This revealed the 7 critical handoff points where items typically get lost in the current system.</p></div>
+</div>
+</div>
+
+<!-- PERSONAS -->
+<div class="w"><hr>
+<div class="sl">03 Personas</div>
+<h2 class="sh">Three user types, fundamentally different trust needs</h2>
+
+<div class="pr">
+<div class="pc"><h4>Sara, 28</h4><div class="rl">The Owner (Lost Item)</div>
+<blockquote>"I left my wallet on the S-Bahn. By the time I realized, I had no idea where to start looking."</blockquote>
+<dl><dt>Goals</dt><dd>Report lost items quickly, get notified if found, verify and recover securely</dd>
+<dt>Frustrations</dt><dd>No centralized search, emotional stress, privacy concerns about sharing personal info with strangers</dd>
+<dt>Trust need</dt><dd>High. Needs to know the platform and the finder are both legitimate</dd></dl>
+</div>
+<div class="pc"><h4>Marcus, 35</h4><div class="rl">The Finder</div>
+<blockquote>"I found someone's bag at a cafe. I wanted to return it but had no idea how without it being awkward."</blockquote>
+<dl><dt>Goals</dt><dd>Return items without hassle or obligation, no need to meet strangers, feel good about helping</dd>
+<dt>Frustrations</dt><dd>Social awkwardness, liability concerns, time commitment uncertainty</dd>
+<dt>Trust need</dt><dd>Medium. Wants assurance they will not be blamed for theft or damage</dd></dl>
+</div>
+<div class="pc"><h4>Katja, 42</h4><div class="rl">The Operator (B2B)</div>
+<blockquote>"Our lost-and-found office is drowning in unclaimed items. We need a system that works with our existing processes."</blockquote>
+<dl><dt>Goals</dt><dd>Reduce unclaimed items, automate matching, integrate with existing tools</dd>
+<dt>Frustrations</dt><dd>Manual processes, storage costs, regulatory compliance burden</dd>
+<dt>Trust need</dt><dd>Institutional. Needs data security proof and GDPR compliance</dd></dl>
+</div>
+</div>
+</div>
+
+<!-- USER FLOW -->
+<div class="w"><hr>
+<div class="sl">04 Core User Flow</div>
+<h2 class="sh">The return loop: balancing speed with security</h2>
+<p class="sp">The critical design challenge was creating a flow that is fast (users want immediate resolution) while remaining secure (ownership must be verified to prevent fraud). Every step had to build trust incrementally.</p>
+
+<div class="flow">
+<div class="fn fn-s">Item reported</div><span class="fa">→</span>
+<div class="fn fn-a">AI match scan</div><span class="fa">→</span>
+<div class="fn fn-a">Owner notified</div><span class="fa">→</span>
+<div class="fn fn-a">Verify ownership</div><span class="fa">→</span>
+<div class="fn fn-a">Arrange return</div><span class="fa">→</span>
+<div class="fn fn-e">Item returned</div>
+</div>
+</div>
+
+<!-- FINAL DESIGNS: ONBOARDING -->
+<div class="w"><hr>
+<div class="sl">05 Final Designs</div>
+<h2 class="sh">Onboarding and item reporting</h2>
+<p class="sp">The onboarding communicates three value props through illustrated screens: report, match, return. Sign-up uses email plus OTP for simplicity, with Google SSO as an alternative. Item reporting is camera-first: photograph the item, add details, pin the location, and post.</p>
+</div>
+
+<div class="ww">
+<div class="img-box img-dark"><img src="../assets/renuir-post-onboard.png" alt="Renuir onboarding and item posting"></div>
+</div>
+
+<!-- MATCHING + CHAT -->
+<div class="w">
+<h2 class="sh">Matching, verification, and communication</h2>
+<p class="sp">When the AI finds a potential match, both parties see a match confidence score (e.g., 98%). The finder reviews ownership proof (serial numbers, photos, purchase receipts) before approving. In-app messaging coordinates the return without sharing personal contact details.</p>
+</div>
+
+<div class="ww">
+<div class="img-box img-dark"><img src="../assets/renuir-chat-match.png" alt="Chat and matching screens"></div>
+</div>
+
+<!-- OWNERSHIP + DELIVERY -->
+<div class="w">
+<h2 class="sh">Ownership verification and return coordination</h2>
+<p class="sp">Users provide proof of ownership through serial numbers, purchase receipts, photographs, or warranty documents. The system supports both in-person meetups (with safe location suggestions and a handover code) and shipping through integrated delivery partners with real-time tracking.</p>
+</div>
+
+<div class="ww">
+<div class="img-row">
+<div class="img-box img-dark" style="margin:0"><img src="../assets/renuir-ownership.png" alt="Ownership verification flow"></div>
+<div class="img-box img-dark" style="margin:0"><img src="../assets/renuir-delivery.png" alt="Delivery and shipping flow"></div>
+</div>
+</div>
+
+<!-- MEETUP + REJECT -->
+<div class="w">
+<h2 class="sh">Safe meetups and claim resolution</h2>
+<p class="sp">The in-person meetup flow suggests safe public locations (police stations, cafes, libraries), handles time scheduling, and uses a 4-digit handover code for identity verification. For disputed claims, the reject flow communicates decisions respectfully while protecting both parties.</p>
+</div>
+
+<div class="ww">
+<div class="img-row">
+<div class="img-box img-dark" style="margin:0"><img src="../assets/renuir-meetup.png" alt="In-person meetup coordination"></div>
+<div class="img-box" style="margin:0;background:#c5cec8"><img src="../assets/renuir-reject.png" alt="Claim rejection flow"></div>
+</div>
+</div>
+
+<!-- FULL SCREEN MAP -->
+<div class="w">
+<h2 class="sh">Complete screen architecture</h2>
+<p class="sp">The full app spans 47 screens across onboarding, item reporting, AI matching, ownership verification, messaging, delivery coordination, and rating. Every screen was designed mobile-first with accessibility built in from the start.</p>
+</div>
+
+<div class="ww">
+<div class="img-box img-dark"><img src="../assets/renuir-screens.png" alt="All 47 screens"></div>
+</div>
+
+<!-- TESTING -->
+<div class="w"><hr>
+<div class="sl">06 Usability Testing</div>
+<h2 class="sh">Two rounds: moderated (n=6) and unmoderated (n=18)</h2>
+<p class="sp">Tested with people who had recently lost items, frequent public transit users, and hostel travelers. Used both moderated sessions for qualitative depth and Maze for quantitative validation.</p>
+
+<div class="tg2">
+<div class="tc"><h4>Task completion</h4>
+<div class="br"><div class="bl"><span>Report a lost item</span><span class="v">94%</span></div><div class="bar"><div class="bf bg" style="width:94%"></div></div></div>
+<div class="br"><div class="bl"><span>Complete onboarding</span><span class="v">96%</span></div><div class="bar"><div class="bf bg" style="width:96%"></div></div></div>
+<div class="br"><div class="bl"><span>Verify ownership</span><span class="v">79%</span></div><div class="bar"><div class="bf by" style="width:79%"></div></div></div>
+<div class="br"><div class="bl"><span>Schedule meetup</span><span class="v">85%</span></div><div class="bar"><div class="bf ba" style="width:85%"></div></div></div>
+<div class="br"><div class="bl"><span>Enter handover code</span><span class="v">91%</span></div><div class="bar"><div class="bf bg" style="width:91%"></div></div></div>
+</div>
+<div class="tc"><h4>Key metrics</h4>
+<div class="br"><div class="bl"><span>SUS Score</span><span class="v">84.2 / 100</span></div><div class="bar"><div class="bf bg" style="width:84.2%"></div></div></div>
+<div class="br"><div class="bl"><span>NPS</span><span class="v">+52 (Excellent)</span></div><div class="bar"><div class="bf bg" style="width:76%"></div></div></div>
+<div class="br"><div class="bl"><span>Trust score</span><span class="v">4.3 / 5</span></div><div class="bar"><div class="bf ba" style="width:86%"></div></div></div>
+<div class="br"><div class="bl"><span>Onboarding time</span><span class="v">38 seconds</span></div><div class="bar"><div class="bf bg" style="width:30%"></div></div></div>
+<div class="br"><div class="bl"><span>Report time</span><span class="v">72 seconds</span></div><div class="bar"><div class="bf ba" style="width:45%"></div></div></div>
+</div>
+</div>
+
+<div class="fd c"><div class="sv">Critical</div><h4>Ownership verification too complex on mobile</h4><p>21% struggled with document upload. The multi-select interface confused users. Simplified to progressive disclosure: one proof type at a time with clear examples.</p></div>
+<div class="fd i"><div class="sv">Improvement</div><h4>Meeting location suggestions needed context</h4><p>Users loved safe meeting spots but wanted to know why they were "safe." Added rationale labels: "Police station: public, CCTV, staff present."</p></div>
+<div class="fd s"><div class="sv">Validation</div><h4>Match confidence score built immediate trust</h4><p>10/12 testers said the "98% match" indicator gave them confidence the system was working. Without it, users questioned whether the match was real.</p></div>
+<div class="fd i"><div class="sv">Improvement</div><h4>Handover code needed better error recovery</h4><p>Wrong code error was unclear. Added: "Code does not match. Ask the other person to show their code screen" with retry.</p></div>
+</div>
+
+<!-- REFLECTIONS -->
+<div class="w"><hr>
+<div class="sl">07 Reflections</div>
+<h2 class="sh">What I learned</h2>
+
+<div class="cg">
+<div class="cd"><h4>Designing for trust is the hardest problem</h4><p>In a platform where strangers exchange personal belongings, every interaction must build trust. Trust is not a feature. It emerges from dozens of small decisions: clear language, verification steps, safety features, and transparent processes.</p></div>
+<div class="cd"><h4>0 to 1 requires ruthless prioritization</h4><p>With limited resources, I developed the framework "What is the minimum viable trust?" The smallest set of features that makes someone comfortable handing belongings to a stranger through the platform.</p></div>
+<div class="cd"><h4>The design system scales the product</h4><p>The component library I built supports the mobile app, a B2B admin dashboard, and API documentation from the same token set. New flows can be assembled in hours, not weeks.</p></div>
+<div class="cd"><h4>Regulatory constraints improve design</h4><p>German found-property law and GDPR initially felt like obstacles. They turned out to be forcing functions that made the verification flow more trustworthy. Legal requirements and good UX aligned perfectly.</p></div>
+</div>
+</div>
+
+<div class="bk"><a href="../index.html" class="bk-btn">← Back to portfolio</a></div>
+</body></html>

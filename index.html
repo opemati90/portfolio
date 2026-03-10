@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Opeyemi Ajimati | Senior Product Designer</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,300;0,14..32,400;0,14..32,500;0,14..32,600;0,14..32,700;1,14..32,400&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --bg:#fff;--sf:#FAFAFA;--sf2:#F5F5F5;--tx:#0A0A0A;--tx2:#555;--tx3:#999;
+  --bd:#EBEBEB;--bd2:#D4D4D4;--r:12px;
+  --f:'Inter',system-ui,-apple-system,'Helvetica Neue',Helvetica,sans-serif;
+  --spring:cubic-bezier(0.22,1,0.36,1);--ease-out:cubic-bezier(0,0,0.2,1);
+  --d-fast:0.2s;--d-base:0.4s;--d-slow:0.6s;--d-enter:0.7s;
+}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:0.01ms!important;transition-duration:0.01ms!important}.rv{opacity:1!important;transform:none!important}}
+html{scroll-behavior:smooth}
+body{font-family:var(--f);background:var(--bg);color:var(--tx);-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;font-feature-settings:'ss01','ss02','cv01';line-height:1.55}
+a{color:inherit;text-decoration:none}img{display:block;max-width:100%}::selection{background:#0A0A0A;color:#fff}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;height:56px;display:flex;align-items:center;justify-content:space-between;padding:0 32px;background:rgba(255,255,255,0.82);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid var(--bd);transition:background var(--d-base) var(--ease-out),box-shadow var(--d-base) var(--ease-out)}
+.logo{font-size:14px;font-weight:600;letter-spacing:-0.3px;transition:opacity var(--d-fast) var(--ease-out)}.logo:hover{opacity:0.6}
+.nr{display:flex;align-items:center;gap:4px}
+.nr a{font-size:13px;color:var(--tx2);padding:6px 12px;border-radius:8px;transition:color var(--d-fast) var(--ease-out),background var(--d-fast) var(--ease-out)}.nr a:hover{color:var(--tx);background:var(--sf)}
+.nr .cta{color:var(--bg);background:var(--tx);font-weight:500;margin-left:4px;transition:opacity var(--d-fast),transform var(--d-fast) var(--spring)}.nr .cta:hover{opacity:.85;transform:scale(0.98)}.nr .cta:active{transform:scale(0.95)}
+
+.w{max-width:1080px;margin:0 auto;padding:0 32px}
+
+/* HERO */
+.hero{padding:140px 0 80px}
+.badge{display:inline-flex;align-items:center;gap:6px;font-size:12px;font-weight:500;color:var(--tx3);background:var(--sf);border:1px solid var(--bd);padding:5px 12px 5px 8px;border-radius:100px;margin-bottom:24px}
+.badge .dot{width:6px;height:6px;border-radius:50%;background:#22C55E;box-shadow:0 0 0 3px rgba(34,197,94,.15);animation:pulse 2.5s cubic-bezier(.4,0,.6,1) infinite}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.4;transform:scale(.85)}}
+.hero h1{font-size:clamp(36px,5vw,60px);font-weight:700;letter-spacing:-.04em;line-height:1.08;margin-bottom:20px;max-width:640px}
+.hero-p{font-size:17px;color:var(--tx2);line-height:1.65;max-width:500px;margin-bottom:32px}
+.btns{display:flex;gap:10px}
+.btn{font-family:var(--f);font-size:13px;font-weight:500;padding:10px 20px;border-radius:8px;border:1px solid var(--bd);cursor:pointer;transition:border-color var(--d-fast) var(--ease-out),box-shadow var(--d-base) var(--spring),transform var(--d-fast) var(--spring);display:inline-flex;align-items:center;gap:6px;background:var(--bg);color:var(--tx)}.btn:hover{border-color:var(--bd2);box-shadow:0 1px 4px rgba(0,0,0,.05)}.btn:active{transform:scale(.97)}
+.btn-p{background:var(--tx);color:var(--bg);border-color:var(--tx)}.btn-p:hover{box-shadow:0 4px 16px rgba(0,0,0,.12)}.btn-p:active{transform:scale(.96)}
+
+hr{border:none;height:1px;background:var(--bd);margin:0}
+
+.s{padding:80px 0}
+.sl{font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:1.2px;color:var(--tx3);margin-bottom:8px}
+.st{font-size:clamp(24px,3vw,34px);font-weight:700;letter-spacing:-.03em;line-height:1.2;margin-bottom:8px}
+.sd{font-size:15px;color:var(--tx2);line-height:1.65;max-width:500px;margin-bottom:40px}
+
+/* PROJECTS */
+.work-list{display:flex;flex-direction:column}
+.work-item{display:grid;grid-template-columns:1fr 1fr;gap:40px;border-bottom:1px solid var(--bd);transition:background var(--d-base) var(--ease-out);text-decoration:none;color:inherit;padding:40px 0}
+.work-item:first-child{border-top:1px solid var(--bd)}
+.work-item:hover{background:var(--sf)}
+.work-thumb{padding:8px 24px 8px 32px;display:flex;align-items:center;justify-content:center;overflow:hidden;border-radius:var(--r)}
+.work-thumb img{max-height:280px;max-width:100%;object-fit:contain;border-radius:8px;transition:transform var(--d-slow) var(--spring)}
+.work-item:hover .work-thumb img{transform:scale(1.03) translateY(-2px)}
+.work-info{padding:8px 32px 8px 0;display:flex;flex-direction:column;justify-content:center}
+.work-num{font-size:10px;font-weight:500;color:var(--tx3);font-variant-numeric:tabular-nums;margin-bottom:10px;transition:color var(--d-fast) var(--ease-out)}
+.work-item:hover .work-num{color:var(--tx2)}
+.work-name{font-size:20px;font-weight:700;letter-spacing:-.03em;line-height:1.25;margin-bottom:6px}
+.work-desc{font-size:13px;color:var(--tx2);line-height:1.6;margin-bottom:16px;max-width:400px}
+.work-meta{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:14px}
+.wm{font-size:10px;font-weight:500;padding:3px 8px;border-radius:4px;background:var(--sf2);color:var(--tx2);transition:background var(--d-fast) var(--ease-out)}
+.work-item:hover .wm{background:var(--bd)}
+.work-cta{font-size:12px;font-weight:600;color:var(--tx);display:inline-flex;align-items:center;gap:4px;transition:gap var(--d-base) var(--spring),opacity var(--d-fast) var(--ease-out);opacity:.7}
+.work-item:hover .work-cta{gap:10px;opacity:1}
+
+/* ABOUT */
+.about-intro{font-size:16px;color:var(--tx2);line-height:1.7;max-width:600px;margin-bottom:40px}
+.about-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:40px}
+.about-card{padding:16px;background:var(--sf);border-radius:10px;border:1px solid var(--bd);transition:border-color var(--d-base) var(--ease-out)}.about-card:hover{border-color:var(--bd2)}
+.about-card dt{font-size:9px;font-weight:600;text-transform:uppercase;letter-spacing:1.2px;color:var(--tx3);margin-bottom:3px}.about-card dd{font-size:13px;font-weight:500}
+.about-cols{display:grid;grid-template-columns:1fr 1fr;gap:48px;margin-bottom:40px}
+.about-col h4{font-size:13px;font-weight:600;margin-bottom:10px}.about-col p{font-size:13px;color:var(--tx2);line-height:1.65}
+.domain-tags{display:flex;flex-wrap:wrap;gap:6px}
+.dtag{font-size:11px;font-weight:500;padding:4px 12px;border:1px solid var(--bd);border-radius:100px;color:var(--tx2);transition:border-color var(--d-fast) var(--ease-out),color var(--d-fast) var(--ease-out)}.dtag:hover{border-color:var(--bd2);color:var(--tx)}
+
+/* SKILLS */
+.sk-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+.sk{padding:24px;border:1px solid var(--bd);border-radius:var(--r);background:var(--bg);transition:border-color var(--d-base) var(--ease-out),box-shadow var(--d-base) var(--spring),transform var(--d-base) var(--spring)}.sk:hover{border-color:var(--bd2);box-shadow:0 2px 12px rgba(0,0,0,.03);transform:translateY(-1px)}
+.sk-top{display:flex;align-items:center;gap:10px;margin-bottom:10px}.sk-icon{font-size:18px}
+.sk h4{font-size:14px;font-weight:600}.sk p{font-size:12.5px;color:var(--tx2);line-height:1.55}
+.sk-pills{display:flex;flex-wrap:wrap;gap:4px;margin-top:12px}
+.pill{font-size:10px;font-weight:500;padding:2px 7px;border-radius:3px;background:var(--sf2);color:var(--tx3)}
+
+/* EXPERIENCE */
+.exp{padding:24px 0;border-bottom:1px solid var(--bd);display:grid;grid-template-columns:120px 1fr;gap:20px}.exp:last-child{border-bottom:none}
+.exp-d{font-size:12px;color:var(--tx3);font-weight:500;padding-top:2px;font-variant-numeric:tabular-nums}
+.exp-r{font-size:15px;font-weight:600;letter-spacing:-.01em;margin-bottom:1px}
+.exp-c{font-size:13px;color:var(--tx2);margin-bottom:6px}.exp-p{font-size:13px;color:var(--tx2);line-height:1.6}
+
+/* CTA */
+.cta-box{background:var(--tx);color:var(--bg);border-radius:16px;margin:0 32px 32px;padding:56px;text-align:center}
+.cta-box .st{color:#fff;margin-bottom:6px}.cta-box .sd{color:rgba(255,255,255,.5);margin:0 auto 28px;max-width:400px}
+.cta-links{display:flex;gap:8px;justify-content:center;flex-wrap:wrap}
+.cta-l{font-size:13px;font-weight:500;padding:10px 20px;border:1px solid rgba(255,255,255,.15);border-radius:8px;color:rgba(255,255,255,.7);transition:border-color var(--d-fast) var(--ease-out),color var(--d-fast) var(--ease-out),transform var(--d-fast) var(--spring)}.cta-l:hover{border-color:rgba(255,255,255,.4);color:#fff;transform:translateY(-1px)}.cta-l:active{transform:translateY(0) scale(.98)}
+
+.foot{text-align:center;padding:24px;font-size:11px;color:var(--tx3)}
+
+/* SCROLL REVEAL */
+/* SCROLL REVEAL - progressive enhancement only */
+.rv{opacity:1;transform:none}
+.js .rv{opacity:0;transform:translateY(24px);transition:opacity var(--d-enter) var(--ease-out),transform var(--d-enter) var(--spring)}
+.js .rv.in{opacity:1;transform:translateY(0)}
+.js .hero .rv:nth-child(1){transition-delay:.1s}.js .hero .rv:nth-child(2){transition-delay:.2s}.js .hero .rv:nth-child(3){transition-delay:.32s}.js .hero .rv:nth-child(4){transition-delay:.44s}
+.js hr{transform:scaleX(0);transform-origin:left;transition:transform var(--d-slow) var(--spring)}.js hr.in{transform:scaleX(1)}
+
+/* RESPONSIVE */
+@media(max-width:900px){.work-item{grid-template-columns:1fr;gap:16px;padding:28px 0}.work-info{padding:0 24px 8px}.work-thumb{padding:8px 24px}.sk-grid{grid-template-columns:1fr}.about-grid{grid-template-columns:1fr 1fr}.about-cols{grid-template-columns:1fr;gap:32px}.exp{grid-template-columns:1fr;gap:4px}.cta-box{margin:0 20px 20px;padding:40px 24px}}
+@media(max-width:640px){.w{padding:0 20px}nav{padding:0 20px}.hero{padding:110px 0 56px}.s{padding:56px 0}.nr a:not(.cta){display:none}.about-grid{grid-template-columns:1fr 1fr}}
+</style>
+<script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+
+<nav>
+  <a href="#" class="logo">Opeyemi Ajimati</a>
+  <div class="nr">
+    <a href="#work">Work</a>
+    <a href="#about">About</a>
+    <a href="#experience">Experience</a>
+    <a href="#contact" class="cta">Contact</a>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="w">
+    <div class="badge rv"><span class="dot"></span> Available for work</div>
+    <h1 class="rv">Designing complex systems that feel simple</h1>
+    <p class="hero-p rv">Senior Product Designer with 7+ years in B2B platforms, fintech, and data-heavy regulated environments. I simplify complexity through research-driven UX, design systems, and tight cross-functional delivery.</p>
+    <div class="btns rv">
+      <a href="#work" class="btn btn-p">View work ↓</a>
+      <a href="#contact" class="btn">Get in touch</a>
+    </div>
+  </div>
+</section>
+
+<hr>
+
+<section class="s" id="about">
+  <div class="w">
+    <div class="sl rv">About</div>
+    <h2 class="st rv">Opeyemi Ajimati</h2>
+    <p class="about-intro rv">Senior Product Designer in Berlin. 7+ years turning complex, data-heavy platforms into intuitive experiences. I build design systems, simplify regulatory workflows, and ship AI-powered features across enterprise and consumer products.</p>
+    <div class="about-grid rv">
+      <div class="about-card"><dt>Location</dt><dd>Berlin, Germany</dd></div>
+      <div class="about-card"><dt>Citizenship</dt><dd>German</dd></div>
+      <div class="about-card"><dt>Languages</dt><dd>English, German</dd></div>
+      <div class="about-card"><dt>Education</dt><dd>RMIT UX Design</dd></div>
+    </div>
+    <div class="about-cols rv">
+      <div class="about-col">
+        <h4>How I work</h4>
+        <p>Research first, always. I run user interviews and usability tests before touching pixels. I build shared design systems so teams ship faster. I sit with engineers during implementation because handoff docs alone are not enough.</p>
+      </div>
+      <div class="about-col">
+        <h4>What sets me apart</h4>
+        <p>I have been the sole designer responsible for an entire enterprise platform, and I have been one of many on a cross-functional squad. I understand cloud infrastructure, write production CSS, and hold Scrum and Product Owner certifications.</p>
+      </div>
+    </div>
+    <div class="rv">
+      <h4 style="font-size:13px;font-weight:600;margin-bottom:10px">Domain expertise</h4>
+      <div class="domain-tags">
+        <span class="dtag">UI/UX Design</span><span class="dtag">Design Systems</span><span class="dtag">AI/Human-AI Patterns</span><span class="dtag">Fintech</span><span class="dtag">Climate Tech</span><span class="dtag">EdTech</span><span class="dtag">B2B Platforms</span><span class="dtag">B2C Products</span><span class="dtag">Data-Heavy UX</span><span class="dtag">Enterprise SaaS</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr>
+
+<section class="s" id="work">
+  <div class="w">
+    <div class="sl rv">Selected Work</div>
+    <h2 class="st rv">Case Studies</h2>
+    <p class="sd rv">End-to-end product design grounded in user research and validated through testing.</p>
+
+    <div class="work-list">
+
+      <a href="projects/design-system.html" class="work-item rv">
+        <div class="work-thumb" style="background:#FAFAFA"><img src="assets/design-system-thumb.png" alt="Enterprise Design System"></div>
+        <div class="work-info">
+          <div class="work-num">01</div>
+          <div class="work-meta"><span class="wm">Design Systems</span><span class="wm">Enterprise</span><span class="wm">NDA</span></div>
+          <div class="work-name">Enterprise Design System</div>
+          <p class="work-desc">Built a 60+ component system from scratch for a global climate-tech platform. Unified 3 product squads, cut design-to-dev handoff by 40%.</p>
+          <span class="work-cta">Read case study →</span>
+        </div>
+      </a>
+
+      <a href="projects/renuir.html" class="work-item rv">
+        <div class="work-thumb" style="background:#0A0A0A"><img src="assets/renuir-chat-match.png" alt="Renuir"></div>
+        <div class="work-info">
+          <div class="work-num">02</div>
+          <div class="work-meta"><span class="wm">Mobile App</span><span class="wm">0 to 1</span><span class="wm">Lost and Found</span></div>
+          <div class="work-name">Renuir</div>
+          <p class="work-desc">Designed a 47-screen mobile platform for Europe's lost-and-found ecosystem. AI matching, ownership verification, safe meetups, and a passport gamification system.</p>
+          <span class="work-cta">Read case study →</span>
+        </div>
+      </a>
+
+      <a href="projects/compliance.html" class="work-item rv">
+        <div class="work-thumb" style="background:#F8F9FC"><img src="assets/sbti-upload.png" alt="Target Validation Platform"></div>
+        <div class="work-info">
+          <div class="work-num">03</div>
+          <div class="work-meta"><span class="wm">B2B Enterprise</span><span class="wm">Climate Tech</span><span class="wm">Data UX</span></div>
+          <div class="work-name">Target Validation Platform</div>
+          <p class="work-desc">Simplified a 14-step compliance validation workflow to 6 steps for an enterprise platform processing climate targets across thousands of global companies.</p>
+          <span class="work-cta">Read case study →</span>
+        </div>
+      </a>
+
+      <a href="projects/sportipb.html" class="work-item rv">
+        <div class="work-thumb" style="background:#111"><img src="assets/sportipb-desktop.png" alt="Sportipb"></div>
+        <div class="work-info">
+          <div class="work-num">04</div>
+          <div class="work-meta"><span class="wm">Web Design</span><span class="wm">Landing Page</span><span class="wm">Community</span></div>
+          <div class="work-name">Sportipb</div>
+          <p class="work-desc">Full landing page redesign from research through A/B testing. +42% sign-up conversion, -34% bounce rate, SUS score of 82.5.</p>
+          <span class="work-cta">Read case study →</span>
+        </div>
+      </a>
+
+      <a href="projects/bitchain.html" class="work-item rv">
+        <div class="work-thumb" style="background:#0A0A0F"><img src="assets/bitchain-hero.png" alt="Bitchain"></div>
+        <div class="work-info">
+          <div class="work-num">05</div>
+          <div class="work-meta"><span class="wm">Fintech</span><span class="wm">Crypto Wallet</span><span class="wm">Mobile</span></div>
+          <div class="work-name">Bitchain</div>
+          <p class="work-desc">Crypto wallet management app for the growing wave of everyday crypto users. Portfolio tracking, secure transactions, and real-time market data.</p>
+          <span class="work-cta">Read case study →</span>
+        </div>
+      </a>
+
+      <a href="projects/paywise.html" class="work-item rv">
+        <div class="work-thumb" style="background:#0A0A14"><img src="assets/paywise-hero.png" alt="PayWise"></div>
+        <div class="work-info">
+          <div class="work-num">06</div>
+          <div class="work-meta"><span class="wm">Fintech</span><span class="wm">Mobile App</span><span class="wm">B2C</span></div>
+          <div class="work-name">PayWise</div>
+          <p class="work-desc">Card and expense management app. Real-time transaction tracking, budget categories, savings goals, and multi-card wallet in one unified interface.</p>
+          <span class="work-cta">Read case study →</span>
+        </div>
+      </a>
+
+      <a href="projects/pay4me.html" class="work-item rv">
+        <div class="work-thumb" style="background:#F8F6F3"><img src="assets/pay4me.jpg" alt="Pay4Me"></div>
+        <div class="work-info">
+          <div class="work-num">07</div>
+          <div class="work-meta"><span class="wm">Fintech</span><span class="wm">EdTech</span></div>
+          <div class="work-name">Pay4Me Finance</div>
+          <p class="work-desc">$500M+ processed across 150+ countries. Trust-first design for international student payment transfers.</p>
+          <span class="work-cta">Read case study →</span>
+        </div>
+      </a>
+
+      <a href="projects/eduapp.html" class="work-item rv">
+        <div class="work-thumb" style="background:#F0F0F0"><img src="assets/eduapp-real.png" alt="EduApp"></div>
+        <div class="work-info">
+          <div class="work-num">08</div>
+          <div class="work-meta"><span class="wm">EdTech</span><span class="wm">Mobile + Web</span><span class="wm">Nigeria</span></div>
+          <div class="work-name">EduApp</div>
+          <p class="work-desc">E-learning platform for the Nigerian market. Adaptive learning paths, offline-first mobile experience, and interactive quizzes for secondary school students.</p>
+          <span class="work-cta">Read case study →</span>
+        </div>
+      </a>
+
+      <a href="projects/fivo.html" class="work-item rv">
+        <div class="work-thumb" style="background:#EDF3FF"><img src="assets/fivo.jpg" alt="Fivo AI"></div>
+        <div class="work-info">
+          <div class="work-num">09</div>
+          <div class="work-meta"><span class="wm">AI SaaS</span><span class="wm">Productivity</span></div>
+          <div class="work-name">Fivo AI</div>
+          <p class="work-desc">AI meeting assistant with transcription, smart summaries, and team integrations. +52% sign-up rate after redesign.</p>
+          <span class="work-cta">Read case study →</span>
+        </div>
+      </a>
+
+      <a href="projects/raridex.html" class="work-item rv">
+        <div class="work-thumb" style="background:#F0F5F0"><img src="assets/raridex.jpg" alt="Raridex"></div>
+        <div class="work-info">
+          <div class="work-num">10</div>
+          <div class="work-meta"><span class="wm">Analytics</span><span class="wm">CRM</span></div>
+          <div class="work-name">Raridex</div>
+          <p class="work-desc">Analytics and CRM platform with real-time dashboards, custom reporting, and integrations for growing businesses.</p>
+          <span class="work-cta">Read case study →</span>
+        </div>
+      </a>
+
+      <a href="projects/outbound.html" class="work-item rv">
+        <div class="work-thumb" style="background:#F8F5F0"><img src="assets/outbound-1.png" alt="Outbound"></div>
+        <div class="work-info">
+          <div class="work-num">11</div>
+          <div class="work-meta"><span class="wm">Mobile App</span><span class="wm">AI Travel</span><span class="wm">B2C</span></div>
+          <div class="work-name">Outbound</div>
+          <p class="work-desc">AI-powered travel planning app. Generates personalized itineraries, manages bookings, and tracks trips with a passport stamp gamification system.</p>
+          <span class="work-cta">Read case study →</span>
+        </div>
+      </a>
+
+      <a href="projects/martly.html" class="work-item rv">
+        <div class="work-thumb" style="background:#F1F4F2"><img src="assets/martly.jpg" alt="Martly"></div>
+        <div class="work-info">
+          <div class="work-num">12</div>
+          <div class="work-meta"><span class="wm">CRM</span><span class="wm">SaaS</span></div>
+          <div class="work-name">Martly CRM</div>
+          <p class="work-desc">CRM for growing teams with pipeline management, analytics, and collaboration tools. +41% trial sign-ups.</p>
+          <span class="work-cta">Read case study →</span>
+        </div>
+      </a>
+
+      <a href="projects/dashboard.html" class="work-item rv">
+        <div class="work-thumb" style="background:#F8F7F5"><img src="assets/dashboard.jpg" alt="Admin Dashboard"></div>
+        <div class="work-info">
+          <div class="work-num">13</div>
+          <div class="work-meta"><span class="wm">Dashboard</span><span class="wm">Analytics</span></div>
+          <div class="work-name">Admin Dashboard</div>
+          <p class="work-desc">Business intelligence dashboard for revenue, users, projects, and traffic at a glance.</p>
+          <span class="work-cta">Read case study →</span>
+        </div>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<hr>
+
+<section class="s" id="skills">
+  <div class="w">
+    <div class="sl rv">Capabilities</div>
+    <h2 class="st rv">What I bring</h2>
+    <p class="sd rv">Deep expertise in UI/UX design with working knowledge across frontend and delivery.</p>
+    <div class="sk-grid rv">
+      <div class="sk"><div class="sk-top"><span class="sk-icon">🎯</span><h4>End-to-End UX Design</h4></div><p>Research, information architecture, interaction design, wireframes, prototyping, hi-fi UI, and developer handoff across full product lifecycles.</p><div class="sk-pills"><span class="pill">User Flows</span><span class="pill">Wireframing</span><span class="pill">Prototyping</span><span class="pill">Hi-Fi UI</span></div></div>
+      <div class="sk"><div class="sk-top"><span class="sk-icon">🔬</span><h4>User Research</h4></div><p>User interviews, usability testing, Jobs-to-be-Done, heuristic evaluation, behavioral analytics, A/B testing, and journey mapping.</p><div class="sk-pills"><span class="pill">JTBD</span><span class="pill">Usability Testing</span><span class="pill">Hotjar</span><span class="pill">Maze</span></div></div>
+      <div class="sk"><div class="sk-top"><span class="sk-icon">✏️</span><h4>Design Systems</h4></div><p>Component library architecture, design tokens, multi-product systems. Built 60+ component libraries scaling across parallel product squads.</p><div class="sk-pills"><span class="pill">Figma</span><span class="pill">Tokens</span><span class="pill">Component Libraries</span><span class="pill">WCAG 2.1</span></div></div>
+      <div class="sk"><div class="sk-top"><span class="sk-icon">🤖</span><h4>AI and Data UX</h4></div><p>Human-AI collaboration patterns, explainability UI, AI-assisted review flows where users trust, audit, and override automated outputs.</p><div class="sk-pills"><span class="pill">AI Patterns</span><span class="pill">Data Extraction</span><span class="pill">Document UX</span></div></div>
+      <div class="sk"><div class="sk-top"><span class="sk-icon">💻</span><h4>Frontend Development</h4></div><p>Production-grade HTML/CSS/JS, React, responsive implementation, and design-to-code handoff that reduces engineering ambiguity.</p><div class="sk-pills"><span class="pill">React</span><span class="pill">HTML/CSS</span><span class="pill">Tailwind</span><span class="pill">Framer</span></div></div>
+      <div class="sk"><div class="sk-top"><span class="sk-icon">🔄</span><h4>Agile Delivery</h4></div><p>PSM I, PSPO I, PMI-ACP certified. Cross-functional collaboration, OKR-aligned design, stakeholder management, and design critique facilitation.</p><div class="sk-pills"><span class="pill">Scrum</span><span class="pill">Jira</span><span class="pill">Confluence</span><span class="pill">Notion</span></div></div>
+    </div>
+  </div>
+</section>
+
+<hr>
+
+<section class="s" id="experience">
+  <div class="w">
+    <div class="sl rv">Experience</div>
+    <h2 class="st rv">Where I have worked</h2>
+    <div style="max-width:700px;margin-top:28px">
+      <div class="exp rv"><div class="exp-d">Feb 2023 - Present</div><div><div class="exp-r">Senior Product Designer</div><div class="exp-c">Science Based Targets initiative (SBTi), Berlin</div><div class="exp-p">Sole product designer for an enterprise platform handling climate target submissions across thousands of documents. Owned end-to-end design across 3 product squads. Simplified a 14-step validation workflow to 6 steps. Built a 60+ component design system. Ran 30+ research sessions with enterprise users.</div></div></div>
+      <div class="exp rv"><div class="exp-d">Dec 2019 - Dec 2022</div><div><div class="exp-r">UX Designer</div><div class="exp-c">Universal Investment (Enlyte), Frankfurt am Main</div><div class="exp-p">Designed interfaces for a multi-product fintech platform covering digital asset lifecycle management, tokenization, and primary market trading. Built a 60+ component design system across 4 product areas. Led end-to-end UX for the tokenization module.</div></div></div>
+      <div class="exp rv"><div class="exp-d">May 2017 - Aug 2019</div><div><div class="exp-r">UX Designer</div><div class="exp-c">Deveote Technologies, Lagos, Nigeria</div><div class="exp-p">Delivered end-to-end design across 6+ client products in fintech, health, and logistics. Introduced structured user testing. Presented design rationale to C-level stakeholders.</div></div></div>
+    </div>
+  </div>
+</section>
+
+<hr>
+
+<section class="s" id="contact" style="padding-bottom:0">
+  <div class="cta-box rv">
+    <h2 class="st">Let's work together</h2>
+    <p class="sd">Open to senior product design roles across Europe.</p>
+    <div class="cta-links">
+      <a href="mailto:opeuxdesigns@yahoo.com" class="cta-l">Email</a>
+      <a href="https://www.linkedin.com/in/ajimatiopeyemi/" target="_blank" class="cta-l">LinkedIn</a>
+      <a href="https://www.behance.net/ope_mi" target="_blank" class="cta-l">Behance</a>
+    </div>
+  </div>
+</section>
+
+<footer class="foot">© 2025 Opeyemi Ajimati</footer>
+
+<script>
+document.querySelectorAll('a[href^="#"]').forEach(a=>{a.addEventListener('click',e=>{e.preventDefault();document.querySelector(a.getAttribute('href'))?.scrollIntoView({behavior:'smooth'})})});
+const ro=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');ro.unobserve(e.target)}})},{threshold:0.08,rootMargin:'0px 0px -40px 0px'});
+document.querySelectorAll('.rv,hr').forEach(el=>ro.observe(el));
+const nav=document.querySelector('nav');
+window.addEventListener('scroll',()=>{const y=window.scrollY;nav.style.boxShadow=y>20?'0 1px 8px rgba(0,0,0,0.04)':'none';nav.style.background=y>20?'rgba(255,255,255,0.92)':'rgba(255,255,255,0.82)';},{passive:true});
+</script>
+</body>
+</html>

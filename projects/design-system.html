@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Enterprise Design System | Opeyemi Ajimati</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,300;0,14..32,400;0,14..32,500;0,14..32,600;0,14..32,700;1,14..32,400&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#fff;--sf:#FAFAFA;--sf2:#F5F5F5;--tx:#0A0A0A;--tx2:#555;--tx3:#999;--bd:#EBEBEB;--bd2:#D4D4D4;--r:12px;--f:'Inter',system-ui,-apple-system,'Helvetica Neue',Helvetica,sans-serif;--tr:0.2s ease;--ac:#0A0A0A}
+html{scroll-behavior:smooth}body{font-family:var(--f);background:var(--bg);color:var(--tx);-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;font-feature-settings:'ss01','ss02','cv01';line-height:1.55}a{color:inherit;text-decoration:none}img{display:block;max-width:100%}
+
+nav{position:fixed;top:0;left:0;right:0;z-index:100;height:56px;display:flex;align-items:center;justify-content:space-between;padding:0 32px;background:rgba(255,255,255,0.82);backdrop-filter:blur(20px);border-bottom:1px solid var(--bd)}
+.back{font-size:13px;color:var(--tx2);display:flex;align-items:center;gap:6px;transition:color var(--tr)}.back:hover{color:var(--tx)}
+.case-num{font-size:11px;font-weight:500;color:var(--tx3);letter-spacing:0.5px}
+
+.w{max-width:760px;margin:0 auto;padding:0 32px}
+.w-wide{max-width:1000px;margin:0 auto;padding:0 32px}
+
+/* HERO */
+.hero{padding:120px 0 48px}
+.hero-tags{display:flex;gap:6px;margin-bottom:20px;flex-wrap:wrap}
+.htag{font-size:11px;font-weight:500;padding:4px 10px;border-radius:6px;background:var(--sf2);color:var(--tx2)}
+.hero h1{font-size:clamp(28px,4vw,42px);font-weight:700;letter-spacing:-0.035em;line-height:1.15;margin-bottom:16px}
+.hero-lead{font-size:17px;color:var(--tx2);line-height:1.65;margin-bottom:32px}
+.meta-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.meta-cell{padding:14px 16px;background:var(--sf);border-radius:10px;border:1px solid var(--bd)}
+.meta-cell dt{font-size:9px;font-weight:600;text-transform:uppercase;letter-spacing:1.2px;color:var(--tx3);margin-bottom:2px}
+.meta-cell dd{font-size:13px;font-weight:500}
+
+/* METRICS */
+.metrics{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--bd);border:1px solid var(--bd);border-radius:var(--r);overflow:hidden;margin:48px 0}
+.mtr{background:var(--bg);padding:28px;text-align:center}
+.mtr .n{font-size:28px;font-weight:700;letter-spacing:-0.03em;line-height:1}
+.mtr .l{font-size:11px;color:var(--tx3);margin-top:4px}
+
+hr{border:none;height:1px;background:var(--bd);margin:48px 0}
+
+/* NDA BANNER */
+.nda{background:var(--sf);border:1px solid var(--bd);border-radius:var(--r);padding:20px 24px;display:flex;align-items:flex-start;gap:12px;margin:32px 0}
+.nda-icon{width:32px;height:32px;border-radius:8px;background:var(--sf2);display:flex;align-items:center;justify-content:center;font-size:16px;flex-shrink:0;margin-top:2px}
+.nda h4{font-size:13px;font-weight:600;margin-bottom:2px}
+.nda p{font-size:12px;color:var(--tx2);line-height:1.5}
+
+/* SECTION TEXT */
+.slab{font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:1.5px;color:var(--tx3);margin-bottom:6px}
+.stitle{font-size:clamp(20px,2.5vw,26px);font-weight:700;letter-spacing:-0.025em;line-height:1.25;margin-bottom:10px}
+.stext{font-size:14px;color:var(--tx2);line-height:1.7;margin-bottom:20px}
+
+/* CARDS */
+.card-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:24px 0}
+.crd{background:var(--sf);border:1px solid var(--bd);border-radius:10px;padding:24px}
+.crd h4{font-size:14px;font-weight:600;margin-bottom:6px}
+.crd p{font-size:13px;color:var(--tx2);line-height:1.6}
+.crd .stat{font-size:24px;font-weight:700;letter-spacing:-0.02em;margin-bottom:6px}
+
+/* VISUAL BLOCKS (design system illustrations) */
+.ds-visual{background:var(--sf);border:1px solid var(--bd);border-radius:var(--r);padding:40px;margin:24px 0;overflow:hidden}
+
+/* Token visualization */
+.token-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.token-group h5{font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:1px;color:var(--tx3);margin-bottom:10px}
+.token-row{display:flex;align-items:center;gap:8px;margin-bottom:8px}
+.token-swatch{width:28px;height:28px;border-radius:6px;border:1px solid var(--bd);flex-shrink:0}
+.token-label{font-size:11px;font-weight:500;color:var(--tx2)}
+.token-value{font-size:10px;color:var(--tx3);font-family:monospace}
+
+/* Component anatomy */
+.anatomy{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin:24px 0}
+.anatomy-card{background:var(--sf);border:1px solid var(--bd);border-radius:10px;padding:24px}
+.anatomy-preview{background:var(--bg);border:1px solid var(--bd);border-radius:8px;padding:20px;margin-bottom:16px;display:flex;align-items:center;justify-content:center;min-height:80px}
+.anatomy-card h5{font-size:13px;font-weight:600;margin-bottom:4px}
+.anatomy-card p{font-size:12px;color:var(--tx2);line-height:1.5}
+
+/* Fake button components */
+.ds-btn{display:inline-flex;align-items:center;gap:6px;padding:8px 16px;border-radius:6px;font-size:12px;font-weight:500;font-family:var(--f)}
+.ds-btn-primary{background:var(--tx);color:#fff}
+.ds-btn-secondary{background:var(--bg);color:var(--tx);border:1px solid var(--bd)}
+.ds-btn-ghost{background:transparent;color:var(--tx2)}
+.ds-btn-sm{padding:5px 10px;font-size:11px;border-radius:4px}
+
+/* Fake input */
+.ds-input{padding:8px 12px;border:1px solid var(--bd);border-radius:6px;font-size:12px;color:var(--tx);background:var(--bg);width:100%;font-family:var(--f)}
+
+/* Spacing scale */
+.spacing-row{display:flex;align-items:center;gap:12px;margin-bottom:8px}
+.spacing-block{background:var(--tx);opacity:0.08;border-radius:2px;height:20px;flex-shrink:0}
+.spacing-label{font-size:10px;color:var(--tx3);font-family:monospace;min-width:48px}
+
+/* Process timeline */
+.timeline{position:relative;padding-left:28px;margin:24px 0}
+.timeline::before{content:'';position:absolute;left:6px;top:8px;bottom:8px;width:1px;background:var(--bd)}
+.tl-item{position:relative;padding-bottom:28px}
+.tl-item:last-child{padding-bottom:0}
+.tl-dot{position:absolute;left:-28px;top:4px;width:13px;height:13px;border-radius:50%;background:var(--bg);border:2px solid var(--bd2)}
+.tl-item.active .tl-dot{background:var(--tx);border-color:var(--tx)}
+.tl-week{font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:1px;color:var(--tx3);margin-bottom:2px}
+.tl-title{font-size:14px;font-weight:600;margin-bottom:2px}
+.tl-desc{font-size:12px;color:var(--tx2);line-height:1.55}
+
+/* Principles */
+.principle-list{display:flex;flex-direction:column;gap:12px;margin:24px 0}
+.principle{display:flex;gap:16px;padding:20px;background:var(--sf);border-radius:10px;border:1px solid var(--bd)}
+.principle-num{font-size:24px;font-weight:700;color:var(--bd2);min-width:36px;line-height:1}
+.principle h4{font-size:14px;font-weight:600;margin-bottom:2px}
+.principle p{font-size:12px;color:var(--tx2);line-height:1.5}
+
+/* Redacted blocks */
+.redacted{background:repeating-linear-gradient(135deg,var(--sf),var(--sf) 10px,var(--sf2) 10px,var(--sf2) 20px);border:1px solid var(--bd);border-radius:var(--r);padding:48px;text-align:center;margin:24px 0}
+.redacted-icon{font-size:28px;margin-bottom:12px}
+.redacted h4{font-size:14px;font-weight:600;margin-bottom:4px}
+.redacted p{font-size:12px;color:var(--tx3)}
+
+/* BACK */
+.back-s{padding:64px;text-align:center}
+.back-btn{display:inline-flex;align-items:center;gap:6px;padding:12px 24px;border:1px solid var(--bd);border-radius:8px;font-size:13px;font-weight:500;transition:all var(--tr)}
+.back-btn:hover{border-color:var(--tx)}
+
+@media(max-width:768px){
+  .w,.w-wide{padding:0 20px}
+  .meta-grid{grid-template-columns:1fr 1fr}
+  .metrics{grid-template-columns:1fr 1fr}
+  .card-grid,.anatomy{grid-template-columns:1fr}
+  .token-grid{grid-template-columns:1fr}
+  nav{padding:0 20px}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="../index.html" class="back">← Portfolio</a>
+  <span class="case-num">Design System Case Study</span>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="w">
+    <div class="hero-tags">
+      <span class="htag">Design Systems</span>
+      <span class="htag">Enterprise B2B</span>
+      <span class="htag">Climate Tech</span>
+      <span class="htag">NDA Protected</span>
+    </div>
+    <h1>Building a design system for a global enterprise platform from zero</h1>
+    <p class="hero-lead">How I created a 60+ component design system from scratch for an enterprise climate-tech platform handling regulatory workflows across thousands of global companies. The system unified 3 product squads and became the foundation for all new feature development.</p>
+    <div class="meta-grid">
+      <div class="meta-cell"><dt>Role</dt><dd>Sole Product Designer</dd></div>
+      <div class="meta-cell"><dt>Company</dt><dd>Enterprise Climate-Tech</dd></div>
+      <div class="meta-cell"><dt>Timeline</dt><dd>6 months (ongoing)</dd></div>
+      <div class="meta-cell"><dt>Impact</dt><dd>3 squads, 60+ components</dd></div>
+    </div>
+  </div>
+</section>
+
+<div class="w">
+  <div class="nda">
+    <div class="nda-icon">🔒</div>
+    <div>
+      <h4>Work under NDA</h4>
+      <p>Due to a non-disclosure agreement, I cannot show the final production UI. This case study focuses on my process, methodology, design decisions, and measurable outcomes. The component previews shown are simplified representations, not actual product screens.</p>
+    </div>
+  </div>
+</div>
+
+<!-- METRICS -->
+<div class="w">
+  <div class="metrics">
+    <div class="mtr"><div class="n">60+</div><div class="l">Components built</div></div>
+    <div class="mtr"><div class="n">3</div><div class="l">Product squads unified</div></div>
+    <div class="mtr"><div class="n">40%</div><div class="l">Faster design-to-dev</div></div>
+    <div class="mtr"><div class="n">30%</div><div class="l">Engagement lift</div></div>
+  </div>
+</div>
+
+<!-- THE PROBLEM -->
+<div class="w">
+  <hr>
+  <div class="slab">01 The Problem</div>
+  <h2 class="stitle">Three squads, three different design languages</h2>
+  <p class="stext">When I joined, the enterprise platform had no shared design system. Each of the 3 product squads had developed their own patterns independently. Buttons looked different across modules. Spacing was inconsistent. Form patterns varied. Engineers spent 30% of their time recreating UI that already existed somewhere else in the product.</p>
+
+  <div class="card-grid">
+    <div class="crd"><div class="stat">3</div><h4>Siloed squads</h4><p>When I joined, each squad was building UI independently with zero shared patterns between them.</p></div>
+    <div class="crd"><div class="stat">30%</div><h4>Wasted engineering time</h4><p>Engineers were recreating UI that already existed elsewhere. I identified this through an audit in my first two weeks.</p></div>
+    <div class="crd"><div class="stat">14→3</div><h4>Button variants consolidated</h4><p>I found 14 different button styles across the product. I consolidated them into 3 purposeful variants with clear usage rules.</p></div>
+    <div class="crd"><div class="stat">60+</div><h4>Components I built</h4><p>From zero shared components to a 60+ component Figma library with tokens, documentation, and usage guidelines.</p></div>
+  </div>
+</div>
+
+<!-- AUDIT -->
+<div class="w">
+  <hr>
+  <div class="slab">02 Interface Audit</div>
+  <h2 class="stitle">Cataloging the chaos</h2>
+  <p class="stext">Before building anything, I conducted a comprehensive interface audit. I screenshotted every unique UI pattern across the platform, categorized them, and created a visual inventory. This became the foundation for stakeholder alignment: showing leadership the inconsistency made the case for investment self-evident.</p>
+
+  <div class="card-grid">
+    <div class="crd">
+      <h4>What I found</h4>
+      <p>14 button styles. 8 different input patterns. 5 card layouts. 3 navigation paradigms. 4 color palettes. No accessibility standards. No spacing scale. No type hierarchy.</p>
+    </div>
+    <div class="crd">
+      <h4>How I presented it</h4>
+      <p>Created a "Wall of Inconsistency" in FigJam showing every variant side by side. Presented to product, engineering, and leadership. The visual impact made the problem undeniable. Got buy-in for a dedicated design system workstream within one week.</p>
+    </div>
+  </div>
+</div>
+
+<!-- PRINCIPLES -->
+<div class="w">
+  <hr>
+  <div class="slab">03 Design Principles</div>
+  <h2 class="stitle">What this system stands for</h2>
+  <p class="stext">Before designing a single component, I facilitated a workshop with all 3 squad leads, the PM, and 2 senior engineers to define the principles that would guide every design decision. These became our north star for trade-off discussions.</p>
+
+  <div class="principle-list">
+    <div class="principle"><div class="principle-num">01</div><div><h4>Clarity over cleverness</h4><p>Enterprise users handle complex regulatory data. Every component must communicate its purpose instantly. No ambiguity, no decoration for its own sake.</p></div></div>
+    <div class="principle"><div class="principle-num">02</div><div><h4>Consistency is trust</h4><p>When buttons behave the same everywhere, users build muscle memory. Muscle memory builds confidence. Confidence builds trust in the platform.</p></div></div>
+    <div class="principle"><div class="principle-num">03</div><div><h4>Accessible by default</h4><p>WCAG 2.1 AA compliance is not a feature request, it is a baseline. Every component ships with proper contrast ratios, keyboard navigation, and screen reader support.</p></div></div>
+    <div class="principle"><div class="principle-num">04</div><div><h4>Composable, not prescriptive</h4><p>Components should combine freely to serve use cases we haven't imagined yet. Atomic building blocks over rigid templates.</p></div></div>
+    <div class="principle"><div class="principle-num">05</div><div><h4>Document everything</h4><p>A component that isn't documented doesn't exist. Usage guidelines, do/don't examples, and interaction specs ship with every component.</p></div></div>
+  </div>
+</div>
+
+<!-- TOKENS -->
+<div class="w-wide">
+  <div class="w" style="padding:0">
+    <hr>
+    <div class="slab">04 Design Tokens</div>
+    <h2 class="stitle">The foundation layer</h2>
+    <p class="stext">I established a token architecture that separates primitive values (raw colors, pixel sizes) from semantic tokens (what they mean in context). This lets us theme the system and maintain consistency even as the visual language evolves.</p>
+  </div>
+
+  <div class="ds-visual">
+    <div class="token-grid">
+      <div class="token-group">
+        <h5>Color primitives</h5>
+        <div class="token-row"><div class="token-swatch" style="background:#0A0A0A"></div><div><div class="token-label">Gray 900</div><div class="token-value">--gray-900: #0A0A0A</div></div></div>
+        <div class="token-row"><div class="token-swatch" style="background:#555"></div><div><div class="token-label">Gray 600</div><div class="token-value">--gray-600: #555555</div></div></div>
+        <div class="token-row"><div class="token-swatch" style="background:#999"></div><div><div class="token-label">Gray 400</div><div class="token-value">--gray-400: #999999</div></div></div>
+        <div class="token-row"><div class="token-swatch" style="background:#EBEBEB"></div><div><div class="token-label">Gray 200</div><div class="token-value">--gray-200: #EBEBEB</div></div></div>
+        <div class="token-row"><div class="token-swatch" style="background:#F5F5F5"></div><div><div class="token-label">Gray 100</div><div class="token-value">--gray-100: #F5F5F5</div></div></div>
+        <div class="token-row"><div class="token-swatch" style="background:#16A34A"></div><div><div class="token-label">Green 600</div><div class="token-value">--green-600: #16A34A</div></div></div>
+        <div class="token-row"><div class="token-swatch" style="background:#DC2626"></div><div><div class="token-label">Red 600</div><div class="token-value">--red-600: #DC2626</div></div></div>
+      </div>
+      <div class="token-group">
+        <h5>Spacing scale</h5>
+        <div class="spacing-row"><div class="spacing-label">4px</div><div class="spacing-block" style="width:16px"></div></div>
+        <div class="spacing-row"><div class="spacing-label">8px</div><div class="spacing-block" style="width:32px"></div></div>
+        <div class="spacing-row"><div class="spacing-label">12px</div><div class="spacing-block" style="width:48px"></div></div>
+        <div class="spacing-row"><div class="spacing-label">16px</div><div class="spacing-block" style="width:64px"></div></div>
+        <div class="spacing-row"><div class="spacing-label">24px</div><div class="spacing-block" style="width:96px"></div></div>
+        <div class="spacing-row"><div class="spacing-label">32px</div><div class="spacing-block" style="width:128px"></div></div>
+        <div class="spacing-row"><div class="spacing-label">48px</div><div class="spacing-block" style="width:192px"></div></div>
+      </div>
+      <div class="token-group">
+        <h5>Typography scale</h5>
+        <div style="margin-bottom:12px"><div style="font-size:24px;font-weight:700;letter-spacing:-0.03em;line-height:1.2">Heading XL</div><div class="token-value">24px / 700 / -0.03em</div></div>
+        <div style="margin-bottom:12px"><div style="font-size:18px;font-weight:600;letter-spacing:-0.02em">Heading L</div><div class="token-value">18px / 600 / -0.02em</div></div>
+        <div style="margin-bottom:12px"><div style="font-size:14px;font-weight:600">Heading M</div><div class="token-value">14px / 600</div></div>
+        <div style="margin-bottom:12px"><div style="font-size:14px;color:var(--tx2)">Body</div><div class="token-value">14px / 400 / 1.55 lh</div></div>
+        <div style="margin-bottom:12px"><div style="font-size:12px;color:var(--tx3)">Caption</div><div class="token-value">12px / 400 / 1.4 lh</div></div>
+        <div><div style="font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:1px;color:var(--tx3)">OVERLINE</div><div class="token-value">10px / 600 / uppercase</div></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- COMPONENT SAMPLES -->
+<div class="w">
+  <hr>
+  <div class="slab">05 Component Architecture</div>
+  <h2 class="stitle">Atomic building blocks</h2>
+  <p class="stext">I structured the library using atomic design principles: tokens feed into primitives (buttons, inputs), primitives compose into patterns (form groups, card layouts), and patterns assemble into templates (page layouts, workflow steps). Every component includes states, variants, and responsive behavior.</p>
+
+  <div class="anatomy">
+    <div class="anatomy-card">
+      <div class="anatomy-preview" style="gap:8px;flex-wrap:wrap">
+        <span class="ds-btn ds-btn-primary">Primary</span>
+        <span class="ds-btn ds-btn-secondary">Secondary</span>
+        <span class="ds-btn ds-btn-ghost">Ghost</span>
+        <span class="ds-btn ds-btn-primary ds-btn-sm">Small</span>
+      </div>
+      <h5>Buttons (4 variants, 3 sizes, 5 states)</h5>
+      <p>Primary, secondary, ghost, and destructive. Each supports default, hover, active, disabled, and loading states. Consolidated from 14 inconsistent button styles.</p>
+    </div>
+    <div class="anatomy-card">
+      <div class="anatomy-preview" style="flex-direction:column;gap:8px;width:100%">
+        <input class="ds-input" placeholder="Default input" readonly>
+        <input class="ds-input" style="border-color:#DC2626" placeholder="Error state" readonly>
+      </div>
+      <h5>Inputs (6 types, validation states)</h5>
+      <p>Text, email, number, select, textarea, and search. Inline validation with error, warning, and success states. Consistent label, helper text, and error message positioning.</p>
+    </div>
+    <div class="anatomy-card">
+      <div class="anatomy-preview" style="gap:6px">
+        <span style="font-size:11px;font-weight:500;padding:3px 8px;border-radius:4px;background:#DCFCE7;color:#166534">Approved</span>
+        <span style="font-size:11px;font-weight:500;padding:3px 8px;border-radius:4px;background:#FEF3C7;color:#92400E">Pending</span>
+        <span style="font-size:11px;font-weight:500;padding:3px 8px;border-radius:4px;background:#FEE2E2;color:#991B1B">Rejected</span>
+        <span style="font-size:11px;font-weight:500;padding:3px 8px;border-radius:4px;background:#F3F4F6;color:#374151">Draft</span>
+      </div>
+      <h5>Status badges (8 semantic states)</h5>
+      <p>Consistent status communication across all workflow states. Color-coded with accessible contrast ratios. Used across document review, target validation, and submission tracking.</p>
+    </div>
+    <div class="anatomy-card">
+      <div class="anatomy-preview" style="flex-direction:column;gap:4px;width:100%">
+        <div style="display:flex;justify-content:space-between;align-items:center;padding:8px 12px;background:var(--sf);border-radius:6px;font-size:12px;width:100%"><span style="font-weight:500">Document name.pdf</span><span style="color:var(--tx3);font-size:10px">2.4 MB</span></div>
+        <div style="display:flex;justify-content:space-between;align-items:center;padding:8px 12px;background:var(--sf);border-radius:6px;font-size:12px;width:100%"><span style="font-weight:500">Validation report.xlsx</span><span style="color:var(--tx3);font-size:10px">890 KB</span></div>
+      </div>
+      <h5>Data table rows and list items</h5>
+      <p>Flexible row components for document lists, data tables, and workflow queues. Supports selection, expansion, inline actions, and drag reordering.</p>
+    </div>
+  </div>
+</div>
+
+<!-- REDACTED FINAL UI -->
+<div class="w">
+  <hr>
+  <div class="slab">06 The System in Production</div>
+  <h2 class="stitle">How it all comes together</h2>
+  <p class="stext">The design system now powers every screen in the platform. Here is where the components live in context. Due to NDA, I cannot show the actual product UI, but I can share the structural patterns.</p>
+
+  <div class="redacted">
+    <div class="redacted-icon">🔒</div>
+    <h4>Production screens under NDA</h4>
+    <p>The final product UI is confidential. Contact me directly for a walkthrough.</p>
+  </div>
+
+  <div class="card-grid">
+    <div class="crd">
+      <h4>Document review workflow</h4>
+      <p>A multi-step guided flow that replaced a 14-step process with 6 clear steps. Uses progress indicators, inline validation, contextual help, and auto-save. Task completion improved 30%.</p>
+    </div>
+    <div class="crd">
+      <h4>AI-assisted search</h4>
+      <p>Search and recommendation features surfacing relevant guidance from large unstructured document sets. Designed trust, audit, and override patterns for AI outputs.</p>
+    </div>
+    <div class="crd">
+      <h4>Target submission dashboard</h4>
+      <p>Enterprise dashboard for tracking climate target submissions across multiple entities. Status tracking, document management, and multi-stakeholder review.</p>
+    </div>
+    <div class="crd">
+      <h4>Data entry forms</h4>
+      <p>Complex forms handling hundreds of data points with conditional logic, cross-field validation, and progressive disclosure to manage cognitive load.</p>
+    </div>
+  </div>
+</div>
+
+<!-- PROCESS -->
+<div class="w">
+  <hr>
+  <div class="slab">07 Rollout Process</div>
+  <h2 class="stitle">How I shipped it across 3 squads</h2>
+  <p class="stext">Building the system was only half the challenge. Adoption required buy-in, education, and ongoing support. Here is the phased rollout approach I designed and executed.</p>
+
+  <div class="timeline">
+    <div class="tl-item active"><div class="tl-dot"></div><div class="tl-week">Weeks 1-2</div><div class="tl-title">Audit and alignment</div><div class="tl-desc">Interface audit, stakeholder presentations, principle definition workshop. Got executive buy-in and dedicated time allocation.</div></div>
+    <div class="tl-item active"><div class="tl-dot"></div><div class="tl-week">Weeks 3-4</div><div class="tl-title">Token foundation</div><div class="tl-desc">Color, typography, spacing, and elevation tokens. Published as Figma styles and CSS variables simultaneously. Engineers could start using tokens before components shipped.</div></div>
+    <div class="tl-item active"><div class="tl-dot"></div><div class="tl-week">Weeks 5-8</div><div class="tl-title">Core components (v1)</div><div class="tl-desc">Buttons, inputs, selects, badges, cards, tables, modals, tooltips. Each with full state coverage, responsive variants, and usage documentation. Reviewed with all 3 squads.</div></div>
+    <div class="tl-item active"><div class="tl-dot"></div><div class="tl-week">Weeks 9-12</div><div class="tl-title">Pattern library</div><div class="tl-desc">Form groups, navigation, page layouts, workflow templates, data display patterns. Composed from core components. Tested against real product use cases.</div></div>
+    <div class="tl-item active"><div class="tl-dot"></div><div class="tl-week">Weeks 13-16</div><div class="tl-title">Migration and adoption</div><div class="tl-desc">Worked with each squad to migrate existing screens. Held weekly office hours for questions. Created migration guides for common patterns. Tracked adoption metrics.</div></div>
+    <div class="tl-item"><div class="tl-dot"></div><div class="tl-week">Ongoing</div><div class="tl-title">Governance and evolution</div><div class="tl-desc">Bi-weekly design system review sessions. Contribution guidelines for engineers. Versioning and changelog. New component requests go through a lightweight RFC process.</div></div>
+  </div>
+</div>
+
+<!-- RESULTS -->
+<div class="w">
+  <hr>
+  <div class="slab">08 Results</div>
+  <h2 class="stitle">Measurable impact</h2>
+
+  <div class="card-grid">
+    <div class="crd"><div class="stat">40%</div><h4>Faster design-to-dev handoff</h4><p>Shared component names between Figma and code eliminated translation overhead. Engineers grab components by name instead of rebuilding from screenshots.</p></div>
+    <div class="crd"><div class="stat">30%</div><h4>User engagement lift</h4><p>Consistent patterns built user confidence. Validated through assumption-testing workshops with product and stakeholder teams.</p></div>
+    <div class="crd"><div class="stat">60+</div><h4>Components shipped</h4><p>Covering the full product surface: navigation, forms, data display, feedback, overlays, and workflow-specific patterns.</p></div>
+    <div class="crd"><div class="stat">100%</div><h4>WCAG 2.1 AA compliance</h4><p>Every component meets accessibility standards out of the box. Contrast ratios, keyboard navigation, focus indicators, and screen reader support.</p></div>
+  </div>
+</div>
+
+<!-- REFLECTIONS -->
+<div class="w">
+  <hr>
+  <div class="slab">09 Reflections</div>
+  <h2 class="stitle">What I learned</h2>
+
+  <div class="card-grid">
+    <div class="crd">
+      <h4>A design system is a product</h4>
+      <p>It has users (designers and engineers), a roadmap, versioning, support channels, and adoption metrics. Treating it as a product, not a side project, is what made it succeed.</p>
+    </div>
+    <div class="crd">
+      <h4>Start with tokens, not components</h4>
+      <p>Tokens gave engineers something to use immediately, even before components were ready. This built momentum and trust before the first component shipped.</p>
+    </div>
+    <div class="crd">
+      <h4>Adoption is a people problem</h4>
+      <p>The best design system in the world is worthless if nobody uses it. Weekly office hours, migration guides, and embedding in squad rituals mattered more than the Figma file quality.</p>
+    </div>
+    <div class="crd">
+      <h4>Enterprise complexity requires composability</h4>
+      <p>Rigid templates break when use cases multiply. Atomic, composable components survived use cases we never anticipated, while template-based approaches would have required constant rework.</p>
+    </div>
+  </div>
+</div>
+
+<div class="back-s">
+  <a href="../index.html" class="back-btn">← Back to portfolio</a>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,206 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Sportipb | Opeyemi Ajimati</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,300;0,14..32,400;0,14..32,500;0,14..32,600;0,14..32,700;1,14..32,400&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#fff;--sf:#FAFAFA;--sf2:#F5F5F5;--tx:#0A0A0A;--tx2:#555;--tx3:#999;--bd:#EBEBEB;--bd2:#D4D4D4;--r:12px;--f:'Inter',system-ui,-apple-system,'Helvetica Neue',Helvetica,sans-serif}
+html{scroll-behavior:smooth}
+body{font-family:var(--f);background:var(--bg);color:var(--tx);-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;font-feature-settings:'ss01','ss02','cv01';line-height:1.55}
+a{color:inherit;text-decoration:none}img{display:block;max-width:100%}
+
+/* Nav */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;height:56px;display:flex;align-items:center;justify-content:space-between;padding:0 32px;background:rgba(255,255,255,0.82);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid var(--bd)}
+.back{font-size:13px;color:var(--tx2);display:flex;align-items:center;gap:6px;transition:color 0.2s}.back:hover{color:var(--tx)}
+
+/* Layout */
+.w{max-width:760px;margin:0 auto;padding:0 32px}
+.ww{max-width:1040px;margin:0 auto;padding:0 32px}
+
+/* Hero */
+.hero{padding:120px 0 48px}
+.tags{display:flex;gap:6px;margin-bottom:20px;flex-wrap:wrap}
+.tg{font-size:11px;font-weight:500;padding:4px 10px;border-radius:6px;background:var(--sf2);color:var(--tx2)}
+.hero h1{font-size:clamp(28px,4vw,40px);font-weight:700;letter-spacing:-0.035em;line-height:1.15;margin-bottom:16px}
+.lead{font-size:16px;color:var(--tx2);line-height:1.65;margin-bottom:32px}
+.mg{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.mc{padding:14px 16px;background:var(--sf);border-radius:10px;border:1px solid var(--bd)}
+.mc dt{font-size:9px;font-weight:600;text-transform:uppercase;letter-spacing:1.2px;color:var(--tx3);margin-bottom:2px}
+.mc dd{font-size:13px;font-weight:500}
+
+/* Metrics */
+.metrics{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--bd);border:1px solid var(--bd);border-radius:var(--r);overflow:hidden;margin:48px 0}
+.mt{background:var(--bg);padding:24px;text-align:center}
+.mt .n{font-size:26px;font-weight:700;letter-spacing:-0.03em}
+.mt .l{font-size:11px;color:var(--tx3);margin-top:3px}
+
+hr{border:none;height:1px;background:var(--bd);margin:48px 0}
+
+/* Section text */
+.sl{font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:1.5px;color:var(--tx3);margin-bottom:6px}
+.sh{font-size:clamp(20px,2.5vw,24px);font-weight:700;letter-spacing:-0.02em;line-height:1.25;margin-bottom:10px}
+.sp{font-size:14px;color:var(--tx2);line-height:1.7;margin-bottom:20px}
+
+/* Cards */
+.cg{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:20px 0}
+.cd{background:var(--sf);border:1px solid var(--bd);border-radius:10px;padding:22px}
+.cd h4{font-size:13px;font-weight:600;margin-bottom:5px}
+.cd p{font-size:12.5px;color:var(--tx2);line-height:1.55}
+.cd .stat{font-size:22px;font-weight:700;margin-bottom:5px}
+
+/* 5W1H */
+.wh{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;margin:20px 0}
+.wh-item{padding:18px;background:var(--sf);border:1px solid var(--bd);border-radius:10px}
+.wh-item strong{display:block;font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:1px;color:var(--tx3);margin-bottom:4px}
+.wh-item p{font-size:12.5px;color:var(--tx2);line-height:1.5}
+
+/* Images */
+.img-box{margin:24px 0;border-radius:var(--r);overflow:hidden;border:1px solid var(--bd);padding:20px}
+.img-box img{width:100%;border-radius:8px}
+.img-dark{background:#0A0A0F;border-color:#1a1a1a}
+.img-row{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:24px 0}
+.img-row img{border-radius:var(--r);border:1px solid var(--bd);width:100%}
+.img-row-3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;margin:24px 0}
+.img-row-3 img{border-radius:var(--r);border:1px solid var(--bd);width:100%}
+.img-caption{font-size:11px;color:var(--tx3);text-align:center;margin-top:8px}
+
+/* Personas */
+.pr{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;margin:20px 0}
+.pc{background:var(--sf);border:1px solid var(--bd);border-radius:10px;padding:22px}
+.pc h4{font-size:14px;font-weight:600;margin-bottom:2px}
+.pc .rl{font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:1px;color:var(--tx3);margin-bottom:10px}
+.pc blockquote{font-style:italic;font-size:12.5px;color:var(--tx2);border-left:2px solid var(--bd2);padding-left:10px;margin-bottom:12px;line-height:1.5}
+.pc dl dt{font-size:9px;font-weight:600;text-transform:uppercase;letter-spacing:1px;color:var(--tx3);margin-top:10px}
+.pc dl dd{font-size:12px;color:var(--tx2);line-height:1.5}
+
+/* Flow */
+.flow{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin:20px 0;padding:28px;background:var(--sf);border:1px solid var(--bd);border-radius:10px}
+.fn{padding:7px 13px;border-radius:7px;font-size:11.5px;font-weight:500;white-space:nowrap}
+.fn-s{background:var(--tx);color:#fff}
+.fn-a{background:var(--bg);border:1px solid var(--bd)}
+.fn-e{background:#DCFCE7;color:#166534}
+.fa{color:var(--tx3);font-size:12px}
+
+/* Testing */
+.tg2{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:20px 0}
+.tc{background:var(--sf);border:1px solid var(--bd);border-radius:10px;padding:22px}
+.tc h4{font-size:13px;font-weight:600;margin-bottom:14px}
+.br{margin-bottom:12px}
+.bl{display:flex;justify-content:space-between;font-size:12px;margin-bottom:3px}
+.bl .v{font-weight:600}
+.bar{height:5px;background:var(--sf2);border-radius:3px;overflow:hidden}
+.bf{height:100%;border-radius:3px}
+.bg{background:#34D399}.ba{background:#0A0A0A}.by{background:#FBBF24}
+
+/* Findings */
+.fd{background:var(--sf);border-radius:0 10px 10px 0;padding:18px 22px;margin-bottom:10px;border-left:3px solid}
+.fd.c{border-color:#F87171}.fd.i{border-color:var(--tx)}.fd.s{border-color:#34D399}
+.fd .sv{font-size:9px;font-weight:600;text-transform:uppercase;letter-spacing:1px;margin-bottom:2px}
+.fd.c .sv{color:#F87171}.fd.i .sv{color:var(--tx)}.fd.s .sv{color:#34D399}
+.fd h4{font-size:13px;font-weight:600;margin-bottom:2px}
+.fd p{font-size:12px;color:var(--tx2);line-height:1.5}
+
+/* Back */
+.bk{padding:48px;text-align:center}
+.bk-btn{display:inline-flex;align-items:center;gap:6px;padding:10px 20px;border:1px solid var(--bd);border-radius:8px;font-size:13px;font-weight:500;transition:border-color 0.2s}
+.bk-btn:hover{border-color:var(--tx)}
+
+/* NDA */
+.nda{background:var(--sf);border:1px solid var(--bd);border-radius:10px;padding:18px 22px;display:flex;align-items:flex-start;gap:10px;margin:20px 0}
+.nda-icon{font-size:16px;margin-top:1px}
+.nda h4{font-size:12px;font-weight:600;margin-bottom:2px}
+.nda p{font-size:11.5px;color:var(--tx2);line-height:1.5}
+
+@media(max-width:900px){.pr{grid-template-columns:1fr}.wh{grid-template-columns:1fr 1fr}}
+@media(max-width:768px){.w,.ww{padding:0 20px}.mg,.metrics{grid-template-columns:1fr 1fr}.cg,.tg2,.img-row{grid-template-columns:1fr}.img-row-3{grid-template-columns:1fr 1fr}.wh{grid-template-columns:1fr}nav{padding:0 20px}}
+</style>
+</head><body>
+<nav><a href="../index.html" class="back">← Portfolio</a></nav>
+<section class="hero"><div class="w">
+<div class="tags"><span class="tg">Web Design</span><span class="tg">Landing Page</span><span class="tg">Sports Community</span></div>
+<h1>Sportipb: redesigning a sports community platform</h1>
+<p class="lead">Full landing page redesign for a sports community platform connecting fans, players, and coaches. From fragmented fan experiences to a unified, conversion-optimized experience that increased sign-ups by 42%.</p>
+<div class="mg"><div class="mc"><dt>Role</dt><dd>Lead Product Designer</dd></div><div class="mc"><dt>Type</dt><dd>Web / Landing Page</dd></div><div class="mc"><dt>Timeline</dt><dd>8 Weeks</dd></div><div class="mc"><dt>Users Tested</dt><dd>12</dd></div></div>
+</div></section>
+
+<div class="w"><div class="metrics">
+<div class="mt"><div class="n">+42%</div><div class="l">Sign-up conversion</div></div>
+<div class="mt"><div class="n">-34%</div><div class="l">Bounce rate</div></div>
+<div class="mt"><div class="n">82.5</div><div class="l">SUS score</div></div>
+<div class="mt"><div class="n">+47</div><div class="l">NPS</div></div>
+</div></div>
+
+<div class="w"><hr>
+<div class="sl">01 Framing the Problem</div>
+<h2 class="sh">5W1H: Defining the design challenge</h2>
+<div class="wh">
+<div class="wh-item"><strong>Who</strong><p>Sports fans, amateur players, and coaches looking for a community beyond just scores</p></div>
+<div class="wh-item"><strong>What</strong><p>A landing page that communicates Sportipb's unique value and converts visitors to members</p></div>
+<div class="wh-item"><strong>When</strong><p>After competitor analysis showed no platform combining community features with live data</p></div>
+<div class="wh-item"><strong>Where</strong><p>Web, responsive across desktop, tablet, and mobile (73% mobile traffic)</p></div>
+<div class="wh-item"><strong>Why</strong><p>68% bounce rate and 2.1% conversion. Users could not understand the value prop in under 5 seconds</p></div>
+<div class="wh-item"><strong>How</strong><p>Research-driven redesign with A/B tested CTAs, trust signals, and progressive disclosure</p></div>
+</div>
+</div>
+
+<div class="w"><hr>
+<div class="sl">02 Research</div>
+<h2 class="sh">Quantitative + qualitative discovery</h2>
+<p class="sp">I audited 6 months of analytics data, conducted 8 user interviews, benchmarked 6 competitors, and facilitated a stakeholder alignment workshop.</p>
+<div class="cg">
+<div class="cd"><div class="stat">68%</div><h4>Bounce rate on existing page</h4><p>Users leaving within 8 seconds on average. No clear value proposition in the hero section.</p></div>
+<div class="cd"><div class="stat">6/8</div><h4>Could not explain what Sportipb does</h4><p>Interview participants failed to identify the value proposition from the hero section alone.</p></div>
+<div class="cd"><div class="stat">7/8</div><h4>Wanted trust signals</h4><p>Testimonials, user counts, and partner logos were cited as sign-up motivators by nearly all participants.</p></div>
+<div class="cd"><div class="stat">73%</div><h4>Mobile traffic</h4><p>Yet mobile conversion was 0.8% vs 3.4% desktop. The mobile experience was an afterthought.</p></div>
+</div></div>
+
+<div class="w"><hr>
+<div class="sl">03 Personas</div>
+<h2 class="sh">Three user types with different entry points</h2>
+<div class="pr">
+<div class="pc"><h4>Marcus, 24</h4><div class="rl">Passionate Fan</div><blockquote>"I follow 3 leagues across 2 time zones. I need everything in one place."</blockquote><dl><dt>Goals</dt><dd>Live scores, tactical analysis, match-day community</dd><dt>Frustrations</dt><dd>Fragmented across 4+ apps, surface-level discussions</dd></dl></div>
+<div class="pc"><h4>Aisha, 31</h4><div class="rl">Amateur Player</div><blockquote>"I play Sunday league and coach U-12s. I want to connect with local players."</blockquote><dl><dt>Goals</dt><dd>Game tracking, local community, coaching resources</dd><dt>Frustrations</dt><dd>Platforms cater only to elite sports</dd></dl></div>
+<div class="pc"><h4>David, 45</h4><div class="rl">Youth Coach</div><blockquote>"I need one platform for team management, not three separate apps."</blockquote><dl><dt>Goals</dt><dd>Team management, parent communication, training content</dd><dt>Frustrations</dt><dd>Tools too expensive or too complex for his level</dd></dl></div>
+</div></div>
+
+<div class="w"><hr>
+<div class="sl">04 Final Designs</div>
+<h2 class="sh">The solution, delivered</h2>
+<p class="sp">The redesigned landing page leads with an action-oriented hero, builds trust through community stats and social proof, and converts through community-framed CTAs. "Join Our Team" outperformed "Sign Up Free" by 59% in A/B testing.</p>
+</div>
+<div class="ww">
+<div class="img-box img-dark"><img src="../assets/sportipb-desktop.png" alt="Desktop mockup"></div>
+<div class="img-row" style="margin-top:12px">
+<div class="img-box img-dark" style="margin:0"><img src="../assets/sportipb-tablet.png" alt="Tablet view"></div>
+<div class="img-box" style="margin:0;background:#f0ede8"><img src="../assets/sportipb-full.jpg" alt="Full page design"></div>
+</div>
+</div>
+
+<div class="w"><hr>
+<div class="sl">05 Usability Testing</div>
+<h2 class="sh">Validated with 12 users across 2 rounds</h2>
+<div class="tg2">
+<div class="tc"><h4>Task completion</h4>
+<div class="br"><div class="bl"><span>Find sign-up CTA</span><span class="v">96%</span></div><div class="bar"><div class="bf bg" style="width:96%"></div></div></div>
+<div class="br"><div class="bl"><span>Understand value prop</span><span class="v">92%</span></div><div class="bar"><div class="bf bg" style="width:92%"></div></div></div>
+<div class="br"><div class="bl"><span>Find upcoming matches</span><span class="v">83%</span></div><div class="bar"><div class="bf ba" style="width:83%"></div></div></div>
+<div class="br"><div class="bl"><span>Identify community features</span><span class="v">88%</span></div><div class="bar"><div class="bf bg" style="width:88%"></div></div></div>
+</div>
+<div class="tc"><h4>Key metrics</h4>
+<div class="br"><div class="bl"><span>SUS Score</span><span class="v">82.5 / 100</span></div><div class="bar"><div class="bf bg" style="width:82.5%"></div></div></div>
+<div class="br"><div class="bl"><span>NPS</span><span class="v">+47 (Excellent)</span></div><div class="bar"><div class="bf bg" style="width:73%"></div></div></div>
+<div class="br"><div class="bl"><span>Value prop clarity</span><span class="v">3.2 seconds</span></div><div class="bar"><div class="bf bg" style="width:32%"></div></div></div>
+<div class="br"><div class="bl"><span>CTA conversion lift</span><span class="v">+59% (A/B)</span></div><div class="bar"><div class="bf bg" style="width:59%"></div></div></div>
+</div></div>
+<div class="fd s"><div class="sv">Validation</div><h4>Community language outperformed transactional framing</h4><p>"Join Our Team" beat "Sign Up Free" by 59% in A/B testing. Users are motivated by belonging, not features.</p></div>
+<div class="fd c"><div class="sv">Critical</div><h4>Mobile CTA was below the fold</h4><p>On devices under 375px, the primary CTA was hidden. Fixed with a persistent sticky CTA bar on mobile.</p></div>
+</div>
+
+<div class="w"><hr>
+<div class="sl">06 Reflections</div>
+<h2 class="sh">What I learned</h2>
+<div class="cg">
+<div class="cd"><h4>Test before you polish</h4><p>Guerrilla wireframe tests cost nothing but saved weeks. Validating the hero layout before any high-fidelity work was the single biggest time-saver.</p></div>
+<div class="cd"><h4>Mobile-first is not a suggestion</h4><p>With 73% mobile traffic, I should have started wireframes on mobile. Adapting desktop layouts down always creates compromise. Start small, scale up.</p></div>
+</div></div>
+<div class="bk"><a href="../index.html" class="bk-btn">← Back to portfolio</a></div>
+</body></html>

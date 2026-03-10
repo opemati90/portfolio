@@ -1,0 +1,205 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>EduApp | Opeyemi Ajimati</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,300;0,14..32,400;0,14..32,500;0,14..32,600;0,14..32,700;1,14..32,400&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#fff;--sf:#FAFAFA;--sf2:#F5F5F5;--tx:#0A0A0A;--tx2:#555;--tx3:#999;--bd:#EBEBEB;--bd2:#D4D4D4;--r:12px;--f:'Inter',system-ui,-apple-system,'Helvetica Neue',Helvetica,sans-serif}
+html{scroll-behavior:smooth}
+body{font-family:var(--f);background:var(--bg);color:var(--tx);-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;font-feature-settings:'ss01','ss02','cv01';line-height:1.55}
+a{color:inherit;text-decoration:none}img{display:block;max-width:100%}
+
+/* Nav */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;height:56px;display:flex;align-items:center;justify-content:space-between;padding:0 32px;background:rgba(255,255,255,0.82);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid var(--bd)}
+.back{font-size:13px;color:var(--tx2);display:flex;align-items:center;gap:6px;transition:color 0.2s}.back:hover{color:var(--tx)}
+
+/* Layout */
+.w{max-width:760px;margin:0 auto;padding:0 32px}
+.ww{max-width:1040px;margin:0 auto;padding:0 32px}
+
+/* Hero */
+.hero{padding:120px 0 48px}
+.tags{display:flex;gap:6px;margin-bottom:20px;flex-wrap:wrap}
+.tg{font-size:11px;font-weight:500;padding:4px 10px;border-radius:6px;background:var(--sf2);color:var(--tx2)}
+.hero h1{font-size:clamp(28px,4vw,40px);font-weight:700;letter-spacing:-0.035em;line-height:1.15;margin-bottom:16px}
+.lead{font-size:16px;color:var(--tx2);line-height:1.65;margin-bottom:32px}
+.mg{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.mc{padding:14px 16px;background:var(--sf);border-radius:10px;border:1px solid var(--bd)}
+.mc dt{font-size:9px;font-weight:600;text-transform:uppercase;letter-spacing:1.2px;color:var(--tx3);margin-bottom:2px}
+.mc dd{font-size:13px;font-weight:500}
+
+/* Metrics */
+.metrics{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--bd);border:1px solid var(--bd);border-radius:var(--r);overflow:hidden;margin:48px 0}
+.mt{background:var(--bg);padding:24px;text-align:center}
+.mt .n{font-size:26px;font-weight:700;letter-spacing:-0.03em}
+.mt .l{font-size:11px;color:var(--tx3);margin-top:3px}
+
+hr{border:none;height:1px;background:var(--bd);margin:48px 0}
+
+/* Section text */
+.sl{font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:1.5px;color:var(--tx3);margin-bottom:6px}
+.sh{font-size:clamp(20px,2.5vw,24px);font-weight:700;letter-spacing:-0.02em;line-height:1.25;margin-bottom:10px}
+.sp{font-size:14px;color:var(--tx2);line-height:1.7;margin-bottom:20px}
+
+/* Cards */
+.cg{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:20px 0}
+.cd{background:var(--sf);border:1px solid var(--bd);border-radius:10px;padding:22px}
+.cd h4{font-size:13px;font-weight:600;margin-bottom:5px}
+.cd p{font-size:12.5px;color:var(--tx2);line-height:1.55}
+.cd .stat{font-size:22px;font-weight:700;margin-bottom:5px}
+
+/* 5W1H */
+.wh{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;margin:20px 0}
+.wh-item{padding:18px;background:var(--sf);border:1px solid var(--bd);border-radius:10px}
+.wh-item strong{display:block;font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:1px;color:var(--tx3);margin-bottom:4px}
+.wh-item p{font-size:12.5px;color:var(--tx2);line-height:1.5}
+
+/* Images */
+.img-box{margin:24px 0;border-radius:var(--r);overflow:hidden;border:1px solid var(--bd);padding:20px}
+.img-box img{width:100%;border-radius:8px}
+.img-dark{background:#0A0A0F;border-color:#1a1a1a}
+.img-row{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:24px 0}
+.img-row img{border-radius:var(--r);border:1px solid var(--bd);width:100%}
+.img-row-3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;margin:24px 0}
+.img-row-3 img{border-radius:var(--r);border:1px solid var(--bd);width:100%}
+.img-caption{font-size:11px;color:var(--tx3);text-align:center;margin-top:8px}
+
+/* Personas */
+.pr{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;margin:20px 0}
+.pc{background:var(--sf);border:1px solid var(--bd);border-radius:10px;padding:22px}
+.pc h4{font-size:14px;font-weight:600;margin-bottom:2px}
+.pc .rl{font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:1px;color:var(--tx3);margin-bottom:10px}
+.pc blockquote{font-style:italic;font-size:12.5px;color:var(--tx2);border-left:2px solid var(--bd2);padding-left:10px;margin-bottom:12px;line-height:1.5}
+.pc dl dt{font-size:9px;font-weight:600;text-transform:uppercase;letter-spacing:1px;color:var(--tx3);margin-top:10px}
+.pc dl dd{font-size:12px;color:var(--tx2);line-height:1.5}
+
+/* Flow */
+.flow{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin:20px 0;padding:28px;background:var(--sf);border:1px solid var(--bd);border-radius:10px}
+.fn{padding:7px 13px;border-radius:7px;font-size:11.5px;font-weight:500;white-space:nowrap}
+.fn-s{background:var(--tx);color:#fff}
+.fn-a{background:var(--bg);border:1px solid var(--bd)}
+.fn-e{background:#DCFCE7;color:#166534}
+.fa{color:var(--tx3);font-size:12px}
+
+/* Testing */
+.tg2{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:20px 0}
+.tc{background:var(--sf);border:1px solid var(--bd);border-radius:10px;padding:22px}
+.tc h4{font-size:13px;font-weight:600;margin-bottom:14px}
+.br{margin-bottom:12px}
+.bl{display:flex;justify-content:space-between;font-size:12px;margin-bottom:3px}
+.bl .v{font-weight:600}
+.bar{height:5px;background:var(--sf2);border-radius:3px;overflow:hidden}
+.bf{height:100%;border-radius:3px}
+.bg{background:#34D399}.ba{background:#0A0A0A}.by{background:#FBBF24}
+
+/* Findings */
+.fd{background:var(--sf);border-radius:0 10px 10px 0;padding:18px 22px;margin-bottom:10px;border-left:3px solid}
+.fd.c{border-color:#F87171}.fd.i{border-color:var(--tx)}.fd.s{border-color:#34D399}
+.fd .sv{font-size:9px;font-weight:600;text-transform:uppercase;letter-spacing:1px;margin-bottom:2px}
+.fd.c .sv{color:#F87171}.fd.i .sv{color:var(--tx)}.fd.s .sv{color:#34D399}
+.fd h4{font-size:13px;font-weight:600;margin-bottom:2px}
+.fd p{font-size:12px;color:var(--tx2);line-height:1.5}
+
+/* Back */
+.bk{padding:48px;text-align:center}
+.bk-btn{display:inline-flex;align-items:center;gap:6px;padding:10px 20px;border:1px solid var(--bd);border-radius:8px;font-size:13px;font-weight:500;transition:border-color 0.2s}
+.bk-btn:hover{border-color:var(--tx)}
+
+/* NDA */
+.nda{background:var(--sf);border:1px solid var(--bd);border-radius:10px;padding:18px 22px;display:flex;align-items:flex-start;gap:10px;margin:20px 0}
+.nda-icon{font-size:16px;margin-top:1px}
+.nda h4{font-size:12px;font-weight:600;margin-bottom:2px}
+.nda p{font-size:11.5px;color:var(--tx2);line-height:1.5}
+
+@media(max-width:900px){.pr{grid-template-columns:1fr}.wh{grid-template-columns:1fr 1fr}}
+@media(max-width:768px){.w,.ww{padding:0 20px}.mg,.metrics{grid-template-columns:1fr 1fr}.cg,.tg2,.img-row{grid-template-columns:1fr}.img-row-3{grid-template-columns:1fr 1fr}.wh{grid-template-columns:1fr}nav{padding:0 20px}}
+</style>
+</head><body>
+<nav><a href="../index.html" class="back">← Portfolio</a></nav>
+<section class="hero"><div class="w">
+<div class="tags"><span class="tg">EdTech</span><span class="tg">Mobile + Web</span><span class="tg">Nigerian Market</span><span class="tg">B2C</span></div>
+<h1>EduApp: quality education accessible to every Nigerian student</h1>
+<p class="lead">An adaptive e-learning platform for secondary school students in Nigeria. Built for low-bandwidth environments, offline-first mobile use, and the realities of the Nigerian education system.</p>
+<div class="mg"><div class="mc"><dt>Role</dt><dd>Lead Product Designer</dd></div><div class="mc"><dt>Market</dt><dd>Nigeria (B2C)</dd></div><div class="mc"><dt>Timeline</dt><dd>12 Weeks</dd></div><div class="mc"><dt>Users Tested</dt><dd>16</dd></div></div>
+</div></section>
+
+<div class="w"><div class="metrics">
+<div class="mt"><div class="n">3.2M</div><div class="l">Target students</div></div>
+<div class="mt"><div class="n">87%</div><div class="l">Task completion</div></div>
+<div class="mt"><div class="n">4.5/5</div><div class="l">Usability score</div></div>
+<div class="mt"><div class="n">42s</div><div class="l">Avg. onboarding</div></div>
+</div></div>
+
+<div class="ww"><div class="img-box" style="background:#F0F0F0"><img src="../assets/eduapp-real.png" alt="EduApp"></div></div>
+
+<div class="w"><hr>
+<div class="sl">01 Framing the Problem</div>
+<h2 class="sh">5W1H: Defining the design challenge</h2>
+<div class="wh">
+<div class="wh-item"><strong>Who</strong><p>Secondary school students (SS1-SS3) in Nigeria preparing for WAEC, NECO, and JAMB exams</p></div>
+<div class="wh-item"><strong>What</strong><p>An adaptive learning platform with curriculum-aligned content, quizzes, and progress tracking</p></div>
+<div class="wh-item"><strong>When</strong><p>During exam preparation seasons and daily study routines, often during commutes</p></div>
+<div class="wh-item"><strong>Where</strong><p>Mobile-first on Android devices (1-3GB RAM), used on 2G/3G networks and offline</p></div>
+<div class="wh-item"><strong>Why</strong><p>10.5M out-of-school children in Nigeria. Existing edtech assumes Western infrastructure</p></div>
+<div class="wh-item"><strong>How</strong><p>Offline-first architecture, ultra-light UI (under 15MB), curriculum-aligned content, adaptive learning paths</p></div>
+</div>
+</div>
+
+<div class="w"><hr>
+<div class="sl">02 Research</div>
+<h2 class="sh">Field research in Lagos</h2>
+<p class="sp">I interviewed 10 secondary school students, 4 teachers, and 2 school administrators across Lagos. Observed classroom dynamics, tested device capabilities, and mapped the actual learning journey.</p>
+<div class="cg">
+<div class="cd"><h4>Student interviews (n=10)</h4><p>Students wanted bite-sized content for commutes, interactive quizzes that feel like games, and offline access. The #1 request: "Let me study without data."</p></div>
+<div class="cd"><h4>Teacher interviews (n=4)</h4><p>Teachers wanted curriculum alignment (WAEC/NECO syllabus), student progress tracking, and a supplement to classroom teaching.</p></div>
+<div class="cd"><h4>Device audit (n=8)</h4><p>Mix of Android 8-12, screens 5-6.5 inches, 1-3GB RAM. App must be under 20MB and load in under 3 seconds on 3G.</p></div>
+<div class="cd"><h4>Competitive analysis</h4><p>Analyzed uLesson, Tuteria, PrepClass, Khan Academy. Gap: none offered true offline-first with curriculum-aligned adaptive learning.</p></div>
+</div></div>
+
+<div class="w"><hr>
+<div class="sl">03 Personas</div>
+<h2 class="sh">Designing for real Nigerian students</h2>
+<div class="pr">
+<div class="pc"><h4>Adaeze, 15</h4><div class="rl">SS2, Lagos</div><blockquote>"I study on the bus to school. I need something that works without data."</blockquote><dl><dt>Goals</dt><dd>Prepare for WAEC, study on commute</dd><dt>Context</dt><dd>Android phone, 2GB RAM, shared data plan</dd></dl></div>
+<div class="pc"><h4>Emeka, 16</h4><div class="rl">SS3, Enugu</div><blockquote>"Maths is hard and my teacher moves too fast."</blockquote><dl><dt>Goals</dt><dd>Go at own pace, practice with quizzes</dd><dt>Context</dt><dd>Borrowed phone, limited data, evening study</dd></dl></div>
+<div class="pc"><h4>Mrs. Okafor</h4><div class="rl">Mathematics Teacher</div><blockquote>"I have 60 students. I need to know who is falling behind."</blockquote><dl><dt>Goals</dt><dd>Assign homework, track class progress</dd><dt>Context</dt><dd>Feature phone, school computer lab</dd></dl></div>
+</div></div>
+
+<div class="w"><hr>
+<div class="sl">04 Key Design Decisions</div>
+<h2 class="sh">Built for the real Nigeria</h2>
+<div class="cg">
+<div class="cd"><h4>Offline-first</h4><p>Lessons download over WiFi. Students study completely offline. Progress syncs when connectivity returns.</p></div>
+<div class="cd"><h4>Curriculum-aligned</h4><p>Every lesson maps to WAEC/NECO syllabus. Search by subject, topic, and exam year.</p></div>
+<div class="cd"><h4>Adaptive paths</h4><p>Quiz results adjust difficulty and recommend review topics. Struggling with quadratics? The app surfaces prerequisite algebra first.</p></div>
+<div class="cd"><h4>Ultra-light UI</h4><p>App under 15MB. Every screen loads in under 2 seconds on 3G. Text-first, video optional for WiFi.</p></div>
+</div></div>
+
+<div class="w"><hr>
+<div class="sl">05 Usability Testing</div>
+<h2 class="sh">Tested with students and teachers in Lagos</h2>
+<div class="tg2">
+<div class="tc"><h4>Task completion</h4>
+<div class="br"><div class="bl"><span>Complete onboarding</span><span class="v">94%</span></div><div class="bar"><div class="bf bg" style="width:94%"></div></div></div>
+<div class="br"><div class="bl"><span>Find a topic</span><span class="v">88%</span></div><div class="bar"><div class="bf ba" style="width:88%"></div></div></div>
+<div class="br"><div class="bl"><span>Complete a quiz</span><span class="v">92%</span></div><div class="bar"><div class="bf bg" style="width:92%"></div></div></div>
+<div class="br"><div class="bl"><span>Download for offline</span><span class="v">79%</span></div><div class="bar"><div class="bf by" style="width:79%"></div></div></div>
+</div>
+<div class="tc"><h4>Key metrics</h4>
+<div class="br"><div class="bl"><span>SUS Score</span><span class="v">83 / 100</span></div><div class="bar"><div class="bf bg" style="width:83%"></div></div></div>
+<div class="br"><div class="bl"><span>Onboarding time</span><span class="v">42 seconds</span></div><div class="bar"><div class="bf bg" style="width:30%"></div></div></div>
+<div class="br"><div class="bl"><span>Daily return rate</span><span class="v">68%</span></div><div class="bar"><div class="bf ba" style="width:68%"></div></div></div>
+<div class="br"><div class="bl"><span>Quiz engagement</span><span class="v">4.5 / 5</span></div><div class="bar"><div class="bf bg" style="width:90%"></div></div></div>
+</div></div>
+<div class="fd s"><div class="sv">Validation</div><h4>Offline mode was the most valued feature</h4><p>7/8 students said offline access was the reason they would use EduApp over competitors.</p></div>
+<div class="fd c"><div class="sv">Critical</div><h4>Quiz timer caused anxiety</h4><p>Changed to optional timer with untimed "practice mode" as default. Timed mode for exam prep only.</p></div>
+</div>
+
+<div class="w"><hr>
+<div class="sl">06 Reflections</div>
+<h2 class="sh">What I learned</h2>
+<div class="cg">
+<div class="cd"><h4>Design for constraints, not ideals</h4><p>Great UX is not beautiful pixels on 4K screens. It is an interface that loads in 2 seconds on a phone with 1GB RAM and intermittent 3G.</p></div>
+<div class="cd"><h4>Local context changes everything</h4><p>Studying on a Lagos bus is fundamentally different from studying at a desk. Larger touch targets, sunlight-readable text, auto-save every 30 seconds.</p></div>
+</div></div>
+<div class="bk"><a href="../index.html" class="bk-btn">← Back to portfolio</a></div>
+</body></html>
