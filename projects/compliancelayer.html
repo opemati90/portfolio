@@ -1,0 +1,378 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>ComplianceLayer — Map once. Comply many times. | Opeyemi Ajimati</title>
+<meta name="description" content="Case study: a unified security & compliance platform concept — one shared model serving GDPR, ISO 27001, NIS2 and SOC 2, with traceable AI mapping.">
+<meta name="author" content="Opeyemi Ajimati">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<link rel="canonical" href="https://opeyemiajimati.vercel.app/projects/compliancelayer.html">
+<meta name="theme-color" content="#FAFAF7">
+
+<!-- Open Graph -->
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Opeyemi Ajimati — Portfolio">
+<meta property="og:title" content="ComplianceLayer — Map once. Comply many times. — Opeyemi Ajimati">
+<meta property="og:description" content="A unified security & compliance platform concept — one shared model serving GDPR, ISO 27001, NIS2 and SOC 2, with traceable AI mapping.">
+<meta property="og:url" content="https://opeyemiajimati.vercel.app/projects/compliancelayer.html">
+<meta property="og:image" content="https://opeyemiajimati.vercel.app/assets/compliancelayer-operator.png">
+<meta property="og:image:alt" content="ComplianceLayer operator view — one control mapped across four frameworks">
+<meta property="og:locale" content="en_US">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="ComplianceLayer — Map once. Comply many times. — Opeyemi Ajimati">
+<meta name="twitter:description" content="A unified security & compliance platform concept — one shared model serving GDPR, ISO 27001, NIS2 and SOC 2, with traceable AI mapping.">
+<meta name="twitter:image" content="https://opeyemiajimati.vercel.app/assets/compliancelayer-operator.png">
+
+<!-- Icons -->
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="alternate icon" href="../favicon-32.png" type="image/png" sizes="32x32">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<link rel="manifest" href="../site.webmanifest">
+
+<!-- Structured data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CreativeWork",
+  "name": "ComplianceLayer — Map once. Comply many times.",
+  "description": "A unified security & compliance platform concept — one shared model serving GDPR, ISO 27001, NIS2 and SOC 2, with traceable AI mapping.",
+  "image": "https://opeyemiajimati.vercel.app/assets/compliancelayer-operator.png",
+  "url": "https://opeyemiajimati.vercel.app/projects/compliancelayer.html",
+  "author": {
+    "@type": "Person",
+    "name": "Opeyemi Ajimati",
+    "url": "https://opeyemiajimati.vercel.app/",
+    "jobTitle": "Senior Product Designer"
+  },
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "Opeyemi Ajimati — Portfolio",
+    "url": "https://opeyemiajimati.vercel.app/"
+  }
+}
+</script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,300;0,14..32,400;0,14..32,500;0,14..32,600;0,14..32,700;1,14..32,400&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#fff;--sf:#FAFAFA;--sf2:#F5F5F5;--tx:#0A0A0A;--tx2:#555;--tx3:#999;--bd:#EBEBEB;--bd2:#D4D4D4;--r:12px;--f:'Inter',system-ui,-apple-system,'Helvetica Neue',Helvetica,sans-serif}
+html{scroll-behavior:smooth}
+body{font-family:var(--f);background:var(--bg);color:var(--tx);-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;font-feature-settings:'ss01','ss02','cv01';line-height:1.55}
+a{color:inherit;text-decoration:none}img{display:block;max-width:100%}
+
+/* Nav */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;height:56px;display:flex;align-items:center;justify-content:space-between;padding:0 32px;background:rgba(255,255,255,0.82);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid var(--bd)}
+.back{font-size:13px;color:var(--tx2);display:flex;align-items:center;gap:6px;transition:color 0.2s}.back:hover{color:var(--tx)}
+
+/* Layout */
+.w{max-width:760px;margin:0 auto;padding:0 32px}
+.ww{max-width:1040px;margin:0 auto;padding:0 32px}
+
+/* Hero */
+.hero{padding:120px 0 48px}
+.tags{display:flex;gap:6px;margin-bottom:20px;flex-wrap:wrap}
+.tg{font-size:11px;font-weight:500;padding:4px 10px;border-radius:6px;background:var(--sf2);color:var(--tx2)}
+.hero h1{font-size:clamp(28px,4vw,40px);font-weight:700;letter-spacing:-0.035em;line-height:1.15;margin-bottom:16px}
+.lead{font-size:16px;color:var(--tx2);line-height:1.65;margin-bottom:32px}
+.mg{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.mc{padding:14px 16px;background:var(--sf);border-radius:10px;border:1px solid var(--bd)}
+.mc dt{font-size:9px;font-weight:600;text-transform:uppercase;letter-spacing:1.2px;color:var(--tx3);margin-bottom:2px}
+.mc dd{font-size:13px;font-weight:500}
+
+/* Metrics */
+.metrics{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--bd);border:1px solid var(--bd);border-radius:var(--r);overflow:hidden;margin:48px 0}
+.mt{background:var(--bg);padding:24px;text-align:center}
+.mt .n{font-size:26px;font-weight:700;letter-spacing:-0.03em}
+.mt .l{font-size:11px;color:var(--tx3);margin-top:3px}
+
+hr{border:none;height:1px;background:var(--bd);margin:48px 0}
+
+/* Section text */
+.sl{font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:1.5px;color:var(--tx3);margin-bottom:6px}
+.sh{font-size:clamp(20px,2.5vw,24px);font-weight:700;letter-spacing:-0.02em;line-height:1.25;margin-bottom:10px}
+.sp{font-size:14px;color:var(--tx2);line-height:1.7;margin-bottom:20px}
+.pull{font-size:clamp(17px,2.2vw,20px);font-weight:600;letter-spacing:-0.01em;line-height:1.45;margin:24px 0;color:var(--tx)}
+
+/* Cards */
+.cg{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:20px 0}
+.cg3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;margin:20px 0}
+.cd{background:var(--sf);border:1px solid var(--bd);border-radius:10px;padding:22px}
+.cd h4{font-size:13px;font-weight:600;margin-bottom:5px}
+.cd p{font-size:12.5px;color:var(--tx2);line-height:1.55}
+.cd .stat{font-size:22px;font-weight:700;margin-bottom:5px}
+
+/* Tables */
+.tbl{width:100%;border-collapse:collapse;margin:20px 0;border:1px solid var(--bd);border-radius:10px;overflow:hidden;font-size:12.5px}
+.tbl th{background:var(--sf);text-align:left;padding:10px 14px;font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:1px;color:var(--tx3);border-bottom:1px solid var(--bd)}
+.tbl td{padding:11px 14px;border-bottom:1px solid var(--bd);color:var(--tx2);vertical-align:top;line-height:1.5}
+.tbl tr:last-child td{border-bottom:none}
+.tbl td:first-child{font-weight:600;color:var(--tx);white-space:nowrap}
+.tbl-wrap{overflow-x:auto;margin:20px 0}
+.tbl-wrap .tbl{margin:0;min-width:640px}
+
+/* Layer diagram */
+.layers{margin:24px 0}
+.lyr{border:1px solid var(--bd);border-radius:10px;padding:18px 20px;background:var(--bg)}
+.lyr+.lyr-arrow+.lyr{margin-top:0}
+.lyr-arrow{text-align:center;font-size:10px;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:var(--tx3);padding:8px 0}
+.lyr .lt{font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:1.2px;color:var(--tx3);margin-bottom:10px}
+.pills{display:flex;flex-wrap:wrap;gap:7px}
+.pl{font-size:11.5px;font-weight:500;padding:5px 12px;border-radius:99px;border:1px solid var(--bd2);color:var(--tx2);background:var(--bg)}
+.pl.dash{border-style:dashed;font-weight:600;color:var(--tx);padding:8px 18px}
+.pl.dark{background:var(--tx);color:#fff;border-color:var(--tx)}
+.lyr.mid{background:var(--sf)}
+
+/* Numbered promises */
+.nm{display:grid;grid-template-columns:44px 1fr;gap:16px;padding:18px 0;border-bottom:1px solid var(--bd);align-items:start}
+.nm:last-child{border-bottom:none}
+.nm .no{font-size:20px;font-weight:700;color:var(--tx3);letter-spacing:-0.02em}
+.nm h4{font-size:12.5px;font-weight:600;text-transform:uppercase;letter-spacing:0.8px;margin-bottom:4px}
+.nm p{font-size:12.5px;color:var(--tx2);line-height:1.6}
+
+/* Personas */
+.pr{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:20px 0}
+.pc{background:var(--sf);border:1px solid var(--bd);border-radius:10px;padding:22px}
+.pc h4{font-size:14px;font-weight:600;margin-bottom:2px}
+.pc .rl{font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:1px;color:var(--tx3);margin-bottom:10px}
+.pc blockquote{font-style:italic;font-size:12.5px;color:var(--tx2);border-left:2px solid var(--bd2);padding-left:10px;margin-bottom:12px;line-height:1.5}
+.pc dl dt{font-size:9px;font-weight:600;text-transform:uppercase;letter-spacing:1px;color:var(--tx3);margin-top:10px}
+.pc dl dd{font-size:12px;color:var(--tx2);line-height:1.5}
+
+/* Flow */
+.flow{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin:20px 0;padding:28px;background:var(--sf);border:1px solid var(--bd);border-radius:10px}
+.fn{padding:7px 13px;border-radius:7px;font-size:11.5px;font-weight:500;white-space:nowrap}
+.fn-s{background:var(--tx);color:#fff}
+.fn-a{background:var(--bg);border:1px solid var(--bd)}
+.fn-e{background:#DCFCE7;color:#166534}
+.fa{color:var(--tx3);font-size:12px}
+.flow-label{font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:1.2px;color:var(--tx3);margin:20px 0 -10px}
+
+/* Reuse banner */
+.reuse{display:flex;align-items:center;justify-content:space-between;gap:16px;background:#F0FDF4;border:1px solid #BBF7D0;border-radius:10px;padding:18px 24px;margin:20px 0;flex-wrap:wrap}
+.reuse .rn{font-size:22px;font-weight:700;color:#166534;white-space:nowrap}
+.reuse p{font-size:12.5px;color:#166534;font-weight:500}
+
+/* Images */
+.img-box{margin:24px 0;border-radius:var(--r);overflow:hidden;border:1px solid var(--bd);padding:20px}
+.img-box img{width:100%;border-radius:8px}
+.img-caption{font-size:11px;color:var(--tx3);text-align:center;margin-top:8px}
+
+/* Findings */
+.fd{background:var(--sf);border-radius:0 10px 10px 0;padding:18px 22px;margin-bottom:10px;border-left:3px solid}
+.fd.c{border-color:#F87171}.fd.i{border-color:var(--tx)}.fd.s{border-color:#34D399}
+.fd .sv{font-size:9px;font-weight:600;text-transform:uppercase;letter-spacing:1px;margin-bottom:2px}
+.fd.c .sv{color:#F87171}.fd.i .sv{color:var(--tx)}.fd.s .sv{color:#34D399}
+.fd h4{font-size:13px;font-weight:600;margin-bottom:2px}
+.fd p{font-size:12px;color:var(--tx2);line-height:1.5}
+
+/* Back */
+.bk{padding:48px;text-align:center}
+.bk-btn{display:inline-flex;align-items:center;gap:6px;padding:10px 20px;border:1px solid var(--bd);border-radius:8px;font-size:13px;font-weight:500;transition:border-color 0.2s}
+.bk-btn:hover{border-color:var(--tx)}
+
+@media(max-width:900px){.cg3{grid-template-columns:1fr}}
+@media(max-width:768px){.w,.ww{padding:0 20px}.mg,.metrics{grid-template-columns:1fr 1fr}.cg,.pr{grid-template-columns:1fr}nav{padding:0 20px}.reuse{justify-content:center;text-align:center}}
+</style>
+</head><body>
+<nav><a href="../index.html" class="back">← Portfolio</a></nav>
+<section class="hero"><div class="w">
+<div class="tags"><span class="tg">B2B SaaS</span><span class="tg">GRC / Compliance</span><span class="tg">AI UX</span><span class="tg">0 → 1 Concept</span></div>
+<h1>ComplianceLayer — Map once. Comply many times.</h1>
+<p class="lead">A product concept for unifying security and compliance work. Companies juggling GDPR, ISO 27001, NIS2 and SOC 2 redo the same evidence collection for every framework. ComplianceLayer is built on one shared model — frameworks become lenses over work you've already done.</p>
+<div class="mg"><div class="mc"><dt>Role</dt><dd>Product Designer</dd></div><div class="mc"><dt>Type</dt><dd>Self-initiated concept</dd></div><div class="mc"><dt>Scope</dt><dd>Strategy → Hi-Fi UI</dd></div><div class="mc"><dt>Year</dt><dd>2026</dd></div></div>
+</div></section>
+
+<div class="w"><div class="metrics">
+<div class="mt"><div class="n">~70%</div><div class="l">Of compliance work is shared</div></div>
+<div class="mt"><div class="n">1</div><div class="l">Shared model, N frameworks</div></div>
+<div class="mt"><div class="n">2</div><div class="l">Surfaces: Operator + Buyer</div></div>
+<div class="mt"><div class="n">6</div><div class="l">Product promises</div></div>
+</div></div>
+
+<div class="w">
+<div class="sl">01 The Problem</div>
+<h2 class="sh">Adding a framework shouldn't mean redoing months of work</h2>
+<p class="sp">Customers don't have a Security problem or a Compliance problem. They have one shared body of work — assets, controls, evidence, risks. That body of work already serves multiple framework obligations. The platform's job is to make that reuse visible, not to recreate work per framework.</p>
+<p class="sp">Today's tools don't behave this way. A mid-size company adding NIS2 to an existing ISO 27001 program typically restarts evidence collection from zero — even though most of what NIS2 asks for already exists, verified, in the ISO program.</p>
+<p class="pull">Frameworks are lenses, not workspaces.</p>
+</div>
+
+<div class="w"><hr>
+<div class="sl">02 Competitive Audit</div>
+<h2 class="sh">How the market handles multi-framework compliance</h2>
+<p class="sp">I audited the four dominant GRC platforms to understand how each structures multi-framework work — and where the structural gap is.</p>
+<div class="tbl-wrap"><table class="tbl">
+<thead><tr><th>Platform</th><th>Model</th><th>Strength</th><th>Where it breaks</th></tr></thead>
+<tbody>
+<tr><td>Vanta</td><td>Per-framework workspaces with cross-mapping add-on</td><td>Fast SOC 2 onboarding; strong integrations</td><td>Each framework is its own project. Evidence duplicates across workspaces; adding a framework restarts collection.</td></tr>
+<tr><td>Drata</td><td>Control library mapped per framework</td><td>Continuous monitoring; auditor network</td><td>Mappings are static templates, not records — no author, confidence, or audit trail on the mapping itself.</td></tr>
+<tr><td>OneTrust</td><td>Configurable enterprise modules</td><td>Breadth — privacy, GRC, ESG in one suite</td><td>Configurable but unlearnable. Operators need consultants to model their own program.</td></tr>
+<tr><td>Secureframe</td><td>Framework checklists + evidence vault</td><td>Approachable for first-time compliance</td><td>Evidence vault is shared, but requirements aren't connected across frameworks — reuse is manual.</td></tr>
+</tbody>
+</table></div>
+<div class="cg">
+<div class="cd"><h4>The structural gap</h4><p>Every incumbent treats the framework as the organizing unit. None treats the customer's body of work as the unit and frameworks as views over it. That inversion is the bet.</p></div>
+<div class="cd"><h4>What this drove</h4><p>Three design decisions trace directly to this audit: a shared model over workspaces (vs. Vanta), mappings as first-class records (vs. Drata), and an opinionated default view (vs. OneTrust).</p></div>
+</div>
+</div>
+
+<div class="w"><hr>
+<div class="sl">03 The Model</div>
+<h2 class="sh">Three layers, one shared model</h2>
+<p class="sp">Frameworks sit on top as lenses. The shared model in the middle is collected once. Domain-specific concerns draw from it underneath. About 70% of the work is shared; the other 30% is genuinely domain-specific.</p>
+<div class="layers">
+<div class="lyr"><div class="lt">Frameworks · Lenses</div><div class="pills"><span class="pl dash">ISO 27001</span><span class="pl dash">NIS2</span><span class="pl dash">GDPR</span><span class="pl dash">SOC 2</span></div></div>
+<div class="lyr-arrow">▼ frameworks compose from</div>
+<div class="lyr mid"><div class="lt">The Shared Model · Collected once</div><div class="pills"><span class="pl">Assets</span><span class="pl">Controls</span><span class="pl">Policies</span><span class="pl">Agreements</span><span class="pl">Risks</span><span class="pl">Roles</span><span class="pl">Evidence (attestation)</span><span class="pl">Evidence (operation)</span><span class="pl">Requirements</span><span class="pl dark">Mappings (full records)</span></div></div>
+<div class="lyr-arrow">▼ domain lenses compose from</div>
+<div class="lyr"><div class="lt">Domain-Specific Lenses</div><div class="cg" style="margin:0">
+<div class="cd" style="background:var(--bg)"><h4>Security-leaning</h4><p>Vulnerabilities · Threats · Incidents · Detections · Patches · Pen-test findings</p></div>
+<div class="cd" style="background:var(--bg)"><h4>Compliance-leaning</h4><p>Frameworks · Audit findings · RoPA · DPAs · DSRs · Sub-processor register · Privacy notices</p></div>
+</div></div>
+</div>
+<div class="cg">
+<div class="cd"><h4>Evidence has two flavors</h4><p>Signed (a policy that exists) and operating (a scan or log that works). Most tools conflate them. Splitting them lets one model serve frameworks with different burdens.</p></div>
+<div class="cd"><h4>Mappings are records, not links</h4><p>Each mapping carries author, timestamp, confidence, and source. The AI proposes; humans accept, edit, or reject. That's what makes the audit trail real.</p></div>
+</div>
+</div>
+
+<div class="w"><hr>
+<div class="sl">04 Where Frameworks Overlap</div>
+<h2 class="sh">Real cross-framework mappings, accurate citations</h2>
+<p class="sp">The 70% claim has to survive contact with the actual standards. A sample of the mapping work — one record satisfying requirements across three frameworks:</p>
+<div class="tbl-wrap"><table class="tbl">
+<thead><tr><th>Entity</th><th>Example</th><th>ISO 27001</th><th>NIS2</th><th>GDPR</th></tr></thead>
+<tbody>
+<tr><td>Control</td><td>Quarterly access review</td><td>A.5.18</td><td>Art. 21(2)(i)</td><td>Art. 32(1)(b)</td></tr>
+<tr><td>Control</td><td>Encryption at rest for production data</td><td>A.8.24</td><td>Art. 21(2)(h)</td><td>Art. 32(1)(a)</td></tr>
+<tr><td>Control</td><td>Vendor risk assessment process</td><td>A.5.19, A.5.20</td><td>Art. 21(2)(d)</td><td>Art. 28</td></tr>
+<tr><td>Evidence</td><td>MFA enrollment log (operation)</td><td>A.8.5</td><td>Art. 21(2)(j)</td><td>Art. 32(1)(b)</td></tr>
+<tr><td>Policy</td><td>Information security policy</td><td>A.5.1</td><td>Art. 21(2)(a)</td><td>Art. 24</td></tr>
+<tr><td>Agreement</td><td>DPA with sub-processor</td><td>A.5.20</td><td>Art. 21(2)(d)</td><td>Art. 28(3)</td></tr>
+<tr><td>Event</td><td>Tabletop exercise</td><td>A.5.24</td><td>Art. 21(2)(c)</td><td>implication of Art. 32</td></tr>
+</tbody>
+</table></div>
+<div class="cg">
+<div class="cd"><h4>GDPR-only · the data-subject lifecycle</h4><p>RoPA, DSRs, privacy notices. These belong to the data-subject lifecycle, not the shared compliance model. GDPR-specific obligations only.</p></div>
+<div class="cd"><h4>Security-only · operational telemetry</h4><p>Vulnerability scans and incident detections feed the shared model as operational evidence, but live in the Security lens. Not framework-mappable on their own.</p></div>
+</div>
+</div>
+
+<div class="w"><hr>
+<div class="sl">05 Product Principles</div>
+<h2 class="sh">Six promises the system must keep</h2>
+<div class="nm"><div class="no">01</div><div><h4>One shared model</h4><p>Assets, Controls, Evidence, Policies, Agreements, Risks, Mappings, Requirements. The same model serves every framework. Adding a framework adds Requirements, not a workspace.</p></div></div>
+<div class="nm"><div class="no">02</div><div><h4>Map once, comply many times</h4><p>A Control or Evidence record satisfies 1 to N Requirements across multiple Frameworks. Mappings carry author, timestamp, confidence, and source.</p></div></div>
+<div class="nm"><div class="no">03</div><div><h4>Compute posture continuously</h4><p>Compliance state reflects reality in real time. Evidence aging, expired certifications, and missing mappings change posture automatically.</p></div></div>
+<div class="nm"><div class="no">04</div><div><h4>Route work by ownership</h4><p>Every Control, Policy, Agreement, and Program has an accountable Role. Tasks route to the right person, not a shared queue.</p></div></div>
+<div class="nm"><div class="no">05</div><div><h4>Adapt the view for each user</h4><p>Operators see prioritized work and concrete next steps. Buyers see aggregated posture, change since last review, and decisions awaiting them.</p></div></div>
+<div class="nm"><div class="no">06</div><div><h4>Make AI traceable, audit-ready by default</h4><p>Every AI proposal shows source and confidence, reviewable before commit. The audit trail is the same shared model, scoped for read. Auditors see what the operator wrote, what the AI proposed, and every override. No separate audit prep.</p></div></div>
+</div>
+
+<div class="w"><hr>
+<div class="sl">06 Personas</div>
+<h2 class="sh">Two people, two views, one model</h2>
+<p class="sp">An Operator who does the work. A Buyer who reads the result. Same shared model, different goals, different decisions, different tools. Both work at Mira, a fictional 200-person EU fintech used to ground every scenario.</p>
+<div class="pr">
+<div class="pc"><h4>Lena Chen</h4><div class="rl">Operator · Data Protection Officer</div><blockquote>"Adding a framework usually means redoing months of evidence collection. Why should NIS2 mean I redo what I already did for ISO?"</blockquote><dl><dt>Goals</dt><dd>Demonstrate NIS2 Art. 21 in 90 days without redoing evidence; keep ISO 27001 continuously audit-ready; every AI suggestion traceable to a source</dd><dt>Frustrations</dt><dd>Auditors and the board want different things from the same data; AI suggestions she can't trace are worthless in compliance</dd></dl></div>
+<div class="pc"><h4>Marc Petersen</h4><div class="rl">Buyer · Chief Risk Officer</div><blockquote>"The board doesn't want compliance reports. They want to know where we stand vs peers and what we got for the spend. Tell me that, with the evidence to defend it."</blockquote><dl><dt>Goals</dt><dd>Quarterly board readout in under 20 minutes' prep; approve exceptions with full context, not hope; defend the compliance investment</dd><dt>Frustrations</dt><dd>Dashboards that don't explain themselves; signing off on technical exceptions he can't fully validate</dd></dl></div>
+</div>
+</div>
+
+<div class="w"><hr>
+<div class="sl">07 Journeys</div>
+<h2 class="sh">Operator and Buyer in motion</h2>
+<p class="sp">Lena onboards NIS2 across 90 days. Marc prepares the board readout in 13 minutes. Same model, two views, decisions flowing both ways.</p>
+<div class="flow-label">Lena onboards NIS2 · 6 stages, 90 days</div>
+<div class="flow">
+<div class="fn fn-s">Trigger</div><span class="fa">→</span><div class="fn fn-a">Scan</div><span class="fa">→</span><div class="fn fn-a">Triage</div><span class="fa">→</span><div class="fn fn-a">Review</div><span class="fa">→</span><div class="fn fn-a">Gap work</div><span class="fa">→</span><div class="fn fn-e">Outcome</div>
+</div>
+<p class="sp">Lena gets a NIS2 deadline notification, scopes the scan to Mira's EU entity, and waits four seconds. The system stages 47 high-confidence mappings against existing controls and evidence — 63% of NIS2 already covered before she collects anything new. She bulk-accepts the high-confidence set, reviews 18 moderate matches with the AI's reasoning visible, and works three ranked gaps. The flow branches when reuse comes back low (AI suggests narrowing scope), when she disagrees with a proposal (rejection is logged; the model recalibrates), and when a gap is vendor-side (it routes to the risk register, off her queue).</p>
+<div class="reuse"><div class="rn">3 → 4 frameworks</div><p>NIS2 mapped using existing evidence. Zero new collection for 63% of requirements.</p></div>
+<div class="flow-label">Marc prepares the board readout · 6 phases, 13 minutes</div>
+<div class="flow">
+<div class="fn fn-s">Arrive</div><span class="fa">→</span><div class="fn fn-a">Read</div><span class="fa">→</span><div class="fn fn-a">Change</div><span class="fa">→</span><div class="fn fn-a">Decide</div><span class="fa">→</span><div class="fn fn-a">Drill</div><span class="fa">→</span><div class="fn fn-e">Export</div>
+</div>
+<p class="sp">Marc lands on a written briefing — drafted overnight from events, not a dashboard. He skims "stable" plus key numbers, scans three change bullets, decides on three exception cards, drills into one ("Why did Risk #41 open?") via plain-language Q&A citing source events, and exports a clean board doc. Thirteen minutes. The journey also maps where Marc overrides the system: re-owning a degrading control, escalating an exception to the board, tightening an evidence-freshness SLA.</p>
+<div class="cg">
+<div class="cd"><h4>The auditor inherits everything</h4><p>Every mapping carries author, timestamp, source. AI proposals and decisions are preserved. The board PDF doubles as the audit narrative — same shared model, scoped for read.</p></div>
+<div class="cd"><h4>Decisions flow both ways</h4><p>Operator rejections recalibrate the AI. Buyer overrides re-route operator work. The journeys aren't parallel tracks; they're one loop through the same model.</p></div>
+</div>
+</div>
+
+<div class="ww"><hr style="max-width:760px;margin-left:auto;margin-right:auto">
+<div class="w" style="padding:0"><div class="sl">08 The Operator Surface</div>
+<h2 class="sh">One control, four frameworks</h2>
+<p class="sp">CTRL-0048, Quarterly access review. Operated once, evidenced once, mapped to ISO 27001, NIS2, GDPR — with a proposed SOC 2 mapping awaiting review. The mappings table is the heart of the product: every row shows confidence, source, and verification status.</p></div>
+<div class="img-box" style="background:#F8F7F4">
+<img src="../assets/compliancelayer-operator.png" alt="Operator view — control detail with cross-framework mappings table" loading="lazy">
+</div>
+<p class="img-caption">Operator view · control detail. Next-best actions ranked on the right; evidence split into attestation and operation.</p>
+</div>
+
+<div class="ww">
+<div class="w" style="padding:0"><div class="sl">09 The Buyer Surface</div>
+<h2 class="sh">Written, not dashboard</h2>
+<p class="sp">The Buyer reads a briefing, decides on exceptions, and exports a clean board document. Same product, a different shape on purpose — buyers read; they don't scan.</p></div>
+<div class="img-box" style="background:#F8F7F4">
+<img src="../assets/compliancelayer-buyer.png" alt="Buyer view — quarterly posture briefing with exception decisions" loading="lazy">
+</div>
+<p class="img-caption">Buyer view · quarterly readout. Plain-language posture, change since last review, three exception decisions with recommendations.</p>
+</div>
+
+<div class="w"><hr>
+<div class="sl">10 The AI Experience Layer</div>
+<h2 class="sh">How AI earns trust here</h2>
+<p class="sp">Compliance is auditable by definition — AI without source and confidence is unusable. Five patterns cover how the AI shows its work, how users trust it, and how they disagree with it.</p>
+<div class="cg3">
+<div class="cd"><h4>01 · Confidence</h4><p>Three bands, never one number. High (≥90%) is a bulk-accept candidate. Moderate (60–89%) gets review with reasoning. Low (&lt;60%) surfaces as a gap, not a mapping.</p></div>
+<div class="cd"><h4>02 · Traceability</h4><p>Every proposal carries a four-part trail: source language matched verbatim, one-paragraph reasoning, confidence + band, and author = AI with timestamp.</p></div>
+<div class="cd"><h4>03 · Review states</h4><p>Proposed by AI → under human review → accepted/edited → rejected (the model learns). All states logged in the audit trail.</p></div>
+<div class="cd"><h4>04 · The Buyer trusts</h4><p>Plain English first, source events listed underneath, an "ask" affordance for deeper context. Marc can always read the raw source.</p></div>
+<div class="cd"><h4>05 · The Operator disagrees</h4><p>Reject with optional reason. Mapping not applied; the audit trail keeps the AI version; the model recalibrates on the next scan.</p></div>
+<div class="cd"><h4>06 · The auditor inherits</h4><p>The silent third user. The audit trail is the shared model scoped for read — not compiled separately at audit time. Full reasoning, source, and decisions intact.</p></div>
+</div>
+</div>
+
+<div class="ww">
+<div class="img-box" style="background:#F8F7F4">
+<img src="../assets/compliancelayer-anatomy.png" alt="Anatomy of an AI suggestion — from, why this match, decision" loading="lazy">
+</div>
+<p class="img-caption">Anatomy of an AI suggestion. The AI proposes with weighted reasoning; the human decides; the decision is logged.</p>
+</div>
+
+<div class="w"><hr>
+<div class="sl">11 Decisions &amp; Trade-offs</div>
+<h2 class="sh">What I chose, what I rejected, what ships first</h2>
+<div class="fd i"><div class="sv">Chose</div><h4>A shared model over per-framework workspaces</h4><p>Workspaces duplicate evidence and turn "add NIS2" into a project instead of a Tuesday.</p></div>
+<div class="fd i"><div class="sv">Chose</div><h4>Written briefing over executive dashboard</h4><p>Buyers read; they don't scan. The briefing is drafted from events and exports as the board doc.</p></div>
+<div class="fd i"><div class="sv">Chose</div><h4>Inline AI with traceability over a side-panel chatbot</h4><p>Opaque AI is unusable in compliance. Every proposal shows its work where the work happens.</p></div>
+<div class="fd c"><div class="sv">Rejected</div><h4>A separate Compliance app · a maturity score · a posture donut · a configurable rules engine</h4><p>One product, two lenses. Single-number scores hide the decisions that matter; configurability without opinion is how tools become unlearnable.</p></div>
+<div class="fd s"><div class="sv">Ships first</div><h4>Phase 1: the smallest version that delivers the "map once" promise</h4><p>Shared model + mappings as records + the operator's add-framework flow with AI-proposed mappings. Phase 2: the Buyer briefing, once posture has data to summarize.</p></div>
+<h2 class="sh" style="margin-top:36px">Edge cases worth designing for</h2>
+<div class="cg">
+<div class="cd"><h4>Framework requirement updates</h4><p>Mappings flagged as drifted; surfaces as a re-mapping task, not silent staleness.</p></div>
+<div class="cd"><h4>AI confidence below threshold</h4><p>System requires explicit human approval; never auto-applies.</p></div>
+<div class="cd"><h4>Certificate expiry mid-renewal</h4><p>The model represents both "expired" and "in renewal" — real programs live in that gap.</p></div>
+<div class="cd"><h4>Sub-processor failing audit</h4><p>A Compliance event and a Security risk simultaneously. One record, two lenses.</p></div>
+</div>
+</div>
+
+<div class="w"><hr>
+<div class="sl">12 Success Metrics</div>
+<h2 class="sh">How I'd measure it</h2>
+<div class="cg">
+<div class="cd"><div class="stat">≥ 60%</div><h4>Reuse ratio</h4><p>Share of new-framework requirements satisfied by existing evidence on day one.</p></div>
+<div class="cd"><div class="stat">≥ 70%</div><h4>AI acceptance rate</h4><p>High-confidence proposals accepted without edit — the trust signal.</p></div>
+<div class="cd"><div class="stat">≤ 15 min</div><h4>Time to board readout</h4><p>Posture-open to PDF export. The Buyer journey's 13-minute target, in practice.</p></div>
+<div class="cd"><div class="stat">≤ 30 days</div><h4>Time to add a framework</h4><p>Selection to first verified evidence. Counters the per-workspace baseline of months.</p></div>
+</div>
+</div>
+
+<div class="w"><hr>
+<div class="sl">13 Reflections</div>
+<h2 class="sh">What I learned</h2>
+<div class="cg">
+<div class="cd"><h4>The data model is the design</h4><p>The highest-leverage design decision here isn't a screen — it's evidence split into two flavors and mappings promoted to records. Every UI choice downstream got easier because the model was right.</p></div>
+<div class="cd"><h4>In regulated domains, AI UX is provenance UX</h4><p>Confidence bands, verbatim source matching, and preserved rejections aren't AI features — they're what makes AI admissible in a domain where every claim must survive an audit.</p></div>
+</div></div>
+<div class="bk"><a href="../index.html" class="bk-btn">← Back to portfolio</a></div>
+</body></html>
