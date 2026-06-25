@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Opeyemi Ajimati — Senior Product Designer (Fintech, Climate, Compliance) · Berlin</title>
+<title>Opeyemi Ajimati - Senior Product Designer (Fintech, Climate, Compliance) · Berlin</title>
 <meta name="description" content="Opeyemi Ajimati is a Senior Product Designer in Berlin with 7+ years across fintech, climate tech, and data-heavy enterprise platforms. Case studies in turning regulatory complexity into clarity through research-driven UX, scalable design systems, and tight cross-functional delivery.">
 <meta name="author" content="Opeyemi Ajimati">
 <meta name="keywords" content="Opeyemi Ajimati, Senior Product Designer Berlin, Product Designer, UX Designer, Fintech UX, Compliance UX, Climate Tech Design, Design Systems, Enterprise UX, Berlin Designer, Product Design Portfolio">
@@ -47,7 +47,7 @@
 <!-- Performance -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,500&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 
 <!-- Structured data: Person + WebSite -->
 <script type="application/ld+json">
@@ -109,7 +109,7 @@
   --accent-soft:#F0DDD6;
   --r:14px;
   --r-sm:8px;
-  --serif:'Fraunces',Georgia,'Times New Roman',serif;
+  --serif:'Newsreader',Georgia,'Times New Roman',serif;
   --sans:'Inter',system-ui,-apple-system,'Helvetica Neue',sans-serif;
   --mono:'JetBrains Mono',ui-monospace,Menlo,monospace;
   --spring:cubic-bezier(0.22,1,0.36,1);
@@ -130,13 +130,19 @@ body{
   color:var(--ink);
   -webkit-font-smoothing:antialiased;
   text-rendering:optimizeLegibility;
-  font-feature-settings:'ss01','cv01';
   line-height:1.55;
   font-size:16px;
 }
 a{color:inherit;text-decoration:none}
 img{display:block;max-width:100%}
 ::selection{background:var(--ink);color:var(--bg)}
+
+/* film-grain paper texture (fixed, never on scroll containers) */
+body::after{
+  content:"";position:fixed;inset:0;z-index:60;pointer-events:none;opacity:.028;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.82' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+@media(prefers-reduced-transparency:reduce){body::after{display:none}}
 
 /* NAV */
 nav{
@@ -168,44 +174,30 @@ nav.scrolled{background:rgba(250,250,247,0.92);border-bottom-color:var(--line)}
 .w-narrow{max-width:840px;margin:0 auto;padding:0 32px}
 
 /* HERO */
-.hero{padding:160px 0 56px;position:relative}
-.hero::before{
-  content:"";position:absolute;left:32px;right:32px;top:120px;
-  height:1px;background:var(--line);max-width:calc(1120px - 64px);margin:0 auto;
-  display:none;
-}
-.tagstrip{display:flex;align-items:center;gap:14px;margin-bottom:36px;font-size:12px;color:var(--ink-3)}
+.hero{padding:152px 0 56px;position:relative}
+.tagstrip{display:flex;align-items:center;gap:14px;margin-bottom:34px;font-size:12px;color:var(--ink-3)}
 .avail{
   display:inline-flex;align-items:center;gap:8px;
-  font-size:12px;font-weight:500;color:var(--accent);
+  font-size:12.5px;font-weight:500;color:var(--accent);
   background:var(--accent-soft);
-  padding:6px 12px 6px 10px;border-radius:100px;
+  padding:6px 15px;border-radius:100px;
   letter-spacing:-0.005em;
 }
-.avail .dot{
-  width:7px;height:7px;border-radius:50%;background:var(--accent);
-  box-shadow:0 0 0 3px rgba(180,83,66,0.18);
-  animation:pulse 2.6s var(--ease) infinite;
-}
-@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.55;transform:scale(.85)}}
-.tagstrip .sep{width:14px;height:1px;background:var(--line-2)}
-.tagstrip .meta{font-family:var(--mono);font-size:11.5px;letter-spacing:0;color:var(--ink-3)}
 
 .hero h1{
   font-family:var(--serif);
-  font-size:clamp(44px,7vw,84px);
+  font-size:clamp(44px,7vw,82px);
   font-weight:500;
-  letter-spacing:-0.035em;
-  line-height:1.02;
+  letter-spacing:-0.025em;
+  line-height:1.03;
   margin-bottom:28px;
   max-width:18ch;
-  font-variation-settings:"opsz" 96, "SOFT" 30;
+  font-variation-settings:"opsz" 72;
 }
-.hero h1 em{font-style:italic;font-weight:400;color:var(--accent);font-variation-settings:"opsz" 144,"SOFT" 80}
+.hero h1 em{font-style:italic;font-weight:400;color:var(--accent)}
 .hero-p{
-  font-size:18px;color:var(--ink-2);line-height:1.6;
-  max-width:54ch;margin-bottom:36px;
-  font-feature-settings:'ss01';
+  font-size:18px;color:var(--ink-2);line-height:1.62;
+  max-width:56ch;margin-bottom:36px;
 }
 .hero-p strong{color:var(--ink);font-weight:600}
 .btns{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:64px}
@@ -218,10 +210,18 @@ nav.scrolled{background:rgba(250,250,247,0.92);border-bottom-color:var(--line)}
 }
 .btn:hover{border-color:var(--ink);box-shadow:0 1px 4px rgba(0,0,0,.04)}
 .btn:active{transform:scale(.97)}
-.btn-p{background:var(--ink);color:var(--bg);border-color:var(--ink)}
-.btn-p:hover{background:#000;border-color:#000;box-shadow:0 6px 20px rgba(0,0,0,.16)}
+.btn-p{background:var(--ink);color:var(--bg);border-color:var(--ink);padding:8px 8px 8px 20px;gap:12px}
+.btn-p:hover{background:#000;border-color:#000;box-shadow:0 12px 30px -10px rgba(26,24,22,.38)}
 .btn .arrow{transition:transform var(--d-base) var(--spring);display:inline-block}
 .btn:hover .arrow{transform:translate(2px,-2px)}
+.btn-p .ic{
+  width:30px;height:30px;border-radius:50%;flex-shrink:0;
+  background:rgba(255,255,255,.12);
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.18);
+  display:inline-flex;align-items:center;justify-content:center;font-size:13px;
+  transition:transform var(--d-base) var(--spring),background var(--d-fast) var(--ease);
+}
+.btn-p:hover .ic{transform:translate(2px,-2px) scale(1.05);background:rgba(255,255,255,.2)}
 
 /* hero stats strip */
 .kpis{
@@ -235,38 +235,38 @@ nav.scrolled{background:rgba(250,250,247,0.92);border-bottom-color:var(--line)}
 .kpi .n em{font-style:italic;color:var(--accent);font-weight:400}
 .kpi .l{font-size:12px;color:var(--ink-2);line-height:1.45;max-width:24ch}
 
-/* TRUST BAR */
-.trust{
+/* CONTEXT ROW (replaces decorative trust bar) */
+.context{
   border-top:1px solid var(--line);border-bottom:1px solid var(--line);
   padding:22px 0;background:var(--bg);
 }
-.trust .row{display:flex;align-items:center;justify-content:space-between;gap:32px;flex-wrap:wrap}
-.trust-label{font-family:var(--mono);font-size:11px;color:var(--ink-3);letter-spacing:0.02em;text-transform:uppercase;white-space:nowrap}
-.trust-list{display:flex;align-items:center;gap:36px;flex-wrap:wrap}
-.trust-list span{font-family:var(--serif);font-size:18px;font-weight:500;color:var(--ink-2);letter-spacing:-0.01em;font-style:italic;opacity:0.85;transition:opacity var(--d-fast) var(--ease),color var(--d-fast) var(--ease)}
-.trust-list span:hover{opacity:1;color:var(--ink)}
+.context .row{display:flex;align-items:center;justify-content:space-between;gap:32px;flex-wrap:wrap}
+.context-label{font-family:var(--mono);font-size:11px;color:var(--ink-3);letter-spacing:0.04em;text-transform:uppercase;white-space:nowrap}
+.context-list{display:flex;align-items:center;gap:36px;flex-wrap:wrap}
+.context-list span{font-family:var(--serif);font-size:18px;font-weight:500;color:var(--ink-2);letter-spacing:-0.01em;transition:color var(--d-fast) var(--ease)}
+.context-list span:hover{color:var(--ink)}
 
 /* SECTIONS */
 .s{padding:104px 0;position:relative}
 .s + .s{border-top:1px solid var(--line)}
 .section-head{display:flex;align-items:flex-end;justify-content:space-between;gap:32px;margin-bottom:56px;flex-wrap:wrap}
-.section-head .left{max-width:640px}
+.section-head .left{max-width:660px}
 .eyebrow{font-family:var(--mono);font-size:11px;font-weight:500;text-transform:uppercase;letter-spacing:0.08em;color:var(--ink-3);margin-bottom:18px;display:inline-flex;align-items:center;gap:8px}
 .eyebrow::before{content:"";width:18px;height:1px;background:var(--ink-3)}
 .st{
-  font-family:var(--serif);font-size:clamp(32px,4.6vw,52px);font-weight:500;
-  letter-spacing:-0.028em;line-height:1.05;margin-bottom:18px;
-  font-variation-settings:"opsz" 72,"SOFT" 40;
+  font-family:var(--serif);font-size:clamp(32px,4.6vw,50px);font-weight:500;
+  letter-spacing:-0.022em;line-height:1.06;margin-bottom:18px;
+  font-variation-settings:"opsz" 60;
 }
-.st em{font-style:italic;font-weight:400;color:var(--accent);font-variation-settings:"opsz" 144,"SOFT" 80}
-.sd{font-size:16px;color:var(--ink-2);line-height:1.65;max-width:52ch}
+.st em{font-style:italic;font-weight:400;color:var(--accent)}
+.sd{font-size:16px;color:var(--ink-2);line-height:1.65;max-width:56ch}
 .section-head .count{
   font-family:var(--mono);font-size:11px;color:var(--ink-3);
   border:1px solid var(--line);padding:6px 10px;border-radius:6px;
   white-space:nowrap;align-self:flex-start;margin-top:4px;
 }
 
-/* WORK — featured */
+/* WORK - featured */
 .featured{display:grid;grid-template-columns:1fr;gap:18px;margin-bottom:18px}
 .feat{
   display:grid;grid-template-columns:1.05fr 1fr;gap:0;
@@ -274,7 +274,7 @@ nav.scrolled{background:rgba(250,250,247,0.92);border-bottom-color:var(--line)}
   overflow:hidden;text-decoration:none;color:inherit;
   transition:border-color var(--d-base) var(--ease),box-shadow var(--d-base) var(--spring),transform var(--d-base) var(--spring);
 }
-.feat:hover{border-color:var(--line-2);box-shadow:0 16px 40px -20px rgba(26,24,22,0.18);transform:translateY(-2px)}
+.feat:hover{border-color:var(--line-2);box-shadow:0 30px 60px -28px rgba(82,46,38,0.22),0 8px 20px -14px rgba(26,24,22,0.12);transform:translateY(-3px)}
 .feat .thumb{
   position:relative;aspect-ratio:4/3;
   display:flex;align-items:center;justify-content:center;
@@ -288,11 +288,10 @@ nav.scrolled{background:rgba(250,250,247,0.92);border-bottom-color:var(--line)}
 .feat:hover .thumb img{transform:scale(1.04) translateY(-4px)}
 .feat .info{padding:32px 36px;display:flex;flex-direction:column;justify-content:space-between;gap:24px;border-left:1px solid var(--line)}
 .feat .info-top{display:flex;flex-direction:column;gap:14px}
-.feat .num{font-family:var(--mono);font-size:11px;color:var(--ink-3);letter-spacing:0.02em}
 .feat .meta{display:flex;flex-wrap:wrap;gap:6px}
 .feat .wm{font-size:11px;font-weight:500;padding:4px 10px;border-radius:100px;border:1px solid var(--line);color:var(--ink-2);background:var(--bg);transition:border-color var(--d-fast) var(--ease),color var(--d-fast) var(--ease)}
 .feat:hover .wm{border-color:var(--line-2);color:var(--ink)}
-.feat .name{font-family:var(--serif);font-size:30px;font-weight:500;letter-spacing:-0.025em;line-height:1.12;font-variation-settings:"opsz" 72}
+.feat .name{font-family:var(--serif);font-size:30px;font-weight:500;letter-spacing:-0.02em;line-height:1.14;font-variation-settings:"opsz" 60}
 .feat .desc{font-size:14.5px;color:var(--ink-2);line-height:1.6}
 .feat .info-bot{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-top:20px;border-top:1px dashed var(--line)}
 .feat .impact{display:flex;gap:24px}
@@ -302,7 +301,7 @@ nav.scrolled{background:rgba(250,250,247,0.92);border-bottom-color:var(--line)}
 .feat .read{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:500;color:var(--ink);transition:gap var(--d-base) var(--spring)}
 .feat:hover .read{gap:12px}
 
-/* WORK — secondary grid */
+/* WORK - secondary grid */
 .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
 .card{
   display:flex;flex-direction:column;
@@ -310,16 +309,15 @@ nav.scrolled{background:rgba(250,250,247,0.92);border-bottom-color:var(--line)}
   overflow:hidden;text-decoration:none;color:inherit;
   transition:border-color var(--d-base) var(--ease),transform var(--d-base) var(--spring),box-shadow var(--d-base) var(--spring);
 }
-.card:hover{border-color:var(--line-2);transform:translateY(-2px);box-shadow:0 10px 28px -16px rgba(26,24,22,0.16)}
+.card:hover{border-color:var(--line-2);transform:translateY(-3px);box-shadow:0 24px 48px -26px rgba(82,46,38,0.20),0 6px 16px -12px rgba(26,24,22,0.10)}
 .card .thumb{aspect-ratio:4/3;display:flex;align-items:center;justify-content:center;overflow:hidden;border-bottom:1px solid var(--line)}
 .card .thumb img{max-height:80%;max-width:84%;object-fit:contain;transition:transform var(--d-slow) var(--spring);filter:drop-shadow(0 8px 18px rgba(0,0,0,0.10))}
 .card:hover .thumb img{transform:scale(1.05)}
 .card .body{padding:22px 22px 24px;display:flex;flex-direction:column;gap:10px;flex:1}
-.card .row1{display:flex;align-items:center;justify-content:space-between;gap:12px}
-.card .num{font-family:var(--mono);font-size:11px;color:var(--ink-3)}
+.card .row1{display:flex;align-items:center;justify-content:flex-end;gap:12px}
 .card .tags{display:flex;gap:5px;flex-wrap:wrap;justify-content:flex-end}
 .card .tag{font-size:10.5px;font-weight:500;padding:2px 8px;border-radius:100px;background:var(--paper);color:var(--ink-2)}
-.card h3{font-family:var(--serif);font-size:22px;font-weight:500;letter-spacing:-0.02em;line-height:1.2;margin-top:4px;font-variation-settings:"opsz" 48}
+.card h3{font-family:var(--serif);font-size:22px;font-weight:500;letter-spacing:-0.018em;line-height:1.2;margin-top:4px;font-variation-settings:"opsz" 36}
 .card p{font-size:13px;color:var(--ink-2);line-height:1.55}
 .card .read{margin-top:auto;padding-top:14px;font-size:12.5px;font-weight:500;display:inline-flex;align-items:center;gap:6px;color:var(--ink);transition:gap var(--d-base) var(--spring);opacity:.7}
 .card:hover .read{gap:10px;opacity:1}
@@ -328,8 +326,8 @@ nav.scrolled{background:rgba(250,250,247,0.92);border-bottom-color:var(--line)}
 .about-wrap{display:grid;grid-template-columns:1.4fr 1fr;gap:80px;align-items:start}
 .about-lead{
   font-family:var(--serif);font-size:clamp(22px,2.6vw,28px);
-  font-weight:400;line-height:1.4;letter-spacing:-0.012em;
-  color:var(--ink);margin-bottom:32px;font-variation-settings:"opsz" 36;
+  font-weight:400;line-height:1.42;letter-spacing:-0.01em;
+  color:var(--ink);margin-bottom:32px;font-variation-settings:"opsz" 32;
 }
 .about-lead em{font-style:italic;color:var(--accent)}
 .about-cols{display:grid;grid-template-columns:1fr 1fr;gap:32px;margin-bottom:40px}
@@ -398,15 +396,14 @@ nav.scrolled{background:rgba(250,250,247,0.92);border-bottom-color:var(--line)}
   background:radial-gradient(ellipse at 50% 0%,rgba(180,83,66,0.08) 0%,transparent 60%);
   pointer-events:none;
 }
-.cta-card .ey{font-family:var(--mono);font-size:11px;text-transform:uppercase;letter-spacing:0.1em;color:var(--accent);margin-bottom:16px;display:inline-block;position:relative}
 .cta-card h2{
-  font-family:var(--serif);font-size:clamp(36px,5vw,60px);font-weight:500;
-  letter-spacing:-0.03em;line-height:1.05;margin-bottom:14px;
-  font-variation-settings:"opsz" 96,"SOFT" 50;
+  font-family:var(--serif);font-size:clamp(34px,5vw,56px);font-weight:500;
+  letter-spacing:-0.025em;line-height:1.08;margin-bottom:14px;
+  font-variation-settings:"opsz" 72;
   position:relative;
 }
-.cta-card h2 em{font-style:italic;font-weight:400;color:var(--accent);font-variation-settings:"opsz" 144,"SOFT" 80}
-.cta-card p{font-size:16px;color:var(--ink-2);line-height:1.6;max-width:46ch;margin:0 auto 32px;position:relative}
+.cta-card h2 em{font-style:italic;font-weight:400;color:var(--accent)}
+.cta-card p{font-size:16px;color:var(--ink-2);line-height:1.6;max-width:50ch;margin:0 auto 32px;position:relative}
 .cta-card .links{display:inline-flex;gap:8px;flex-wrap:wrap;justify-content:center;position:relative}
 .cta-link{
   font-size:13.5px;font-weight:500;padding:11px 18px;
@@ -434,6 +431,7 @@ footer{
 .foot-col ul{list-style:none;display:flex;flex-direction:column;gap:8px}
 .foot-col a{font-size:13.5px;color:var(--ink-2);transition:color var(--d-fast) var(--ease)}
 .foot-col a:hover{color:var(--ink)}
+.foot-status{font-size:13.5px;color:var(--accent);font-weight:500}
 .foot-bottom{
   max-width:1120px;margin:0 auto;
   border-top:1px solid var(--line);
@@ -441,12 +439,12 @@ footer{
   display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px;
   font-family:var(--mono);font-size:11px;color:var(--ink-3);letter-spacing:0.01em;
 }
-.foot-bottom .colophon{max-width:60ch}
 
 /* SCROLL REVEAL */
 .rv{opacity:1;transform:none}
-.js .rv{opacity:0;transform:translateY(20px);transition:opacity var(--d-enter) var(--ease),transform var(--d-enter) var(--spring)}
-.js .rv.in{opacity:1;transform:translateY(0)}
+.js .rv{opacity:0;transform:translateY(22px);filter:blur(6px);transition:opacity var(--d-enter) var(--ease),transform var(--d-enter) var(--spring),filter var(--d-enter) var(--ease)}
+.js .rv.in{opacity:1;transform:translateY(0);filter:blur(0)}
+@media(prefers-reduced-motion:reduce){.js .rv{filter:none}}
 .js .hero .rv:nth-child(1){transition-delay:.05s}
 .js .hero .rv:nth-child(2){transition-delay:.15s}
 .js .hero .rv:nth-child(3){transition-delay:.27s}
@@ -466,7 +464,7 @@ footer{
   nav{padding:0 20px;height:56px}
   .nr a:not(.cta){display:none}
   .w,.w-narrow{padding:0 20px}
-  .hero{padding:120px 0 40px}
+  .hero{padding:116px 0 40px}
   .s{padding:72px 0}
   .grid{grid-template-columns:1fr}
   .sk-grid{grid-template-columns:1fr}
@@ -480,13 +478,15 @@ footer{
   .feat .impact{gap:16px}
   .foot-wrap{grid-template-columns:1fr 1fr;gap:24px}
   .section-head{margin-bottom:36px}
-  .trust .row{gap:18px}
-  .trust-list{gap:20px}
+  .context .row{gap:18px}
+  .context-list{gap:20px}
 }
 </style>
 <script>document.documentElement.classList.add('js');</script>
 </head>
 <body>
+
+<span id="top-sentinel" aria-hidden="true" style="position:absolute;top:0;height:1px;width:1px"></span>
 
 <nav id="nav">
   <a href="#" class="logo"><span class="mark"></span> Opeyemi Ajimati</a>
@@ -502,48 +502,44 @@ footer{
 <section class="hero">
   <div class="w">
     <div class="tagstrip rv">
-      <span class="avail"><span class="dot"></span> Available — Senior Product Design roles</span>
-      <span class="sep"></span>
-      <span class="meta">Berlin / Remote · EU</span>
+      <span class="avail">Open to senior product design roles · Berlin and remote (EU)</span>
     </div>
     <h1 class="rv">Designing <em>complex</em> systems<br>that feel simple.</h1>
-    <p class="hero-p rv">Senior Product Designer with <strong>7+ years</strong> across fintech, climate tech, and data‑heavy enterprise platforms. I simplify regulatory complexity through research‑driven UX, scalable design systems, and tight cross‑functional delivery.</p>
+    <p class="hero-p rv">I'm a senior product designer in Berlin. For <strong>seven years</strong> I've worked on fintech, climate, and enterprise products: dense data, real regulation, and not much room for guesswork. I do the research, design the system, and stay with engineering until it ships.</p>
     <div class="btns rv">
-      <a href="#work" class="btn btn-p">View selected work <span class="arrow">↗</span></a>
+      <a href="#work" class="btn btn-p">View selected work <span class="ic">↗</span></a>
       <a href="#contact" class="btn">Get in touch</a>
     </div>
     <div class="kpis rv">
       <div class="kpi">
         <div class="n"><em>$</em>500M<em>+</em></div>
-        <div class="l">Processed across the products I've shipped — international student payments, fintech, crypto.</div>
+        <div class="l">Processed through products I've shipped, across international tuition, fintech, and crypto.</div>
       </div>
       <div class="kpi">
         <div class="n">60<em>+</em></div>
-        <div class="l">Components built into a unified enterprise design system, scaling across three product squads.</div>
+        <div class="l">Components in one enterprise design system, used by three product squads.</div>
       </div>
       <div class="kpi">
         <div class="n">14<em>→</em>6</div>
-        <div class="l">Steps reduced in an SBTi climate‑target validation workflow used across thousands of companies.</div>
+        <div class="l">Steps cut from an SBTi climate-target validation flow used by thousands of companies.</div>
       </div>
       <div class="kpi">
         <div class="n">+52<em>%</em></div>
-        <div class="l">Sign‑up lift on Fivo AI after a research‑led redesign — among many measured wins.</div>
+        <div class="l">Sign-up lift on Fivo AI after a research-led redesign.</div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- TRUST BAR -->
-<div class="trust">
+<!-- CONTEXT / PRIOR ROLES -->
+<div class="context">
   <div class="w">
     <div class="row">
-      <span class="trust-label">Trusted across</span>
-      <div class="trust-list">
+      <span class="context-label">Previously</span>
+      <div class="context-list">
         <span>Science Based Targets initiative</span>
         <span>Universal Investment</span>
-        <span>Pay4Me</span>
-        <span>Deveote</span>
-        <span>Fivo AI</span>
+        <span>Deveote Technologies</span>
       </div>
     </div>
   </div>
@@ -555,8 +551,8 @@ footer{
     <div class="section-head">
       <div class="left">
         <div class="eyebrow rv">Selected Work</div>
-        <h2 class="st rv">Case studies in <em>turning complexity</em> into clarity.</h2>
-        <p class="sd rv">End‑to‑end product design grounded in user research, validated through testing, and shipped with engineering. Four featured below — seven more after.</p>
+        <h2 class="st rv">Research in, <em>shipped product</em> out.</h2>
+        <p class="sd rv">Eleven projects across fintech, climate, and enterprise tooling. Each one started with research and ended in something real. The first four go deep; the rest are shorter reads.</p>
       </div>
       <div class="count rv">11 case studies</div>
     </div>
@@ -570,18 +566,17 @@ footer{
         </div>
         <div class="info">
           <div class="info-top">
-            <div class="num">01 / Featured</div>
             <div class="meta">
               <span class="wm">B2B SaaS</span>
               <span class="wm">AI UX</span>
-              <span class="wm">0 → 1 Concept</span>
+              <span class="wm">0 to 1 Concept</span>
             </div>
             <div class="name">ComplianceLayer</div>
-            <p class="desc">A unified security &amp; compliance platform concept. One shared model serving ISO 27001, NIS2, GDPR and SOC 2 — competitive audit, cross‑framework mapping system, and traceable AI.</p>
+            <p class="desc">A unified security and compliance platform concept. One model serving ISO 27001, NIS2, GDPR and SOC 2, built on a competitive audit, a cross-framework mapping system, and AI you can trace.</p>
           </div>
           <div class="info-bot">
             <div class="impact">
-              <div class="imp-i"><div class="imp-n">63%</div><div class="imp-l">Day‑one Reuse</div></div>
+              <div class="imp-i"><div class="imp-n">63%</div><div class="imp-l">Day-one Reuse</div></div>
               <div class="imp-i"><div class="imp-n">4</div><div class="imp-l">Frameworks, 1 Model</div></div>
               <div class="imp-i"><div class="imp-n">13 min</div><div class="imp-l">Board Readout</div></div>
             </div>
@@ -596,14 +591,13 @@ footer{
         </div>
         <div class="info">
           <div class="info-top">
-            <div class="num">02 / Featured</div>
             <div class="meta">
               <span class="wm">Design Systems</span>
               <span class="wm">Enterprise</span>
               <span class="wm">NDA</span>
             </div>
             <div class="name">Enterprise Design System</div>
-            <p class="desc">Built a 60+ component system from scratch for a global climate‑tech platform. Unified three product squads and cut design‑to‑dev handoff by 40%.</p>
+            <p class="desc">A 60+ component system built from scratch for a global climate-tech platform. It unified three product squads and cut design-to-dev handoff by 40%.</p>
           </div>
           <div class="info-bot">
             <div class="impact">
@@ -622,14 +616,13 @@ footer{
         </div>
         <div class="info">
           <div class="info-top">
-            <div class="num">03 / Featured</div>
             <div class="meta">
               <span class="wm">Mobile App</span>
-              <span class="wm">0 → 1</span>
-              <span class="wm">Lost & Found</span>
+              <span class="wm">0 to 1</span>
+              <span class="wm">Lost &amp; Found</span>
             </div>
             <div class="name">Renuir</div>
-            <p class="desc">A 47‑screen mobile platform for Europe's lost‑and‑found ecosystem. AI matching, ownership verification, safe meetups, and a passport gamification system.</p>
+            <p class="desc">A 47-screen mobile platform for Europe's lost-and-found ecosystem. AI matching, ownership verification, safe meetups, and a passport gamification system.</p>
           </div>
           <div class="info-bot">
             <div class="impact">
@@ -648,14 +641,13 @@ footer{
         </div>
         <div class="info">
           <div class="info-top">
-            <div class="num">04 / Featured</div>
             <div class="meta">
               <span class="wm">B2B Enterprise</span>
               <span class="wm">Climate Tech</span>
               <span class="wm">Data UX</span>
             </div>
             <div class="name">Target Validation Platform</div>
-            <p class="desc">Simplified a 14‑step compliance validation workflow to 6 steps for an enterprise platform processing climate targets across thousands of global companies.</p>
+            <p class="desc">A 14-step climate-target validation workflow, redesigned down to 6 steps, for an enterprise platform processing targets from thousands of companies worldwide.</p>
           </div>
           <div class="info-bot">
             <div class="impact">
@@ -676,21 +668,19 @@ footer{
       <a href="projects/climate-compass.html" class="card rv">
         <div class="thumb" style="background:#F2EFE9"><img src="assets/compass-concept.png" alt="Climate Compass"></div>
         <div class="body">
-          <div class="row1"><span class="num">05</span><div class="tags"><span class="tag">Strategy</span><span class="tag">Climate Tech</span></div></div>
+          <div class="row1"><div class="tags"><span class="tag">Strategy</span><span class="tag">Climate Tech</span></div></div>
           <h3>Climate Compass</h3>
-          <p>From anxiety to agency. A behavior-design concept that converts climate paralysis into one credible shared action a week.</p>
+          <p>From anxiety to agency. A behavior-design concept that turns climate paralysis into one credible shared action a week.</p>
           <span class="read">Read →</span>
         </div>
       </a>
 
-
-
       <a href="projects/paywise.html" class="card rv">
         <div class="thumb" style="background:linear-gradient(135deg,#0A0A14 0%,#1C1C2A 100%)"><img src="assets/paywise-hero.png" alt="PayWise"></div>
         <div class="body">
-          <div class="row1"><span class="num">06</span><div class="tags"><span class="tag">Fintech</span><span class="tag">B2C</span></div></div>
+          <div class="row1"><div class="tags"><span class="tag">Fintech</span><span class="tag">B2C</span></div></div>
           <h3>PayWise</h3>
-          <p>Card and expense management. Real‑time tracking, budget categories, savings goals, multi‑card wallet.</p>
+          <p>Card and expense management. Real-time tracking, budget categories, savings goals, and a multi-card wallet.</p>
           <span class="read">Read →</span>
         </div>
       </a>
@@ -698,9 +688,9 @@ footer{
       <a href="projects/pay4me.html" class="card rv">
         <div class="thumb" style="background:#F8F6F3"><img src="assets/pay4me.jpg" alt="Pay4Me"></div>
         <div class="body">
-          <div class="row1"><span class="num">07</span><div class="tags"><span class="tag">Fintech</span><span class="tag">EdTech</span></div></div>
+          <div class="row1"><div class="tags"><span class="tag">Fintech</span><span class="tag">EdTech</span></div></div>
           <h3>Pay4Me Finance</h3>
-          <p>$500M+ processed across 150+ countries. Trust‑first design for international student payment transfers.</p>
+          <p>$500M+ processed across 150+ countries. Trust-first design for international student payment transfers.</p>
           <span class="read">Read →</span>
         </div>
       </a>
@@ -708,9 +698,9 @@ footer{
       <a href="projects/eduapp.html" class="card rv">
         <div class="thumb" style="background:#F0F0F0"><img src="assets/eduapp-real.png" alt="EduApp"></div>
         <div class="body">
-          <div class="row1"><span class="num">08</span><div class="tags"><span class="tag">EdTech</span><span class="tag">Mobile</span></div></div>
+          <div class="row1"><div class="tags"><span class="tag">EdTech</span><span class="tag">Mobile</span></div></div>
           <h3>EduApp</h3>
-          <p>E‑learning for the Nigerian market. Adaptive paths, offline‑first mobile, interactive quizzes for secondary school.</p>
+          <p>E-learning for the Nigerian market. Adaptive paths, offline-first mobile, and interactive quizzes for secondary school.</p>
           <span class="read">Read →</span>
         </div>
       </a>
@@ -718,9 +708,9 @@ footer{
       <a href="projects/fivo.html" class="card rv">
         <div class="thumb" style="background:#EDF3FF"><img src="assets/fivo.jpg" alt="Fivo AI"></div>
         <div class="body">
-          <div class="row1"><span class="num">09</span><div class="tags"><span class="tag">AI SaaS</span><span class="tag">Productivity</span></div></div>
+          <div class="row1"><div class="tags"><span class="tag">AI SaaS</span><span class="tag">Productivity</span></div></div>
           <h3>Fivo AI</h3>
-          <p>AI meeting assistant — transcription, smart summaries, integrations. +52% sign‑ups after redesign.</p>
+          <p>An AI meeting assistant: transcription, smart summaries, and integrations. +52% sign-ups after the redesign.</p>
           <span class="read">Read →</span>
         </div>
       </a>
@@ -728,9 +718,9 @@ footer{
       <a href="projects/raridex.html" class="card rv">
         <div class="thumb" style="background:#F0F5F0"><img src="assets/raridex.jpg" alt="Raridex"></div>
         <div class="body">
-          <div class="row1"><span class="num">10</span><div class="tags"><span class="tag">Analytics</span><span class="tag">CRM</span></div></div>
+          <div class="row1"><div class="tags"><span class="tag">Analytics</span><span class="tag">CRM</span></div></div>
           <h3>Raridex</h3>
-          <p>Analytics and CRM with real‑time dashboards, custom reporting, and integrations for growing businesses.</p>
+          <p>Analytics and CRM with real-time dashboards, custom reporting, and integrations for growing businesses.</p>
           <span class="read">Read →</span>
         </div>
       </a>
@@ -738,14 +728,12 @@ footer{
       <a href="projects/outbound.html" class="card rv">
         <div class="thumb" style="background:#F8F5F0"><img src="assets/outbound-1.png" alt="Outbound"></div>
         <div class="body">
-          <div class="row1"><span class="num">11</span><div class="tags"><span class="tag">AI Travel</span><span class="tag">B2C</span></div></div>
+          <div class="row1"><div class="tags"><span class="tag">AI Travel</span><span class="tag">B2C</span></div></div>
           <h3>Outbound</h3>
-          <p>AI‑powered travel planning. Personalized itineraries, booking management, passport stamp gamification.</p>
+          <p>AI-powered travel planning. Personalized itineraries, booking management, and passport-stamp gamification.</p>
           <span class="read">Read →</span>
         </div>
       </a>
-
-
 
     </div>
   </div>
@@ -762,15 +750,15 @@ footer{
     </div>
     <div class="about-wrap">
       <div>
-        <p class="about-lead rv">Senior Product Designer based in Berlin. <em>Seven years</em> turning complex, data‑heavy platforms into intuitive experiences — across fintech, climate tech, and AI products. I build design systems, simplify regulatory workflows, and ship.</p>
+        <p class="about-lead rv">Senior product designer based in Berlin, <em>seven years</em> in. Most of my work has been on platforms heavy on data and rules: fintech, climate, AI. I build the design system, untangle the workflow, and see it through to release.</p>
         <div class="about-cols rv">
           <div class="about-col">
             <h4>How I work</h4>
-            <p>Research first, always. I run user interviews and usability tests before touching pixels. I build shared design systems so teams ship faster. I sit with engineers during implementation — handoff docs alone are not enough.</p>
+            <p>Research comes first. I run interviews and usability tests before I open Figma. I build shared systems so the team moves faster, and I sit with engineers during the build, because a handoff doc has never shipped a screen on its own.</p>
           </div>
           <div class="about-col">
             <h4>What sets me apart</h4>
-            <p>I've been the sole designer responsible for an entire enterprise platform, and one of many on a cross‑functional squad. I understand cloud infrastructure, write production CSS, and hold Scrum and Product Owner certifications.</p>
+            <p>I've been the sole designer responsible for an entire enterprise platform, and one of many on a cross-functional squad. I understand cloud infrastructure, write production CSS, and hold Scrum and Product Owner certifications.</p>
           </div>
         </div>
         <div class="domains rv">
@@ -778,13 +766,13 @@ footer{
           <div class="domain-tags">
             <span class="dtag">UI/UX Design</span>
             <span class="dtag">Design Systems</span>
-            <span class="dtag">AI / Human‑AI Patterns</span>
+            <span class="dtag">AI / Human-AI Patterns</span>
             <span class="dtag">Fintech</span>
             <span class="dtag">Climate Tech</span>
             <span class="dtag">EdTech</span>
             <span class="dtag">B2B Platforms</span>
             <span class="dtag">B2C Products</span>
-            <span class="dtag">Data‑Heavy UX</span>
+            <span class="dtag">Data-Heavy UX</span>
             <span class="dtag">Enterprise SaaS</span>
           </div>
         </div>
@@ -795,7 +783,7 @@ footer{
         <div class="am-row"><dt>Languages</dt><dd>English <span class="qual">native</span></dd></div>
         <div class="am-row"><dt></dt><dd>German <span class="qual">fluent</span></dd></div>
         <div class="am-row"><dt>Education</dt><dd>RMIT <span class="qual">UX Design</span></dd></div>
-        <div class="am-row"><dt>Certifications</dt><dd>PSM I · PSPO I · PMI‑ACP</dd></div>
+        <div class="am-row"><dt>Certifications</dt><dd>PSM I · PSPO I · PMI-ACP</dd></div>
         <div class="am-row"><dt>Experience</dt><dd>7+ years</dd></div>
         <div class="am-row"><dt>Currently</dt><dd>Senior PD, SBTi</dd></div>
       </dl>
@@ -808,9 +796,8 @@ footer{
   <div class="w">
     <div class="section-head">
       <div class="left">
-        <div class="eyebrow rv">Capabilities</div>
         <h2 class="st rv">Deep in <em>UX</em>. Comfortable across the stack.</h2>
-        <p class="sd rv">Where I spend most of my time, and where I can step in when teams are short‑handed.</p>
+        <p class="sd rv">Where I spend most of my time, and where I can step in when a team is short-handed.</p>
       </div>
     </div>
     <div class="sk-grid">
@@ -819,10 +806,10 @@ footer{
           <span class="sk-icon" aria-hidden="true">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.5" fill="currentColor"/></svg>
           </span>
-          <h4>End‑to‑End UX</h4>
+          <h4>End-to-End UX</h4>
         </div>
-        <p>Research, information architecture, interaction design, wireframes, prototyping, hi‑fi UI, and developer handoff across full product lifecycles.</p>
-        <div class="sk-pills"><span class="pill">User Flows</span><span class="pill">Wireframing</span><span class="pill">Prototyping</span><span class="pill">Hi‑Fi UI</span></div>
+        <p>Research, information architecture, interaction design, wireframes, prototyping, hi-fi UI, and developer handoff across full product lifecycles.</p>
+        <div class="sk-pills"><span class="pill">User Flows</span><span class="pill">Wireframing</span><span class="pill">Prototyping</span><span class="pill">Hi-Fi UI</span></div>
       </div>
       <div class="sk rv">
         <div class="sk-top">
@@ -831,7 +818,7 @@ footer{
           </span>
           <h4>User Research</h4>
         </div>
-        <p>User interviews, usability testing, Jobs‑to‑be‑Done, heuristic evaluation, behavioral analytics, A/B testing, and journey mapping.</p>
+        <p>User interviews, usability testing, Jobs-to-be-Done, heuristic evaluation, behavioral analytics, A/B testing, and journey mapping.</p>
         <div class="sk-pills"><span class="pill">JTBD</span><span class="pill">Usability Testing</span><span class="pill">Hotjar</span><span class="pill">Maze</span></div>
       </div>
       <div class="sk rv">
@@ -841,7 +828,7 @@ footer{
           </span>
           <h4>Design Systems</h4>
         </div>
-        <p>Component library architecture, design tokens, multi‑product systems. Built 60+ component libraries scaling across parallel product squads.</p>
+        <p>Component library architecture, design tokens, and multi-product systems. Built 60+ component libraries that scale across parallel product squads.</p>
         <div class="sk-pills"><span class="pill">Figma</span><span class="pill">Tokens</span><span class="pill">Components</span><span class="pill">WCAG 2.1</span></div>
       </div>
       <div class="sk rv">
@@ -851,7 +838,7 @@ footer{
           </span>
           <h4>AI &amp; Data UX</h4>
         </div>
-        <p>Human‑AI collaboration patterns, explainability UI, AI‑assisted review flows where users trust, audit, and override automated outputs.</p>
+        <p>Human-AI collaboration patterns, explainability UI, and AI-assisted review flows where people trust, audit, and override automated output.</p>
         <div class="sk-pills"><span class="pill">AI Patterns</span><span class="pill">Data Extraction</span><span class="pill">Document UX</span></div>
       </div>
       <div class="sk rv">
@@ -861,7 +848,7 @@ footer{
           </span>
           <h4>Frontend Development</h4>
         </div>
-        <p>Production‑grade HTML/CSS/JS, React, responsive implementation, and design‑to‑code handoff that reduces engineering ambiguity.</p>
+        <p>Production-grade HTML/CSS/JS, React, responsive implementation, and design-to-code handoff that takes the guesswork out of engineering.</p>
         <div class="sk-pills"><span class="pill">React</span><span class="pill">HTML/CSS</span><span class="pill">Tailwind</span><span class="pill">Framer</span></div>
       </div>
       <div class="sk rv">
@@ -871,7 +858,7 @@ footer{
           </span>
           <h4>Agile Delivery</h4>
         </div>
-        <p>PSM I, PSPO I, PMI‑ACP certified. Cross‑functional collaboration, OKR‑aligned design, stakeholder management, and design critique facilitation.</p>
+        <p>PSM I, PSPO I, and PMI-ACP certified. Cross-functional collaboration, OKR-aligned design, stakeholder management, and design critique.</p>
         <div class="sk-pills"><span class="pill">Scrum</span><span class="pill">Jira</span><span class="pill">Confluence</span><span class="pill">Notion</span></div>
       </div>
     </div>
@@ -883,35 +870,34 @@ footer{
   <div class="w">
     <div class="section-head">
       <div class="left">
-        <div class="eyebrow rv">Experience</div>
         <h2 class="st rv">Where I've <em>worked</em>.</h2>
       </div>
     </div>
     <div class="exp-list">
       <div class="exp rv">
-        <div class="exp-d">Feb 2023<br>— Present</div>
+        <div class="exp-d">Feb 2023<br>to Present</div>
         <div>
           <div class="exp-r">Senior Product Designer</div>
           <div class="exp-c">Science Based Targets initiative <span class="city">· SBTi</span></div>
-          <p class="exp-p">Sole product designer for an enterprise platform handling climate target submissions across thousands of documents. Owned end‑to‑end design across three product squads. Simplified a 14‑step validation workflow to 6. Built a 60+ component design system. Ran 30+ research sessions with enterprise users.</p>
+          <p class="exp-p">Sole product designer for an enterprise platform handling climate-target submissions across thousands of documents. Owned end-to-end design across three product squads. Simplified a 14-step validation workflow to 6. Built a 60+ component design system. Ran 30+ research sessions with enterprise users.</p>
         </div>
         <div class="exp-loc">Berlin · DE</div>
       </div>
       <div class="exp rv">
-        <div class="exp-d">Dec 2019<br>— Dec 2022</div>
+        <div class="exp-d">Dec 2019<br>to Dec 2022</div>
         <div>
           <div class="exp-r">UX Designer</div>
           <div class="exp-c">Universal Investment <span class="city">· Enlyte</span></div>
-          <p class="exp-p">Designed interfaces for a multi‑product fintech platform covering digital asset lifecycle management, tokenization, and primary market trading. Built a 60+ component design system across four product areas. Led end‑to‑end UX for the tokenization module.</p>
+          <p class="exp-p">Designed interfaces for a multi-product fintech platform covering digital-asset lifecycle management, tokenization, and primary-market trading. Built a 60+ component design system across four product areas. Led end-to-end UX for the tokenization module.</p>
         </div>
         <div class="exp-loc">Frankfurt · DE</div>
       </div>
       <div class="exp rv">
-        <div class="exp-d">May 2017<br>— Aug 2019</div>
+        <div class="exp-d">May 2017<br>to Aug 2019</div>
         <div>
           <div class="exp-r">UX Designer</div>
           <div class="exp-c">Deveote Technologies</div>
-          <p class="exp-p">Delivered end‑to‑end design across 6+ client products in fintech, health, and logistics. Introduced structured user testing. Presented design rationale to C‑level stakeholders.</p>
+          <p class="exp-p">Delivered end-to-end design across 6+ client products in fintech, health, and logistics. Introduced structured user testing. Presented design rationale to C-level stakeholders.</p>
         </div>
         <div class="exp-loc">Lagos · NG</div>
       </div>
@@ -923,9 +909,8 @@ footer{
 <section class="cta-wrap" id="contact">
   <div class="w">
     <div class="cta-card rv">
-      <div class="ey">Currently open to new roles</div>
-      <h2>Let's design something <em>meaningful</em> together.</h2>
-      <p>Senior Product Design roles across Europe — I'm especially drawn to fintech, climate tech, and AI products where complexity needs care.</p>
+      <h2>If the problem is hard,<br>I'm <em>interested</em>.</h2>
+      <p>I'm open to senior product design roles across Europe, with a soft spot for fintech, climate, and AI. If that's the kind of work you have, let's talk.</p>
       <div class="links">
         <a href="mailto:opeuxdesigns@yahoo.com" class="cta-link primary">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 7 9-7"/></svg>
@@ -949,7 +934,7 @@ footer{
   <div class="foot-wrap">
     <div class="foot-brand">
       <h3><span class="mark"></span> Opeyemi Ajimati</h3>
-      <p>Senior Product Designer based in Berlin. Designing complex systems that feel simple — across fintech, climate tech, and AI.</p>
+      <p>Senior product designer in Berlin, working across fintech, climate, and AI.</p>
     </div>
     <div class="foot-col">
       <h5>Sitemap</h5>
@@ -971,14 +956,14 @@ footer{
     <div class="foot-col">
       <h5>Status</h5>
       <ul>
-        <li><a href="#contact" style="color:var(--accent)">● Available for senior roles</a></li>
+        <li><a href="#contact" class="foot-status">Open to senior roles</a></li>
         <li>Berlin · Remote · EU</li>
       </ul>
     </div>
   </div>
   <div class="foot-bottom">
     <span>© 2026 Opeyemi Ajimati. All rights reserved.</span>
-    <span class="colophon">Set in Fraunces &amp; Inter. Hand‑built in HTML &amp; CSS.</span>
+    <span>Berlin, Germany</span>
   </div>
 </footer>
 
@@ -997,11 +982,13 @@ const ro=new IntersectionObserver(es=>{
   es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');ro.unobserve(e.target)}})
 },{threshold:0.06,rootMargin:'0px 0px -40px 0px'});
 document.querySelectorAll('.rv').forEach(el=>ro.observe(el));
-// Nav scroll state
+// Nav scroll state via sentinel (no scroll listener)
 const nav=document.getElementById('nav');
-const onScroll=()=>{nav.classList.toggle('scrolled',window.scrollY>20)};
-window.addEventListener('scroll',onScroll,{passive:true});
-onScroll();
+const sentinel=document.getElementById('top-sentinel');
+const navIO=new IntersectionObserver(es=>{
+  es.forEach(e=>nav.classList.toggle('scrolled',!e.isIntersecting));
+},{rootMargin:'-20px 0px 0px 0px'});
+navIO.observe(sentinel);
 </script>
 </body>
 </html>
