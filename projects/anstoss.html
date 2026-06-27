@@ -1,0 +1,212 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Anstoss - Designing and building a club app, end to end | Opeyemi Ajimati</title>
+<meta name="description" content="UX case study: Anstoss, a white-label football club app for Android and iOS. Discovery, role-based design, flows, validation, and shipping, designed and coded end to end.">
+<meta name="author" content="Opeyemi Ajimati">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<link rel="canonical" href="https://opeyemiajimati.vercel.app/projects/anstoss.html">
+<meta name="theme-color" content="#FAFAF7">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Opeyemi Ajimati - Portfolio">
+<meta property="og:title" content="Anstoss - Designing and building a club app, end to end">
+<meta property="og:description" content="A white-label football club app for Android and iOS. Discovery, role-based design, flows, validation, and shipping, end to end.">
+<meta property="og:url" content="https://opeyemiajimati.vercel.app/projects/anstoss.html">
+<meta property="og:image" content="https://opeyemiajimati.vercel.app/assets/anstoss-site.png">
+<meta property="og:image:alt" content="Anstoss, the app for amateur football clubs">
+<meta property="og:locale" content="en_US">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Anstoss - Designing and building a club app, end to end">
+<meta name="twitter:description" content="A white-label football club app for Android and iOS. Designed and coded end to end.">
+<meta name="twitter:image" content="https://opeyemiajimati.vercel.app/assets/anstoss-site.png">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="alternate icon" href="../favicon-32.png" type="image/png" sizes="32x32">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<link rel="manifest" href="../site.webmanifest">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org","@type": "CreativeWork",
+  "name": "Anstoss - Designing and building a club app, end to end",
+  "description": "UX case study: Anstoss, a white-label football club app for Android and iOS, designed and coded end to end.",
+  "image": "https://opeyemiajimati.vercel.app/assets/anstoss-site.png",
+  "url": "https://opeyemiajimati.vercel.app/projects/anstoss.html",
+  "author": { "@type": "Person", "name": "Opeyemi Ajimati", "url": "https://opeyemiajimati.vercel.app/", "jobTitle": "Senior Product Designer" },
+  "isPartOf": { "@type": "WebSite", "name": "Opeyemi Ajimati - Portfolio", "url": "https://opeyemiajimati.vercel.app/" }
+}
+</script>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Inter:ital,opsz,wght@0,14..32,300;0,14..32,400;0,14..32,500;0,14..32,600;0,14..32,700;1,14..32,400&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#FAFAF7;--sf:#F4F2EC;--sf2:#EDEAE2;--tx:#1A1816;--tx2:#5C5852;--tx3:#8E8A82;--bd:#E1DCD2;--bd2:#CFC9BD;--ac:#B45342;--r:12px;--f:'Inter',system-ui,-apple-system,'Helvetica Neue',Helvetica,sans-serif;--serif:'Newsreader',Georgia,'Times New Roman',serif}
+html{scroll-behavior:smooth}
+body{font-family:var(--f);background:var(--bg);color:var(--tx);-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;font-feature-settings:'ss01','ss02','cv01';line-height:1.55}
+a{color:inherit;text-decoration:none}img{display:block;max-width:100%}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;height:56px;display:flex;align-items:center;justify-content:space-between;padding:0 32px;background:rgba(250,250,247,0.82);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid var(--bd)}
+.back{font-size:13px;color:var(--tx2);display:flex;align-items:center;gap:6px;transition:color 0.2s}.back:hover{color:var(--tx)}
+.nav-live{font-size:12.5px;font-weight:600;color:var(--ac)}
+.w{max-width:760px;margin:0 auto;padding:0 32px}
+.ww{max-width:1040px;margin:0 auto;padding:0 32px}
+.hero{padding:120px 0 40px}
+.tags{display:flex;gap:6px;margin-bottom:20px;flex-wrap:wrap}
+.tg{font-size:11px;font-weight:500;padding:4px 10px;border-radius:6px;background:var(--sf2);color:var(--tx2)}
+.hero h1{font-family:var(--serif);font-size:clamp(28px,4vw,42px);font-weight:500;letter-spacing:-0.02em;line-height:1.14;margin-bottom:16px}
+.hero h1 em{font-style:italic;color:var(--ac)}
+.lead{font-size:16px;color:var(--tx2);line-height:1.65;margin-bottom:24px}
+.cta-row{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:32px}
+.btnp{display:inline-flex;align-items:center;gap:7px;padding:11px 18px;background:var(--tx);color:var(--bg);border-radius:9px;font-size:13px;font-weight:600;transition:background 0.2s}.btnp:hover{background:#000}
+.btng{display:inline-flex;align-items:center;gap:7px;padding:11px 18px;border:1px solid var(--bd2);border-radius:9px;font-size:13px;font-weight:500;transition:border-color 0.2s}.btng:hover{border-color:var(--tx)}
+.mg{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.mc{padding:14px 16px;background:var(--sf);border-radius:10px;border:1px solid var(--bd)}
+.mc dt{font-size:9px;font-weight:600;text-transform:uppercase;letter-spacing:1.2px;color:var(--tx3);margin-bottom:2px}
+.mc dd{font-size:13px;font-weight:500}
+.metrics{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--bd);border:1px solid var(--bd);border-radius:var(--r);overflow:hidden;margin:44px 0}
+.mt{background:var(--bg);padding:24px;text-align:center}
+.mt .n{font-family:var(--serif);font-size:24px;font-weight:500;letter-spacing:-0.02em}
+.mt .l{font-size:11px;color:var(--tx3);margin-top:3px}
+hr{border:none;height:1px;background:var(--bd);margin:48px 0}
+.sl{font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:1.5px;color:var(--tx3);margin-bottom:6px}
+.sh{font-family:var(--serif);font-size:clamp(20px,2.5vw,26px);font-weight:500;letter-spacing:-0.02em;line-height:1.22;margin-bottom:10px}
+.sp{font-size:14.5px;color:var(--tx2);line-height:1.75;margin-bottom:20px}
+.cg{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:20px 0}
+.cd{background:var(--sf);border:1px solid var(--bd);border-radius:10px;padding:22px}
+.cd h4{font-size:13px;font-weight:600;margin-bottom:5px}
+.cd p{font-size:12.5px;color:var(--tx2);line-height:1.55}
+.wh{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;margin:20px 0}
+.wh-item{padding:18px;background:var(--sf);border:1px solid var(--bd);border-radius:10px}
+.wh-item strong{display:block;font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:1px;color:var(--tx3);margin-bottom:4px}
+.wh-item p{font-size:12.5px;color:var(--tx2);line-height:1.5}
+.flow{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin:20px 0;padding:24px;background:var(--sf);border:1px solid var(--bd);border-radius:10px}
+.fn{padding:7px 13px;border-radius:7px;font-size:11.5px;font-weight:500;white-space:nowrap}
+.fn-s{background:var(--tx);color:#fff}.fn-a{background:var(--bg);border:1px solid var(--bd)}.fn-e{background:#E6ECDD;color:#4C5F3E}
+.fa{color:var(--tx3);font-size:12px}
+.img-box{margin:24px 0;border-radius:var(--r);overflow:hidden;border:1px solid var(--bd);padding:16px;background:var(--sf)}
+.img-box img{width:100%;border-radius:8px}
+.img-dark{background:#0A1117;border-color:#1a2330}
+.img-caption{font-size:11px;color:var(--tx3);text-align:center;margin-top:10px}
+.fd{background:var(--sf);border-radius:0 10px 10px 0;padding:16px 22px;margin-bottom:10px;border-left:3px solid var(--ac)}
+.fd h4{font-size:13px;font-weight:600;margin-bottom:2px}
+.fd p{font-size:12.5px;color:var(--tx2);line-height:1.55}
+.bk{padding:48px;text-align:center}
+.bk-btn{display:inline-flex;align-items:center;gap:6px;padding:10px 20px;border:1px solid var(--bd);border-radius:8px;font-size:13px;font-weight:500;transition:border-color 0.2s}.bk-btn:hover{border-color:var(--ac);color:var(--ac)}
+@media(max-width:900px){.wh{grid-template-columns:1fr 1fr}}
+@media(max-width:768px){.w,.ww{padding:0 20px}.mg,.metrics{grid-template-columns:1fr 1fr}.cg,.wh{grid-template-columns:1fr}nav{padding:0 20px}}
+</style>
+</head><body>
+<nav><a href="../index.html" class="back">← Portfolio</a><a href="https://anstoss.io/" target="_blank" rel="noopener" class="nav-live">anstoss.io ↗</a></nav>
+
+<section class="hero"><div class="w">
+<div class="tags"><span class="tg">Founder &amp; Design Engineer</span><span class="tg">Mobile App</span><span class="tg">Android &amp; iOS</span><span class="tg">Shipped</span></div>
+<h1>Anstoss: one app for the <em>whole club</em>.</h1>
+<p class="lead">Amateur football clubs run on a pile of tools that were never built for them: WhatsApp for chat, Doodle for RSVPs, a PDF for the lineup, a spreadsheet for the table. Anstoss replaces all of it with one white-label app in the club's own colours. I founded it, ran the UX end to end, and wrote the code, for Android and iOS.</p>
+<div class="cta-row">
+<a href="https://anstoss.io/" target="_blank" rel="noopener" class="btnp">Visit the live site at anstoss.io ↗</a>
+<a href="#research" class="btng">Read the process</a>
+</div>
+<div class="mg">
+<div class="mc"><dt>Role</dt><dd>Founder, UX &amp; Build</dd></div>
+<div class="mc"><dt>Platform</dt><dd>Android &amp; iOS</dd></div>
+<div class="mc"><dt>Process</dt><dd>Research → Ship</dd></div>
+<div class="mc"><dt>Status</dt><dd>Live</dd></div>
+</div>
+</div></section>
+
+<div class="ww"><div class="img-box img-dark"><img src="../assets/anstoss-site.png" alt="Anstoss landing page: your club, one place"></div>
+<p class="img-caption">The live product and marketing site, at anstoss.io.</p></div>
+
+<div class="w"><div class="metrics">
+<div class="mt"><div class="n">10+</div><div class="l">Tools replaced</div></div>
+<div class="mt"><div class="n">4</div><div class="l">User roles, one app</div></div>
+<div class="mt"><div class="n">Android + iOS</div><div class="l">Shipped</div></div>
+<div class="mt"><div class="n">Free</div><div class="l">For amateur clubs</div></div>
+</div></div>
+
+<div class="w" id="research"><hr>
+<div class="sl">Discovery</div>
+<h2 class="sh">I started inside the problem</h2>
+<p class="sp">Anstoss began as my own Sunday-morning admin. I help run an amateur side, so the tool-chaos was lived, not researched from a distance. To turn that into a brief I did three things: mapped every tool a club touches across a single match week, ran informal interviews with coaches and club admins at other clubs, and read the support threads where volunteers ask each other how to keep a squad organised. Three patterns came back every time.</p>
+<div class="fd"><h4>The coach is also the admin</h4><p>One volunteer owns comms, attendance, lineup, and the kit. Any tool that adds work, however small, gets dropped by the next fixture.</p></div>
+<div class="fd"><h4>Information is scattered and stale</h4><p>The lineup lives in a screenshot, RSVPs in a poll, the table in a browser tab. Nothing is a source of truth, so the same questions get re-asked in the group every week.</p></div>
+<div class="fd"><h4>Belonging is the product</h4><p>People show up for the badge. Any club tool that looks generic, or like someone else's brand, never feels like theirs.</p></div>
+</div>
+
+<div class="w"><hr>
+<div class="sl">Define</div>
+<h2 class="sh">The brief, in one sentence</h2>
+<p class="sp">Give a club one place to run match day, in its own identity, without asking a volunteer to learn software. The 5W1H kept that honest as the scope grew.</p>
+<div class="wh">
+<div class="wh-item"><strong>Who</strong><p>Volunteer coaches, players, and parents at amateur and youth clubs.</p></div>
+<div class="wh-item"><strong>What</strong><p>One white-label app for chat, fixtures, lineups, RSVP, and the table.</p></div>
+<div class="wh-item"><strong>Why</strong><p>The current ten-tool stack is fragile, generic, and re-built every season.</p></div>
+<div class="wh-item"><strong>When</strong><p>Across a match week: midweek planning through Sunday kickoff.</p></div>
+<div class="wh-item"><strong>Where</strong><p>On phones, often pitch-side with one hand and bad signal.</p></div>
+<div class="wh-item"><strong>How</strong><p>Role-based views, a multi-team data model, and an overlay for one-tap actions.</p></div>
+</div>
+</div>
+
+<div class="w"><hr>
+<div class="sl">Users</div>
+<h2 class="sh">One app, four very different jobs</h2>
+<p class="sp">The hardest constraint was role. A coach, a player, a parent, and a club admin open the same app and need almost opposite things. I designed around role-based views so each person sees only what is theirs, with a separate, safer space for parents of under-age players.</p>
+<div class="cg">
+<div class="cd"><h4>Coach</h4><p>Builds the lineup, sets the schedule, posts announcements, runs match day from one screen.</p></div>
+<div class="cd"><h4>Player</h4><p>Sees fixtures, RSVPs in one tap, reads the team chat, votes for man of the match.</p></div>
+<div class="cd"><h4>Parent</h4><p>A dedicated channel, kept separate from the player group, for under-age teams and logistics.</p></div>
+<div class="cd"><h4>Club admin</h4><p>Manages multiple teams, roles, and membership across the whole club from one account.</p></div>
+</div>
+</div>
+
+<div class="w"><hr>
+<div class="sl">Flows &amp; architecture</div>
+<h2 class="sh">From empty club to first whistle</h2>
+<p class="sp">The make-or-break flow is the first ten minutes. If a coach cannot stand up a club and get players in before they lose patience, nothing else matters. I designed setup to lean on what a club already has: phone numbers. A coach creates the club, invites by number, and players are auto-matched into the right team.</p>
+<div class="flow">
+<span class="fn fn-s">Create club</span><span class="fa">→</span>
+<span class="fn fn-a">Invite by phone</span><span class="fa">→</span>
+<span class="fn fn-a">Auto-match players</span><span class="fa">→</span>
+<span class="fn fn-a">Set the lineup</span><span class="fa">→</span>
+<span class="fn fn-e">Run match day</span>
+</div>
+<p class="sp">Underneath, I modelled the data around clubs from the start, not single teams: multiple teams per club, role-based access, a parent channel, and membership dues that track manual payments or a provider. It is the kind of decision that is invisible when it works and impossible to retrofit when it does not.</p>
+</div>
+<div class="ww"><div class="img-box"><img src="../assets/anstoss-multiteam.png" alt="Multi-team architecture: from U6 to first team, one app"></div></div>
+
+<div class="w"><hr>
+<div class="sl">Design decisions</div>
+<h2 class="sh">The club's identity, not mine</h2>
+<p class="sp">Because belonging was the deepest insight, the headline design decision was white-label by default: club colours, crest, and kit, with no generic blue and no Anstoss branding on top of someone else's identity. The in-app surfaces, match day and team chat, are designed to feel like the club's own product, down to translating messages so a mixed-language squad can still read the group.</p>
+</div>
+<div class="ww"><div class="img-box img-dark"><img src="../assets/anstoss-inapp.png" alt="In-app match day and team chat, themed in the club's colours"></div>
+<p class="img-caption">Match day and team chat, rendered in each club's own colours.</p></div>
+<div class="w">
+<p class="sp">The second decision was restraint. The feature set stays narrow on purpose, live scores, lineups, team chat, schedule and RSVP, squad and roster, and man-of-the-match, because every extra feature is one more thing a volunteer has to ignore. Nothing here is a roadmap promise; it is what the app does today.</p>
+</div>
+<div class="ww"><div class="img-box"><img src="../assets/anstoss-features.png" alt="Anstoss feature set: live scores, lineups, team chat, RSVP, roster, MOTM"></div></div>
+
+<div class="w"><hr>
+<div class="sl">Build</div>
+<h2 class="sh">I didn't hand this off. I shipped it.</h2>
+<p class="sp">The design and the product are the same artifact. I wrote the code myself, which meant designing for what could actually ship rather than what only looks right in a mockup.</p>
+<div class="fd"><h4>The floating overlay</h4><p>The signature feature surfaces key actions on top of other apps. Designing it meant living inside real Android constraints, overlay permissions, draw-over behaviour, and battery. It had to be useful in one tap and invisible the rest of the time.</p></div>
+<div class="fd"><h4>AI that keeps the user in control</h4><p>AI surfaces squad insights but never decides for the coach. I designed it as suggestions the user accepts or ignores, the same human-in-the-loop pattern I work on in enterprise, applied to a Sunday-league bench.</p></div>
+<div class="fd"><h4>Shipping reality</h4><p>App signing, deep-link verification, store review. I used AI build tools, Claude Code, Cursor, and Codex, to move from concept to working build fast, treating prototyping in code as a way of thinking.</p></div>
+</div>
+
+<div class="w"><hr>
+<div class="sl">Validation</div>
+<h2 class="sh">Tested against a real season</h2>
+<p class="sp">Because I had built it, I could put it straight into a real club's hands and watch. I dogfooded Anstoss across a run of actual fixtures, tracking two things: where onboarding stalled, and whether the overlay helped or got in the way. That loop drove the changes that mattered.</p>
+<div class="cg">
+<div class="cd"><h4>Onboarding got shorter</h4><p>Phone-number invites and auto-matching replaced manual roster setup after I watched coaches stall on it.</p></div>
+<div class="cd"><h4>The overlay got quieter</h4><p>Early versions surfaced too much. Testing pushed it down to the few actions a user actually wants mid-task.</p></div>
+</div>
+</div>
+
+<div class="w"><hr>
+<div class="sl">Results</div>
+<h2 class="sh">Live, and in clubs' own colours</h2>
+<p class="sp">Anstoss is shipped on Android and iOS, free for amateur clubs, with a white-label build per club and the floating overlay and AI features in production. It replaced the ten-tool stack with one app, and proved out a design-engineering way of working: research the problem, design the system, write the code, and let real use reshape it.</p>
+<div class="cta-row" style="margin-top:8px">
+<a href="https://anstoss.io/" target="_blank" rel="noopener" class="btnp">See it live at anstoss.io ↗</a>
+</div>
+</div>
+
+<div class="bk"><a href="../index.html" class="bk-btn">← Back to portfolio</a></div>
+</body></html>
