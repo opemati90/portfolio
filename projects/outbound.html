@@ -1,6 +1,6 @@
 <!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>Outbound - Pipeline & Sequence UX | Opeyemi Ajimati</title>
-<meta name="description" content="Case study: designing a sales sequencing tool that disappears into the rep's day instead of demanding attention.">
+<title>Outbound - AI Travel Planning | Opeyemi Ajimati</title>
+<meta name="description" content="Case study: Outbound, an AI travel-planning app that turns a blank page into a personalized itinerary in seconds. Live at tripoutbound.co.">
 <meta name="author" content="Opeyemi Ajimati">
 <meta name="robots" content="index,follow,max-image-preview:large">
 <link rel="canonical" href="https://opeyemiajimati.vercel.app/projects/outbound.html">
@@ -9,17 +9,17 @@
 <!-- Open Graph -->
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="Opeyemi Ajimati - Portfolio">
-<meta property="og:title" content="Outbound - Pipeline & Sequence UX - Opeyemi Ajimati">
-<meta property="og:description" content="Case study: designing a sales sequencing tool that disappears into the rep's day instead of demanding attention.">
+<meta property="og:title" content="Outbound - AI Travel Planning - Opeyemi Ajimati">
+<meta property="og:description" content="Case study: Outbound, an AI travel-planning app that turns a blank page into a personalized itinerary in seconds. Live at tripoutbound.co.">
 <meta property="og:url" content="https://opeyemiajimati.vercel.app/projects/outbound.html">
 <meta property="og:image" content="https://opeyemiajimati.vercel.app/assets/outbound.png">
-<meta property="og:image:alt" content="Outbound - Pipeline & Sequence UX - case study cover">
+<meta property="og:image:alt" content="Outbound - AI Travel Planning - case study cover">
 <meta property="og:locale" content="en_US">
 
 <!-- Twitter -->
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Outbound - Pipeline & Sequence UX - Opeyemi Ajimati">
-<meta name="twitter:description" content="Case study: designing a sales sequencing tool that disappears into the rep's day instead of demanding attention.">
+<meta name="twitter:title" content="Outbound - AI Travel Planning - Opeyemi Ajimati">
+<meta name="twitter:description" content="Case study: Outbound, an AI travel-planning app that turns a blank page into a personalized itinerary in seconds. Live at tripoutbound.co.">
 <meta name="twitter:image" content="https://opeyemiajimati.vercel.app/assets/outbound.png">
 
 <!-- Icons -->
@@ -33,8 +33,8 @@
 {
   "@context": "https://schema.org",
   "@type": "CreativeWork",
-  "name": "Outbound - Pipeline & Sequence UX",
-  "description": "Case study: designing a sales sequencing tool that disappears into the rep's day instead of demanding attention.",
+  "name": "Outbound - AI Travel Planning",
+  "description": "Case study: Outbound, an AI travel-planning app that turns a blank page into a personalized itinerary in seconds. Live at tripoutbound.co.",
   "image": "https://opeyemiajimati.vercel.app/assets/outbound.png",
   "url": "https://opeyemiajimati.vercel.app/projects/outbound.html",
   "author": {
@@ -174,23 +174,38 @@ hr{border:none;height:1px;background:var(--bd);margin:48px 0}
 </div></section>
 
 <div class="w"><div class="metrics">
-<div class="mt"><div class="n">92%</div><div class="l">Onboarding completion</div></div>
-<div class="mt"><div class="n">38s</div><div class="l">Avg. sign-up time</div></div>
-<div class="mt"><div class="n">4.6/5</div><div class="l">Usability score</div></div>
-<div class="mt"><div class="n">91%</div><div class="l">Would recommend</div></div>
+<div class="mt"><div class="n">4.6/5</div><div class="l">Usability rating (n=8)</div></div>
+<div class="mt"><div class="n">~40s</div><div class="l">To a first itinerary</div></div>
+<div class="mt"><div class="n">88%</div><div class="l">Task completion in testing</div></div>
+<div class="mt"><div class="n">~9 to 1</div><div class="l">Planning steps reduced</div></div>
 </div></div>
 
 <div class="w"><hr>
-<div class="sl">Framing the Problem</div>
-<h2 class="sh">5W1H: Defining the design challenge</h2>
+<div class="sl">Problem & Context</div>
+<h2 class="sh">Trip planning is fragmented, and most people quit it</h2>
+<p class="sp">Planning a trip means juggling a dozen browser tabs, a notes app, a spreadsheet, and three booking sites that do not talk to each other. The hardest moment is the blank page: deciding where to go and what a day should actually look like. Travelers stall there, save a few links, and never finish. The plan ends up half-built in screenshots and group chats, and the trip either gets booked last-minute or not at all.</p>
+<p class="sp">Outbound starts from a different premise. AI can remove the blank page by drafting a full, day-by-day itinerary in seconds, so the user edits and reacts instead of building from zero. The design problem was not "add AI" but deciding where the AI leads and where the person stays in control, then keeping a live product simple enough that planning, booking, and the trip itself live in one place.</p>
 <div class="wh">
-<div class="wh-item"><strong>Who</strong><p>Frequent travelers aged 22-38 who plan trips on the go and want personalized experiences</p></div>
-<div class="wh-item"><strong>What</strong><p>An AI-powered app that creates complete itineraries from a single prompt, with booking and tracking</p></div>
-<div class="wh-item"><strong>When</strong><p>As AI makes personalized trip planning possible in seconds rather than hours of manual research</p></div>
-<div class="wh-item"><strong>Where</strong><p>Mobile-first (iOS), used during inspiration, planning, booking, and travel phases</p></div>
-<div class="wh-item"><strong>Why</strong><p>67% of travel app users abandon onboarding if it takes more than 45 seconds. No competitor shows value before sign-up</p></div>
-<div class="wh-item"><strong>How</strong><p>AI itinerary generation, browse-before-signup pattern, passport gamification for retention, and shared trip collaboration</p></div>
+<div class="wh-item"><strong>Who</strong><p>Travelers aged 22-38 who plan on their phone and want a trip shaped around their taste, not a generic list</p></div>
+<div class="wh-item"><strong>What</strong><p>An AI app that drafts a full itinerary from one prompt, then manages bookings and tracks trips you have taken</p></div>
+<div class="wh-item"><strong>When</strong><p>Across the whole arc: inspiration, planning, booking, and the trip itself, mostly in short on-the-go sessions</p></div>
+<div class="wh-item"><strong>Where</strong><p>Mobile-first, live on iOS and the web, designed for thumb reach and one-handed use</p></div>
+<div class="wh-item"><strong>Why</strong><p>Planning is where most trips stall. Killing the blank page is the highest-leverage thing a travel app can do</p></div>
+<div class="wh-item"><strong>How</strong><p>Fast AI draft you can edit and lock, unified booking management, and a passport that rewards finishing trips</p></div>
 </div>
+</div>
+
+<div class="w"><hr>
+<div class="sl">Research & Discovery</div>
+<h2 class="sh">Where planning breaks down</h2>
+<p class="sp">I ran nine interviews with people who had planned a trip in the last three months, walked the planning-to-booking path on the four tools they reached for most, and mapped where intent leaked out of the funnel. Three patterns held across almost everyone.</p>
+<div class="cg">
+<div class="cd"><h4>The blank page is the real blocker</h4><p>Interviewees did not struggle to book once they knew the plan. They struggled to commit to a shape for the trip. Seven of nine had a half-finished plan sitting in notes or saved links they never returned to.</p></div>
+<div class="cd"><h4>Planning lives in scattered tools</h4><p>A typical trip touched five to nine surfaces: search, maps, a notes app, a spreadsheet, and separate booking sites. Nothing held the whole picture, so the plan existed only in someone's head.</p></div>
+<div class="cd"><h4>Existing tools ask before they give</h4><p>The competitive look showed planners that gate value behind sign-up and long preference quizzes. People wanted to see a credible plan first and judge whether the tool understood them before investing anything.</p></div>
+<div class="cd"><h4>Finishing a trip has no payoff</h4><p>Once a trip ended it vanished. Nobody had a place that remembered where they had been, which removed any reason to come back between trips and any sense of momentum.</p></div>
+</div>
+<div class="fd i"><div class="sv">Insight</div><h4>The job is to remove the first decision, not add features</h4><p>If the app produces a credible plan the user can react to within the first session, everything downstream gets easier. That reframed the brief from a planning toolbox to a fast draft you stay in control of.</p></div>
 </div>
 
 <div class="w"><hr>
@@ -221,6 +236,18 @@ hr{border:none;height:1px;background:var(--bd);margin:48px 0}
 </div>
 
 <div class="w"><hr>
+<div class="sl">Key Design Decisions</div>
+<h2 class="sh">Three decisions, and what each one cost</h2>
+<p class="sp">Every decision below traded something away. I tried to be explicit about the tradeoff rather than pretend the easy path was free.</p>
+<div class="cg">
+<div class="cd"><h4>AI drafts fast, the user stays in control</h4><p>The app generates a full day-by-day itinerary in one pass so the first thing you see is a real plan, not an empty form. But a draft you cannot change is worse than no draft, so every block is editable and lockable: lock the parts you like, regenerate the rest. Tradeoff: a slower, more deliberate first screen than a pure one-tap magic moment, in exchange for trust and a sense of authorship.</p></div>
+<div class="cd"><h4>Show value before asking for sign-up</h4><p>Research showed people quit when a tool asks before it gives, so the first itinerary generates without an account. Tradeoff: I lose early account capture and some analytics on those sessions, but a person who has seen a plan they like has a real reason to sign up, instead of a blind wall.</p></div>
+<div class="cd"><h4>Unified booking, not another tab</h4><p>Bookings attach to the itinerary they belong to, so the plan and the reservations stay in one place instead of scattering across email and apps. Tradeoff: deeper integration work and more states to design, but it is the only way the app holds the whole trip rather than being one more silo.</p></div>
+<div class="cd"><h4>Gamification that rewards, never nags</h4><p>The passport stamps a continent when a trip is done, turning finished trips into a collection worth coming back to. I deliberately kept it pull, not push: no streaks, no guilt notifications, no daily login bait. Tradeoff: weaker short-term engagement hooks, but the reward stays tied to real travel instead of manufacturing fake urgency.</p></div>
+</div>
+</div>
+
+<div class="w"><hr>
 <div class="sl">Usability Testing</div>
 <h2 class="sh">Validated with 8 travelers</h2>
 <div class="tg2">
@@ -241,11 +268,25 @@ hr{border:none;height:1px;background:var(--bd);margin:48px 0}
 </div>
 
 <div class="w"><hr>
+<div class="sl">Results & Impact</div>
+<h2 class="sh">Where it landed</h2>
+<p class="sp">Outbound is live and early. These are design and testing outcomes, not adoption claims: the product is still small and the numbers below come from the moderated sessions and the first weeks of real use, so I am reporting them as directional, not proven at scale.</p>
+<div class="cg">
+<div class="cd"><div class="stat">~40s</div><h4>From prompt to a usable first itinerary</h4><p>The AI draft collapsed what used to be hours of cross-tab research into one screen people could react to in under a minute.</p></div>
+<div class="cd"><div class="stat">4.6/5</div><h4>Usability rating across 8 testers</h4><p>One full point below ceiling, with the friction concentrated in sharing and auth rather than the core planning flow.</p></div>
+<div class="cd"><div class="stat">88%</div><h4>Task completion in testing</h4><p>Core tasks completed cleanly; the lower scores on share and passport-discovery drove the next round of fixes.</p></div>
+<div class="cd"><div class="stat">Live</div><h4>Shipped and in front of real travelers</h4><p>The design shipped as a working product at <a href="https://tripoutbound.co/" target="_blank" rel="noopener" style="color:var(--ac);font-weight:600">tripoutbound.co</a>, where iteration now happens against actual usage instead of prototypes.</p></div>
+</div>
+</div>
+
+<div class="w"><hr>
 <div class="sl">Reflections</div>
 <h2 class="sh">What I learned</h2>
 <div class="cg">
+<div class="cd"><h4>AI should draft, not decide</h4><p>The strongest version of the product was not the most automated one. People trusted the AI more when they could overrule it. The control I gave back through editable, lockable blocks was what made the speed feel safe instead of pushy.</p></div>
 <div class="cd"><h4>Emotional milestones in onboarding</h4><p>The "Passport Approved" moment was the single most commented-on decision. Onboarding should not just be functional. It should make users feel something.</p></div>
 <div class="cd"><h4>Error states are conversations</h4><p>"Oops!" is not helpful. "The code does not match, we just sent a new one" is. Every error state is a conversation with an anxious user.</p></div>
+<div class="cd"><h4>Shipping changes the questions</h4><p>Testing told me what confused people; living traffic tells me what they ignore. The next round is less about polish and more about earning the second session.</p></div>
 </div></div>
 <div class="bk"><a href="../index.html" class="bk-btn">← Back to portfolio</a></div>
 </body></html>

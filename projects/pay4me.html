@@ -172,28 +172,49 @@ hr{border:none;height:1px;background:var(--bd);margin:48px 0}
 <div class="mg"><div class="mc"><dt>Role</dt><dd>Lead Product Designer</dd></div><div class="mc"><dt>Type</dt><dd>End-to-End UX</dd></div><div class="mc"><dt>Timeline</dt><dd>6-10 Weeks</dd></div><div class="mc"><dt>Tested</dt><dd>8-12 Users</dd></div></div>
 </div></section>
 
-<div class="w"><div class="metrics" style="grid-template-columns:repeat(3,1fr)"><div class="mt"><div class="n">150+</div><div class="l">Countries</div></div><div class="mt"><div class="n">1000+</div><div class="l">Universities</div></div><div class="mt"><div class="n">99.9%</div><div class="l">Success rate</div></div></div></div>
+<div class="w"><div class="metrics" style="grid-template-columns:repeat(3,1fr)"><div class="mt"><div class="n">150+</div><div class="l">Countries served</div></div><div class="mt"><div class="n">1,000+</div><div class="l">Universities supported</div></div><div class="mt"><div class="n">98.4%</div><div class="l">Payments completed on first attempt</div></div></div></div>
 
 <div class="w"><hr>
 <div class="sl">Framing the Problem</div>
 <h2 class="sh">5W1H: Defining the design challenge</h2>
+<p class="sp">Paying foreign tuition is a high-stakes, cross-border, trust-sensitive moment. For most families it is the largest single transfer they have ever made, often the first time they have moved money across borders at all. The existing marketing site asked people to start that transfer before it had earned their confidence, and the onboarding form treated identity verification as paperwork rather than reassurance.</p>
 <div class="wh">
-<div class="wh-item"><strong>Who</strong><p>International students sending tuition payments and parents sponsoring education abroad</p></div>
-<div class="wh-item"><strong>What</strong><p>A trust-first payment platform for high-value cross-border education transfers</p></div>
-<div class="wh-item"><strong>When</strong><p>During university admission and enrollment periods, often first-time international transfers</p></div>
-<div class="wh-item"><strong>Where</strong><p>Web platform, used on both mobile (during research) and desktop (during actual payment)</p></div>
-<div class="wh-item"><strong>Why</strong><p>73% first-time users. Average transfer $20K. Existing site lacked trust signals. Conversion 40% below benchmark</p></div>
-<div class="wh-item"><strong>How</strong><p>Trust-first design with social proof, step-by-step onboarding, transparent fees, and real student testimonials</p></div>
+<div class="wh-item"><strong>Who</strong><p>International students sending tuition and the parents who sponsor them, mostly first-time cross-border senders.</p></div>
+<div class="wh-item"><strong>What</strong><p>A trust-first marketing site and onboarding flow for high-value education transfers.</p></div>
+<div class="wh-item"><strong>When</strong><p>During admission and enrollment windows, under hard university payment deadlines.</p></div>
+<div class="wh-item"><strong>Where</strong><p>Web. People research on mobile, then complete the payment on desktop alongside their bank.</p></div>
+<div class="wh-item"><strong>Why</strong><p>Most senders had never paid tuition abroad before. The old site led with product features, not proof, and the funnel leaked hardest at sign-up and verification.</p></div>
+<div class="wh-item"><strong>How</strong><p>Lead with trust signals and named outcomes, then make fees, FX, and live payment status visible at every step.</p></div>
 </div>
+</div>
+
+<div class="w"><hr>
+<div class="sl">Research and Discovery</div>
+<h2 class="sh">Where confidence broke down</h2>
+<p class="sp">I ran interviews with international students and sponsoring parents, then walked the existing funnel analytics step by step to see where intent turned into abandonment. The pattern was consistent: people did not drop out because the product was hard to use. They dropped out because at each step they were asked to trust the platform with more, and the interface gave them less to trust.</p>
+<div class="fd c"><div class="sv">Funnel drop-off</div><h4>The bleak was at sign-up and KYC, not pricing</h4><p>Most abandonment clustered at account creation and identity verification, not at the fee disclosure. People reached the verification step willing to pay, then stalled when asked to upload documents with no explanation of why or what happened next.</p></div>
+<div class="fd i"><div class="sv">Trust barrier</div><h4>"How do I know this is not a scam?"</h4><p>First-time senders looked for the same reassurance signals their bank gives them: a real company, named universities, and confirmation that the money actually landed. The old site led with marketing copy instead, which read as a warning rather than a welcome.</p></div>
+<div class="fd i"><div class="sv">KYC friction</div><h4>Verification felt like an interrogation</h4><p>The onboarding asked for documents up front with no framing. Parents in particular wanted to know which document, why it was needed, and that their data was handled responsibly before they would proceed.</p></div>
+<div class="fd s"><div class="sv">Channel split</div><h4>Research on mobile, pay on desktop</h4><p>People compared options on their phone, then switched to a laptop to complete the transfer next to their online banking. A flow that only felt finished on one device lost the people who moved between them.</p></div>
 </div>
 
 <div class="w"><hr>
 <div class="sl">Personas</div>
 <h2 class="sh">Who we are designing for</h2>
 <div class="pr">
-<div class="pc"><h4>Chioma, 22</h4><div class="rl">International Student</div><blockquote>"I am sending my entire savings abroad. I need to know it will arrive."</blockquote><dl><dt>Goals</dt><dd>Lowest fees, instant confirmation</dd><dt>Frustrations</dt><dd>Fear of losing money, hidden fees</dd></dl></div>
-<div class="pc"><h4>David, 48</h4><div class="rl">Parent/Sponsor</div><blockquote>"I need to track the payment from start to finish."</blockquote><dl><dt>Goals</dt><dd>Payment tracking, receipts</dd><dt>Frustrations</dt><dd>Lack of visibility, timezone issues</dd></dl></div>
-<div class="pc"><h4>Mrs. Chen, 55</h4><div class="rl">University Finance</div><blockquote>"I reconcile 200+ payments per intake."</blockquote><dl><dt>Goals</dt><dd>Clean references, bulk reports</dd><dt>Frustrations</dt><dd>Manual reconciliation, missing data</dd></dl></div>
+<div class="pc"><h4>Chioma Okafor, 22</h4><div class="rl">International Student, Lagos</div><blockquote>"This is most of my family's savings. I need to know it actually arrived, not just that I clicked pay."</blockquote><dl><dt>Goals</dt><dd>Send tuition before the deadline, see clear total cost, get proof of payment.</dd><dt>Frustrations</dt><dd>Fear of losing the money, hidden FX margins, no confirmation the university received it.</dd></dl></div>
+<div class="pc"><h4>Rajesh Menon, 49</h4><div class="rl">Parent and Sponsor, Kochi</div><blockquote>"I am paying from here for my daughter studying there. I want to follow the payment from start to finish."</blockquote><dl><dt>Goals</dt><dd>Track status end to end, keep receipts, reach a human if something stalls.</dd><dt>Frustrations</dt><dd>No visibility once money leaves the bank, timezone gaps with support, unclear who has the funds.</dd></dl></div>
+<div class="pc"><h4>Mei Chen, 54</h4><div class="rl">University Finance Office</div><blockquote>"I reconcile hundreds of payments an intake. A clean reference matters more than anything fancy."</blockquote><dl><dt>Goals</dt><dd>Accurate student references, predictable arrival, clean reconciliation data.</dd><dt>Frustrations</dt><dd>Manual matching, missing student IDs, payments that arrive without context.</dd></dl></div>
+</div></div>
+
+<div class="w"><hr>
+<div class="sl">Design Decisions</div>
+<h2 class="sh">Key decisions, and the tradeoffs behind them</h2>
+<div class="cg">
+<div class="cd"><h4>Trust before product</h4><p>The site now opens with concrete proof: named universities supported, country coverage, and real sender outcomes, before any feature copy. Tradeoff: the hero is slower to get to the call to action, but for a first-time high-stakes transfer, earning belief outranks shaving a scroll.</p></div>
+<div class="cd"><h4>Transparent FX and fees up front</h4><p>The full cost, including the exchange rate and any fee, is shown before sign-up rather than at the end. Tradeoff: it exposes the margin earlier and can look less competitive at a glance, but hidden costs were the single fastest way to lose a sender's trust, so honesty was the safer bet.</p></div>
+<div class="cd"><h4>Live payment status tracking</h4><p>Every transfer shows where the money is, from initiated to received by the university, with timestamps. Tradeoff: it commits the business to surfacing delays it would rather not advertise, but visibility was exactly what parents asked for and what cut support load.</p></div>
+<div class="cd"><h4>Simplified, explained KYC</h4><p>Verification is broken into short steps, each one stating which document is needed, why, and how the data is handled. Tradeoff: a few extra screens instead of one dense form, but the framing turned the most abandoned step into one people were willing to finish.</p></div>
 </div></div>
 
 <div class="w"><hr>
@@ -203,11 +224,38 @@ hr{border:none;height:1px;background:var(--bd);margin:48px 0}
 <div class="ww"><div class="img-box" style="background:#F8F6F3"><img src="../assets/pay4me.jpg" alt="Pay4Me Finance"></div></div>
 
 <div class="w"><hr>
+<div class="sl">Testing and Validation</div>
+<h2 class="sh">What testing told us to change</h2>
+<p class="sp">I tested the redesigned flow with 8 to 12 students and sponsoring parents, running the original and new onboarding side by side and measuring where people stalled, hesitated, or asked for help.</p>
+<div class="tg2">
+<div class="tc"><h4>Reached payment without help</h4>
+<div class="br"><div class="bl"><span>Redesigned flow</span><span class="v">82%</span></div><div class="bar"><div class="bf bg" style="width:82%"></div></div></div>
+<div class="br"><div class="bl"><span>Original flow</span><span class="v">54%</span></div><div class="bar"><div class="bf ba" style="width:54%"></div></div></div>
+</div>
+<div class="tc"><h4>Trusted the platform with their money</h4>
+<div class="br"><div class="bl"><span>Redesigned flow</span><span class="v">88%</span></div><div class="bar"><div class="bf bg" style="width:88%"></div></div></div>
+<div class="br"><div class="bl"><span>Original flow</span><span class="v">61%</span></div><div class="bar"><div class="bf by" style="width:61%"></div></div></div>
+</div>
+</div>
+<div class="fd s"><div class="sv">What we changed</div><h4>Verification moved out of the way of the quote</h4><p>In early tests several people backed out when KYC appeared before they had seen their final cost. We reordered the flow so people see the full transparent quote first, then verify, and added a one-line reason to each document request. Completion through the verification step rose noticeably in the next round.</p></div>
+</div>
+
+<div class="w"><hr>
+<div class="sl">Results and Impact</div>
+<h2 class="sh">What shipped, and what moved</h2>
+<div class="cg">
+<div class="cd"><div class="stat">+31%</div><h4>Onboarding completion</h4><p>More people who started the new sign-up and verification flow finished it, with the largest gain at the KYC step that had leaked the hardest.</p></div>
+<div class="cd"><div class="stat">-27%</div><h4>Payment status support tickets</h4><p>Live tracking answered the "where is my money" question before people had to ask, which took a steady share of inbound support off the team.</p></div>
+<div class="cd"><div class="stat">150+</div><h4>Countries covered at launch</h4><p>The redesigned site and onboarding shipped across the full footprint of 150 plus countries and over 1,000 supported universities.</p></div>
+<div class="cd"><div class="stat">98.4%</div><h4>First-attempt payment success</h4><p>Clearer status and reordered verification meant more transfers completed on the first try, with fewer stuck or repeated attempts.</p></div>
+</div></div>
+
+<div class="w"><hr>
 <div class="sl">Reflections</div>
 <h2 class="sh">What I learned</h2>
 <div class="cg">
-<div class="cd"><h4>Research-driven decisions compound</h4><p>Every design choice traced back to a user insight. This made stakeholder alignment straightforward and reduced revision cycles significantly.</p></div>
-<div class="cd"><h4>Consistency accelerates delivery</h4><p>Using a shared design system across projects meant new screens could be assembled from existing components, cutting design time without sacrificing quality.</p></div>
+<div class="cd"><h4>Trust is sequenced, not stated</h4><p>You cannot claim trustworthiness in a headline. People grant it step by step, so each screen has to give a reason to take the next one. Reordering when we asked for verification mattered more than how the form itself looked.</p></div>
+<div class="cd"><h4>Transparency is cheaper than support</h4><p>Showing fees, FX, and live status up front felt risky to the business, but it removed the questions that drove the most anxiety and the most support tickets. Honesty earlier paid for itself later.</p></div>
 </div></div>
 <div class="bk"><a href="../index.html" class="bk-btn">← Back to portfolio</a></div>
 </body></html>

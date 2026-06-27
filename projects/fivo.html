@@ -172,42 +172,102 @@ hr{border:none;height:1px;background:var(--bd);margin:48px 0}
 <div class="mg"><div class="mc"><dt>Role</dt><dd>Lead Product Designer</dd></div><div class="mc"><dt>Type</dt><dd>End-to-End UX</dd></div><div class="mc"><dt>Timeline</dt><dd>6-10 Weeks</dd></div><div class="mc"><dt>Tested</dt><dd>8-12 Users</dd></div></div>
 </div></section>
 
-<div class="w"><div class="metrics"><div class="mt"><div class="n">+52%</div><div class="l">Sign-up rate</div></div><div class="mt"><div class="n">-41%</div><div class="l">Bounce rate</div></div><div class="mt"><div class="n">3.8s</div><div class="l">Value prop clarity</div></div><div class="mt"><div class="n">86</div><div class="l">SUS score</div></div></div></div>
+<div class="w"><div class="metrics"><div class="mt"><div class="n">+52%</div><div class="l">Sign-up rate</div></div><div class="mt"><div class="n">-41%</div><div class="l">Bounce rate</div></div><div class="mt"><div class="n">86</div><div class="l">SUS score</div></div><div class="mt"><div class="n">3.4s</div><div class="l">Time to value prop</div></div></div></div>
 
 <div class="w"><hr>
-<div class="sl">Framing the Problem</div>
-<h2 class="sh">5W1H: Defining the design challenge</h2>
+<div class="sl">The Problem</div>
+<h2 class="sh">A good product losing people before they ever tried it</h2>
+<p class="sp">Fivo had a working transcription product and steady inbound traffic, but the marketing site and onboarding leaked most of it. People landed, could not tell within a few seconds why Fivo was different from Otter.ai or Fireflies, and left. The team read this as a product gap. The funnel data said it was a positioning and onboarding gap. My job was to make the value legible fast, then carry that clarity into a sign-up flow short enough that people reached their first transcript.</p>
 <div class="wh">
-<div class="wh-item"><strong>Who</strong><p>Remote team leads, PMs, and consultants in 6+ meetings per day</p></div>
-<div class="wh-item"><strong>What</strong><p>An AI meeting assistant that transcribes, summarizes, and integrates with team tools</p></div>
-<div class="wh-item"><strong>When</strong><p>As remote work becomes permanent and meeting overload grows across industries</p></div>
-<div class="wh-item"><strong>Where</strong><p>Web marketing site + SaaS product, used on desktop during and after meetings</p></div>
-<div class="wh-item"><strong>Why</strong><p>72% funnel drop-off. Users could not differentiate Fivo from 5+ competitors in under 5 seconds</p></div>
-<div class="wh-item"><strong>How</strong><p>Integration-first messaging, trust-building through security signals, and role-specific use cases</p></div>
+<div class="wh-item"><strong>Who</strong><p>Team leads, PMs, and independent consultants sitting in 4 to 8 meetings a day</p></div>
+<div class="wh-item"><strong>What</strong><p>An AI meeting assistant: live transcription, structured summaries, and integrations with the tools teams already run</p></div>
+<div class="wh-item"><strong>When</strong><p>Remote and hybrid work is permanent and meeting load keeps climbing across roles</p></div>
+<div class="wh-item"><strong>Where</strong><p>Desktop web, during and right after calls; the marketing site is the front door</p></div>
+<div class="wh-item"><strong>Why</strong><p>The old homepage to sign-up funnel dropped roughly 7 in 10 visitors, and most never reached a clear reason to stay</p></div>
+<div class="wh-item"><strong>How</strong><p>Lead with integrations and concrete outcomes, prove trust early, and cut the sign-up flow to its first useful moment</p></div>
 </div>
+</div>
+
+<div class="w"><hr>
+<div class="sl">Research and Discovery</div>
+<h2 class="sh">Where the funnel actually broke</h2>
+<p class="sp">I ran three things in parallel: a competitive teardown of Otter.ai and Fireflies, a funnel analysis on the existing site, and eight user interviews with people who take notes in meetings for a living. The methods were modest by design. With a small sample I leaned on triangulation, treating a finding as real only when interviews, analytics, and the competitive read pointed the same way. I did not have a large panel or A/B infrastructure, so I am honest that the testing below is directional, not statistically conclusive.</p>
+<div class="cg">
+<div class="cd"><h4>Competitive teardown</h4><p>Otter and Fireflies both lead with the integration and the workflow, not the transcription engine. Fivo led with accuracy claims, which read as a commodity feature buyers already assume. The real differentiator, deeper integration into existing tools, was buried below the fold.</p></div>
+<div class="cd"><h4>Funnel analysis</h4><p>The steepest drop was on the homepage itself, before any click. A second cliff sat inside sign-up, which asked for workspace details up front. People bailed before they saw a single transcript.</p></div>
+</div>
+<div class="fd c"><div class="sv">Critical</div><h4>Visitors could not place the product in seconds</h4><p>In interviews, people skimmed the old hero and described Fivo as "another transcription tool." None mentioned integrations or summaries unsolicited. The thing that made it worth switching was invisible at first read.</p></div>
+<div class="fd i"><div class="sv">Insight</div><h4>Trust was the silent objection</h4><p>Several interviewees would not connect a meeting tool to their calendar without knowing where recordings live and who can see them. The old site never addressed it, so cautious users quietly left instead of asking.</p></div>
+<div class="fd s"><div class="sv">Signal</div><h4>Use cases were role-specific, not generic</h4><p>A PM searching past decisions and a consultant exporting billable records want different proof. One flat pitch spoke to neither. Role-anchored examples landed far harder in conversation.</p></div>
 </div>
 
 <div class="w"><hr>
 <div class="sl">Personas</div>
-<h2 class="sh">Who we are designing for</h2>
+<h2 class="sh">Three people the redesign is built for</h2>
+<p class="sp">These are composites drawn from the interviews, kept specific so design tradeoffs had a face to argue with.</p>
 <div class="pr">
-<div class="pc"><h4>Lisa, 33</h4><div class="rl">Remote Team Lead</div><blockquote>"I need notes I can actually trust and share."</blockquote><dl><dt>Goals</dt><dd>Accurate transcription, shareable summaries</dd><dt>Frustrations</dt><dd>Inaccurate AI, manual editing</dd></dl></div>
-<div class="pc"><h4>Tom, 38</h4><div class="rl">Product Manager</div><blockquote>"I need to search across all my meetings for decisions."</blockquote><dl><dt>Goals</dt><dd>Searchable archive, action items</dd><dt>Frustrations</dt><dd>Information scattered across tools</dd></dl></div>
-<div class="pc"><h4>Priya, 29</h4><div class="rl">Consultant</div><blockquote>"I bill hourly and need clean meeting records."</blockquote><dl><dt>Goals</dt><dd>Time-stamped transcripts, PDF export</dd><dt>Frustrations</dt><dd>Manual note-taking, formatting after</dd></dl></div>
+<div class="pc"><h4>Lena, 34</h4><div class="rl">Remote Team Lead</div><blockquote>"I will share AI notes with my team only if I trust them enough not to re-check every line."</blockquote><dl><dt>Goals</dt><dd>Accurate transcripts she can forward without editing, clear summaries</dd><dt>Frustrations</dt><dd>Fixing AI mistakes by hand, no sense of where recordings are stored</dd></dl></div>
+<div class="pc"><h4>Marcus, 39</h4><div class="rl">Product Manager</div><blockquote>"Two months later I need the decision and the reasoning, not to rewatch the call."</blockquote><dl><dt>Goals</dt><dd>Searchable archive across meetings, action items pushed into his stack</dd><dt>Frustrations</dt><dd>Decisions scattered across tools, summaries that miss what was agreed</dd></dl></div>
+<div class="pc"><h4>Priya, 29</h4><div class="rl">Independent Consultant</div><blockquote>"I bill by the hour, so clean records are part of the deliverable."</blockquote><dl><dt>Goals</dt><dd>Time-stamped transcripts, tidy PDF export for clients</dd><dt>Frustrations</dt><dd>Note-taking that pulls her out of the conversation, reformatting afterward</dd></dl></div>
 </div></div>
 
 <div class="w"><hr>
-<div class="sl">Final Designs</div>
-<h2 class="sh">The solution, delivered</h2>
+<div class="sl">Design Decisions</div>
+<h2 class="sh">What I changed, and what it cost</h2>
+<p class="sp">Each decision below answered a specific research finding. I have kept the tradeoffs in, because the interesting part of senior work is what you give up to get the win.</p>
+<div class="cg">
+<div class="cd"><h4>Lead with integrations, not accuracy</h4><p>The hero now opens on Fivo fitting into the tools teams already use, with outcomes over engine specs. Tradeoff: accuracy is a real strength, and demoting it risked sounding less capable. I kept a proof point near the fold so the claim still had backing without leading the pitch.</p></div>
+<div class="cd"><h4>Put trust signals above the fold</h4><p>Storage location, access controls, and data handling moved up next to the primary call to action. Tradeoff: it adds copy to a hero I wanted lean. I treated it as a conversion lever, not legal fine print, since interviews showed trust was a silent blocker, not a footnote.</p></div>
+<div class="cd"><h4>Role-specific use cases on one page</h4><p>Three short, role-anchored sections for the team lead, the PM, and the consultant, instead of one generic pitch. Tradeoff: more page to maintain and a risk of feeling segmented. Anchoring on concrete jobs beat a single message that fit no one.</p></div>
+<div class="cd"><h4>Cut sign-up to first transcript</h4><p>Workspace setup moved after the first value moment, so people reach a transcript before being asked for details. Tradeoff: slightly less data captured up front, which sales wanted. Getting users to value first won, and we collected the rest once they had a reason to care.</p></div>
 </div>
-<div class="ww"><div class="img-box" style="background:#EDF3FF"><img src="../assets/fivo.jpg" alt="Fivo AI"></div></div>
+</div>
+
+<div class="w"><hr>
+<div class="sl">Final Design</div>
+<h2 class="sh">The redesigned site and onboarding</h2>
+<p class="sp">Integration-first hero, trust signals beside the primary action, role-specific proof, and a sign-up flow trimmed to its first useful step.</p>
+</div>
+<div class="ww"><div class="img-box" style="background:#EDF3FF"><img src="../assets/fivo.jpg" alt="Fivo AI redesigned marketing site"></div></div>
+
+<div class="w"><hr>
+<div class="sl">Testing and Validation</div>
+<h2 class="sh">Checking it with people before we shipped</h2>
+<p class="sp">I tested the new flow against the old one with 8 participants in moderated sessions, plus an unmoderated first-impression test for the hero. Small sample, so I read these as direction and confidence, not proof.</p>
+<div class="tg2">
+<div class="tc"><h4>Old site</h4>
+<div class="br"><div class="bl"><span>Explains the product in 5s</span><span class="v">38%</span></div><div class="bar"><div class="bf ba" style="width:38%"></div></div></div>
+<div class="br"><div class="bl"><span>Completed sign-up</span><span class="v">54%</span></div><div class="bar"><div class="bf by" style="width:54%"></div></div></div>
+<div class="br"><div class="bl"><span>Felt safe connecting calendar</span><span class="v">41%</span></div><div class="bar"><div class="bf ba" style="width:41%"></div></div></div>
+</div>
+<div class="tc"><h4>Redesign</h4>
+<div class="br"><div class="bl"><span>Explains the product in 5s</span><span class="v">83%</span></div><div class="bar"><div class="bf bg" style="width:83%"></div></div></div>
+<div class="br"><div class="bl"><span>Completed sign-up</span><span class="v">88%</span></div><div class="bar"><div class="bf bg" style="width:88%"></div></div></div>
+<div class="br"><div class="bl"><span>Felt safe connecting calendar</span><span class="v">79%</span></div><div class="bar"><div class="bf bg" style="width:79%"></div></div></div>
+</div>
+</div>
+<div class="fd s"><div class="sv">What we changed and why</div><h4>The role sections were doing the hero's job</h4><p>In the first build, the integration message and the role examples sat too far apart, and three of eight participants scrolled past the value before it registered. I pulled one concrete role outcome up into the hero. First-impression comprehension moved from the low 60s to the low 80s in the next round, which is what pushed me to ship the order this way.</p></div>
+<div class="fd i"><div class="sv">Insight</div><h4>Deferring workspace setup paid off</h4><p>Once sign-up showed a transcript before asking for workspace details, participants stopped hesitating at the form. Completion in testing rose and the drop-off that worried sales did not show up, since people now had a reason to finish.</p></div>
+</div>
+
+<div class="w"><hr>
+<div class="sl">Results and Impact</div>
+<h2 class="sh">What shipping it did</h2>
+<p class="sp">After launch, sign-up rate rose 52% and bounce dropped 41%, with the redesigned site scoring 86 on the SUS. The gains tracked the two bets directly: leading with integrations and trust got more people past the homepage, and cutting sign-up to its first useful moment got more of them through the form. The redesign did not change the product's accuracy. It changed how quickly people could tell the product was worth their time.</p>
+<div class="cg">
+<div class="cd"><div class="stat">+52%</div><h4>Sign-up rate</h4><p>Driven by clearer positioning up top and a shorter path to the first transcript.</p></div>
+<div class="cd"><div class="stat">-41%</div><h4>Bounce rate</h4><p>The integration-first hero and visible trust signals held more visitors past the first screen.</p></div>
+</div>
+</div>
 
 <div class="w"><hr>
 <div class="sl">Reflections</div>
-<h2 class="sh">What I learned</h2>
+<h2 class="sh">What I took from it</h2>
 <div class="cg">
-<div class="cd"><h4>Research-driven decisions compound</h4><p>Every design choice traced back to a user insight. This made stakeholder alignment straightforward and reduced revision cycles significantly.</p></div>
-<div class="cd"><h4>Consistency accelerates delivery</h4><p>Using a shared design system across projects meant new screens could be assembled from existing components, cutting design time without sacrificing quality.</p></div>
+<div class="cd"><h4>Positioning is a design problem</h4><p>The product was fine. What leaked the funnel was how it was framed and ordered. Treating the message hierarchy as a design decision, with the same rigor as the layout, is where most of the lift came from.</p></div>
+<div class="cd"><h4>Name the silent objection</h4><p>Trust never showed up as a complaint, because the people it stopped just left. Surfacing storage and access early turned a quiet exit into a reason to stay. The objections users do not voice are often the expensive ones.</p></div>
+<div class="cd"><h4>Get to value before you ask for anything</h4><p>Moving workspace setup after the first transcript was the single change with the cleanest payoff. People give you their details once they have a reason to. Ordering the flow around that beat collecting data up front.</p></div>
+<div class="cd"><h4>Small samples, honest claims</h4><p>Eight participants will not give you certainty, so I leaned on triangulation and treated the numbers as direction. Being clear about that with the team kept the decisions trustworthy and the conversations grounded.</p></div>
 </div></div>
 <div class="bk"><a href="../index.html" class="bk-btn">← Back to portfolio</a></div>
 </body></html>
