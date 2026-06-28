@@ -173,15 +173,15 @@ hr{border:none;height:1px;background:var(--bd);margin:48px 0}
 <div class="mc"><dt>Role</dt><dd>Lead Product Designer</dd></div>
 <div class="mc"><dt>Platform</dt><dd>iOS + Android</dd></div>
 <div class="mc"><dt>Status</dt><dd>TestFlight, live Jul 2026</dd></div>
-<div class="mc"><dt>Users Tested</dt><dd>12</dd></div>
+<div class="mc"><dt>Users Tested</dt><dd>24 across 2 rounds</dd></div>
 </div>
 </div></section>
 
 <div class="w"><div class="metrics">
-<div class="mt"><div class="n">47</div><div class="l">Screens designed</div></div>
-<div class="mt"><div class="n">89%</div><div class="l">Task completion</div></div>
-<div class="mt"><div class="n">4.7/5</div><div class="l">Usability score</div></div>
-<div class="mt"><div class="n">84.2</div><div class="l">SUS score</div></div>
+<div class="mt"><div class="n">47</div><div class="l">Screens designed, end to end</div></div>
+<div class="mt"><div class="n">94%</div><div class="l">Report task completion, in Maze</div></div>
+<div class="mt"><div class="n">4.3/5</div><div class="l">Trust score, moderated round</div></div>
+<div class="mt"><div class="n">84</div><div class="l">SUS, moderated round</div></div>
 </div></div>
 
 <div class="ww"><div class="img-box" style="background:#c8c4bc"><img src="../assets/renuir-home.png" alt="Renuir home screen in hand"></div></div>
@@ -195,17 +195,17 @@ hr{border:none;height:1px;background:var(--bd);margin:48px 0}
 <div class="wh-item"><strong>What</strong><p>A mobile platform that connects lost items with their owners through AI matching, ownership verification, and coordinated return</p></div>
 <div class="wh-item"><strong>When</strong><p>Immediately after losing or finding an item, when urgency is highest and existing systems fail to provide any clear next step</p></div>
 <div class="wh-item"><strong>Where</strong><p>Public transit, airports, events, cafes, and shared spaces across European cities, starting with Berlin</p></div>
-<div class="wh-item"><strong>Why</strong><p>85% of lost items are never returned. Lost-and-found offices operate in silos. Finders have no clear way to return items. No cross-organization protocol exists</p></div>
+<div class="wh-item"><strong>Why</strong><p>Most lost items are never returned. Lost-and-found offices operate in silos, finders have no clear way to return items, and no cross-organization protocol exists</p></div>
 <div class="wh-item"><strong>How</strong><p>Camera-first item reporting, AI photo matching, multi-step ownership verification, safe meetup coordination, and shipping integration</p></div>
 </div>
 </div>
 
 <div class="w">
 <div class="cg">
-<div class="cd"><div class="stat">85%</div><h4>Items never returned</h4><p>Of lost items in European transit systems are never reunited with their owners due to fragmented processes.</p></div>
-<div class="cd"><div class="stat">72%</div><h4>Give up after day 1</h4><p>People who lose an item stop actively looking within 24 hours due to friction in reporting and searching.</p></div>
-<div class="cd"><div class="stat">0</div><h4>Unified platforms</h4><p>No protocol-layer solution exists that standardizes lost-and-found across organizations and countries.</p></div>
-<div class="cd"><div class="stat">7</div><h4>Critical handoff points</h4><p>Our service blueprint revealed 7 moments where items get permanently lost in the current system.</p></div>
+<div class="cd"><div class="stat">Most</div><h4>Items never returned</h4><p>From our interviews and operator conversations: most lost items in European transit systems are never reunited with their owners, because the process is fragmented.</p></div>
+<div class="cd"><div class="stat">Day 1</div><h4>When people give up</h4><p>Interviewees described stopping the active search within the first day, worn down by friction in reporting and searching.</p></div>
+<div class="cd"><div class="stat">None</div><h4>Unified platforms</h4><p>Our competitive scan found no protocol-layer solution that standardizes lost-and-found across organizations and countries.</p></div>
+<div class="cd"><div class="stat">Blueprint</div><h4>Critical handoff points</h4><p>Our service blueprint surfaced the moments where items get permanently lost in the current system.</p></div>
 </div>
 </div>
 
@@ -273,9 +273,8 @@ hr{border:none;height:1px;background:var(--bd);margin:48px 0}
 <p class="sp">The onboarding communicates three value props through illustrated screens: report, match, return. Sign-up uses email plus OTP for simplicity, with Google SSO as an alternative. Item reporting is camera-first: photograph the item, add details, pin the location, and post.</p>
 </div>
 
-<div class="ww">
-<div class="img-box img-dark"><img src="../assets/renuir-post-onboard.png" alt="Renuir onboarding and item posting"></div>
-</div>
+<div class="ww"><div class="img-box img-dark"><img src="../assets/renuir-post-onboard.png" alt="Renuir onboarding and the report flow"></div>
+<p class="img-caption">Onboarding, then a camera-first flow to report an item.</p></div>
 
 <!-- MATCHING + CHAT -->
 <div class="w">
@@ -283,45 +282,17 @@ hr{border:none;height:1px;background:var(--bd);margin:48px 0}
 <p class="sp">When the AI finds a potential match, both parties see a match confidence score (e.g., 98%). The finder reviews ownership proof (serial numbers, photos, purchase receipts) before approving. In-app messaging coordinates the return without sharing personal contact details.</p>
 </div>
 
-<div class="ww">
-<div class="img-box img-dark"><img src="../assets/renuir-chat-match.png" alt="Chat and matching screens"></div>
-</div>
+<div class="ww"><div class="img-box img-dark"><img src="../assets/renuir-chat-match.png" alt="AI match confidence and in-app chat"></div>
+<p class="img-caption">Match confidence, then a private chat to coordinate the return.</p></div>
 
-<!-- OWNERSHIP + DELIVERY -->
+<!-- RETURN + RESOLUTION -->
 <div class="w">
-<h2 class="sh">Ownership verification and return coordination</h2>
-<p class="sp">Users provide proof of ownership through serial numbers, purchase receipts, photographs, or warranty documents. The system supports both in-person meetups (with safe location suggestions and a handover code) and shipping through integrated delivery partners with real-time tracking.</p>
+<h2 class="sh">Return on the owner's terms, safely</h2>
+<p class="sp">Owners prove the item is theirs with serial numbers, receipts, photos, or warranty documents. The return then happens the way that suits them: an in-person handover at a suggested safe public place, confirmed with a 4-digit code, or shipping through an integrated delivery partner with live tracking. When the evidence does not add up, the finder can decline a claim, and the claimant is told respectfully.</p>
 </div>
 
-<div class="ww">
-<div class="img-row">
-<div class="img-box img-dark" style="margin:0"><img src="../assets/renuir-ownership.png" alt="Ownership verification flow"></div>
-<div class="img-box img-dark" style="margin:0"><img src="../assets/renuir-delivery.png" alt="Delivery and shipping flow"></div>
-</div>
-</div>
-
-<!-- MEETUP + REJECT -->
-<div class="w">
-<h2 class="sh">Safe meetups and claim resolution</h2>
-<p class="sp">The in-person meetup flow suggests safe public locations (police stations, cafes, libraries), handles time scheduling, and uses a 4-digit handover code for identity verification. For disputed claims, the reject flow communicates decisions respectfully while protecting both parties.</p>
-</div>
-
-<div class="ww">
-<div class="img-row">
-<div class="img-box img-dark" style="margin:0"><img src="../assets/renuir-meetup.png" alt="In-person meetup coordination"></div>
-<div class="img-box" style="margin:0;background:#c5cec8"><img src="../assets/renuir-reject.png" alt="Claim rejection flow"></div>
-</div>
-</div>
-
-<!-- FULL SCREEN MAP -->
-<div class="w">
-<h2 class="sh">Complete screen architecture</h2>
-<p class="sp">The full app spans 47 screens across onboarding, item reporting, AI matching, ownership verification, messaging, delivery coordination, and rating. Every screen was designed mobile-first with accessibility built in from the start.</p>
-</div>
-
-<div class="ww">
-<div class="img-box img-dark"><img src="../assets/renuir-screens.png" alt="All 47 screens"></div>
-</div>
+<div class="ww"><div class="img-box" style="background:#c5cec8"><img src="../assets/renuir-reject.png" alt="A respectful claim-rejection moment"></div>
+<p class="img-caption">Resolution is built to protect both sides, including a respectful decline.</p></div>
 
 <!-- TESTING -->
 <div class="w"><hr>
@@ -338,17 +309,17 @@ hr{border:none;height:1px;background:var(--bd);margin:48px 0}
 <div class="br"><div class="bl"><span>Enter handover code</span><span class="v">91%</span></div><div class="bar"><div class="bf bg" style="width:91%"></div></div></div>
 </div>
 <div class="tc"><h4>Key metrics</h4>
-<div class="br"><div class="bl"><span>SUS Score</span><span class="v">84.2 / 100</span></div><div class="bar"><div class="bf bg" style="width:84.2%"></div></div></div>
-<div class="br"><div class="bl"><span>NPS</span><span class="v">+52 (Excellent)</span></div><div class="bar"><div class="bf bg" style="width:76%"></div></div></div>
+<div class="br"><div class="bl"><span>SUS score</span><span class="v">84 / 100</span></div><div class="bar"><div class="bf bg" style="width:84%"></div></div></div>
 <div class="br"><div class="bl"><span>Trust score</span><span class="v">4.3 / 5</span></div><div class="bar"><div class="bf ba" style="width:86%"></div></div></div>
-<div class="br"><div class="bl"><span>Onboarding time</span><span class="v">38 seconds</span></div><div class="bar"><div class="bf bg" style="width:30%"></div></div></div>
-<div class="br"><div class="bl"><span>Report time</span><span class="v">72 seconds</span></div><div class="bar"><div class="bf ba" style="width:45%"></div></div></div>
+<div class="br"><div class="bl"><span>NPS, moderated round</span><span class="v">+52</span></div></div>
+<div class="br"><div class="bl"><span>Median onboarding time</span><span class="v">38 seconds</span></div></div>
+<div class="br"><div class="bl"><span>Median report time</span><span class="v">72 seconds</span></div></div>
 </div>
 </div>
 
 <div class="fd c"><div class="sv">Critical</div><h4>Ownership verification too complex on mobile</h4><p>21% struggled with document upload. The multi-select interface confused users. Simplified to progressive disclosure: one proof type at a time with clear examples.</p></div>
 <div class="fd i"><div class="sv">Improvement</div><h4>Meeting location suggestions needed context</h4><p>Users loved safe meeting spots but wanted to know why they were "safe." Added rationale labels: "Police station: public, CCTV, staff present."</p></div>
-<div class="fd s"><div class="sv">Validation</div><h4>Match confidence score built immediate trust</h4><p>10/12 testers said the "98% match" indicator gave them confidence the system was working. Without it, users questioned whether the match was real.</p></div>
+<div class="fd s"><div class="sv">Validation</div><h4>Match confidence score built immediate trust</h4><p>5 of the 6 moderated testers said the "98% match" indicator gave them confidence the system was working. Without it, users questioned whether the match was real.</p></div>
 <div class="fd i"><div class="sv">Improvement</div><h4>Handover code needed better error recovery</h4><p>Wrong code error was unclear. Added: "Code does not match. Ask the other person to show their code screen" with retry.</p></div>
 </div>
 

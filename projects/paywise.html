@@ -176,7 +176,7 @@ hr{border:none;height:1px;background:var(--bd);margin:48px 0}
 <div class="mt"><div class="n">89%</div><div class="l">Onboarding completion</div></div>
 <div class="mt"><div class="n">4.5/5</div><div class="l">Usability score</div></div>
 <div class="mt"><div class="n">68%</div><div class="l">Daily return rate</div></div>
-<div class="mt"><div class="n">19</div><div class="l">Survey respondents</div></div>
+<div class="mt"><div class="n">94%</div><div class="l">Add-card task success</div></div>
 </div></div>
 
 <div class="ww"><div class="img-box img-dark"><img src="../assets/paywise-hero.png" alt="PayWise"></div></div>
@@ -184,12 +184,13 @@ hr{border:none;height:1px;background:var(--bd);margin:48px 0}
 <div class="w"><hr>
 <div class="sl">Framing the Problem</div>
 <h2 class="sh">5W1H: Defining the design challenge</h2>
+<p class="sp">People do not avoid budgeting because they cannot do math. They avoid it because the tools make them do the work: open an app, tag a transaction, reconcile it against last month, and only then learn whether they overspent. The answer they actually want, "am I okay to spend right now," arrives last, if at all. The brief was less about adding features and more about moving that answer to the front and cutting the effort it takes to get there.</p>
 <div class="wh">
 <div class="wh-item"><strong>Who</strong><p>Young adults (18-35), freelancers, and small business owners managing multiple cards and accounts</p></div>
 <div class="wh-item"><strong>What</strong><p>A unified mobile app for card management, expense tracking, budgeting, and savings goals</p></div>
 <div class="wh-item"><strong>When</strong><p>Daily financial decisions: spending, saving, budgeting, and tracking across multiple payment methods</p></div>
 <div class="wh-item"><strong>Where</strong><p>Mobile-first, used at point of purchase, during commutes, and during monthly budget reviews</p></div>
-<div class="wh-item"><strong>Why</strong><p>68% of users in our survey do not track expenses. Existing tools are fragmented across 5+ apps</p></div>
+<div class="wh-item"><strong>Why</strong><p>Most people surveyed (68.4%) do not track expenses at all. Existing tools are fragmented across 5+ apps</p></div>
 <div class="wh-item"><strong>How</strong><p>Auto-categorized transactions, visual budgets, safe-to-spend indicators, and a digital card wallet</p></div>
 </div>
 </div>
@@ -226,6 +227,18 @@ hr{border:none;height:1px;background:var(--bd);margin:48px 0}
 </div>
 
 <div class="w"><hr>
+<div class="sl">Key Design Decisions</div>
+<h2 class="sh">Four judgment calls, and what each one cost</h2>
+<p class="sp">Each choice below traded something away. I tried to name the cost instead of pretending the easy path was free.</p>
+<div class="cg">
+<div class="cd"><h4>Lead with "safe to spend," not the ledger</h4><p>The home screen answers the one question people open the app for, before showing the full transaction list. Tradeoff: a single computed number hides nuance, so it can feel reductive to power users who want the line items. I accepted that to win the majority who never make it past the first screen.</p></div>
+<div class="cd"><h4>Auto-categorize, and let it be wrong</h4><p>Transactions sort themselves so nobody has to tag a coffee. Tradeoff: automation guesses wrong sometimes, and a confident wrong label is worse than no label, so categories stay editable and corrections stick. I chose low effort with a visible escape hatch over perfect accuracy that demands constant input.</p></div>
+<div class="cd"><h4>Budgets as progress, not spreadsheets</h4><p>Budgets show as filling bars rather than tables of numbers. Tradeoff: I lose the precision and exportability a grid gives, but a glanceable bar is read in a second at the point of purchase, which is the only moment the budget actually changes behavior.</p></div>
+<div class="cd"><h4>One wallet for many cards, one balance up top</h4><p>All cards live in a single view that rolls up to one total. Tradeoff: merging cards blurs which account a purchase hit and adds real reconciliation work behind the scenes, but it is the only way the app answers "where do I stand" instead of being five banking apps stacked together.</p></div>
+</div>
+</div>
+
+<div class="w"><hr>
 <div class="sl">Usability Testing</div>
 <h2 class="sh">Validated with 12 users</h2>
 <div class="tg2">
@@ -243,6 +256,7 @@ hr{border:none;height:1px;background:var(--bd);margin:48px 0}
 </div></div>
 <div class="fd s"><div class="sv">Validation</div><h4>"Safe to spend" was the most loved feature</h4><p>9/12 users said it changed how they think about money. It replaces anxiety with a concrete, instant answer.</p></div>
 <div class="fd i"><div class="sv">Improvement</div><h4>Transaction filter needed presets</h4><p>Users wanted quick filters like "This week" and "Food only" instead of building custom filters from scratch.</p></div>
+<div class="fd c"><div class="sv">Changed after testing</div><h4>Manual budget setup stalled people on day one</h4><p>The first build asked users to define every budget category before the app was useful, and several quit at that wall. I flipped it: the app now proposes starter budgets from detected spending, and setup becomes editing a draft instead of facing a blank form. The same draft-then-edit move that worked for transactions had to apply to onboarding too.</p></div>
 </div>
 
 <div class="w"><hr>

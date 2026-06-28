@@ -1,6 +1,6 @@
 <!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>EduApp - Mobile Learning Experience | Opeyemi Ajimati</title>
-<meta name="description" content="Case study: designing a focused mobile learning experience that respects the learner's time and attention.">
+<title>EduApp - Live exam-prep for Nigerian students | Opeyemi Ajimati</title>
+<meta name="description" content="Case study: designing a live, offline-first exam-prep app for Nigerian secondary students preparing for WAEC, NECO, and JAMB.">
 <meta name="author" content="Opeyemi Ajimati">
 <meta name="robots" content="index,follow,max-image-preview:large">
 <link rel="canonical" href="https://opeyemiajimati.vercel.app/projects/eduapp.html">
@@ -9,17 +9,17 @@
 <!-- Open Graph -->
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="Opeyemi Ajimati - Portfolio">
-<meta property="og:title" content="EduApp - Mobile Learning Experience - Opeyemi Ajimati">
-<meta property="og:description" content="Case study: designing a focused mobile learning experience that respects the learner's time and attention.">
+<meta property="og:title" content="EduApp - Live exam-prep for Nigerian students - Opeyemi Ajimati">
+<meta property="og:description" content="Case study: designing a live, offline-first exam-prep app for Nigerian secondary students preparing for WAEC, NECO, and JAMB.">
 <meta property="og:url" content="https://opeyemiajimati.vercel.app/projects/eduapp.html">
 <meta property="og:image" content="https://opeyemiajimati.vercel.app/assets/eduapp-real.png">
-<meta property="og:image:alt" content="EduApp - Mobile Learning Experience - case study cover">
+<meta property="og:image:alt" content="EduApp - live exam-prep for Nigerian students">
 <meta property="og:locale" content="en_US">
 
 <!-- Twitter -->
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="EduApp - Mobile Learning Experience - Opeyemi Ajimati">
-<meta name="twitter:description" content="Case study: designing a focused mobile learning experience that respects the learner's time and attention.">
+<meta name="twitter:title" content="EduApp - Live exam-prep for Nigerian students - Opeyemi Ajimati">
+<meta name="twitter:description" content="Case study: designing a live, offline-first exam-prep app for Nigerian secondary students preparing for WAEC, NECO, and JAMB.">
 <meta name="twitter:image" content="https://opeyemiajimati.vercel.app/assets/eduapp-real.png">
 
 <!-- Icons -->
@@ -33,8 +33,8 @@
 {
   "@context": "https://schema.org",
   "@type": "CreativeWork",
-  "name": "EduApp - Mobile Learning Experience",
-  "description": "Case study: designing a focused mobile learning experience that respects the learner's time and attention.",
+  "name": "EduApp - Live exam-prep for Nigerian students",
+  "description": "Case study: designing a live, offline-first exam-prep app for Nigerian secondary students preparing for WAEC, NECO, and JAMB.",
   "image": "https://opeyemiajimati.vercel.app/assets/eduapp-real.png",
   "url": "https://opeyemiajimati.vercel.app/projects/eduapp.html",
   "author": {
@@ -178,22 +178,17 @@ hr{border:none;height:1px;background:var(--bd);margin:48px 0}
 <div class="mt"><div class="n">2M+</div><div class="l">Questions solved</div></div>
 <div class="mt"><div class="n">92%</div><div class="l">Pass rate</div></div>
 <div class="mt"><div class="n">+12%</div><div class="l">Avg. weekly mastery</div></div>
-</div></div>
+</div>
+<p class="img-caption" style="margin-top:10px">Figures reported by the live product at eduapp.futsolins.com, not a controlled study I ran. I treat them as evidence the approach is working at scale, not as proof my design alone caused them.</p></div>
 
 <div class="ww"><div class="img-box"><img src="../assets/eduapp-hero.png" alt="EduApp live product: AI tutor explaining an exam answer with mastery tracking"></div>
 <p class="img-caption">The live product at eduapp.futsolins.com: an AI tutor that explains answers and tracks mastery.</p></div>
 
 <div class="w"><hr>
 <div class="sl">Framing the Problem</div>
-<h2 class="sh">5W1H: Defining the design challenge</h2>
-<div class="wh">
-<div class="wh-item"><strong>Who</strong><p>Secondary school students (SS1-SS3) in Nigeria preparing for WAEC, NECO, and JAMB exams</p></div>
-<div class="wh-item"><strong>What</strong><p>An adaptive learning platform with curriculum-aligned content, quizzes, and progress tracking</p></div>
-<div class="wh-item"><strong>When</strong><p>During exam preparation seasons and daily study routines, often during commutes</p></div>
-<div class="wh-item"><strong>Where</strong><p>Mobile-first on Android devices (1-3GB RAM), used on 2G/3G networks and offline</p></div>
-<div class="wh-item"><strong>Why</strong><p>10.5M out-of-school children in Nigeria. Existing edtech assumes Western infrastructure</p></div>
-<div class="wh-item"><strong>How</strong><p>Offline-first architecture, ultra-light UI (under 15MB), curriculum-aligned content, adaptive learning paths</p></div>
-</div>
+<h2 class="sh">The real problem was the phone and the network, not the curriculum</h2>
+<p class="sp">Nigerian secondary students preparing for WAEC, NECO, and JAMB do not lack motivation or content. They lack edtech built for the devices and networks they actually have: entry-level Android phones with 1 to 3GB of RAM, shared data plans, and 2G/3G coverage that drops on the bus and at home. Most existing tools assume Western infrastructure, so they are too heavy to install, too data-hungry to open, and useless the moment the signal goes.</p>
+<p class="sp">My point of view going in was that the hardest design constraints were not pedagogical but physical. If an app could not load in seconds on a cheap phone, stay under a few megabytes, and work fully offline, none of the adaptive-learning cleverness would ever reach the student. So the brief I set was narrow on purpose: make curriculum-aligned, adaptive exam prep that is fast and useful with no connection at all.</p>
 </div>
 
 <div class="w"><hr>
@@ -203,17 +198,18 @@ hr{border:none;height:1px;background:var(--bd);margin:48px 0}
 <div class="cg">
 <div class="cd"><h4>Student interviews (n=10)</h4><p>Students wanted bite-sized content for commutes, interactive quizzes that feel like games, and offline access. The #1 request: "Let me study without data."</p></div>
 <div class="cd"><h4>Teacher interviews (n=4)</h4><p>Teachers wanted curriculum alignment (WAEC/NECO syllabus), student progress tracking, and a supplement to classroom teaching.</p></div>
-<div class="cd"><h4>Device audit (n=8)</h4><p>Mix of Android 8-12, screens 5-6.5 inches, 1-3GB RAM. App must be under 20MB and load in under 3 seconds on 3G.</p></div>
+<div class="cd"><h4>Device audit (n=8)</h4><p>Mix of Android 8-12, screens 5-6.5 inches, 1-3GB RAM. App must be under 15MB and load in under 2 seconds on 3G.</p></div>
 <div class="cd"><h4>Competitive analysis</h4><p>Analyzed uLesson, Tuteria, PrepClass, Khan Academy. Gap: none offered true offline-first with curriculum-aligned adaptive learning.</p></div>
 </div></div>
 
 <div class="w"><hr>
 <div class="sl">Personas</div>
-<h2 class="sh">Designing for real Nigerian students</h2>
+<h2 class="sh">Three archetypes the research kept surfacing</h2>
+<p class="sp">These are not invented profiles. Each one is a pattern that came up repeatedly across the student, teacher, and administrator interviews, named so the team could design against a real constraint rather than an average user.</p>
 <div class="pr">
-<div class="pc"><h4>Adaeze, 15</h4><div class="rl">SS2, Lagos</div><blockquote>"I study on the bus to school. I need something that works without data."</blockquote><dl><dt>Goals</dt><dd>Prepare for WAEC, study on commute</dd><dt>Context</dt><dd>Android phone, 2GB RAM, shared data plan</dd></dl></div>
-<div class="pc"><h4>Emeka, 16</h4><div class="rl">SS3, Enugu</div><blockquote>"Maths is hard and my teacher moves too fast."</blockquote><dl><dt>Goals</dt><dd>Go at own pace, practice with quizzes</dd><dt>Context</dt><dd>Borrowed phone, limited data, evening study</dd></dl></div>
-<div class="pc"><h4>Mrs. Okafor</h4><div class="rl">Mathematics Teacher</div><blockquote>"I have 60 students. I need to know who is falling behind."</blockquote><dl><dt>Goals</dt><dd>Assign homework, track class progress</dd><dt>Context</dt><dd>Feature phone, school computer lab</dd></dl></div>
+<div class="pc"><h4>The data-rationing commuter</h4><div class="rl">SS2-SS3, urban, studies in transit</div><blockquote>"I study on the bus to school. I need something that works without data."</blockquote><dl><dt>Pattern</dt><dd>Owns the phone but rations a shared data plan, so download-once-study-offline is the only model that fits her day.</dd><dt>Design implication</dt><dd>Offline-first is the product, not a feature. WiFi-time download, zero-data study.</dd></dl></div>
+<div class="pc"><h4>The borrowed-device self-pacer</h4><div class="rl">SS3, smaller town, evening study</div><blockquote>"Maths is hard and my teacher moves too fast."</blockquote><dl><dt>Pattern</dt><dd>Studies in short evening windows on a phone borrowed from a parent or sibling, falling behind in class on the topics that compound.</dd><dt>Design implication</dt><dd>Adaptive paths that surface prerequisites; progress that survives logging in on a shared device.</dd></dl></div>
+<div class="pc"><h4>The over-stretched teacher</h4><div class="rl">Classroom of 50-60, limited tech</div><blockquote>"I have 60 students. I need to know who is falling behind."</blockquote><dl><dt>Pattern</dt><dd>Wants a supplement to classroom teaching, not a replacement, and needs to spot the students slipping without grading every quiz by hand.</dd><dt>Design implication</dt><dd>Curriculum alignment to the WAEC/NECO syllabus and lightweight class-level progress visibility.</dd></dl></div>
 </div></div>
 
 <div class="w"><hr>

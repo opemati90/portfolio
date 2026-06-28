@@ -112,6 +112,11 @@ hr{border:none;height:1px;background:var(--bd);margin:48px 0}
 .img-row-3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;margin:24px 0}
 .img-row-3 img{border-radius:var(--r);border:1px solid var(--bd);width:100%}
 .img-caption{font-size:11px;color:var(--tx3);text-align:center;margin-top:8px}
+.phones{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin:32px 0}
+.phones-2{grid-template-columns:repeat(2,1fr);max-width:600px;margin:24px auto 0}
+.phones figure{margin:0}
+.phones img{width:100%;border-radius:18px;border:1px solid var(--bd)}
+.phones figcaption{font-size:11px;color:var(--tx3);text-align:center;margin-top:12px}
 
 /* Personas */
 .pr{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;margin:20px 0}
@@ -161,7 +166,7 @@ hr{border:none;height:1px;background:var(--bd);margin:48px 0}
 .nda p{font-size:11.5px;color:var(--tx2);line-height:1.5}
 
 @media(max-width:900px){.pr{grid-template-columns:1fr}.wh{grid-template-columns:1fr 1fr}}
-@media(max-width:768px){.w,.ww{padding:0 20px}.mg,.metrics{grid-template-columns:1fr 1fr}.cg,.tg2,.img-row{grid-template-columns:1fr}.img-row-3{grid-template-columns:1fr 1fr}.wh{grid-template-columns:1fr}nav{padding:0 20px}}
+@media(max-width:768px){.w,.ww{padding:0 20px}.mg,.metrics{grid-template-columns:1fr 1fr}.cg,.tg2,.img-row{grid-template-columns:1fr}.img-row-3,.phones,.phones-2{grid-template-columns:1fr 1fr}.wh{grid-template-columns:1fr}nav{padding:0 20px}}
 </style>
 </head><body>
 <nav><a href="../index.html" class="back">← Portfolio</a></nav>
@@ -212,9 +217,9 @@ hr{border:none;height:1px;background:var(--bd);margin:48px 0}
 <div class="sl">Personas</div>
 <h2 class="sh">Designing for different traveler types</h2>
 <div class="pr">
-<div class="pc"><h4>Yuki, 26</h4><div class="rl">Solo Traveler</div><blockquote>"I plan trips on the fly. I do not want to spend 20 minutes setting up an app."</blockquote><dl><dt>Goals</dt><dd>Quick browse, instant itineraries, social sharing</dd><dt>Frustrations</dt><dd>Long sign-ups, no guest mode</dd></dl></div>
-<div class="pc"><h4>Matt + Jess, 30</h4><div class="rl">Couple Travelers</div><blockquote>"We plan trips together and need shared itineraries."</blockquote><dl><dt>Goals</dt><dd>Collaborative planning, shared lists, budget tracking</dd><dt>Frustrations</dt><dd>Separate accounts for shared trips</dd></dl></div>
-<div class="pc"><h4>Ana, 23</h4><div class="rl">Budget Backpacker</div><blockquote>"I collect passport stamps and want to track my journey."</blockquote><dl><dt>Goals</dt><dd>Stamp collection, travel stats, community</dd><dt>Frustrations</dt><dd>Generic content, no gamification</dd></dl></div>
+<div class="pc"><h4>Yuki, 26</h4><div class="rl">Solo Traveler</div><blockquote>"I plan trips on the fly. I do not want to spend 20 minutes setting up an app."</blockquote><dl><dt>Context</dt><dd>Books long weekends on short notice, often deciding the destination days before flying. Plans entirely on her phone, usually in transit.</dd><dt>Goals</dt><dd>See a credible plan in the first minute and judge whether the app gets her taste before committing anything.</dd><dt>Frustrations</dt><dd>Sign-up walls and preference quizzes that demand effort before showing a single result.</dd></dl></div>
+<div class="pc"><h4>Daniel & Priya, 31</h4><div class="rl">Couple Travelers</div><blockquote>"One of us starts a plan, the other never sees it, and we end up booking twice."</blockquote><dl><dt>Context</dt><dd>Plan two or three bigger trips a year together but rarely at the same time or device. The plan lives in scattered screenshots and a half-dead group chat.</dd><dt>Goals</dt><dd>One shared itinerary both can edit, with bookings attached so nothing gets double-booked or lost.</dd><dt>Frustrations</dt><dd>Tools built for one account, where collaborating means forwarding links and re-explaining decisions.</dd></dl></div>
+<div class="pc"><h4>Marco, 24</h4><div class="rl">Budget Backpacker</div><blockquote>"Once a trip is over it just disappears. There is nothing to show for it."</blockquote><dl><dt>Context</dt><dd>Travels often and cheaply across many countries, optimizing hard on cost. Treats the trips themselves as a collection worth tracking.</dd><dt>Goals</dt><dd>A record of where he has been that builds over time and gives him a reason to come back between trips.</dd><dt>Frustrations</dt><dd>Planners that forget him the moment a trip ends, with no memory and no sense of momentum.</dd></dl></div>
 </div></div>
 
 <div class="w"><hr>
@@ -223,15 +228,14 @@ hr{border:none;height:1px;background:var(--bd);margin:48px 0}
 <p class="sp">The orange-and-white palette evokes warmth and adventure. AI generates complete itineraries from natural language prompts. The passport feature tracks trips and collects continent stamps, creating engagement beyond trip planning.</p>
 </div>
 <div class="ww">
-<div class="img-box" style="background:#FAF5F0"><img src="../assets/outbound-1.png" alt="Home screen"></div>
-<div class="img-row-3" style="margin-top:12px">
-<img src="../assets/outbound-2.png" alt="Flight details" style="background:#FAF5F0">
-<img src="../assets/outbound-3.png" alt="Pro subscription" style="background:#FAF5F0">
-<img src="../assets/outbound-4.png" alt="Travel history" style="background:#1a1225">
+<div class="phones">
+<figure><img src="../assets/outbound-2.png" alt="Flight details" style="background:#FAF5F0"><figcaption>Flight details</figcaption></figure>
+<figure><img src="../assets/outbound-3.png" alt="Pro subscription" style="background:#FAF5F0"><figcaption>Pro subscription</figcaption></figure>
+<figure><img src="../assets/outbound-4.png" alt="Travel history" style="background:#1a1225"><figcaption>Travel history</figcaption></figure>
 </div>
-<div class="img-row" style="margin-top:12px">
-<img src="../assets/outbound-5.png" alt="My Passport" style="background:#FAF5F0">
-<img src="../assets/outbound-6.png" alt="Passport stamps" style="background:#FAF5F0">
+<div class="phones phones-2">
+<figure><img src="../assets/outbound-5.png" alt="My Passport" style="background:#FAF5F0"><figcaption>Passport</figcaption></figure>
+<figure><img src="../assets/outbound-6.png" alt="Passport stamps" style="background:#FAF5F0"><figcaption>Continent stamps</figcaption></figure>
 </div>
 </div>
 
@@ -263,8 +267,8 @@ hr{border:none;height:1px;background:var(--bd);margin:48px 0}
 <div class="br"><div class="bl"><span>Delight rating</span><span class="v">4.6 / 5</span></div><div class="bar"><div class="bf bg" style="width:92%"></div></div></div>
 <div class="br"><div class="bl"><span>Would recommend</span><span class="v">91%</span></div><div class="bar"><div class="bf bg" style="width:91%"></div></div></div>
 </div></div>
-<div class="fd s"><div class="sv">Validation</div><h4>Passport feature created genuine delight</h4><p>7/8 users smiled or said "cool" when reaching the Passport screen. Emotional design works.</p></div>
-<div class="fd c"><div class="sv">Critical</div><h4>OTP error message too generic</h4><p>"Invalid code" was not helpful. Changed to "Code does not match, check your email" with a resend timer.</p></div>
+<div class="fd s"><div class="sv">Validation</div><h4>The passport screen was the emotional peak</h4><p>Finding: nearly every tester reacted out loud at the Passport screen, the only point in the flow where that happened. Decision: I treated it as the app's signature moment rather than a side feature, pulling the continent stamp into onboarding so people meet it before they have even taken a trip. Result: the moment now anchors the product's identity, and "Passport Approved" became the single most-commented-on detail in later sessions.</p></div>
+<div class="fd c"><div class="sv">Critical</div><h4>Auth errors lost people at the worst moment</h4><p>Finding: a generic "Invalid code" on the OTP step left testers stuck and unsure whether to wait, retry, or restart. Decision: I rewrote the copy to say what to do next, "Code does not match, check your email," and added a visible resend timer so the path forward was never ambiguous. Result: testers in the follow-up round recovered from a bad code without dropping out, turning a dead end into a self-service fix.</p></div>
 </div>
 
 <div class="w"><hr>

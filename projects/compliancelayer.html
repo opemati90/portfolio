@@ -123,13 +123,13 @@ hr{border:none;height:1px;background:var(--bd);margin:48px 0}
 <p class="sp">The brief came from a real change: the European Accessibility Act moved from theory to enforcement in 2025, landing on top of GDPR, the DSA, and NIS2. To understand the pain rather than the statute, I traced the journey of a single compliance finding through an organisation and talked to the two people it lands on. They turned out to never share a language.</p>
 <div class="fd"><h4>The lawyer gets the letter</h4><p>A compliance lead or founder is told they are non-compliant, with no way to translate a legal clause into an action a team can take.</p></div>
 <div class="fd"><h4>The developer ships the fix</h4><p>An engineer or agency has to act, but the requirement arrives as prose, not as a patch they can paste and verify.</p></div>
-<div class="fd"><h4>The gap is the product</h4><p>Between "you are non-compliant" and "here is the line that fixes it" sits expensive consulting. That gap was the whole opportunity.</p></div>
+<div class="fd"><h4>Nobody owns the handoff</h4><p>Between "you are non-compliant" and "here is the line that fixes it" sits expensive consulting. Closing that handoff, in one tool, was the whole opportunity.</p></div>
 </div>
 
 <div class="w"><hr>
 <div class="sl">Define</div>
-<h2 class="sh">The brief, in one sentence</h2>
-<p class="sp">Turn a regulation into a named clause and a written fix, for both the person who gets the letter and the person who ships the patch. The 5W1H held the line as scope tried to grow.</p>
+<h2 class="sh">The single job, scoped tight</h2>
+<p class="sp">Turn a regulation into a named clause and a written fix, for both the person who gets the letter and the person who ships the patch. Scope kept trying to widen into a full GRC suite; running each idea through these six questions is what kept it to one job done well.</p>
 <div class="wh">
 <div class="wh-item"><strong>Who</strong><p>Compliance leads and founders, plus the developers and agencies who fix it.</p></div>
 <div class="wh-item"><strong>What</strong><p>A scanner that names the clause and writes the remediation.</p></div>
@@ -160,7 +160,7 @@ hr{border:none;height:1px;background:var(--bd);margin:48px 0}
 <h2 class="sh">Everything a regulator would ask for</h2>
 <p class="sp">I structured the report around the four questions an auditor actually asks. That structure was also a guardrail: every finding has to cite a real article, propose a real fix, and stand up as evidence, or it does not ship.</p>
 <div class="cg">
-<div class="cd"><h4>The clause, named</h4><p>Every finding cites the article, for example EAA §5(2) or GDPR Art. 13. No invented severity scores.</p></div>
+<div class="cd"><h4>The clause, named</h4><p>Every finding points to the exact article behind it, such as a specific GDPR Article 13 disclosure gap. No invented severity scores.</p></div>
 <div class="cd"><h4>The fix, written</h4><p>A plain-language explanation and a copy-paste patch for the team's framework.</p></div>
 <div class="cd"><h4>The evidence, sealed</h4><p>A verifiable, timestamped certificate at a permanent URL, for RFPs and audits.</p></div>
 <div class="cd"><h4>The clock, watched</h4><p>Optional monitors re-scan on a schedule and email the team on a regression, not the regulator.</p></div>
@@ -179,16 +179,16 @@ hr{border:none;height:1px;background:var(--bd);margin:48px 0}
 <div class="w"><hr>
 <div class="sl">Build</div>
 <h2 class="sh">Designed and shipped, not just specced</h2>
-<p class="sp">The design and the product are the same artifact. I built it as a live service, which forced every decision to survive contact with a real scan.</p>
-<div class="fd"><h4>Trust is the interface</h4><p>For a compliance tool, credibility is the product. I designed the certificate as a verifiable, dated, permanent record, so the output reads as evidence rather than a marketing score.</p></div>
-<div class="fd"><h4>AI you can audit</h4><p>The scanner uses models to read pages and draft fixes, but every finding is anchored to a named clause and a checkable patch. The same human-in-the-loop, explainable-AI pattern I design in enterprise: trust, audit, override.</p></div>
+<p class="sp">I built it as a live service rather than a spec, so every decision had to survive contact with a real scan instead of looking right in a deck.</p>
+<div class="fd"><h4>The certificate is the credibility</h4><p>A compliance buyer trusts a dated, verifiable record at a permanent URL, not a number on a landing page. So I designed the output to read like evidence an auditor would accept, down to the timestamp and the article reference, because that is the difference between a tool they cite and a tool they ignore.</p></div>
+<div class="fd"><h4>AI you can audit</h4><p>The scanner uses models to read pages and draft fixes, but every finding is anchored to a named clause and a checkable patch. A reviewer can trace the claim, verify it, or throw it out, the machine proposes and the human disposes.</p></div>
 <div class="fd"><h4>Built with AI tooling</h4><p>I moved from concept to a live, scanning product using AI build tools, treating prototyping in code as the design medium, not a step after it.</p></div>
 </div>
 
 <div class="w"><hr>
-<div class="sl">Validation</div>
-<h2 class="sh">Tuned against real sites</h2>
-<p class="sp">I tested the scanner against real production websites and read the output as a sceptical auditor would. The rule that emerged became the product's spine: if a finding could not be traced to a real article and turned into a checkable fix, it was cut. That is what keeps the report trustworthy instead of alarming.</p>
+<div class="sl">Tuning</div>
+<h2 class="sh">Hardened against real sites</h2>
+<p class="sp">This was self-QA, not user research: I pointed the scanner at real production websites and read its output the way a sceptical auditor would read mine. The rule that emerged became the product's spine: if a finding could not be traced to a real article and turned into a checkable fix, it was cut. That is what keeps the report trustworthy instead of alarming.</p>
 <div class="cg">
 <div class="cd"><h4>No clause, no finding</h4><p>Vague warnings were removed until every line cited an article a developer could verify.</p></div>
 <div class="cd"><h4>Fixes that paste</h4><p>Remediations were rewritten until they read as a patch, not advice.</p></div>

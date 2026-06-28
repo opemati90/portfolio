@@ -185,15 +185,9 @@ hr{border:none;height:1px;background:var(--bd);margin:48px 0}
 
 <div class="w"><hr>
 <div class="sl">Framing the Problem</div>
-<h2 class="sh">5W1H: Defining the design challenge</h2>
-<div class="wh">
-<div class="wh-item"><strong>Who</strong><p>Sustainability managers, climate analysts, and regulatory leads at large enterprises</p></div>
-<div class="wh-item"><strong>What</strong><p>A target validation platform for submitting and reviewing climate commitments</p></div>
-<div class="wh-item"><strong>When</strong><p>When I joined, the platform had no UX baseline, no design system, and a 67% abandon rate</p></div>
-<div class="wh-item"><strong>Where</strong><p>Enterprise web application used in office settings, often across multiple sessions</p></div>
-<div class="wh-item"><strong>Why</strong><p>14-step workflow with no progress saving, unclear requirements, and 4.5-hour average completion time</p></div>
-<div class="wh-item"><strong>How</strong><p>User research, workflow consolidation, progressive disclosure, auto-save, and AI-assisted analysis</p></div>
-</div>
+<h2 class="sh">A submission tool that punished the people who used it</h2>
+<p class="sp">Sustainability managers, analysts, and regulatory leads at large enterprises came to this platform to submit climate commitments, but the platform treated a multi-session, expert task as a single rigid form. Fourteen sequential steps, no progress saving, and requirements that only surfaced as errors meant most people gave up partway and rebuilt their progress in spreadsheets on the side.</p>
+<p class="sp">My read going in: the data was not the problem, the workflow was. The job was to consolidate the steps that legacy process had accumulated, make progress legible, and let people leave and return without losing work, without weakening anything compliance actually required.</p>
 </div>
 
 <div class="ww">
@@ -207,7 +201,7 @@ hr{border:none;height:1px;background:var(--bd);margin:48px 0}
 <div class="w"><hr>
 <div class="sl">Research</div>
 <h2 class="sh">30+ sessions with enterprise users</h2>
-<p class="sp">I ran moderated sessions with sustainability managers, analysts, and regulatory leads across energy, finance, manufacturing, and tech. These were expert-domain users in workflows with no existing UX baseline.</p>
+<p class="sp">I ran moderated sessions with sustainability managers, analysts, and regulatory leads across energy, finance, manufacturing, and tech. There was no prior design work to build on, but the product was instrumented: the 67% abandon rate and the 4.5-hour median completion time came from product analytics and the recurring complaints in the support queue, which is what made the case for the rebuild concrete.</p>
 <div class="cg">
 <div class="cd"><h4>User interviews (n=16)</h4><p>Users were not confused by the data itself, but by the system's inability to show where they were and what came next. Progress visibility was the #1 request.</p></div>
 <div class="cd"><h4>Task analysis (n=8)</h4><p>Observed real submissions. Most common workaround: spreadsheets maintained alongside the platform to track progress manually.</p></div>
@@ -216,12 +210,13 @@ hr{border:none;height:1px;background:var(--bd);margin:48px 0}
 </div></div>
 
 <div class="w"><hr>
-<div class="sl">Personas</div>
+<div class="sl">Archetypes</div>
 <h2 class="sh">Three roles, one workflow</h2>
+<p class="sp">The 30 sessions clustered into three working roles, each with a different relationship to the submission. I designed for all three rather than a single primary user.</p>
 <div class="pr">
-<div class="pc"><h4>Anna, 34</h4><div class="rl">Sustainability Manager</div><blockquote>"I spend more time fighting the tool than doing actual analysis."</blockquote><dl><dt>Goals</dt><dd>Submit targets efficiently, track progress</dd><dt>Frustrations</dt><dd>No progress saving, unclear requirements</dd></dl></div>
-<div class="pc"><h4>Thomas, 41</h4><div class="rl">Climate Analyst</div><blockquote>"I know what data is needed but the system makes it hard to provide."</blockquote><dl><dt>Goals</dt><dd>Upload docs, validate scope, ensure accuracy</dd><dt>Frustrations</dt><dd>Rigid formats, no inline guidance</dd></dl></div>
-<div class="pc"><h4>Katja, 48</h4><div class="rl">Regulatory Lead</div><blockquote>"I review 50+ submissions a quarter. I need status at a glance."</blockquote><dl><dt>Goals</dt><dd>Batch review, status overview, audit trail</dd><dt>Frustrations</dt><dd>No dashboard, manual status tracking</dd></dl></div>
+<div class="pc"><h4>The Submission Owner</h4><div class="rl">Sustainability Manager</div><blockquote>"I spend more time fighting the tool than doing actual analysis."</blockquote><dl><dt>Owns</dt><dd>Getting the submission complete and on time</dd><dt>Blocked by</dt><dd>No progress saving, requirements that surface late</dd></dl></div>
+<div class="pc"><h4>The Data Provider</h4><div class="rl">Climate Analyst</div><blockquote>"I know what data is needed but the system makes it hard to provide."</blockquote><dl><dt>Owns</dt><dd>Document accuracy and scope coverage</dd><dt>Blocked by</dt><dd>Rigid input formats, no inline guidance</dd></dl></div>
+<div class="pc"><h4>The Reviewer</h4><div class="rl">Regulatory Lead</div><blockquote>"I review dozens of submissions a quarter. I need status at a glance."</blockquote><dl><dt>Owns</dt><dd>Batch review, audit trail, sign-off</dd><dt>Blocked by</dt><dd>No dashboard, manual status tracking</dd></dl></div>
 </div></div>
 
 <div class="w"><hr>
