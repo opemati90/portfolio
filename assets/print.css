@@ -1,0 +1,99 @@
+/* Print / PDF export. Loaded with media="print" so it never affects the screen view. */
+
+@page {
+  size: A4;
+  margin: 16mm 14mm;
+}
+
+* {
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+
+html, body {
+  background: #fff;
+}
+
+/* Fixed nav repeats on every printed page and overlaps body text. */
+nav {
+  display: none !important;
+}
+
+/* Undo the top offset that existed only to clear the fixed nav. */
+body > *:first-of-type,
+main, header, .hero {
+  margin-top: 0 !important;
+}
+
+/* Scroll-reveal elements stay at opacity 0 when printing, because
+   IntersectionObserver only fires for what is in the viewport. */
+.rv,
+.js .rv,
+.js .rv.in,
+[data-reveal] {
+  opacity: 1 !important;
+  transform: none !important;
+  filter: none !important;
+  transition: none !important;
+  transition-delay: 0s !important;
+  animation: none !important;
+}
+
+/* Screen rhythm leaves whole blank pages on paper. */
+.hero {
+  padding-top: 24px !important;
+  padding-bottom: 28px !important;
+}
+
+.s {
+  padding-top: 40px !important;
+  padding-bottom: 40px !important;
+}
+
+/* Keep composed blocks whole across page breaks. */
+figure, img, .thumb, .row1, .tags, .imp-i,
+.cd, .card, .mg > *, .metrics > *, .cg > *, .wh > *,
+.stat, .quote, .callout, .cta-row, table, blockquote, li {
+  break-inside: avoid;
+  page-break-inside: avoid;
+}
+
+h1, h2, h3, h4, .sh, .sl {
+  break-after: avoid;
+  page-break-after: avoid;
+  break-inside: avoid;
+}
+
+img {
+  max-width: 100% !important;
+  height: auto !important;
+}
+
+/* Interactive chrome carries no meaning on paper. */
+.btnp, .btn, .cta-row a, .bk-btn {
+  border: 1px solid #ddd8d0 !important;
+  background: transparent !important;
+  color: #1a1a1a !important;
+  box-shadow: none !important;
+}
+
+/* Turn the trailing "back to portfolio" block into a contact footer. */
+.bk {
+  border-top: 1px solid #ddd8d0;
+  padding-top: 14px;
+  margin-top: 32px;
+  text-align: left;
+}
+
+.bk-btn {
+  display: none !important;
+}
+
+.bk::after {
+  content: "Opeyemi Ajimati  ·  Product Designer  ·  o.ajimati@yahoo.com  ·  linkedin.com/in/ajimatiopeyemi  ·  opeyemiajimati.com";
+  display: block;
+  font-family: Inter, system-ui, sans-serif;
+  font-size: 10.5px;
+  letter-spacing: 0.01em;
+  color: #6b6560;
+}

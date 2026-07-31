@@ -14,4 +14,4 @@ Allow: /
 User-agent: PerplexityBot
 Allow: /
 
-Sitemap: https://opeyemiajimati.vercel.app/sitemap.xml
+Sitemap: https://opeyemiajimati.com/sitemap.xml
