@@ -35,7 +35,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Inter:ital,opsz,wght@0,14..32,300;0,14..32,400;0,14..32,500;0,14..32,600;0,14..32,700;1,14..32,400&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
-:root{--bg:#F7F8F9;--sf:#EDEFF2;--sf2:#E3E7EC;--tx:#14161A;--tx2:#4B535C;--tx3:#666E78;--bd:#DEE2E8;--bd2:#C4CBD4;--ac:#1E3AC4;--r:12px;--f:'Inter',system-ui,-apple-system,'Helvetica Neue',Helvetica,sans-serif;--serif:'Newsreader',Georgia,'Times New Roman',serif}
+:root{--bg:#F7F8F9;--sf:#EDEFF2;--sf2:#E3E7EC;--tx:#14161A;--tx2:#4B535C;--tx3:#606872;--bd:#DEE2E8;--bd2:#C4CBD4;--ac:#1E3AC4;--r:12px;--f:'Inter',system-ui,-apple-system,'Helvetica Neue',Helvetica,sans-serif;--serif:'Newsreader',Georgia,'Times New Roman',serif}
 html{scroll-behavior:smooth}
 body{font-family:var(--f);background:var(--bg);color:var(--tx);-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;font-feature-settings:'ss01','ss02','cv01';line-height:1.55}
 a{color:inherit;text-decoration:none}img{display:block;max-width:100%}
@@ -88,6 +88,7 @@ hr{border:none;height:1px;background:var(--bd);margin:48px 0}
 @media(max-width:900px){.wh{grid-template-columns:1fr 1fr}}
 @media(max-width:768px){.w,.ww{padding:0 20px}.mg,.metrics{grid-template-columns:1fr 1fr}.cg,.wh{grid-template-columns:1fr}nav{padding:0 20px}}
 </style>
+<link rel="stylesheet" href="../assets/a11y.css">
 <link rel="stylesheet" href="../assets/process.css">
 <link rel="stylesheet" media="print" href="../assets/print.css">
 <!-- Microsoft Clarity -->
@@ -99,7 +100,9 @@ hr{border:none;height:1px;background:var(--bd);margin:48px 0}
     })(window, document, "clarity", "script", "xf2psckz27");
 </script>
 </head><body>
+<a class="skip" href="#main">Skip to content</a>
 <nav><a href="../index.html" class="back">← Portfolio</a><a href="https://compliancelayer-production.up.railway.app/" target="_blank" rel="noopener" class="nav-live">Live site ↗</a></nav>
+<main id="main" tabindex="-1">
 
 <section class="hero"><div class="w">
 <div class="tags"><span class="tg">Design Engineer</span><span class="tg">B2B SaaS</span><span class="tg">Live Product</span><span class="tg">Compliance UX</span></div>
@@ -162,7 +165,7 @@ hr{border:none;height:1px;background:var(--bd);margin:48px 0}
 <span class="fn fn-e">Sealed certificate</span>
 </div>
 <div class="pm">
-<div class="pm-h">Structure &middot; anatomy of the report</div>
+<div class="pm-h">Anatomy of the report</div>
 <div class="it-p">
 <div class="it-t"><span class="v">Shipped structure</span><span class="r">One scan, four auditor questions</span></div>
 <div class="it-b">
@@ -200,7 +203,6 @@ hr{border:none;height:1px;background:var(--bd);margin:48px 0}
 <div class="w">
 <p class="sp">The second decision followed straight from discovery: refuse to pick one audience. The same scan produces two outputs, a clause-by-clause report for the person who gets the letter, and a developer-ready patch, branded as your own, for the agency that ships the fix. One engine, two surfaces, so neither reader has to translate the other's language.</p>
 <div class="pm">
-<div class="pm-h">Decision 01 &middot; which reader the product serves</div>
 <div class="dc">
 <div class="dc-q">The lawyer and the developer never share a language. Which one does the output speak?</div>
 <div class="dc-o chose"><div class="dc-tag">Chose</div><div class="dc-body"><h5>One engine, two surfaces</h5><p>The same scan produces a clause-by-clause report for the person who gets the letter and a developer-ready patch, brandable as the agency's own, for whoever ships the fix.</p></div></div>
@@ -208,7 +210,6 @@ hr{border:none;height:1px;background:var(--bd);margin:48px 0}
 </div>
 </div>
 <div class="pm">
-<div class="pm-h">Decision 02 &middot; what a finding is allowed to say</div>
 <div class="dc">
 <div class="dc-q">Is a finding the scanner cannot anchor still worth showing?</div>
 <div class="dc-o chose"><div class="dc-tag">Chose</div><div class="dc-body"><h5>If it could not be traced to a real article and turned into a checkable fix, it was cut</h5><p>Every line cites an article a developer can verify, and every remediation reads as a patch rather than advice. A reviewer can trace the claim, verify it, or throw it out.</p></div></div>
@@ -216,7 +217,6 @@ hr{border:none;height:1px;background:var(--bd);margin:48px 0}
 </div>
 </div>
 <div class="pm">
-<div class="pm-h">Decision 03 &middot; when to ask for a signup</div>
 <div class="dc">
 <div class="dc-q">Does the first scan run before or after an account?</div>
 <div class="dc-o chose"><div class="dc-tag">Chose</div><div class="dc-body"><h5>First scan free, no signup</h5><p>The fastest way to earn trust in a category built on fear is to let someone watch their own site get graded.</p></div></div>
@@ -248,7 +248,7 @@ hr{border:none;height:1px;background:var(--bd);margin:48px 0}
 <div class="cd"><h4>Fixes that paste</h4><p>Remediations were rewritten until they read as a patch, not advice.</p></div>
 </div>
 <div class="pm">
-<div class="pm-h">Iteration 01 &middot; what survives in a finding</div>
+<div class="pm-h">What survives in a finding, before and after</div>
 <div class="ba">
   <div class="ba-row before">
     <div class="ba-lab"><span class="t">Before tuning</span><span class="n">Alarming, hard to act on</span></div>
@@ -282,4 +282,5 @@ hr{border:none;height:1px;background:var(--bd);margin:48px 0}
 </div>
 
 <div class="bk"><a href="../index.html" class="bk-btn">← Back to portfolio</a></div>
+</main>
 </body></html>

@@ -53,7 +53,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Inter:ital,opsz,wght@0,14..32,300;0,14..32,400;0,14..32,500;0,14..32,600;0,14..32,700;1,14..32,400&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
-:root{--bg:#F7F8F9;--sf:#EDEFF2;--sf2:#E3E7EC;--tx:#14161A;--tx2:#4B535C;--tx3:#666E78;--bd:#DEE2E8;--bd2:#C4CBD4;--ac:#1E3AC4;--r:12px;--f:'Inter',system-ui,-apple-system,'Helvetica Neue',Helvetica,sans-serif;--serif:'Newsreader',Georgia,'Times New Roman',serif}
+:root{--bg:#F7F8F9;--sf:#EDEFF2;--sf2:#E3E7EC;--tx:#14161A;--tx2:#4B535C;--tx3:#606872;--bd:#DEE2E8;--bd2:#C4CBD4;--ac:#1E3AC4;--r:12px;--f:'Inter',system-ui,-apple-system,'Helvetica Neue',Helvetica,sans-serif;--serif:'Newsreader',Georgia,'Times New Roman',serif}
 html{scroll-behavior:smooth}
 body{font-family:var(--f);background:var(--bg);color:var(--tx);-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;font-feature-settings:'ss01','ss02','cv01';line-height:1.55}
 a{color:inherit;text-decoration:none}img{display:block;max-width:100%}
@@ -163,6 +163,7 @@ hr{border:none;height:1px;background:var(--bd);margin:48px 0}
 @media(max-width:900px){.pr{grid-template-columns:1fr}.wh{grid-template-columns:1fr 1fr}}
 @media(max-width:768px){.w,.ww{padding:0 20px}.mg,.metrics{grid-template-columns:1fr 1fr}.cg,.tg2,.img-row{grid-template-columns:1fr}.img-row-3{grid-template-columns:1fr 1fr}.wh{grid-template-columns:1fr}nav{padding:0 20px}}
 </style>
+<link rel="stylesheet" href="../assets/a11y.css">
 <link rel="stylesheet" href="../assets/process.css">
 <link rel="stylesheet" media="print" href="../assets/print.css">
 <!-- Microsoft Clarity -->
@@ -174,7 +175,9 @@ hr{border:none;height:1px;background:var(--bd);margin:48px 0}
     })(window, document, "clarity", "script", "xf2psckz27");
 </script>
 </head><body>
+<a class="skip" href="#main">Skip to content</a>
 <nav><a href="../index.html" class="back">← Portfolio</a></nav>
+<main id="main" tabindex="-1">
 <section class="hero"><div class="w">
 <div class="tags"><span class="tg">EdTech</span><span class="tg">Mobile + Web</span><span class="tg">Nigerian Market</span><span class="tg">B2C</span></div>
 <h1>EduApp: quality education accessible to every Nigerian student</h1>
@@ -225,7 +228,7 @@ hr{border:none;height:1px;background:var(--bd);margin:48px 0}
 <p class="pm-cap">Each input and the decision it forced. Research that changed nothing is not listed.</p>
 </div>
 <div class="pm">
-<div class="pm-h">Competitive analysis &middot; the gap</div>
+<div class="pm-h">Where the gap was</div>
 <table class="cm"><thead><tr><th>Tool</th><th>True offline-first with curriculum-aligned adaptive learning</th><th>What I found</th></tr></thead>
 <tbody>
 <tr><td class="tool">uLesson</td><td><span class="no">No</span></td><td class="note">Part of the Nigerian set analysed; none of the four combined the two.</td></tr>
@@ -237,7 +240,7 @@ hr{border:none;height:1px;background:var(--bd);margin:48px 0}
 <p class="pm-cap">One criterion only, because that combination is the only thing the analysis scored. I have not rated these tools on anything my own notes do not cover.</p>
 </div>
 <div class="pm">
-<div class="pm-h">Device audit &middot; constraint to decision</div>
+<div class="pm-h">From measured constraint to design decision</div>
 <table class="cm"><thead><tr><th>Measured constraint</th><th>Source</th><th>What it forced in the design</th></tr></thead>
 <tbody>
 <tr><td class="tool">1 to 3GB RAM, Android 8-12</td><td class="note">Device audit, n=8</td><td class="note">App budget set at under 15MB, so heavy media and framework weight were off the table from day one.</td></tr>
@@ -268,21 +271,19 @@ hr{border:none;height:1px;background:var(--bd);margin:48px 0}
 <div class="cd"><h4>Ultra-light UI</h4><p>App under 15MB. Every screen loads in under 2 seconds on 3G. Text-first, video optional for WiFi.</p></div>
 </div>
 <div class="pm">
-<div class="pm-h">Decision 01 &middot; the connectivity model</div>
 <div class="dc"><div class="dc-q">Is offline a fallback mode, or the way the product works?</div>
  <div class="dc-o chose"><div class="dc-tag">Chose</div><div class="dc-body"><h5>Offline-first, with sync on reconnect</h5><p>Lessons download over WiFi and students study completely offline; progress syncs when connectivity returns. In testing, 7 of 8 students named offline access as the reason they would pick this over competitors.</p></div></div>
  <div class="dc-o cut"><div class="dc-tag">Rejected</div><div class="dc-body"><h5>Streaming with an offline fallback</h5><p>It assumes Western infrastructure. On 2G/3G that drops on the bus and at home, an app built around a live connection is useless the moment the signal goes.</p></div></div>
 </div>
 </div>
 <div class="pm">
-<div class="pm-h">Decision 02 &middot; the primary content format</div>
 <div class="dc"><div class="dc-q">Video-led lessons, or text-led?</div>
  <div class="dc-o chose"><div class="dc-tag">Chose</div><div class="dc-body"><h5>Text-first, video optional for WiFi</h5><p>It is what fits inside a 15MB app that loads in under 2 seconds on 3G, and it respects a shared, rationed data plan.</p></div></div>
  <div class="dc-o cut"><div class="dc-tag">Rejected</div><div class="dc-body"><h5>Video as the default teaching format</h5><p>Cost of the call: video is the more engaging format and the one competitors lead with. It cannot be delivered inside the device and data budgets the audit produced, so it became an extra rather than the spine.</p></div></div>
 </div>
 </div>
 <div class="pm">
-<div class="pm-h">Screen anatomy &middot; a lesson screen on a 5-inch phone</div>
+<div class="pm-h">Anatomy of a lesson screen on a 5-inch phone</div>
 <div class="it">
   <div class="it-p">
     <div class="it-t"><span class="v">Structure</span><span class="r">Text-first, targets sized for a moving bus</span></div>
@@ -322,7 +323,7 @@ hr{border:none;height:1px;background:var(--bd);margin:48px 0}
 </div></div>
 <div class="fd s"><div class="sv">Validation</div><h4>Offline mode was the most valued feature</h4><p>7/8 students said offline access was the reason they would use EduApp over competitors.</p></div>
 <div class="pm">
-<div class="pm-h">Iteration 01 &middot; the quiz timer</div>
+<div class="pm-h">The quiz timer, before and after</div>
 <div class="ba">
   <div class="ba-row before">
     <div class="ba-lab"><span class="t">First build</span><span class="n">The timer caused anxiety</span></div>
@@ -364,4 +365,5 @@ hr{border:none;height:1px;background:var(--bd);margin:48px 0}
 <div class="cd"><h4>Local context changes everything</h4><p>Studying on a Lagos bus is fundamentally different from studying at a desk. Larger touch targets, sunlight-readable text, auto-save every 30 seconds.</p></div>
 </div></div>
 <div class="bk"><a href="../index.html" class="bk-btn">← Back to portfolio</a></div>
+</main>
 </body></html>

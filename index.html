@@ -105,7 +105,7 @@
   --paper-2:#E3E7EC;
   --ink:#14161A;
   --ink-2:#4B535C;
-  --ink-3:#666E78;
+  --ink-3:#606872;
   --line:#DEE2E8;
   --line-2:#C4CBD4;
   --accent:#1E3AC4;
@@ -427,6 +427,7 @@ footer{
   .context-list{gap:20px}
 }
 </style>
+<link rel="stylesheet" href="assets/a11y.css">
 <link rel="stylesheet" media="print" href="assets/print.css">
 <script>document.documentElement.classList.add('js');</script>
 <!-- Microsoft Clarity -->
@@ -439,6 +440,7 @@ footer{
 </script>
 </head>
 <body>
+<a class="skip" href="#main">Skip to content</a>
 
 <span id="top-sentinel" aria-hidden="true" style="position:absolute;top:0;height:1px;width:1px"></span>
 
@@ -450,6 +452,7 @@ footer{
     <a href="#contact" class="cta">Get in touch</a>
   </div>
 </nav>
+<main id="main" tabindex="-1">
 
 <!-- HERO -->
 <section class="hero">
@@ -733,6 +736,7 @@ footer{
   </div>
 </section>
 
+</main>
 <!-- FOOTER -->
 <footer>
   <div class="foot-wrap">

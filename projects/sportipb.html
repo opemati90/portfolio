@@ -53,7 +53,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Inter:ital,opsz,wght@0,14..32,300;0,14..32,400;0,14..32,500;0,14..32,600;0,14..32,700;1,14..32,400&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
-:root{--bg:#F7F8F9;--sf:#EDEFF2;--sf2:#E3E7EC;--tx:#14161A;--tx2:#4B535C;--tx3:#666E78;--bd:#DEE2E8;--bd2:#C4CBD4;--ac:#1E3AC4;--r:12px;--f:'Inter',system-ui,-apple-system,'Helvetica Neue',Helvetica,sans-serif;--serif:'Newsreader',Georgia,'Times New Roman',serif}
+:root{--bg:#F7F8F9;--sf:#EDEFF2;--sf2:#E3E7EC;--tx:#14161A;--tx2:#4B535C;--tx3:#606872;--bd:#DEE2E8;--bd2:#C4CBD4;--ac:#1E3AC4;--r:12px;--f:'Inter',system-ui,-apple-system,'Helvetica Neue',Helvetica,sans-serif;--serif:'Newsreader',Georgia,'Times New Roman',serif}
 html{scroll-behavior:smooth}
 body{font-family:var(--f);background:var(--bg);color:var(--tx);-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;font-feature-settings:'ss01','ss02','cv01';line-height:1.55}
 a{color:inherit;text-decoration:none}img{display:block;max-width:100%}
@@ -163,6 +163,7 @@ hr{border:none;height:1px;background:var(--bd);margin:48px 0}
 @media(max-width:900px){.pr{grid-template-columns:1fr}.wh{grid-template-columns:1fr 1fr}}
 @media(max-width:768px){.w,.ww{padding:0 20px}.mg,.metrics{grid-template-columns:1fr 1fr}.cg,.tg2,.img-row{grid-template-columns:1fr}.img-row-3{grid-template-columns:1fr 1fr}.wh{grid-template-columns:1fr}nav{padding:0 20px}}
 </style>
+<link rel="stylesheet" href="../assets/a11y.css">
 <link rel="stylesheet" href="../assets/process.css">
 <link rel="stylesheet" media="print" href="../assets/print.css">
 <!-- Microsoft Clarity -->
@@ -174,7 +175,9 @@ hr{border:none;height:1px;background:var(--bd);margin:48px 0}
     })(window, document, "clarity", "script", "xf2psckz27");
 </script>
 </head><body>
+<a class="skip" href="#main">Skip to content</a>
 <nav><a href="../index.html" class="back">← Portfolio</a></nav>
+<main id="main" tabindex="-1">
 <section class="hero"><div class="w">
 <div class="tags"><span class="tg">Web Design</span><span class="tg">Landing Page</span><span class="tg">Sports Community</span></div>
 <h1>Sportipb: redesigning a sports community platform</h1>
@@ -227,7 +230,6 @@ hr{border:none;height:1px;background:var(--bd);margin:48px 0}
 <h2 class="sh">The solution, delivered</h2>
 <p class="sp">The redesigned landing page leads with an action-oriented hero, builds trust through community stats and social proof, and converts through community-framed CTAs. "Join Our Team" outperformed "Sign Up Free" by 59% in A/B testing.</p>
 <div class="pm">
-<div class="pm-h">Decision &middot; the primary CTA</div>
 <div class="dc">
  <div class="dc-q">What should the button that carries the whole page say?</div>
  <div class="dc-o chose"><div class="dc-tag">Chose</div><div class="dc-body"><h5>"Join Our Team"</h5><p>Community framing. It matches what the research said people came for, a community beyond just scores, and it treats sign-up as belonging to something rather than opening an account.</p></div></div>
@@ -262,7 +264,7 @@ hr{border:none;height:1px;background:var(--bd);margin:48px 0}
 </div></div>
 <div class="fd s"><div class="sv">Validation</div><h4>Community language outperformed transactional framing</h4><p>"Join Our Team" beat "Sign Up Free" by 59% in A/B testing. Users are motivated by belonging, not features.</p></div>
 <div class="pm">
-<div class="pm-h">Iteration 01 &middot; the mobile CTA</div>
+<div class="pm-h">The mobile CTA, before and after</div>
 <div class="it">
   <div class="it-p">
     <div class="it-t"><span class="v">First build</span><span class="r">CTA below the fold</span></div>
@@ -300,4 +302,5 @@ hr{border:none;height:1px;background:var(--bd);margin:48px 0}
 <div class="cd"><h4>Mobile-first is not a suggestion</h4><p>With 73% mobile traffic, I should have started wireframes on mobile. Adapting desktop layouts down always creates compromise. Start small, scale up.</p></div>
 </div></div>
 <div class="bk"><a href="../index.html" class="bk-btn">← Back to portfolio</a></div>
+</main>
 </body></html>

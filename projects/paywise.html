@@ -53,7 +53,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Inter:ital,opsz,wght@0,14..32,300;0,14..32,400;0,14..32,500;0,14..32,600;0,14..32,700;1,14..32,400&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
-:root{--bg:#F7F8F9;--sf:#EDEFF2;--sf2:#E3E7EC;--tx:#14161A;--tx2:#4B535C;--tx3:#666E78;--bd:#DEE2E8;--bd2:#C4CBD4;--ac:#1E3AC4;--r:12px;--f:'Inter',system-ui,-apple-system,'Helvetica Neue',Helvetica,sans-serif;--serif:'Newsreader',Georgia,'Times New Roman',serif}
+:root{--bg:#F7F8F9;--sf:#EDEFF2;--sf2:#E3E7EC;--tx:#14161A;--tx2:#4B535C;--tx3:#606872;--bd:#DEE2E8;--bd2:#C4CBD4;--ac:#1E3AC4;--r:12px;--f:'Inter',system-ui,-apple-system,'Helvetica Neue',Helvetica,sans-serif;--serif:'Newsreader',Georgia,'Times New Roman',serif}
 html{scroll-behavior:smooth}
 body{font-family:var(--f);background:var(--bg);color:var(--tx);-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;font-feature-settings:'ss01','ss02','cv01';line-height:1.55}
 a{color:inherit;text-decoration:none}img{display:block;max-width:100%}
@@ -163,6 +163,7 @@ hr{border:none;height:1px;background:var(--bd);margin:48px 0}
 @media(max-width:900px){.pr{grid-template-columns:1fr}.wh{grid-template-columns:1fr 1fr}}
 @media(max-width:768px){.w,.ww{padding:0 20px}.mg,.metrics{grid-template-columns:1fr 1fr}.cg,.tg2,.img-row{grid-template-columns:1fr}.img-row-3{grid-template-columns:1fr 1fr}.wh{grid-template-columns:1fr}nav{padding:0 20px}}
 </style>
+<link rel="stylesheet" href="../assets/a11y.css">
 <link rel="stylesheet" href="../assets/process.css">
 <link rel="stylesheet" media="print" href="../assets/print.css">
 <!-- Microsoft Clarity -->
@@ -174,7 +175,9 @@ hr{border:none;height:1px;background:var(--bd);margin:48px 0}
     })(window, document, "clarity", "script", "xf2psckz27");
 </script>
 </head><body>
+<a class="skip" href="#main">Skip to content</a>
 <nav><a href="../index.html" class="back">← Portfolio</a></nav>
+<main id="main" tabindex="-1">
 <section class="hero"><div class="w">
 <div class="tags"><span class="tg">Fintech</span><span class="tg">Mobile App</span><span class="tg">Expense Management</span><span class="tg">B2C</span></div>
 <h1>PayWise: card and expense management, unified</h1>
@@ -240,7 +243,7 @@ hr{border:none;height:1px;background:var(--bd);margin:48px 0}
 <h2 class="sh">One app, complete financial picture</h2>
 <p class="sp">The home screen shows total balance, income vs. expenses, and a "safe to spend" indicator. Transactions auto-categorize. Budgets show progress visually. Goals track savings with clear timelines.</p>
 <div class="pm">
-<div class="pm-h">Screen anatomy &middot; the home screen</div>
+<div class="pm-h">Anatomy of the home screen</div>
 <div class="it">
   <div class="it-p">
     <div class="it-t"><span class="v">Structure</span><span class="r">Answer first, ledger last</span></div>
@@ -269,28 +272,24 @@ hr{border:none;height:1px;background:var(--bd);margin:48px 0}
 <h2 class="sh">Four judgment calls, and what each one cost</h2>
 <p class="sp">Each choice below traded something away. I tried to name the cost instead of pretending the easy path was free.</p>
 <div class="pm">
-<div class="pm-h">Decision 01 &middot; what the home screen leads with</div>
 <div class="dc"><div class="dc-q">Does the home screen open on an answer or on the data behind it?</div>
  <div class="dc-o chose"><div class="dc-tag">Chose</div><div class="dc-body"><h5>Lead with "safe to spend"</h5><p>The home screen answers the one question people open the app for, before showing the full transaction list. It won the majority who never make it past the first screen, and rated 4.6 out of 5 for clarity in testing.</p></div></div>
  <div class="dc-o alt"><div class="dc-tag">Alternative</div><div class="dc-body"><h5>Ledger first, the standard layout</h5><p>Cost of the call: a single computed number hides nuance, so it can feel reductive to power users who want the line items. I accepted that.</p></div></div>
 </div>
 </div>
 <div class="pm">
-<div class="pm-h">Decision 02 &middot; who categorizes transactions</div>
 <div class="dc"><div class="dc-q">Ask people to tag their spending, or guess for them?</div>
  <div class="dc-o chose"><div class="dc-tag">Chose</div><div class="dc-body"><h5>Auto-categorize, and let it be wrong</h5><p>Transactions sort themselves so nobody has to tag a coffee. Categories stay editable and corrections stick, so there is a visible escape hatch.</p></div></div>
  <div class="dc-o alt"><div class="dc-tag">Alternative</div><div class="dc-body"><h5>Manual tagging for perfect accuracy</h5><p>Cost of the call: automation guesses wrong sometimes, and a confident wrong label is worse than no label. Accuracy that demands constant input loses to low effort when the stated barrier is "too much time".</p></div></div>
 </div>
 </div>
 <div class="pm">
-<div class="pm-h">Decision 03 &middot; how a budget is displayed</div>
 <div class="dc"><div class="dc-q">Should budgets be readable at a glance or precise on the page?</div>
  <div class="dc-o chose"><div class="dc-tag">Chose</div><div class="dc-body"><h5>Budgets as filling progress bars</h5><p>A glanceable bar is read in a second at the point of purchase, which is the only moment a budget actually changes behavior.</p></div></div>
  <div class="dc-o alt"><div class="dc-tag">Alternative</div><div class="dc-body"><h5>Tables of numbers</h5><p>Cost of the call: I lose the precision and the exportability a grid gives.</p></div></div>
 </div>
 </div>
 <div class="pm">
-<div class="pm-h">Decision 04 &middot; many cards, one view</div>
 <div class="dc"><div class="dc-q">One rolled-up balance, or a view per card?</div>
  <div class="dc-o chose"><div class="dc-tag">Chose</div><div class="dc-body"><h5>One wallet for many cards, one balance up top</h5><p>All cards live in a single view that rolls up to one total. It is the only way the app answers "where do I stand" instead of being five banking apps stacked together.</p></div></div>
  <div class="dc-o alt"><div class="dc-tag">Alternative</div><div class="dc-body"><h5>Keeping cards separate</h5><p>Cost of the call: merging cards blurs which account a purchase hit and adds real reconciliation work behind the scenes.</p></div></div>
@@ -316,7 +315,7 @@ hr{border:none;height:1px;background:var(--bd);margin:48px 0}
 </div></div>
 <div class="fd s"><div class="sv">Validation</div><h4>"Safe to spend" was the most loved feature</h4><p>9/12 users said it changed how they think about money. It replaces anxiety with a concrete, instant answer.</p></div>
 <div class="pm">
-<div class="pm-h">Iteration 01 &middot; budget setup</div>
+<div class="pm-h">Budget setup, before and after</div>
 <div class="ba">
   <div class="ba-row before">
     <div class="ba-lab"><span class="t">First build</span><span class="n">Several people quit at the setup wall</span></div>
@@ -339,7 +338,7 @@ hr{border:none;height:1px;background:var(--bd);margin:48px 0}
 <p class="pm-cap">The first build asked people to author their budgets before the product had done anything for them. The same draft-then-edit move that worked for transaction categories had to apply to onboarding too.</p>
 </div>
 <div class="pm">
-<div class="pm-h">Iteration 02 &middot; transaction filtering</div>
+<div class="pm-h">Transaction filtering, before and after</div>
 <div class="ba">
   <div class="ba-row before">
     <div class="ba-lab"><span class="t">First build</span><span class="n">79% completion, the weakest task</span></div>
@@ -370,4 +369,5 @@ hr{border:none;height:1px;background:var(--bd);margin:48px 0}
 <div class="cd"><h4>Auto-categorization is table stakes</h4><p>No one wants to tag every coffee purchase. The moment we automated categories, daily engagement jumped. Reduce effort, increase value.</p></div>
 </div></div>
 <div class="bk"><a href="../index.html" class="bk-btn">← Back to portfolio</a></div>
+</main>
 </body></html>

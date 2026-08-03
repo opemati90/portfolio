@@ -53,7 +53,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Inter:ital,opsz,wght@0,14..32,300;0,14..32,400;0,14..32,500;0,14..32,600;0,14..32,700;1,14..32,400&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
-:root{--bg:#F7F8F9;--sf:#EDEFF2;--sf2:#E3E7EC;--tx:#14161A;--tx2:#4B535C;--tx3:#666E78;--bd:#DEE2E8;--bd2:#C4CBD4;--ac:#1E3AC4;--r:12px;--f:'Inter',system-ui,-apple-system,'Helvetica Neue',Helvetica,sans-serif;--serif:'Newsreader',Georgia,'Times New Roman',serif}
+:root{--bg:#F7F8F9;--sf:#EDEFF2;--sf2:#E3E7EC;--tx:#14161A;--tx2:#4B535C;--tx3:#606872;--bd:#DEE2E8;--bd2:#C4CBD4;--ac:#1E3AC4;--r:12px;--f:'Inter',system-ui,-apple-system,'Helvetica Neue',Helvetica,sans-serif;--serif:'Newsreader',Georgia,'Times New Roman',serif}
 html{scroll-behavior:smooth}
 body{font-family:var(--f);background:var(--bg);color:var(--tx);-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;font-feature-settings:'ss01','ss02','cv01';line-height:1.55}
 a{color:inherit;text-decoration:none}img{display:block;max-width:100%}
@@ -163,6 +163,7 @@ hr{border:none;height:1px;background:var(--bd);margin:48px 0}
 @media(max-width:900px){.pr{grid-template-columns:1fr}.wh{grid-template-columns:1fr 1fr}}
 @media(max-width:768px){.w,.ww{padding:0 20px}.mg,.metrics{grid-template-columns:1fr 1fr}.cg,.tg2,.img-row{grid-template-columns:1fr}.img-row-3{grid-template-columns:1fr 1fr}.wh{grid-template-columns:1fr}nav{padding:0 20px}}
 </style>
+<link rel="stylesheet" href="../assets/a11y.css">
 <link rel="stylesheet" href="../assets/process.css">
 <link rel="stylesheet" media="print" href="../assets/print.css"><!-- Microsoft Clarity -->
 <script type="text/javascript">
@@ -173,7 +174,9 @@ hr{border:none;height:1px;background:var(--bd);margin:48px 0}
     })(window, document, "clarity", "script", "xf2psckz27");
 </script>
 </head><body>
+<a class="skip" href="#main">Skip to content</a>
 <nav><a href="../index.html" class="back">← Portfolio</a></nav>
+<main id="main" tabindex="-1">
 
 <section class="hero"><div class="w">
 <div class="tags"><span class="tg">Lead Product Designer</span><span class="tg">Mobile App</span><span class="tg">In TestFlight</span><span class="tg">B2C + B2B</span></div>
@@ -237,7 +240,7 @@ hr{border:none;height:1px;background:var(--bd);margin:48px 0}
 </div>
 
 <div class="pm">
-<div class="pm-h">Competitive audit &middot; the one criterion that mattered</div>
+<div class="pm-h">The one criterion that mattered</div>
 <table class="cm"><thead><tr><th>Tool</th><th>Works across organizations</th><th>What I found</th></tr></thead>
 <tbody>
 <tr><td class="tool">Tile</td><td><span class="no">No</span></td><td class="note">Device-only. Solves tracking for tagged objects, not the return of untagged property.</td></tr>
@@ -351,7 +354,7 @@ hr{border:none;height:1px;background:var(--bd);margin:48px 0}
 </div>
 
 <div class="pm">
-<div class="pm-h">Iteration 01 &middot; ownership verification</div>
+<div class="pm-h">Ownership verification, before and after</div>
 <div class="it">
   <div class="it-p">
     <div class="it-t"><span class="v">First build</span><span class="r">21% struggled</span></div>
@@ -379,7 +382,7 @@ hr{border:none;height:1px;background:var(--bd);margin:48px 0}
 <p class="pm-cap">Schematic of the change, not a screenshot. <b>Only the revised version shipped;</b> the first build is reconstructed from the finding it fixed.</p>
 </div>
 <div class="pm">
-<div class="pm-h">Iteration 02 &middot; handover code error recovery</div>
+<div class="pm-h">Handover code error recovery, before and after</div>
 <div class="ba">
   <div class="ba-row before">
     <div class="ba-lab"><span class="t">First build</span><span class="n">A dead end at the doorstep</span></div>
@@ -419,4 +422,5 @@ hr{border:none;height:1px;background:var(--bd);margin:48px 0}
 </div>
 
 <div class="bk"><a href="../index.html" class="bk-btn">← Back to portfolio</a></div>
+</main>
 </body></html>

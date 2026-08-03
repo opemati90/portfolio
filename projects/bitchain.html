@@ -53,7 +53,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Inter:ital,opsz,wght@0,14..32,300;0,14..32,400;0,14..32,500;0,14..32,600;0,14..32,700;1,14..32,400&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
-:root{--bg:#F7F8F9;--sf:#EDEFF2;--sf2:#E3E7EC;--tx:#14161A;--tx2:#4B535C;--tx3:#666E78;--bd:#DEE2E8;--bd2:#C4CBD4;--ac:#1E3AC4;--r:12px;--f:'Inter',system-ui,-apple-system,'Helvetica Neue',Helvetica,sans-serif;--serif:'Newsreader',Georgia,'Times New Roman',serif}
+:root{--bg:#F7F8F9;--sf:#EDEFF2;--sf2:#E3E7EC;--tx:#14161A;--tx2:#4B535C;--tx3:#606872;--bd:#DEE2E8;--bd2:#C4CBD4;--ac:#1E3AC4;--r:12px;--f:'Inter',system-ui,-apple-system,'Helvetica Neue',Helvetica,sans-serif;--serif:'Newsreader',Georgia,'Times New Roman',serif}
 html{scroll-behavior:smooth}
 body{font-family:var(--f);background:var(--bg);color:var(--tx);-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;font-feature-settings:'ss01','ss02','cv01';line-height:1.55}
 a{color:inherit;text-decoration:none}img{display:block;max-width:100%}
@@ -163,6 +163,7 @@ hr{border:none;height:1px;background:var(--bd);margin:48px 0}
 @media(max-width:900px){.pr{grid-template-columns:1fr}.wh{grid-template-columns:1fr 1fr}}
 @media(max-width:768px){.w,.ww{padding:0 20px}.mg,.metrics{grid-template-columns:1fr 1fr}.cg,.tg2,.img-row{grid-template-columns:1fr}.img-row-3{grid-template-columns:1fr 1fr}.wh{grid-template-columns:1fr}nav{padding:0 20px}}
 </style>
+<link rel="stylesheet" href="../assets/a11y.css">
 <link rel="stylesheet" href="../assets/process.css">
 <link rel="stylesheet" media="print" href="../assets/print.css">
 <!-- Microsoft Clarity -->
@@ -174,7 +175,9 @@ hr{border:none;height:1px;background:var(--bd);margin:48px 0}
     })(window, document, "clarity", "script", "xf2psckz27");
 </script>
 </head><body>
+<a class="skip" href="#main">Skip to content</a>
 <nav><a href="../index.html" class="back">← Portfolio</a></nav>
+<main id="main" tabindex="-1">
 <section class="hero"><div class="w">
 <div class="tags"><span class="tg">Fintech</span><span class="tg">Crypto Wallet</span><span class="tg">Mobile App</span><span class="tg">B2C</span></div>
 <h1>Bitchain: a crypto wallet for everyday people</h1>
@@ -224,7 +227,7 @@ hr{border:none;height:1px;background:var(--bd);margin:48px 0}
 <p class="pm-cap">Two inputs, and the specific decision each one forced. Research that changed nothing is not listed.</p>
 </div>
 <div class="pm">
-<div class="pm-h">Competitive audit &middot; four wallets, three criteria</div>
+<div class="pm-h">Four wallets, three criteria</div>
 <table class="cm"><thead><tr><th>Wallet</th><th>Plain language in the UI</th><th>Fees shown before confirming</th><th>Onboarding length</th></tr></thead>
 <tbody>
 <tr><td class="tool">Coinbase Wallet</td><td><span class="no">No</span></td><td><span class="no">No</span></td><td class="note">not scored separately</td></tr>
@@ -257,7 +260,7 @@ hr{border:none;height:1px;background:var(--bd);margin:48px 0}
 <h2 class="sh">Dark, clean, confidence-building</h2>
 <p class="sp">The dark theme signals premium and security. Every screen prioritizes the user's balance and recent activity. Blockchain jargon is replaced with plain language. Fees are shown upfront, never hidden.</p>
 <div class="pm">
-<div class="pm-h">Screen anatomy &middot; the wallet home</div>
+<div class="pm-h">Anatomy of the wallet home</div>
 <div class="it">
   <div class="it-p">
     <div class="it-t"><span class="v">Structure</span><span class="r">Balance first, activity second</span></div>
@@ -276,14 +279,12 @@ hr{border:none;height:1px;background:var(--bd);margin:48px 0}
 <p class="pm-cap">Structural breakdown of the shipped screen, not a screenshot and not an original wireframe.</p>
 </div>
 <div class="pm">
-<div class="pm-h">Decision 01 &middot; theme</div>
 <div class="dc"><div class="dc-q">Dark or light as the default theme for a money app?</div>
  <div class="dc-o chose"><div class="dc-tag">Chose</div><div class="dc-body"><h5>Dark as the only theme</h5><p>Dark signals premium and security. In testing, 10 of 12 participants described the dark interface as "more secure" and "more professional".</p></div></div>
  <div class="dc-o cut"><div class="dc-tag">Rejected</div><div class="dc-body"><h5>A light theme matching the audited wallets</h5><p>It is what the competitors ship, so it would have been the safe call. The trust reading in testing was measured against those light-themed competitors, and dark won it.</p></div></div>
 </div>
 </div>
 <div class="pm">
-<div class="pm-h">Decision 02 &middot; language</div>
 <div class="dc"><div class="dc-q">Teach the blockchain vocabulary, or replace it?</div>
  <div class="dc-o chose"><div class="dc-tag">Chose</div><div class="dc-body"><h5>Plain language everywhere in the UI</h5><p>Every audited wallet uses blockchain jargon and none of them explains what the user is doing at each step. The product target was a wallet that reads like a banking app, so the vocabulary had to go.</p></div></div>
  <div class="dc-o cut"><div class="dc-tag">Rejected</div><div class="dc-body"><h5>Keep the industry-standard terms and explain them</h5><p>"Gas fees" confused every participant in testing. Explaining a term at the moment someone is about to move money is a cost paid on every transaction, not once.</p></div></div>
@@ -319,7 +320,7 @@ hr{border:none;height:1px;background:var(--bd);margin:48px 0}
 </div></div>
 <div class="fd s"><div class="sv">Validation</div><h4>Dark theme increased trust perception</h4><p>10/12 users said the dark interface felt "more secure" and "more professional" compared to light-themed competitors.</p></div>
 <div class="pm">
-<div class="pm-h">Iteration 01 &middot; the send flow</div>
+<div class="pm-h">The send flow, before and after</div>
 <div class="it">
   <div class="it-p">
     <div class="it-t"><span class="v">First build</span><span class="r">3 of 12 sent to an invalid address</span></div>
@@ -347,7 +348,7 @@ hr{border:none;height:1px;background:var(--bd);margin:48px 0}
 <p class="pm-cap">Schematic of the change, not a screenshot. <b>Only the revised version shipped;</b> the first build is reconstructed from the finding it fixed.</p>
 </div>
 <div class="pm">
-<div class="pm-h">Iteration 02 &middot; network fees</div>
+<div class="pm-h">Network fees, before and after</div>
 <div class="ba">
   <div class="ba-row before">
     <div class="ba-lab"><span class="t">First build</span><span class="n">"Gas fees" confused every participant</span></div>
@@ -378,4 +379,5 @@ hr{border:none;height:1px;background:var(--bd);margin:48px 0}
 <div class="cd"><h4>Trust is built in the first 30 seconds</h4><p>The onboarding sequence does more for trust than any security badge. A clean, guided, no-surprises first experience tells users: this app respects your time and your money.</p></div>
 </div></div>
 <div class="bk"><a href="../index.html" class="bk-btn">← Back to portfolio</a></div>
+</main>
 </body></html>

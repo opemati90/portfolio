@@ -53,7 +53,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Inter:ital,opsz,wght@0,14..32,300;0,14..32,400;0,14..32,500;0,14..32,600;0,14..32,700;1,14..32,400&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
-:root{--bg:#F7F8F9;--sf:#EDEFF2;--sf2:#E3E7EC;--tx:#14161A;--tx2:#4B535C;--tx3:#666E78;--bd:#DEE2E8;--bd2:#C4CBD4;--ac:#1E3AC4;--r:12px;--f:'Inter',system-ui,-apple-system,'Helvetica Neue',Helvetica,sans-serif;--serif:'Newsreader',Georgia,'Times New Roman',serif}
+:root{--bg:#F7F8F9;--sf:#EDEFF2;--sf2:#E3E7EC;--tx:#14161A;--tx2:#4B535C;--tx3:#606872;--bd:#DEE2E8;--bd2:#C4CBD4;--ac:#1E3AC4;--r:12px;--f:'Inter',system-ui,-apple-system,'Helvetica Neue',Helvetica,sans-serif;--serif:'Newsreader',Georgia,'Times New Roman',serif}
 html{scroll-behavior:smooth}
 body{font-family:var(--f);background:var(--bg);color:var(--tx);-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;font-feature-settings:'ss01','ss02','cv01';line-height:1.55}
 a{color:inherit;text-decoration:none}img{display:block;max-width:100%}
@@ -168,6 +168,7 @@ hr{border:none;height:1px;background:var(--bd);margin:48px 0}
 @media(max-width:900px){.pr{grid-template-columns:1fr}.wh{grid-template-columns:1fr 1fr}}
 @media(max-width:768px){.w,.ww{padding:0 20px}.mg,.metrics{grid-template-columns:1fr 1fr}.cg,.tg2,.img-row{grid-template-columns:1fr}.img-row-3,.phones,.phones-2{grid-template-columns:1fr 1fr}.wh{grid-template-columns:1fr}nav{padding:0 20px}}
 </style>
+<link rel="stylesheet" href="../assets/a11y.css">
 <link rel="stylesheet" href="../assets/process.css">
 <link rel="stylesheet" media="print" href="../assets/print.css">
 <!-- Microsoft Clarity -->
@@ -179,7 +180,9 @@ hr{border:none;height:1px;background:var(--bd);margin:48px 0}
     })(window, document, "clarity", "script", "xf2psckz27");
 </script>
 </head><body>
+<a class="skip" href="#main">Skip to content</a>
 <nav><a href="../index.html" class="back">← Portfolio</a></nav>
+<main id="main" tabindex="-1">
 <section class="hero"><div class="w">
 <div class="tags"><span class="tg">Mobile App</span><span class="tg">AI Travel</span><span class="tg">B2C</span><span class="tg">Live</span></div>
 <h1>Outbound: AI-powered travel planning</h1>
@@ -247,7 +250,7 @@ hr{border:none;height:1px;background:var(--bd);margin:48px 0}
 <h2 class="sh">AI-powered, warm, adventure-ready</h2>
 <p class="sp">The orange-and-white palette evokes warmth and adventure. AI generates complete itineraries from natural language prompts. The passport feature tracks trips and collects continent stamps, creating engagement beyond trip planning.</p>
 <div class="pm">
-<div class="pm-h">Screen anatomy &middot; the generated itinerary</div>
+<div class="pm-h">Anatomy of the generated itinerary</div>
 <div class="it-p">
 <div class="it-t"><span class="v">Shipped structure</span><span class="r">One prompt, one full draft</span></div>
 <div class="it-b">
@@ -284,7 +287,6 @@ hr{border:none;height:1px;background:var(--bd);margin:48px 0}
 <h2 class="sh">Four decisions, and what each one cost</h2>
 <p class="sp">Every decision below traded something away. I tried to be explicit about the tradeoff rather than pretend the easy path was free.</p>
 <div class="pm">
-<div class="pm-h">Decision 01 &middot; how much the AI decides</div>
 <div class="dc">
 <div class="dc-q">Should the first screen be a one-tap magic draft, or a draft the person can take apart?</div>
 <div class="dc-o chose"><div class="dc-tag">Chose</div><div class="dc-body"><h5>A full draft in one pass, with every block editable and lockable</h5><p>The app generates a day-by-day itinerary immediately, so the first thing you see is a real plan rather than an empty form. Lock the parts you like, regenerate the rest.</p></div></div>
@@ -292,7 +294,6 @@ hr{border:none;height:1px;background:var(--bd);margin:48px 0}
 </div>
 </div>
 <div class="pm">
-<div class="pm-h">Decision 02 &middot; when to ask for an account</div>
 <div class="dc">
 <div class="dc-q">Does the user sign up before or after they see a plan?</div>
 <div class="dc-o chose"><div class="dc-tag">Chose</div><div class="dc-body"><h5>Generate the first itinerary with no account</h5><p>Research showed people quit when a tool asks before it gives. Someone who has already seen a plan they like has a real reason to sign up.</p></div></div>
@@ -300,7 +301,6 @@ hr{border:none;height:1px;background:var(--bd);margin:48px 0}
 </div>
 </div>
 <div class="pm">
-<div class="pm-h">Decision 03 &middot; what the passport is allowed to do</div>
 <div class="dc">
 <div class="dc-q">Should the reward system pull people back, or push them?</div>
 <div class="dc-o chose"><div class="dc-tag">Chose</div><div class="dc-body"><h5>Pull only, a continent stamped when a trip is done</h5><p>Finished trips become a collection worth returning to, and the reward stays tied to real travel.</p></div></div>
@@ -330,7 +330,7 @@ hr{border:none;height:1px;background:var(--bd);margin:48px 0}
 </div></div>
 <div class="fd s"><div class="sv">Validation</div><h4>The passport screen was the emotional peak</h4><p>Finding: nearly every tester reacted out loud at the Passport screen, the only point in the flow where that happened. Decision: I treated it as the app's signature moment rather than a side feature, pulling the continent stamp into onboarding so people meet it before they have even taken a trip. Result: the moment now anchors the product's identity, and "Passport Approved" became the single most-commented-on detail in later sessions.</p></div>
 <div class="pm">
-<div class="pm-h">Iteration 01 &middot; where the passport is first met</div>
+<div class="pm-h">Where the passport is first met, before and after</div>
 <div class="ba">
   <div class="ba-row before">
     <div class="ba-lab"><span class="t">First build</span><span class="n">Passport met at the end of the flow</span></div>
@@ -355,7 +355,7 @@ hr{border:none;height:1px;background:var(--bd);margin:48px 0}
 </div>
 <div class="fd c"><div class="sv">Critical</div><h4>Auth errors lost people at the worst moment</h4><p>Finding: a generic "Invalid code" on the OTP step left testers stuck and unsure whether to wait, retry, or restart. Decision: I rewrote the copy to say what to do next, "Code does not match, check your email," and added a visible resend timer so the path forward was never ambiguous. Result: testers in the follow-up round recovered from a bad code without dropping out, turning a dead end into a self-service fix.</p></div>
 <div class="pm">
-<div class="pm-h">Iteration 02 &middot; the OTP dead end</div>
+<div class="pm-h">The OTP dead end, before and after</div>
 <div class="ba">
   <div class="ba-row before">
     <div class="ba-lab"><span class="t">First build</span><span class="n">Testers stalled at a bad code</span></div>
@@ -402,4 +402,5 @@ hr{border:none;height:1px;background:var(--bd);margin:48px 0}
 <div class="cd"><h4>Shipping changes the questions</h4><p>Testing told me what confused people; living traffic tells me what they ignore. The next round is less about polish and more about earning the second session.</p></div>
 </div></div>
 <div class="bk"><a href="../index.html" class="bk-btn">← Back to portfolio</a></div>
+</main>
 </body></html>

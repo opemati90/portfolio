@@ -57,7 +57,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Inter:ital,opsz,wght@0,14..32,300;0,14..32,400;0,14..32,500;0,14..32,600;0,14..32,700;1,14..32,400&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
-:root{--bg:#F7F8F9;--sf:#EDEFF2;--sf2:#E3E7EC;--tx:#14161A;--tx2:#4B535C;--tx3:#666E78;--bd:#DEE2E8;--bd2:#C4CBD4;--ac:#1E3AC4;--r:12px;--f:'Inter',system-ui,-apple-system,'Helvetica Neue',Helvetica,sans-serif;--serif:'Newsreader',Georgia,'Times New Roman',serif;--tr:0.2s ease}
+:root{--bg:#F7F8F9;--sf:#EDEFF2;--sf2:#E3E7EC;--tx:#14161A;--tx2:#4B535C;--tx3:#606872;--bd:#DEE2E8;--bd2:#C4CBD4;--ac:#1E3AC4;--r:12px;--f:'Inter',system-ui,-apple-system,'Helvetica Neue',Helvetica,sans-serif;--serif:'Newsreader',Georgia,'Times New Roman',serif;--tr:0.2s ease}
 html{scroll-behavior:smooth}body{font-family:var(--f);background:var(--bg);color:var(--tx);-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;font-feature-settings:'ss01','ss02','cv01';line-height:1.55}a{color:inherit;text-decoration:none}img{display:block;max-width:100%}
 
 nav{position:fixed;top:0;left:0;right:0;z-index:100;height:56px;display:flex;align-items:center;justify-content:space-between;padding:0 32px;background:rgba(247,248,249,0.82);backdrop-filter:blur(20px);border-bottom:1px solid var(--bd)}
@@ -175,6 +175,7 @@ hr{border:none;height:1px;background:var(--bd);margin:48px 0}
   nav{padding:0 20px}
 }
 </style>
+<link rel="stylesheet" href="../assets/a11y.css">
 <link rel="stylesheet" href="../assets/process.css">
 <link rel="stylesheet" media="print" href="../assets/print.css">
 <!-- Microsoft Clarity -->
@@ -187,11 +188,13 @@ hr{border:none;height:1px;background:var(--bd);margin:48px 0}
 </script>
 </head>
 <body>
+<a class="skip" href="#main">Skip to content</a>
 
 <nav>
   <a href="../index.html" class="back">← Portfolio</a>
   <span class="case-num">Design System Case Study</span>
 </nav>
+<main id="main" tabindex="-1">
 
 <!-- HERO -->
 <section class="hero">
@@ -346,7 +349,7 @@ hr{border:none;height:1px;background:var(--bd);margin:48px 0}
   <p class="stext">I structured the library using atomic design principles: tokens feed into primitives (buttons, inputs), primitives compose into patterns (form groups, card layouts), and patterns assemble into templates (page layouts, workflow steps). Every component includes states, variants, and responsive behavior.</p>
 
   <div class="pm">
-    <div class="pm-h">Structure &middot; how the library stacks</div>
+    <div class="pm-h">How the library stacks</div>
     <div class="it">
       <div class="it-p">
         <div class="it-t"><span class="v">Foundation</span><span class="r">Tokens shipped first</span></div>
@@ -379,7 +382,7 @@ hr{border:none;height:1px;background:var(--bd);margin:48px 0}
   </div>
 
   <div class="pm">
-    <div class="pm-h">Iteration 01 &middot; button consolidation</div>
+    <div class="pm-h">Button consolidation, before and after</div>
     <div class="it">
       <div class="it-p">
         <div class="it-t"><span class="v">What I found</span><span class="r">14 button styles</span></div>
@@ -410,8 +413,7 @@ hr{border:none;height:1px;background:var(--bd);margin:48px 0}
   </div>
 
   <div class="pm">
-    <div class="pm-h">Decision &middot; how components are structured</div>
-    <div class="dc">
+        <div class="dc">
       <div class="dc-q">Do we ship rigid templates that guarantee consistency, or atomic parts that squads assemble themselves?</div>
       <div class="dc-o chose"><div class="dc-tag">Chose</div><div class="dc-body"><h5>Composable atomic building blocks</h5><p>Tokens feed primitives, primitives compose into patterns, patterns assemble into templates. This survived use cases nobody had anticipated when the library was scoped.</p></div></div>
       <div class="dc-o cut"><div class="dc-tag">Rejected</div><div class="dc-body"><h5>Prescriptive page templates</h5><p>Rigid templates break as use cases multiply and would have needed constant rework. The cost of the choice is real: composable parts can be assembled badly, so every component ships with usage guidelines and do/don't examples to constrain it.</p></div></div>
@@ -472,7 +474,7 @@ hr{border:none;height:1px;background:var(--bd);margin:48px 0}
   </div>
 
   <div class="pm">
-    <div class="pm-h">Iteration 02 &middot; the document review workflow</div>
+    <div class="pm-h">The document review workflow, before and after</div>
     <div class="it">
       <div class="it-p">
         <div class="it-t"><span class="v">Before</span><span class="r">14 steps</span></div>
@@ -529,8 +531,7 @@ hr{border:none;height:1px;background:var(--bd);margin:48px 0}
   <p class="stext">Building the system was only half the challenge. Adoption required buy-in, education, and ongoing support. Here is the phased rollout approach I designed and executed.</p>
 
   <div class="pm">
-    <div class="pm-h">Decision &middot; what ships first</div>
-    <div class="dc">
+        <div class="dc">
       <div class="dc-q">With one designer and three squads waiting, what is the first thing to publish?</div>
       <div class="dc-o chose"><div class="dc-tag">Chose</div><div class="dc-body"><h5>Tokens in weeks 3 and 4, as Figma styles and CSS variables at the same time</h5><p>Engineers could adopt color, type, spacing, and elevation before a single component existed. That built momentum and trust early, and every component built afterwards inherited the same values.</p></div></div>
       <div class="dc-o cut"><div class="dc-tag">Rejected</div><div class="dc-body"><h5>Components first, tokens extracted later</h5><p>It shows progress sooner because a button is visible and a variable is not, but it leaves squads waiting with nothing usable and hardcodes values that have to be unpicked afterwards.</p></div></div>
@@ -591,5 +592,6 @@ hr{border:none;height:1px;background:var(--bd);margin:48px 0}
   <a href="../index.html" class="back-btn">← Back to portfolio</a>
 </div>
 
+</main>
 </body>
 </html>

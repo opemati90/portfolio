@@ -35,7 +35,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Inter:ital,opsz,wght@0,14..32,300;0,14..32,400;0,14..32,500;0,14..32,600;0,14..32,700;1,14..32,400&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
-:root{--bg:#F7F8F9;--sf:#EDEFF2;--sf2:#E3E7EC;--tx:#14161A;--tx2:#4B535C;--tx3:#666E78;--bd:#DEE2E8;--bd2:#C4CBD4;--ac:#1E3AC4;--r:12px;--f:'Inter',system-ui,-apple-system,'Helvetica Neue',Helvetica,sans-serif;--serif:'Newsreader',Georgia,'Times New Roman',serif}
+:root{--bg:#F7F8F9;--sf:#EDEFF2;--sf2:#E3E7EC;--tx:#14161A;--tx2:#4B535C;--tx3:#606872;--bd:#DEE2E8;--bd2:#C4CBD4;--ac:#1E3AC4;--r:12px;--f:'Inter',system-ui,-apple-system,'Helvetica Neue',Helvetica,sans-serif;--serif:'Newsreader',Georgia,'Times New Roman',serif}
 html{scroll-behavior:smooth}
 body{font-family:var(--f);background:var(--bg);color:var(--tx);-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;font-feature-settings:'ss01','ss02','cv01';line-height:1.55}
 a{color:inherit;text-decoration:none}img{display:block;max-width:100%}
@@ -89,6 +89,7 @@ hr{border:none;height:1px;background:var(--bd);margin:48px 0}
 @media(max-width:900px){.wh{grid-template-columns:1fr 1fr}}
 @media(max-width:768px){.w,.ww{padding:0 20px}.mg,.metrics{grid-template-columns:1fr 1fr}.cg,.wh{grid-template-columns:1fr}nav{padding:0 20px}}
 </style>
+<link rel="stylesheet" href="../assets/a11y.css">
 <link rel="stylesheet" href="../assets/process.css">
 <link rel="stylesheet" media="print" href="../assets/print.css">
 <!-- Microsoft Clarity -->
@@ -100,7 +101,9 @@ hr{border:none;height:1px;background:var(--bd);margin:48px 0}
     })(window, document, "clarity", "script", "xf2psckz27");
 </script>
 </head><body>
+<a class="skip" href="#main">Skip to content</a>
 <nav><a href="../index.html" class="back">← Portfolio</a><a href="https://anstoss.io/" target="_blank" rel="noopener" class="nav-live">anstoss.io ↗</a></nav>
+<main id="main" tabindex="-1">
 
 <section class="hero"><div class="w">
 <div class="tags"><span class="tg">Side Project</span><span class="tg">Mobile App</span><span class="tg">Android &amp; iOS</span><span class="tg">Shipped</span></div>
@@ -156,7 +159,7 @@ hr{border:none;height:1px;background:var(--bd);margin:48px 0}
 <h2 class="sh">One app, four very different jobs</h2>
 <p class="sp">The hardest constraint was role. A coach, a player, a parent, and a club admin open the same app and need almost opposite things. I designed around role-based views so each person sees only what is theirs, with a separate, safer space for parents of under-age players.</p>
 <div class="pm">
-<div class="pm-h">Structure &middot; one shell, role-gated regions</div>
+<div class="pm-h">One shell, role-gated regions</div>
 <div class="it-p">
 <div class="it-t"><span class="v">Shipped structure</span><span class="r">Four roles, one app</span></div>
 <div class="it-b">
@@ -201,7 +204,6 @@ hr{border:none;height:1px;background:var(--bd);margin:48px 0}
 <h2 class="sh">The club's identity, not mine</h2>
 <p class="sp">Because belonging was the deepest insight, the headline design decision was white-label by default: club colours, crest, and kit, with no generic blue and no Anstoss branding on top of someone else's identity. The in-app surfaces, match day and team chat, are designed to feel like the club's own product, down to translating messages so a mixed-language squad can still read the group.</p>
 <div class="pm">
-<div class="pm-h">Decision 01 &middot; whose brand the app wears</div>
 <div class="dc">
 <div class="dc-q">Does the app carry its own identity, or the club's?</div>
 <div class="dc-o chose"><div class="dc-tag">Chose</div><div class="dc-body"><h5>White-label by default: club colours, crest, and kit</h5><p>Belonging was the deepest research insight. People show up for the crest, so the in-app surfaces are built to feel like the club's own product.</p></div></div>
@@ -209,7 +211,6 @@ hr{border:none;height:1px;background:var(--bd);margin:48px 0}
 </div>
 </div>
 <div class="pm">
-<div class="pm-h">Decision 02 &middot; who picks the lineup</div>
 <div class="dc">
 <div class="dc-q">How far should the AI go once it can see the squad data?</div>
 <div class="dc-o chose"><div class="dc-tag">Chose</div><div class="dc-body"><h5>Surface insights as suggestions a coach accepts or ignores</h5><p>The bench decision stays with the person who has to answer for it on Sunday.</p></div></div>
@@ -217,7 +218,6 @@ hr{border:none;height:1px;background:var(--bd);margin:48px 0}
 </div>
 </div>
 <div class="pm">
-<div class="pm-h">Decision 03 &middot; how much the app is allowed to do</div>
 <div class="dc">
 <div class="dc-q">Broad feature set, or a deliberately narrow one?</div>
 <div class="dc-o chose"><div class="dc-tag">Chose</div><div class="dc-body"><h5>Restraint: live scores, lineups, chat, schedule and RSVP, squad, man-of-the-match</h5><p>Every extra feature is one more thing a volunteer has to ignore. Nothing listed is a roadmap promise, it is what the app does today.</p></div></div>
@@ -250,7 +250,7 @@ hr{border:none;height:1px;background:var(--bd);margin:48px 0}
 <div class="cd"><h4>The overlay got quieter</h4><p>Early versions surfaced too much. Watching it crowd the screen during an actual match pushed it down to the few actions a coach reaches for mid-game.</p></div>
 </div>
 <div class="pm">
-<div class="pm-h">Iteration 01 &middot; the floating overlay</div>
+<div class="pm-h">The floating overlay, before and after</div>
 <div class="it">
   <div class="it-p">
     <div class="it-t"><span class="v">Early versions</span><span class="r">Surfaced too much</span></div>
@@ -280,7 +280,7 @@ hr{border:none;height:1px;background:var(--bd);margin:48px 0}
 <p class="pm-cap">Schematic of the change, not a screenshot. <b>Only the revised version shipped;</b> the first build is reconstructed from the finding it fixed.</p>
 </div>
 <div class="pm">
-<div class="pm-h">Iteration 02 &middot; club setup</div>
+<div class="pm-h">Club setup, before and after</div>
 <div class="ba">
   <div class="ba-row before">
     <div class="ba-lab"><span class="t">First build</span><span class="n">The first coach never finished</span></div>
@@ -315,4 +315,5 @@ hr{border:none;height:1px;background:var(--bd);margin:48px 0}
 </div>
 
 <div class="bk"><a href="../index.html" class="bk-btn">← Back to portfolio</a></div>
+</main>
 </body></html>

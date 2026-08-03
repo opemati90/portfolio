@@ -53,7 +53,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Inter:ital,opsz,wght@0,14..32,300;0,14..32,400;0,14..32,500;0,14..32,600;0,14..32,700;1,14..32,400&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
-:root{--bg:#F7F8F9;--sf:#EDEFF2;--sf2:#E3E7EC;--tx:#14161A;--tx2:#4B535C;--tx3:#666E78;--bd:#DEE2E8;--bd2:#C4CBD4;--ac:#1E3AC4;--r:12px;--f:'Inter',system-ui,-apple-system,'Helvetica Neue',Helvetica,sans-serif;--serif:'Newsreader',Georgia,'Times New Roman',serif}
+:root{--bg:#F7F8F9;--sf:#EDEFF2;--sf2:#E3E7EC;--tx:#14161A;--tx2:#4B535C;--tx3:#606872;--bd:#DEE2E8;--bd2:#C4CBD4;--ac:#1E3AC4;--r:12px;--f:'Inter',system-ui,-apple-system,'Helvetica Neue',Helvetica,sans-serif;--serif:'Newsreader',Georgia,'Times New Roman',serif}
 html{scroll-behavior:smooth}
 body{font-family:var(--f);background:var(--bg);color:var(--tx);-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;font-feature-settings:'ss01','ss02','cv01';line-height:1.55}
 a{color:inherit;text-decoration:none}img{display:block;max-width:100%}
@@ -163,6 +163,7 @@ hr{border:none;height:1px;background:var(--bd);margin:48px 0}
 @media(max-width:900px){.pr{grid-template-columns:1fr}.wh{grid-template-columns:1fr 1fr}}
 @media(max-width:768px){.w,.ww{padding:0 20px}.mg,.metrics{grid-template-columns:1fr 1fr}.cg,.tg2,.img-row{grid-template-columns:1fr}.img-row-3{grid-template-columns:1fr 1fr}.wh{grid-template-columns:1fr}nav{padding:0 20px}}
 </style>
+<link rel="stylesheet" href="../assets/a11y.css">
 <link rel="stylesheet" href="../assets/process.css">
 <link rel="stylesheet" media="print" href="../assets/print.css">
 <!-- Microsoft Clarity -->
@@ -174,7 +175,9 @@ hr{border:none;height:1px;background:var(--bd);margin:48px 0}
     })(window, document, "clarity", "script", "xf2psckz27");
 </script>
 </head><body>
+<a class="skip" href="#main">Skip to content</a>
 <nav><a href="../index.html" class="back">← Portfolio</a></nav>
+<main id="main" tabindex="-1">
 <section class="hero"><div class="w">
 <div class="tags"><span class="tg">B2B Enterprise</span><span class="tg">Climate Tech</span><span class="tg">Data-Heavy UX</span><span class="tg">AI Features</span></div>
 <h1>Simplifying climate target validation for global enterprises</h1>
@@ -237,7 +240,7 @@ hr{border:none;height:1px;background:var(--bd);margin:48px 0}
 <div class="sl">Key Design Decisions</div>
 <h2 class="sh">From 14 steps to 6</h2>
 <div class="pm">
-<div class="pm-h">Iteration 01 &middot; the submission itself</div>
+<div class="pm-h">The submission itself, before and after</div>
 <div class="ba">
   <div class="ba-row before">
     <div class="ba-lab"><span class="t">Before</span><span class="n">14 steps, 67% abandoned</span></div>
@@ -273,7 +276,6 @@ hr{border:none;height:1px;background:var(--bd);margin:48px 0}
 <div class="cd"><h4>Inline validation</h4><p>Replaced post-submission errors with inline guidance. Users see what is needed as they work, not after they submit.</p></div>
 </div>
 <div class="pm">
-<div class="pm-h">Decision &middot; how far the AI gets to go</div>
 <div class="dc">
  <div class="dc-q">Should the scope analysis decide, or suggest?</div>
  <div class="dc-o chose"><div class="dc-tag">Chose</div><div class="dc-body"><h5>Recommend, explain, let the user decide</h5><p>The AI surfaces guidance from unstructured documents as a recommendation the user can trust, audit, or override. Expert users want control, and in a submission that affects billion-euro climate commitments they are accountable for the answer, not the tool.</p></div></div>
@@ -307,4 +309,5 @@ hr{border:none;height:1px;background:var(--bd);margin:48px 0}
 <div class="cd"><h4>AI needs humility in expert workflows</h4><p>The AI recommendation worked best as a suggestion, not a directive. Expert users want control. The pattern: recommend, explain why, let the user decide.</p></div>
 </div></div>
 <div class="bk"><a href="../index.html" class="bk-btn">← Back to portfolio</a></div>
+</main>
 </body></html>

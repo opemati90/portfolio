@@ -53,7 +53,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Inter:ital,opsz,wght@0,14..32,300;0,14..32,400;0,14..32,500;0,14..32,600;0,14..32,700;1,14..32,400&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
-:root{--bg:#F7F8F9;--sf:#EDEFF2;--sf2:#E3E7EC;--tx:#14161A;--tx2:#4B535C;--tx3:#666E78;--bd:#DEE2E8;--bd2:#C4CBD4;--ac:#1E3AC4;--r:12px;--f:'Inter',system-ui,-apple-system,'Helvetica Neue',Helvetica,sans-serif;--serif:'Newsreader',Georgia,'Times New Roman',serif}
+:root{--bg:#F7F8F9;--sf:#EDEFF2;--sf2:#E3E7EC;--tx:#14161A;--tx2:#4B535C;--tx3:#606872;--bd:#DEE2E8;--bd2:#C4CBD4;--ac:#1E3AC4;--r:12px;--f:'Inter',system-ui,-apple-system,'Helvetica Neue',Helvetica,sans-serif;--serif:'Newsreader',Georgia,'Times New Roman',serif}
 html{scroll-behavior:smooth}
 body{font-family:var(--f);background:var(--bg);color:var(--tx);-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;font-feature-settings:'ss01','ss02','cv01';line-height:1.55}
 a{color:inherit;text-decoration:none}img{display:block;max-width:100%}
@@ -163,6 +163,7 @@ hr{border:none;height:1px;background:var(--bd);margin:48px 0}
 @media(max-width:900px){.pr{grid-template-columns:1fr}.wh{grid-template-columns:1fr 1fr}}
 @media(max-width:768px){.w,.ww{padding:0 20px}.mg,.metrics{grid-template-columns:1fr 1fr}.cg,.tg2,.img-row{grid-template-columns:1fr}.img-row-3{grid-template-columns:1fr 1fr}.wh{grid-template-columns:1fr}nav{padding:0 20px}}
 </style>
+<link rel="stylesheet" href="../assets/a11y.css">
 <link rel="stylesheet" href="../assets/process.css">
 <link rel="stylesheet" media="print" href="../assets/print.css">
 <!-- Microsoft Clarity -->
@@ -174,7 +175,9 @@ hr{border:none;height:1px;background:var(--bd);margin:48px 0}
     })(window, document, "clarity", "script", "xf2psckz27");
 </script>
 </head><body>
+<a class="skip" href="#main">Skip to content</a>
 <nav><a href="../index.html" class="back">← Portfolio</a></nav>
+<main id="main" tabindex="-1">
 <section class="hero"><div class="w">
 <div class="tags"><span class="tg">Fintech</span><span class="tg">EdTech</span><span class="tg">Landing Page</span></div>
 <h1>Pay4Me: international student payments, simplified</h1>
@@ -230,28 +233,24 @@ hr{border:none;height:1px;background:var(--bd);margin:48px 0}
 <div class="sl">Design Decisions</div>
 <h2 class="sh">Key decisions, and the tradeoffs behind them</h2>
 <div class="pm">
-<div class="pm-h">Decision 01 &middot; what the homepage leads with</div>
 <div class="dc"><div class="dc-q">Proof first, or product first?</div>
  <div class="dc-o chose"><div class="dc-tag">Chose</div><div class="dc-body"><h5>Trust before product</h5><p>The site opens with concrete proof: named universities supported, country coverage, and real sender outcomes, before any feature copy. For a first-time high-stakes transfer, earning belief outranks shaving a scroll.</p></div></div>
  <div class="dc-o alt"><div class="dc-tag">Alternative</div><div class="dc-body"><h5>Feature-led hero, as the old site had it</h5><p>Cost of the call: the hero is slower to reach the call to action. The old feature-led version read as a warning rather than a welcome to first-time senders.</p></div></div>
 </div>
 </div>
 <div class="pm">
-<div class="pm-h">Decision 02 &middot; when cost is disclosed</div>
 <div class="dc"><div class="dc-q">Show the full cost before sign-up, or at the end?</div>
  <div class="dc-o chose"><div class="dc-tag">Chose</div><div class="dc-body"><h5>Transparent FX and fees up front</h5><p>The full cost, including the exchange rate and any fee, is shown before sign-up. Hidden costs were the single fastest way to lose a sender's trust.</p></div></div>
  <div class="dc-o alt"><div class="dc-tag">Alternative</div><div class="dc-body"><h5>Disclose at the end of the flow</h5><p>Cost of the call: showing the margin early can look less competitive at a glance.</p></div></div>
 </div>
 </div>
 <div class="pm">
-<div class="pm-h">Decision 03 &middot; payment visibility</div>
 <div class="dc"><div class="dc-q">How much of the transfer's progress does the business expose?</div>
  <div class="dc-o chose"><div class="dc-tag">Chose</div><div class="dc-body"><h5>Live status from initiated to received</h5><p>Every transfer shows where the money is, with timestamps, through to receipt by the university. Visibility was exactly what parents asked for, and it cut payment-status support tickets 27% in design-stage testing.</p></div></div>
  <div class="dc-o alt"><div class="dc-tag">Alternative</div><div class="dc-body"><h5>Confirmation only, no intermediate states</h5><p>Cost of the call: live status commits the business to surfacing delays it would rather not advertise.</p></div></div>
 </div>
 </div>
 <div class="pm">
-<div class="pm-h">Decision 04 &middot; the shape of verification</div>
 <div class="dc"><div class="dc-q">One dense verification form, or several explained steps?</div>
  <div class="dc-o chose"><div class="dc-tag">Chose</div><div class="dc-body"><h5>Simplified, explained KYC</h5><p>Verification breaks into short steps, each stating which document is needed, why, and how the data is handled. The framing turned the most abandoned step into one people were willing to finish.</p></div></div>
  <div class="dc-o alt"><div class="dc-tag">Alternative</div><div class="dc-body"><h5>A single dense document upload</h5><p>Cost of the call: a few extra screens. That was the version people described as an interrogation.</p></div></div>
@@ -263,7 +262,7 @@ hr{border:none;height:1px;background:var(--bd);margin:48px 0}
 <div class="sl">Final Designs</div>
 <h2 class="sh">The solution, delivered</h2>
 <div class="pm">
-<div class="pm-h">Page anatomy &middot; the marketing site</div>
+<div class="pm-h">Anatomy of the marketing site</div>
 <div class="it">
   <div class="it-p">
     <div class="it-t"><span class="v">Structure</span><span class="r">Proof above features</span></div>
@@ -298,7 +297,7 @@ hr{border:none;height:1px;background:var(--bd);margin:48px 0}
 </div>
 </div>
 <div class="pm">
-<div class="pm-h">Iteration 01 &middot; verification moved out of the way of the quote</div>
+<div class="pm-h">Verification moved out of the way of the quote, before and after</div>
 <div class="ba">
   <div class="ba-row before">
     <div class="ba-lab"><span class="t">First build</span><span class="n">Several people backed out at KYC</span></div>
@@ -342,4 +341,5 @@ hr{border:none;height:1px;background:var(--bd);margin:48px 0}
 <div class="cd"><h4>What I would do differently</h4><p>I tested with 8 to 12 people, enough to find the big trust breaks but too few to trust the percentages. I also leaned on the platform's own scale numbers in the hero before separating them from my measured results, which blurs what the redesign actually moved. Next time I would size the sample for the claims I want to make and label borrowed metrics from the first draft.</p></div>
 </div></div>
 <div class="bk"><a href="../index.html" class="bk-btn">← Back to portfolio</a></div>
+</main>
 </body></html>

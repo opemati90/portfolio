@@ -53,7 +53,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Inter:ital,opsz,wght@0,14..32,300;0,14..32,400;0,14..32,500;0,14..32,600;0,14..32,700;1,14..32,400&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
-:root{--bg:#F7F8F9;--sf:#EDEFF2;--sf2:#E3E7EC;--tx:#14161A;--tx2:#4B535C;--tx3:#666E78;--bd:#DEE2E8;--bd2:#C4CBD4;--ac:#1E3AC4;--r:12px;--f:'Inter',system-ui,-apple-system,'Helvetica Neue',Helvetica,sans-serif;--serif:'Newsreader',Georgia,'Times New Roman',serif}
+:root{--bg:#F7F8F9;--sf:#EDEFF2;--sf2:#E3E7EC;--tx:#14161A;--tx2:#4B535C;--tx3:#606872;--bd:#DEE2E8;--bd2:#C4CBD4;--ac:#1E3AC4;--r:12px;--f:'Inter',system-ui,-apple-system,'Helvetica Neue',Helvetica,sans-serif;--serif:'Newsreader',Georgia,'Times New Roman',serif}
 html{scroll-behavior:smooth}
 body{font-family:var(--f);background:var(--bg);color:var(--tx);-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;font-feature-settings:'ss01','ss02','cv01';line-height:1.55}
 a{color:inherit;text-decoration:none}img{display:block;max-width:100%}
@@ -163,6 +163,7 @@ hr{border:none;height:1px;background:var(--bd);margin:48px 0}
 @media(max-width:900px){.pr{grid-template-columns:1fr}.wh{grid-template-columns:1fr 1fr}}
 @media(max-width:768px){.w,.ww{padding:0 20px}.mg,.metrics{grid-template-columns:1fr 1fr}.cg,.tg2,.img-row{grid-template-columns:1fr}.img-row-3{grid-template-columns:1fr 1fr}.wh{grid-template-columns:1fr}nav{padding:0 20px}}
 </style>
+<link rel="stylesheet" href="../assets/a11y.css">
 <link rel="stylesheet" href="../assets/process.css">
 <link rel="stylesheet" media="print" href="../assets/print.css">
 <!-- Microsoft Clarity -->
@@ -174,7 +175,9 @@ hr{border:none;height:1px;background:var(--bd);margin:48px 0}
     })(window, document, "clarity", "script", "xf2psckz27");
 </script>
 </head><body>
+<a class="skip" href="#main">Skip to content</a>
 <nav><a href="../index.html" class="back">← Portfolio</a></nav>
+<main id="main" tabindex="-1">
 <section class="hero"><div class="w">
 <div class="tags"><span class="tg">AI SaaS</span><span class="tg">Productivity</span><span class="tg">Website</span></div>
 <h1>Fivo AI: your meetings, transcribed and organized</h1>
@@ -214,7 +217,7 @@ hr{border:none;height:1px;background:var(--bd);margin:48px 0}
 </div>
 
 <div class="pm">
-<div class="pm-h">Competitive teardown &middot; what each site leads with</div>
+<div class="pm-h">What each site leads with</div>
 <table class="cm"><thead><tr><th>Tool</th><th>Leads with integration and workflow</th><th>What I found</th></tr></thead>
 <tbody>
 <tr><td class="tool">Otter.ai</td><td><span class="yes">Yes</span></td><td class="note">Opens on the integration and the workflow, not the transcription engine.</td></tr>
@@ -244,7 +247,6 @@ hr{border:none;height:1px;background:var(--bd);margin:48px 0}
 <h2 class="sh">What I changed, and what it cost</h2>
 <p class="sp">Each decision below answered a specific research finding. I have kept the tradeoffs in, because the interesting part of senior work is what you give up to get the win.</p>
 <div class="pm">
-<div class="pm-h">Decision &middot; what the hero claims first</div>
 <div class="dc"><div class="dc-q">Do we lead on the thing Fivo is good at, or the thing buyers decide on?</div>
 <div class="dc-o chose"><div class="dc-tag">Chose</div><div class="dc-body"><h5>Open on the integration, keep accuracy as the proof point</h5><p>The hero opens on Fivo fitting into the tools teams already use, with outcomes over engine specs, and a proof point near the fold so the accuracy claim still has backing.</p></div></div>
 <div class="dc-o cut"><div class="dc-tag">Rejected</div><div class="dc-body"><h5>Lead with accuracy claims, as the old site did</h5><p>Accuracy is a real strength and demoting it risked sounding less capable. But both competitors lead with workflow, and interviewees skimming the old hero called Fivo "another transcription tool". Leading on a feature buyers already assume bought nothing.</p></div></div>
@@ -252,7 +254,6 @@ hr{border:none;height:1px;background:var(--bd);margin:48px 0}
 </div>
 
 <div class="pm">
-<div class="pm-h">Decision &middot; when to ask for workspace details</div>
 <div class="dc"><div class="dc-q">Sign-up is the only place we can ask for data. Do we ask before the first transcript or after it?</div>
 <div class="dc-o chose"><div class="dc-tag">Chose</div><div class="dc-body"><h5>Value first, workspace setup after</h5><p>People reach a transcript before being asked for details. In testing the drop-off sales worried about did not appear, because people now had a reason to finish.</p></div></div>
 <div class="dc-o alt"><div class="dc-tag">Alternative</div><div class="dc-body"><h5>Capture workspace details up front</h5><p>Sales wanted the data early, and this costs slightly less captured up front. It also sat exactly where the funnel's second cliff was: people bailed before seeing a single transcript, so the data was collected from fewer people anyway.</p></div></div>
@@ -265,7 +266,7 @@ hr{border:none;height:1px;background:var(--bd);margin:48px 0}
 </div>
 
 <div class="pm">
-<div class="pm-h">Structure &middot; how the shipped page is ordered</div>
+<div class="pm-h">How the shipped page is ordered</div>
 <div class="it">
   <div class="it-p">
     <div class="it-t"><span class="v">Above the fold</span><span class="r">First 5 seconds</span></div>
@@ -322,7 +323,7 @@ hr{border:none;height:1px;background:var(--bd);margin:48px 0}
 </div>
 </div>
 <div class="pm">
-<div class="pm-h">Iteration 01 &middot; the hero</div>
+<div class="pm-h">The hero, before and after</div>
 <div class="it">
   <div class="it-p">
     <div class="it-t"><span class="v">First build</span><span class="r">Comprehension in the low 60s</span></div>
@@ -355,7 +356,7 @@ hr{border:none;height:1px;background:var(--bd);margin:48px 0}
 </div>
 
 <div class="pm">
-<div class="pm-h">Iteration 02 &middot; sign-up</div>
+<div class="pm-h">Sign-up, before and after</div>
 <div class="ba">
   <div class="ba-row before">
     <div class="ba-lab"><span class="t">Old flow</span><span class="n">54% completed sign-up</span></div>
@@ -398,4 +399,5 @@ hr{border:none;height:1px;background:var(--bd);margin:48px 0}
 <div class="cd"><h4>Small samples, honest claims</h4><p>Eight participants will not give you certainty, so I leaned on triangulation and treated the numbers as direction. Being clear about that with the team kept the decisions trustworthy and the conversations grounded.</p></div>
 </div></div>
 <div class="bk"><a href="../index.html" class="bk-btn">← Back to portfolio</a></div>
+</main>
 </body></html>

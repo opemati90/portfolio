@@ -1,0 +1,77 @@
+/* Accessibility layer, loaded on every page.
+   Token names differ between the homepage (--accent, --bg, --ink) and the case
+   studies (--ac, --bg, --tx), so every custom property below carries a fallback
+   chain ending in a literal. */
+
+/* ---------- visible focus ----------
+   The site previously had no focus indicator at all, so keyboard and
+   switch-device users had no way to see their position. :focus-visible keeps
+   the ring off for mouse users while guaranteeing it for keyboard users. */
+:focus-visible {
+  outline: 2px solid var(--accent, var(--ac, #1E3AC4));
+  outline-offset: 3px;
+  border-radius: 3px;
+}
+
+/* Older engines without :focus-visible still get a ring rather than nothing. */
+@supports not selector(:focus-visible) {
+  a:focus, button:focus, [tabindex]:focus { outline: 2px solid var(--accent, var(--ac, #1E3AC4)); outline-offset: 3px; }
+}
+
+/* Cards and thumbnails clip their children, so an outside ring would be cut off.
+   Pair the ring with an inset shadow so it stays visible on dark artwork too. */
+a.feat:focus-visible,
+a.card:focus-visible,
+.more-list a:focus-visible {
+  outline-offset: 2px;
+  box-shadow: 0 0 0 4px var(--accent-soft, rgba(30, 58, 196, 0.18));
+}
+
+/* ---------- skip link ----------
+   WCAG 2.4.1. Off-screen until focused, then anchored top-left. */
+.skip {
+  position: absolute;
+  left: 12px;
+  top: -60px;
+  z-index: 200;
+  padding: 10px 16px;
+  border-radius: 8px;
+  background: var(--ink, var(--tx, #14161A));
+  color: var(--bg, #F7F8F9);
+  font-size: 13px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: top 0.18s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.skip:focus {
+  top: 12px;
+}
+
+/* The skip target must not sit under the fixed nav once jumped to. */
+main:focus {
+  outline: none;
+}
+main {
+  scroll-margin-top: 76px;
+}
+
+/* ---------- pointer target size ----------
+   WCAG 2.5.8 asks for 24px minimum; 44px is the comfortable touch figure.
+   Applied to the dense footer and metadata links, which were the smallest. */
+@media (pointer: coarse) {
+  .foot-col a,
+  .more-list a,
+  nav a {
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+  }
+  .more-list a {
+    display: grid;
+  }
+}
+
+/* ---------- honour reduced motion on the skip link too ---------- */
+@media (prefers-reduced-motion: reduce) {
+  .skip { transition: none; }
+}
