@@ -48,7 +48,7 @@ a.card:focus-visible,
 }
 
 /* The skip target must not sit under the fixed nav once jumped to. */
-main:focus {
+main:focus:not(:focus-visible) {
   outline: none;
 }
 main {
@@ -74,4 +74,5 @@ main {
 /* ---------- honour reduced motion on the skip link too ---------- */
 @media (prefers-reduced-motion: reduce) {
   .skip { transition: none; }
+  html { scroll-behavior: auto; }
 }
