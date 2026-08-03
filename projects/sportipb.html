@@ -163,6 +163,7 @@ hr{border:none;height:1px;background:var(--bd);margin:48px 0}
 @media(max-width:900px){.pr{grid-template-columns:1fr}.wh{grid-template-columns:1fr 1fr}}
 @media(max-width:768px){.w,.ww{padding:0 20px}.mg,.metrics{grid-template-columns:1fr 1fr}.cg,.tg2,.img-row{grid-template-columns:1fr}.img-row-3{grid-template-columns:1fr 1fr}.wh{grid-template-columns:1fr}nav{padding:0 20px}}
 </style>
+<link rel="stylesheet" href="../assets/process.css">
 <link rel="stylesheet" media="print" href="../assets/print.css">
 <!-- Microsoft Clarity -->
 <script type="text/javascript">
@@ -225,6 +226,15 @@ hr{border:none;height:1px;background:var(--bd);margin:48px 0}
 <div class="sl">Final Designs</div>
 <h2 class="sh">The solution, delivered</h2>
 <p class="sp">The redesigned landing page leads with an action-oriented hero, builds trust through community stats and social proof, and converts through community-framed CTAs. "Join Our Team" outperformed "Sign Up Free" by 59% in A/B testing.</p>
+<div class="pm">
+<div class="pm-h">Decision &middot; the primary CTA</div>
+<div class="dc">
+ <div class="dc-q">What should the button that carries the whole page say?</div>
+ <div class="dc-o chose"><div class="dc-tag">Chose</div><div class="dc-body"><h5>"Join Our Team"</h5><p>Community framing. It matches what the research said people came for, a community beyond just scores, and it treats sign-up as belonging to something rather than opening an account.</p></div></div>
+ <div class="dc-o cut"><div class="dc-tag">Rejected</div><div class="dc-body"><h5>"Sign Up Free"</h5><p>The transactional default. It leads with price, which was never the objection: 6 of 8 interviewees could not say what Sportipb did in the first place. It lost the A/B test by 59%.</p></div></div>
+</div>
+<p class="pm-cap">The two labels were A/B tested against each other and "Join Our Team" won by <b>59%</b>. What the test settles is which label performs, not why.</p>
+</div>
 </div>
 <div class="ww">
 <div class="img-box img-dark"><img src="../assets/sportipb-desktop.png" alt="Desktop mockup"></div>
@@ -251,7 +261,35 @@ hr{border:none;height:1px;background:var(--bd);margin:48px 0}
 <div class="br"><div class="bl"><span>CTA conversion lift</span><span class="v">+59% (A/B)</span></div><div class="bar"><div class="bf bg" style="width:59%"></div></div></div>
 </div></div>
 <div class="fd s"><div class="sv">Validation</div><h4>Community language outperformed transactional framing</h4><p>"Join Our Team" beat "Sign Up Free" by 59% in A/B testing. Users are motivated by belonging, not features.</p></div>
-<div class="fd c"><div class="sv">Critical</div><h4>Mobile CTA was below the fold</h4><p>On devices under 375px, the primary CTA was hidden. Fixed with a persistent sticky CTA bar on mobile.</p></div>
+<div class="pm">
+<div class="pm-h">Iteration 01 &middot; the mobile CTA</div>
+<div class="it">
+  <div class="it-p">
+    <div class="it-t"><span class="v">First build</span><span class="r">CTA below the fold</span></div>
+    <div class="it-b">
+      <div class="sk">
+        <div class="sk-row"><div class="sk-u tall"></div></div>
+        <div class="sk-row"><div class="sk-u"></div></div>
+        <div class="sk-l">On devices under 375px the primary CTA fell past the first screen</div>
+      </div>
+      <div class="it-n">The old site carried 73% mobile traffic and converted at 0.8% on mobile against 3.4% on desktop. The button the whole design pointed at was not visible without scrolling.</div>
+    </div>
+  </div>
+  <div class="it-p v2">
+    <div class="it-t"><span class="v">Revised</span><span class="r">Persistent sticky bar</span></div>
+    <div class="it-b">
+      <div class="sk">
+        <div class="sk-row"><div class="sk-u tall"></div></div>
+        <div class="sk-row"><div class="sk-u"></div></div>
+        <div class="sk-row"><div class="sk-u hi"></div></div>
+        <div class="sk-l">CTA pinned to the viewport, in reach at any scroll position</div>
+      </div>
+      <div class="it-n"><b>Result:</b> the CTA stops depending on where the fold lands. 96% of testers found the sign-up CTA in testing.</div>
+    </div>
+  </div>
+</div>
+<p class="pm-cap">Schematic of the change, not a screenshot. <b>Only the revised version shipped;</b> the first build is reconstructed from the finding it fixed.</p>
+</div>
 </div>
 
 <div class="w"><hr>

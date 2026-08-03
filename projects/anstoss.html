@@ -89,6 +89,7 @@ hr{border:none;height:1px;background:var(--bd);margin:48px 0}
 @media(max-width:900px){.wh{grid-template-columns:1fr 1fr}}
 @media(max-width:768px){.w,.ww{padding:0 20px}.mg,.metrics{grid-template-columns:1fr 1fr}.cg,.wh{grid-template-columns:1fr}nav{padding:0 20px}}
 </style>
+<link rel="stylesheet" href="../assets/process.css">
 <link rel="stylesheet" media="print" href="../assets/print.css">
 <!-- Microsoft Clarity -->
 <script type="text/javascript">
@@ -154,6 +155,24 @@ hr{border:none;height:1px;background:var(--bd);margin:48px 0}
 <div class="sl">Users</div>
 <h2 class="sh">One app, four very different jobs</h2>
 <p class="sp">The hardest constraint was role. A coach, a player, a parent, and a club admin open the same app and need almost opposite things. I designed around role-based views so each person sees only what is theirs, with a separate, safer space for parents of under-age players.</p>
+<div class="pm">
+<div class="pm-h">Structure &middot; one shell, role-gated regions</div>
+<div class="it-p">
+<div class="it-t"><span class="v">Shipped structure</span><span class="r">Four roles, one app</span></div>
+<div class="it-b">
+<div class="sk">
+<div class="sk-row"><div class="sk-u hi"></div></div>
+<div class="sk-l">Shared shell: the club's identity, the same for everyone who opens it</div>
+<div class="sk-row"><div class="sk-u tall"></div><div class="sk-u tall mute"></div></div>
+<div class="sk-l">Role-gated region: a coach gets lineup and schedule controls where a player gets RSVP and the chat</div>
+<div class="sk-row"><div class="sk-u mute"></div></div>
+<div class="sk-l">Parent channel, kept separate from the player group rather than a permission on top of it</div>
+</div>
+<div class="it-n">Role is the hardest constraint on this product, so it is resolved in the structure rather than by hiding buttons. The parent space is a distinct channel because for under-age teams "same room, fewer rights" was not good enough.</div>
+</div>
+</div>
+<p class="pm-cap">Structural breakdown of how the shipped app is divided by role, not a screenshot and not an original wireframe.</p>
+</div>
 <div class="cg">
 <div class="cd"><h4>Coach</h4><p>Builds the lineup, sets the schedule, posts announcements, runs match day from one screen.</p></div>
 <div class="cd"><h4>Player</h4><p>Sees fixtures, RSVPs in one tap, reads the team chat, votes for man of the match.</p></div>
@@ -181,6 +200,30 @@ hr{border:none;height:1px;background:var(--bd);margin:48px 0}
 <div class="sl">Design decisions</div>
 <h2 class="sh">The club's identity, not mine</h2>
 <p class="sp">Because belonging was the deepest insight, the headline design decision was white-label by default: club colours, crest, and kit, with no generic blue and no Anstoss branding on top of someone else's identity. The in-app surfaces, match day and team chat, are designed to feel like the club's own product, down to translating messages so a mixed-language squad can still read the group.</p>
+<div class="pm">
+<div class="pm-h">Decision 01 &middot; whose brand the app wears</div>
+<div class="dc">
+<div class="dc-q">Does the app carry its own identity, or the club's?</div>
+<div class="dc-o chose"><div class="dc-tag">Chose</div><div class="dc-body"><h5>White-label by default: club colours, crest, and kit</h5><p>Belonging was the deepest research insight. People show up for the crest, so the in-app surfaces are built to feel like the club's own product.</p></div></div>
+<div class="dc-o cut"><div class="dc-tag">Rejected</div><div class="dc-body"><h5>A generic blue product with Anstoss branding on top</h5><p>It would have given the product one recognisable look, which is easier to market and easier to screenshot. It also would have made the app feel like someone else's tool sitting inside the club, which is the opposite of what the research pointed at.</p></div></div>
+</div>
+</div>
+<div class="pm">
+<div class="pm-h">Decision 02 &middot; who picks the lineup</div>
+<div class="dc">
+<div class="dc-q">How far should the AI go once it can see the squad data?</div>
+<div class="dc-o chose"><div class="dc-tag">Chose</div><div class="dc-body"><h5>Surface insights as suggestions a coach accepts or ignores</h5><p>The bench decision stays with the person who has to answer for it on Sunday.</p></div></div>
+<div class="dc-o cut"><div class="dc-tag">Rejected</div><div class="dc-body"><h5>AI that picks the lineup</h5><p>Cost of the choice I made: the most impressive-sounding version of the feature is the one I did not build.</p></div></div>
+</div>
+</div>
+<div class="pm">
+<div class="pm-h">Decision 03 &middot; how much the app is allowed to do</div>
+<div class="dc">
+<div class="dc-q">Broad feature set, or a deliberately narrow one?</div>
+<div class="dc-o chose"><div class="dc-tag">Chose</div><div class="dc-body"><h5>Restraint: live scores, lineups, chat, schedule and RSVP, squad, man-of-the-match</h5><p>Every extra feature is one more thing a volunteer has to ignore. Nothing listed is a roadmap promise, it is what the app does today.</p></div></div>
+<div class="dc-o cut"><div class="dc-tag">Rejected</div><div class="dc-body"><h5>Adding features as they tempted their way in</h5><p>Each candidate was checked against the six define questions first. Cost of the choice I made: the app loses to a broader competitor on a feature-count comparison.</p></div></div>
+</div>
+</div>
 </div>
 <div class="ww"><div class="img-box img-dark"><img src="../assets/anstoss-inapp.png" alt="In-app match day and team chat, themed in the club's colours"></div>
 <p class="img-caption">Match day and team chat, rendered in each club's own colours.</p></div>
@@ -205,6 +248,59 @@ hr{border:none;height:1px;background:var(--bd);margin:48px 0}
 <div class="cg">
 <div class="cd"><h4>Onboarding got shorter</h4><p>The first coach I onboarded never finished the manual roster, he typed three names and switched back to WhatsApp. So invites moved to phone numbers and auto-matching, and the next setup ran without me in the room.</p></div>
 <div class="cd"><h4>The overlay got quieter</h4><p>Early versions surfaced too much. Watching it crowd the screen during an actual match pushed it down to the few actions a coach reaches for mid-game.</p></div>
+</div>
+<div class="pm">
+<div class="pm-h">Iteration 01 &middot; the floating overlay</div>
+<div class="it">
+  <div class="it-p">
+    <div class="it-t"><span class="v">Early versions</span><span class="r">Surfaced too much</span></div>
+    <div class="it-b">
+      <div class="sk">
+        <div class="sk-row"><div class="sk-u"></div><div class="sk-u"></div><div class="sk-u"></div></div>
+        <div class="sk-row"><div class="sk-u"></div><div class="sk-u"></div><div class="sk-u"></div></div>
+        <div class="sk-row"><div class="sk-u"></div><div class="sk-u"></div></div>
+        <div class="sk-l">A panel of actions sitting on top of whatever app was open</div>
+      </div>
+      <div class="it-n">It read fine on a desk. During an actual match it crowded the screen, which is the one place the overlay is supposed to stay out of the way.</div>
+    </div>
+  </div>
+  <div class="it-p v2">
+    <div class="it-t"><span class="v">Revised</span><span class="r">Useful in one tap, invisible otherwise</span></div>
+    <div class="it-b">
+      <div class="sk">
+        <div class="sk-row"><div class="sk-u hi"></div><div class="sk-u hi"></div></div>
+        <div class="sk-l">Only the actions a coach reaches for mid-game</div>
+        <div class="sk-row"><div class="sk-u mute"></div></div>
+        <div class="sk-l">Everything else demoted back into the app itself</div>
+      </div>
+      <div class="it-n"><b>Result:</b> the overlay stopped competing with the screen it floats over. Dogfooding across real fixtures, not a review session, is what exposed it.</div>
+    </div>
+  </div>
+</div>
+<p class="pm-cap">Schematic of the change, not a screenshot. <b>Only the revised version shipped;</b> the first build is reconstructed from the finding it fixed.</p>
+</div>
+<div class="pm">
+<div class="pm-h">Iteration 02 &middot; club setup</div>
+<div class="ba">
+  <div class="ba-row before">
+    <div class="ba-lab"><span class="t">First build</span><span class="n">The first coach never finished</span></div>
+    <div class="ba-steps">
+      <span class="st-c keep">Create club</span><span class="ba-arw">&rarr;</span>
+      <span class="st-c cut">Type the roster in by hand</span><span class="ba-arw">&rarr;</span>
+      <span class="st-c cut">Abandoned after three names, back to WhatsApp</span>
+    </div>
+  </div>
+  <div class="ba-row">
+    <div class="ba-lab"><span class="t">Revised</span><span class="n">Next setup ran without me in the room</span></div>
+    <div class="ba-steps">
+      <span class="st-c keep">Create club</span><span class="ba-arw">&rarr;</span>
+      <span class="st-c new">Invite by phone number</span><span class="ba-arw">&rarr;</span>
+      <span class="st-c new">Players auto-matched into the right team</span><span class="ba-arw">&rarr;</span>
+      <span class="st-c keep">Set the lineup</span>
+    </div>
+  </div>
+</div>
+<p class="pm-cap">Setup leans on the one thing a club already has, phone numbers, instead of asking a volunteer to re-enter a squad they already know. <b>Only the revised flow shipped.</b></p>
 </div>
 <p class="sp">What I would change: the white-label promise cuts both ways. Per-club theming is the reason clubs adopt it, but it also means there is no single screenshot of "Anstoss" to show, and every club starts from a blank crest. If I ran it again I would design a stronger default identity that a club edits down, rather than one it has to build up from nothing.</p>
 </div>

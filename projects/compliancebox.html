@@ -171,6 +171,7 @@ hr{border:none;height:1px;background:var(--bd);margin:48px 0}
 @media(max-width:900px){.cg3{grid-template-columns:1fr}}
 @media(max-width:768px){.w,.ww{padding:0 20px}.mg,.metrics{grid-template-columns:1fr 1fr}.cg,.pr{grid-template-columns:1fr}nav{padding:0 20px}.reuse{justify-content:center;text-align:center}}
 </style>
+<link rel="stylesheet" href="../assets/process.css">
 <link rel="stylesheet" media="print" href="../assets/print.css">
 <!-- Microsoft Clarity -->
 <script type="text/javascript">
@@ -327,6 +328,43 @@ hr{border:none;height:1px;background:var(--bd);margin:48px 0}
 <p class="img-caption">Buyer view · quarterly readout. Plain-language posture, change since last review, three exception decisions with recommendations.</p>
 </div>
 
+<div class="w">
+<div class="pm">
+<div class="pm-h">Structure &middot; why the two surfaces are shaped differently</div>
+<div class="it">
+  <div class="it-p">
+    <div class="it-t"><span class="v">Operator surface</span><span class="r">Control detail</span></div>
+    <div class="it-b">
+      <div class="sk">
+        <div class="sk-row"><div class="sk-u"></div></div>
+        <div class="sk-l">Control identity: CTRL-0048, owner, state</div>
+        <div class="sk-row"><div class="sk-u hi tall"></div><div class="sk-u mute"></div></div>
+        <div class="sk-l">Mappings table, the heart of the product, with next-best actions ranked beside it</div>
+        <div class="sk-row"><div class="sk-u"></div><div class="sk-u"></div></div>
+        <div class="sk-l">Evidence, split into attestation and operation</div>
+      </div>
+      <div class="it-n">Every mapping row carries confidence, source, and verification status, because a mapping here is a record with an author, not a link.</div>
+    </div>
+  </div>
+  <div class="it-p v2">
+    <div class="it-t"><span class="v">Buyer surface</span><span class="r">Quarterly readout</span></div>
+    <div class="it-b">
+      <div class="sk">
+        <div class="sk-row"><div class="sk-u tall"></div></div>
+        <div class="sk-l">Plain-language posture, written not charted</div>
+        <div class="sk-row"><div class="sk-u mute"></div></div>
+        <div class="sk-l">Change since last review</div>
+        <div class="sk-row"><div class="sk-u hi"></div><div class="sk-u hi"></div><div class="sk-u hi"></div></div>
+        <div class="sk-l">Three exception decisions, each with a recommendation</div>
+      </div>
+      <div class="it-n"><b>Result:</b> the same shared model, reshaped around the decision each user has to make. The Operator's screen is a workspace; the Buyer's is a document that exports as the board doc.</div>
+    </div>
+  </div>
+</div>
+<p class="pm-cap">Structural breakdown of the two shipped surfaces, not a wireframe from an earlier round. Block weight stands in for prominence; the rendered screens are above.</p>
+</div>
+</div>
+
 <div class="w"><hr>
 <div class="sl">The AI Experience Layer</div>
 <h2 class="sh">How AI earns trust here</h2>
@@ -351,11 +389,40 @@ hr{border:none;height:1px;background:var(--bd);margin:48px 0}
 <div class="w"><hr>
 <div class="sl">Decisions &amp; Trade-offs</div>
 <h2 class="sh">What I chose, what I rejected, what ships first</h2>
-<div class="fd i"><div class="sv">Chose</div><h4>A shared model over per-framework workspaces</h4><p>Workspaces duplicate evidence and turn "add NIS2" into a project instead of a Tuesday.</p></div>
-<div class="fd i"><div class="sv">Chose</div><h4>Written briefing over executive dashboard</h4><p>Buyers read; they don't scan. The briefing is drafted from events and exports as the board doc.</p></div>
-<div class="fd i"><div class="sv">Chose</div><h4>Inline AI with traceability over a side-panel chatbot</h4><p>Opaque AI is unusable in compliance. Every proposal shows its work where the work happens.</p></div>
-<div class="fd c"><div class="sv">Rejected</div><h4>A separate Compliance app · a maturity score · a posture donut · a configurable rules engine</h4><p>One product, two lenses. Single-number scores hide the decisions that matter; configurability without opinion is how tools become unlearnable.</p></div>
-<div class="fd s"><div class="sv">Ships first</div><h4>Phase 1: the smallest version that delivers the "map once" promise</h4><p>Shared model + mappings as records + the operator's add-framework flow with AI-proposed mappings. Phase 2: the Buyer briefing, once posture has data to summarize.</p></div>
+<div class="pm">
+<div class="pm-h">Decision 01 &middot; the organizing unit</div>
+<div class="dc"><div class="dc-q">Is the framework the workspace, or is the customer's body of work the workspace?</div>
+<div class="dc-o chose"><div class="dc-tag">Chose</div><div class="dc-body"><h5>One shared model, frameworks as lenses over it</h5><p>Assets, controls, evidence, policies, agreements, risks, mappings, requirements are collected once. Adding a framework adds Requirements, not a workspace.</p></div></div>
+<div class="dc-o cut"><div class="dc-tag">Rejected</div><div class="dc-body"><h5>Per-framework workspaces</h5><p>The incumbent pattern. Workspaces duplicate evidence and turn "add NIS2" into a project instead of a Tuesday.</p></div></div>
+<div class="dc-o cut"><div class="dc-tag">Rejected</div><div class="dc-body"><h5>A separate Compliance app alongside Security</h5><p>It splits the same body of work down a line customers do not actually have. One product, two lenses.</p></div></div>
+</div>
+</div>
+
+<div class="pm">
+<div class="pm-h">Decision 02 &middot; what the Buyer reads</div>
+<div class="dc"><div class="dc-q">How does a Chief Risk Officer get to a board readout he can defend?</div>
+<div class="dc-o chose"><div class="dc-tag">Chose</div><div class="dc-body"><h5>A written briefing, drafted from events, that exports as the board doc</h5><p>Buyers read; they don't scan. Plain-language posture, change since last review, and the exception decisions waiting on him.</p></div></div>
+<div class="dc-o cut"><div class="dc-tag">Rejected</div><div class="dc-body"><h5>An executive dashboard</h5><p>Dashboards that don't explain themselves are exactly what Marc named as the frustration. A readout has to carry its own reasoning.</p></div></div>
+<div class="dc-o cut"><div class="dc-tag">Rejected</div><div class="dc-body"><h5>A maturity score and a posture donut</h5><p>Single-number scores hide the decisions that matter. They compress the exceptions, the drift, and the open risks into one figure nobody can defend to a board.</p></div></div>
+</div>
+</div>
+
+<div class="pm">
+<div class="pm-h">Decision 03 &middot; where the AI lives, and how configurable the system is</div>
+<div class="dc"><div class="dc-q">How much of the model does the operator have to assemble themselves?</div>
+<div class="dc-o chose"><div class="dc-tag">Chose</div><div class="dc-body"><h5>Inline AI with traceability, on top of an opinionated default view</h5><p>Every proposal shows source, verbatim matched language, reasoning, and confidence where the work happens. The system has a view about how compliance work is structured.</p></div></div>
+<div class="dc-o cut"><div class="dc-tag">Rejected</div><div class="dc-body"><h5>A side-panel chatbot</h5><p>Opaque AI is unusable in compliance. Advice detached from the record cannot carry an audit trail.</p></div></div>
+<div class="dc-o cut"><div class="dc-tag">Rejected</div><div class="dc-body"><h5>A configurable rules engine</h5><p>The OneTrust failure mode from the audit: configurable but unlearnable. Configurability without opinion is how tools end up needing consultants to model the customer's own program.</p></div></div>
+</div>
+</div>
+
+<div class="pm">
+<div class="pm-h">Decision 04 &middot; what ships first</div>
+<div class="dc"><div class="dc-q">If only one half of the product can ship first, which half is it?</div>
+<div class="dc-o chose"><div class="dc-tag">Chose</div><div class="dc-body"><h5>Phase 1: the smallest version that delivers the "map once" promise</h5><p>Shared model, mappings as records, and the operator's add-framework flow with AI-proposed mappings.</p></div></div>
+<div class="dc-o cut"><div class="dc-tag">Rejected</div><div class="dc-body"><h5>Shipping the Buyer briefing first</h5><p>It is the more demo-able surface, but the briefing summarizes posture, and posture only exists once the operator flow has produced mappings and evidence. Phase 2, once there is something to summarize.</p></div></div>
+</div>
+</div>
 <h2 class="sh" style="margin-top:36px">Edge cases worth designing for</h2>
 <div class="cg">
 <div class="cd"><h4>Framework requirement updates</h4><p>Mappings flagged as drifted; surfaces as a re-mapping task, not silent staleness.</p></div>

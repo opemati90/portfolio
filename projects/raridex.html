@@ -163,6 +163,7 @@ hr{border:none;height:1px;background:var(--bd);margin:48px 0}
 @media(max-width:900px){.pr{grid-template-columns:1fr}.wh{grid-template-columns:1fr 1fr}}
 @media(max-width:768px){.w,.ww{padding:0 20px}.mg,.metrics{grid-template-columns:1fr 1fr}.cg,.tg2,.img-row{grid-template-columns:1fr}.img-row-3{grid-template-columns:1fr 1fr}.wh{grid-template-columns:1fr}nav{padding:0 20px}}
 </style>
+<link rel="stylesheet" href="../assets/process.css">
 <link rel="stylesheet" media="print" href="../assets/print.css">
 <!-- Microsoft Clarity -->
 <script type="text/javascript">
@@ -203,10 +204,22 @@ hr{border:none;height:1px;background:var(--bd);margin:48px 0}
 <h2 class="sh">Where people actually get stuck</h2>
 <p class="sp">I ran nine interviews with founders and ops leads at small and growing companies, sat through three of their weekly metric reviews, and audited six dashboard and CRM tools to map how each one handles density and the path to a decision. The pattern was consistent: the data existed, but getting to a usable read of it was slow and manual.</p>
 <div class="cg">
+
+
 <div class="cd"><h4>The Friday CSV ritual</h4><p>Seven of nine interviewees rebuilt the same cross-tool report by hand every week. The recurring question was never "what is the number" but "is this number good, and compared to what."</p></div>
 <div class="cd"><h4>Default dashboards get ignored</h4><p>People described stock dashboards as wallpaper. Without a baseline or a clear "so what," a wall of widgets read as noise and got scrolled past within days of setup.</p></div>
 <div class="cd"><h4>Setup is where tools lose people</h4><p>The competitive audit showed the drop-off is at connection and configuration, not analysis. Empty states asked users to design their own dashboard before the product had earned any trust.</p></div>
 <div class="cd"><h4>Density is a trust signal, not just clutter</h4><p>Ops leads wanted more on screen, not less; founders wanted less. The same product has to serve both without forcing one to feel cramped or the other overwhelmed.</p></div>
+</div>
+<div class="pm">
+<div class="pm-h">What the discovery actually produced</div>
+<div class="ev">
+<div class="ev-c"><div class="ev-m">9</div><div class="ev-k">Interviews</div><p>Founders and ops leads at small and growing companies.</p><span class="led">Led to: <b>the density split</b>, ops leads want more on screen, founders want less.</span></div>
+<div class="ev-c"><div class="ev-m">3</div><div class="ev-k">Metric reviews observed</div><p>I sat through three weekly reviews rather than only asking about them.</p><span class="led">Led to: <b>decision-first hierarchy</b>, the question was never "what is the number".</span></div>
+<div class="ev-c"><div class="ev-m">6</div><div class="ev-k">Tools audited</div><p>Dashboard and CRM products, scored on density handling and path-to-decision.</p><span class="led">Led to: <b>defaults over a blank canvas</b>, drop-off clustered at setup, not analysis.</span></div>
+<div class="ev-c"><div class="ev-m">11</div><div class="ev-k">Usability participants</div><p>Two rounds against the working prototype, SUS plus task timing.</p><span class="led">Led to: <b>the two changes below</b>, both measured against the first build.</span></div>
+</div>
+<p class="pm-cap">Each row is an input and the specific decision it forced. Research that changed nothing is not listed.</p>
 </div>
 </div>
 
@@ -254,8 +267,57 @@ hr{border:none;height:1px;background:var(--bd);margin:48px 0}
 <div class="br"><div class="bl"><span>Report building</span><span class="v">3.9</span></div><div class="bar"><div class="bf ba" style="width:78%"></div></div></div>
 </div>
 </div>
-<div class="fd c"><div class="sv">What we changed - findability</div><h4>The summary row was too dense to scan</h4><p>The first build packed eight metrics into the top row. Founders could not tell which one to look at, the exact density problem from research. I cut it to four decision-grade metrics with the rest moved one level down. Time-to-insight dropped 42% against the first build, and "I do not know where to look" comments disappeared.</p></div>
-<div class="fd i"><div class="sv">What we changed - setup</div><h4>Integration setup buried the success state</h4><p>Users connected a source but were not sure it worked. I added an explicit sync confirmation with the first rows of data, which lifted setup-task completion from 71% to 88%.</p></div>
+<div class="pm">
+<div class="pm-h">Iteration 01 &middot; the summary row</div>
+<div class="it">
+  <div class="it-p">
+    <div class="it-t"><span class="v">First build</span><span class="r">8 metrics, equal weight</span></div>
+    <div class="it-b">
+      <div class="sk">
+        <div class="sk-row"><div class="sk-u"></div><div class="sk-u"></div><div class="sk-u"></div><div class="sk-u"></div></div>
+        <div class="sk-row"><div class="sk-u"></div><div class="sk-u"></div><div class="sk-u"></div><div class="sk-u"></div></div>
+        <div class="sk-l">Eight tiles competing for the same attention</div>
+      </div>
+      <div class="it-n">Founders could not tell which number to look at first. The exact density problem research had already surfaced, shipped anyway.</div>
+    </div>
+  </div>
+  <div class="it-p v2">
+    <div class="it-t"><span class="v">Revised</span><span class="r">Time-to-insight &minus;42%</span></div>
+    <div class="it-b">
+      <div class="sk">
+        <div class="sk-row"><div class="sk-u hi tall"></div><div class="sk-u hi tall"></div><div class="sk-u hi tall"></div><div class="sk-u hi tall"></div></div>
+        <div class="sk-row"><div class="sk-u mute"></div><div class="sk-u mute"></div><div class="sk-u mute"></div><div class="sk-u mute"></div></div>
+        <div class="sk-l">Four decision-grade metrics, the rest one level down</div>
+      </div>
+      <div class="it-n"><b>Result:</b> time-to-insight dropped 42% against the first build, and "I do not know where to look" disappeared from session comments.</div>
+    </div>
+  </div>
+</div>
+<p class="pm-cap">Schematic of the layout change, not a screenshot. <b>Only the revised version shipped;</b> the first build is reconstructed from the finding it fixed.</p>
+</div>
+<div class="pm">
+<div class="pm-h">Iteration 02 &middot; integration setup</div>
+<div class="ba">
+  <div class="ba-row before">
+    <div class="ba-lab"><span class="t">First build</span><span class="n">71% completed setup</span></div>
+    <div class="ba-steps">
+      <span class="st-c keep">Pick a source</span><span class="ba-arw">&rarr;</span>
+      <span class="st-c keep">Authorise</span><span class="ba-arw">&rarr;</span>
+      <span class="st-c cut">Returned to an unchanged dashboard</span>
+    </div>
+  </div>
+  <div class="ba-row">
+    <div class="ba-lab"><span class="t">Revised</span><span class="n">88% completed setup</span></div>
+    <div class="ba-steps">
+      <span class="st-c keep">Pick a source</span><span class="ba-arw">&rarr;</span>
+      <span class="st-c keep">Authorise</span><span class="ba-arw">&rarr;</span>
+      <span class="st-c new">Sync confirmed, with the first rows of real data</span><span class="ba-arw">&rarr;</span>
+      <span class="st-c keep">Dashboard</span>
+    </div>
+  </div>
+</div>
+<p class="pm-cap">People connected a source and could not tell whether it had worked. Adding an explicit success state with real data lifted setup completion <b>17 points</b>.</p>
+</div>
 <div class="fd s"><div class="sv">What held</div><h4>Decision-first hierarchy validated</h4><p>Leading with "what changed and is it good" tested well across all three personas. Power users wanted the depth, found it one click away, and stopped asking for a denser default.</p></div>
 </div>
 

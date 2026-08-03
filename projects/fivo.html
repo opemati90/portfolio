@@ -163,6 +163,7 @@ hr{border:none;height:1px;background:var(--bd);margin:48px 0}
 @media(max-width:900px){.pr{grid-template-columns:1fr}.wh{grid-template-columns:1fr 1fr}}
 @media(max-width:768px){.w,.ww{padding:0 20px}.mg,.metrics{grid-template-columns:1fr 1fr}.cg,.tg2,.img-row{grid-template-columns:1fr}.img-row-3{grid-template-columns:1fr 1fr}.wh{grid-template-columns:1fr}nav{padding:0 20px}}
 </style>
+<link rel="stylesheet" href="../assets/process.css">
 <link rel="stylesheet" media="print" href="../assets/print.css">
 <!-- Microsoft Clarity -->
 <script type="text/javascript">
@@ -201,9 +202,27 @@ hr{border:none;height:1px;background:var(--bd);margin:48px 0}
 <div class="sl">Research and Discovery</div>
 <h2 class="sh">Where the funnel actually broke</h2>
 <p class="sp">I ran three things in parallel: a competitive teardown of Otter.ai and Fireflies, a funnel analysis on the existing site, and eight user interviews with people who take notes in meetings for a living. The methods were modest by design. With a small sample I leaned on triangulation, treating a finding as real only when interviews, analytics, and the competitive read pointed the same way. I did not have a large panel or A/B infrastructure, so I am honest that the testing below is directional, not statistically conclusive.</p>
-<div class="cg">
-<div class="cd"><h4>Competitive teardown</h4><p>Otter and Fireflies both lead with the integration and the workflow, not the transcription engine. Fivo led with accuracy claims, which read as a commodity feature buyers already assume. The real differentiator, deeper integration into existing tools, was buried below the fold.</p></div>
-<div class="cd"><h4>Funnel analysis</h4><p>The steepest drop was on the homepage itself, before any click. A second cliff sat inside sign-up, which asked for workspace details up front. People bailed before they saw a single transcript.</p></div>
+<div class="pm">
+<div class="pm-h">What the discovery produced</div>
+<div class="ev">
+<div class="ev-c"><div class="ev-m">8</div><div class="ev-k">Interviews</div><p>People who take notes in meetings for a living: team leads, PMs, and independent consultants.</p><span class="led">Led to: <b>role-anchored proof</b>, a PM and a consultant needed different evidence to switch.</span></div>
+<div class="ev-c"><div class="ev-m">2</div><div class="ev-k">Competitors torn down</div><p>Otter.ai and Fireflies, read for what each one leads with above the fold.</p><span class="led">Led to: <b>integration-first positioning</b>, accuracy reads as a commodity buyers already assume.</span></div>
+<div class="ev-c"><div class="ev-m">2</div><div class="ev-k">Cliffs in the funnel</div><p>The steepest drop was on the homepage before any click; a second sat inside sign-up.</p><span class="led">Led to: <b>the two bets</b>, fix the first screen, then cut the form ahead of first value.</span></div>
+<div class="ev-c"><div class="ev-m">3</div><div class="ev-k">Methods triangulated</div><p>Interviews, analytics, and the competitive read. A finding counted only when all three agreed.</p><span class="led">Led to: <b>directional claims, stated as such</b>, with no A/B infrastructure to lean on.</span></div>
+</div>
+<p class="pm-cap">Each card is an input and the decision it forced. The sample is small by design, so these are read as direction rather than proof.</p>
+</div>
+
+<div class="pm">
+<div class="pm-h">Competitive teardown &middot; what each site leads with</div>
+<table class="cm"><thead><tr><th>Tool</th><th>Leads with integration and workflow</th><th>What I found</th></tr></thead>
+<tbody>
+<tr><td class="tool">Otter.ai</td><td><span class="yes">Yes</span></td><td class="note">Opens on the integration and the workflow, not the transcription engine.</td></tr>
+<tr><td class="tool">Fireflies</td><td><span class="yes">Yes</span></td><td class="note">Same pattern. Neither competitor sells the engine, because buyers assume it works.</td></tr>
+<tr><td class="tool">Fivo, old site</td><td><span class="no">No</span></td><td class="note">Led with accuracy claims, a commodity feature. Deeper integration into existing tools, the actual differentiator, sat below the fold.</td></tr>
+<tr class="gap"><td class="tool">The gap</td><td></td><td class="note">Fivo was competing on the one axis nobody was buying on, and hiding the one it could win. I reordered the page so integration is the first claim and accuracy becomes the proof point behind it.</td></tr>
+</tbody></table>
+<p class="pm-cap">Only the criterion the teardown actually tested is shown. Competitor feature comparisons beyond what I read on their pages are not claimed here.</p>
 </div>
 <div class="fd c"><div class="sv">Critical</div><h4>Visitors could not place the product in seconds</h4><p>In interviews, people skimmed the old hero and described Fivo as "another transcription tool." None mentioned integrations or summaries unsolicited. The thing that made it worth switching was invisible at first read.</p></div>
 <div class="fd i"><div class="sv">Insight</div><h4>Trust was the silent objection</h4><p>Several interviewees would not connect a meeting tool to their calendar without knowing where recordings live and who can see them. The old site never addressed it, so cautious users quietly left instead of asking.</p></div>
@@ -224,11 +243,58 @@ hr{border:none;height:1px;background:var(--bd);margin:48px 0}
 <div class="sl">Design Decisions</div>
 <h2 class="sh">What I changed, and what it cost</h2>
 <p class="sp">Each decision below answered a specific research finding. I have kept the tradeoffs in, because the interesting part of senior work is what you give up to get the win.</p>
+<div class="pm">
+<div class="pm-h">Decision &middot; what the hero claims first</div>
+<div class="dc"><div class="dc-q">Do we lead on the thing Fivo is good at, or the thing buyers decide on?</div>
+<div class="dc-o chose"><div class="dc-tag">Chose</div><div class="dc-body"><h5>Open on the integration, keep accuracy as the proof point</h5><p>The hero opens on Fivo fitting into the tools teams already use, with outcomes over engine specs, and a proof point near the fold so the accuracy claim still has backing.</p></div></div>
+<div class="dc-o cut"><div class="dc-tag">Rejected</div><div class="dc-body"><h5>Lead with accuracy claims, as the old site did</h5><p>Accuracy is a real strength and demoting it risked sounding less capable. But both competitors lead with workflow, and interviewees skimming the old hero called Fivo "another transcription tool". Leading on a feature buyers already assume bought nothing.</p></div></div>
+</div>
+</div>
+
+<div class="pm">
+<div class="pm-h">Decision &middot; when to ask for workspace details</div>
+<div class="dc"><div class="dc-q">Sign-up is the only place we can ask for data. Do we ask before the first transcript or after it?</div>
+<div class="dc-o chose"><div class="dc-tag">Chose</div><div class="dc-body"><h5>Value first, workspace setup after</h5><p>People reach a transcript before being asked for details. In testing the drop-off sales worried about did not appear, because people now had a reason to finish.</p></div></div>
+<div class="dc-o alt"><div class="dc-tag">Alternative</div><div class="dc-body"><h5>Capture workspace details up front</h5><p>Sales wanted the data early, and this costs slightly less captured up front. It also sat exactly where the funnel's second cliff was: people bailed before seeing a single transcript, so the data was collected from fewer people anyway.</p></div></div>
+</div>
+</div>
+
 <div class="cg">
-<div class="cd"><h4>Lead with integrations, not accuracy</h4><p>The hero now opens on Fivo fitting into the tools teams already use, with outcomes over engine specs. Tradeoff: accuracy is a real strength, and demoting it risked sounding less capable. I kept a proof point near the fold so the claim still had backing without leading the pitch.</p></div>
 <div class="cd"><h4>Put trust signals above the fold</h4><p>Storage location, access controls, and data handling moved up next to the primary call to action. Tradeoff: it adds copy to a hero I wanted lean. I treated it as a conversion lever, not legal fine print, since interviews showed trust was a silent blocker, not a footnote.</p></div>
 <div class="cd"><h4>Role-specific use cases on one page</h4><p>Three short, role-anchored sections for the team lead, the PM, and the consultant, instead of one generic pitch. Tradeoff: more page to maintain and a risk of feeling segmented. Anchoring on concrete jobs beat a single message that fit no one.</p></div>
-<div class="cd"><h4>Cut sign-up to first transcript</h4><p>Workspace setup moved after the first value moment, so people reach a transcript before being asked for details. Tradeoff: slightly less data captured up front, which sales wanted. Getting users to value first won, and we collected the rest once they had a reason to care.</p></div>
+</div>
+
+<div class="pm">
+<div class="pm-h">Structure &middot; how the shipped page is ordered</div>
+<div class="it">
+  <div class="it-p">
+    <div class="it-t"><span class="v">Above the fold</span><span class="r">First 5 seconds</span></div>
+    <div class="it-b">
+      <div class="sk">
+        <div class="sk-row"><div class="sk-u hi tall"></div></div>
+        <div class="sk-l">Integration-first claim, plus one concrete role outcome</div>
+        <div class="sk-row"><div class="sk-u hi"></div><div class="sk-u mute"></div></div>
+        <div class="sk-l">Primary call to action, with storage and access next to it</div>
+        <div class="sk-row"><div class="sk-u mute"></div></div>
+        <div class="sk-l">Accuracy proof point, near the fold rather than leading</div>
+      </div>
+      <div class="it-n">Trust sits beside the action it blocks. Interviews showed people would not connect a calendar without knowing where recordings live, and they left rather than asking.</div>
+    </div>
+  </div>
+  <div class="it-p v2">
+    <div class="it-t"><span class="v">Below the fold</span><span class="r">The case for switching</span></div>
+    <div class="it-b">
+      <div class="sk">
+        <div class="sk-row"><div class="sk-u"></div><div class="sk-u"></div><div class="sk-u"></div></div>
+        <div class="sk-l">Three role-anchored sections: team lead, PM, consultant</div>
+        <div class="sk-row"><div class="sk-u mute"></div></div>
+        <div class="sk-l">Shared proof and integrations detail</div>
+      </div>
+      <div class="it-n"><b>Result:</b> role sections stopped carrying the value message on their own once one role outcome moved into the hero, so they became depth rather than the first read.</div>
+    </div>
+  </div>
+</div>
+<p class="pm-cap">Structural breakdown of the shipped page order, not a screenshot. Block weight stands in for prominence, not for final layout or copy.</p>
 </div>
 </div>
 
@@ -255,8 +321,61 @@ hr{border:none;height:1px;background:var(--bd);margin:48px 0}
 <div class="br"><div class="bl"><span>Felt safe connecting calendar</span><span class="v">79%</span></div><div class="bar"><div class="bf bg" style="width:79%"></div></div></div>
 </div>
 </div>
-<div class="fd s"><div class="sv">What we changed and why</div><h4>The role sections were doing the hero's job</h4><p>In the first build, the integration message and the role examples sat too far apart, and three of eight participants scrolled past the value before it registered. I pulled one concrete role outcome up into the hero. First-impression comprehension moved from the low 60s to the low 80s in the next round, which is what pushed me to ship the order this way.</p></div>
-<div class="fd i"><div class="sv">Insight</div><h4>Deferring workspace setup paid off</h4><p>Once sign-up showed a transcript before asking for workspace details, participants stopped hesitating at the form. Completion in testing rose and the drop-off that worried sales did not show up, since people now had a reason to finish.</p></div>
+<div class="pm">
+<div class="pm-h">Iteration 01 &middot; the hero</div>
+<div class="it">
+  <div class="it-p">
+    <div class="it-t"><span class="v">First build</span><span class="r">Comprehension in the low 60s</span></div>
+    <div class="it-b">
+      <div class="sk">
+        <div class="sk-row"><div class="sk-u tall"></div></div>
+        <div class="sk-l">Integration message alone in the hero</div>
+        <div class="sk-row"><div class="sk-u mute"></div></div>
+        <div class="sk-l">A gap of page between the claim and the evidence</div>
+        <div class="sk-row"><div class="sk-u"></div><div class="sk-u"></div><div class="sk-u"></div></div>
+        <div class="sk-l">Role examples, far down</div>
+      </div>
+      <div class="it-n">Three of eight participants scrolled past the value before it registered. The role sections were doing the hero's job, too far from it to help.</div>
+    </div>
+  </div>
+  <div class="it-p v2">
+    <div class="it-t"><span class="v">Revised</span><span class="r">Low 80s</span></div>
+    <div class="it-b">
+      <div class="sk">
+        <div class="sk-row"><div class="sk-u hi tall"></div><div class="sk-u hi tall"></div></div>
+        <div class="sk-l">Integration message with one concrete role outcome beside it</div>
+        <div class="sk-row"><div class="sk-u"></div><div class="sk-u"></div><div class="sk-u"></div></div>
+        <div class="sk-l">Role sections stay, now as depth rather than the first read</div>
+      </div>
+      <div class="it-n"><b>Result:</b> first-impression comprehension moved from the low 60s to the low 80s in the next round. That is what pushed me to ship this order.</div>
+    </div>
+  </div>
+</div>
+<p class="pm-cap">Schematic of the reorder, not a screenshot. <b>Only the revised order shipped;</b> the first build is reconstructed from the finding it fixed. Comprehension figures come from the moderated rounds with 8 participants, so read them as direction.</p>
+</div>
+
+<div class="pm">
+<div class="pm-h">Iteration 02 &middot; sign-up</div>
+<div class="ba">
+  <div class="ba-row before">
+    <div class="ba-lab"><span class="t">Old flow</span><span class="n">54% completed sign-up</span></div>
+    <div class="ba-steps">
+      <span class="st-c keep">Sign up</span><span class="ba-arw">&rarr;</span>
+      <span class="st-c cut">Workspace details up front</span><span class="ba-arw">&rarr;</span>
+      <span class="st-c keep">First transcript</span>
+    </div>
+  </div>
+  <div class="ba-row">
+    <div class="ba-lab"><span class="t">Redesign</span><span class="n">88% completed sign-up</span></div>
+    <div class="ba-steps">
+      <span class="st-c keep">Sign up</span><span class="ba-arw">&rarr;</span>
+      <span class="st-c new">First transcript</span><span class="ba-arw">&rarr;</span>
+      <span class="st-c keep">Workspace details</span>
+    </div>
+  </div>
+</div>
+<p class="pm-cap">The funnel's second cliff was the form, not the product: people bailed before they saw a single transcript. Completion in testing went from <b>54% to 88%</b> across the redesign, and the drop-off sales worried about did not appear. The redesign changed several things at once, so the form order is one contributor, not the sole cause.</p>
+</div>
 </div>
 
 <div class="w"><hr>

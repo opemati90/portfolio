@@ -168,6 +168,7 @@ hr{border:none;height:1px;background:var(--bd);margin:48px 0}
 @media(max-width:900px){.pr{grid-template-columns:1fr}.wh{grid-template-columns:1fr 1fr}}
 @media(max-width:768px){.w,.ww{padding:0 20px}.mg,.metrics{grid-template-columns:1fr 1fr}.cg,.tg2,.img-row{grid-template-columns:1fr}.img-row-3,.phones,.phones-2{grid-template-columns:1fr 1fr}.wh{grid-template-columns:1fr}nav{padding:0 20px}}
 </style>
+<link rel="stylesheet" href="../assets/process.css">
 <link rel="stylesheet" media="print" href="../assets/print.css">
 <!-- Microsoft Clarity -->
 <script type="text/javascript">
@@ -213,6 +214,16 @@ hr{border:none;height:1px;background:var(--bd);margin:48px 0}
 <div class="sl">Research & Discovery</div>
 <h2 class="sh">Where planning breaks down</h2>
 <p class="sp">I ran nine interviews with people who had planned a trip in the last three months, walked the planning-to-booking path on the four tools they reached for most, and mapped where intent leaked out of the funnel. Three patterns held across almost everyone.</p>
+<div class="pm">
+<div class="pm-h">What the discovery actually produced</div>
+<div class="ev">
+<div class="ev-c"><div class="ev-m">9</div><div class="ev-k">Interviews</div><p>People who had planned a trip in the previous three months.</p><span class="led">Led to: <b>the blank page as the brief</b>, the stall was committing to a shape, not booking.</span></div>
+<div class="ev-c"><div class="ev-m">7 of 9</div><div class="ev-k">Half-finished plans</div><p>Interviewees with a plan sitting in notes or saved links they never returned to.</p><span class="led">Led to: <b>AI drafts first</b>, the app produces a plan to react to instead of a form to fill.</span></div>
+<div class="ev-c"><div class="ev-m">4</div><div class="ev-k">Tools walked end to end</div><p>The planning-to-booking path on the four products interviewees reached for most.</p><span class="led">Led to: <b>no sign-up wall</b>, value is shown before anything is asked for.</span></div>
+<div class="ev-c"><div class="ev-m">8</div><div class="ev-k">Usability participants</div><p>Moderated sessions against the working build, task completion plus SUS.</p><span class="led">Led to: <b>the two iterations below</b>, both measured against the first build.</span></div>
+</div>
+<p class="pm-cap">Each card is an input and the specific decision it forced. Research that changed nothing is not listed.</p>
+</div>
 <div class="cg">
 <div class="cd"><h4>The blank page is the real blocker</h4><p>Interviewees did not struggle to book once they knew the plan. They struggled to commit to a shape for the trip. Seven of nine had a half-finished plan sitting in notes or saved links they never returned to.</p></div>
 <div class="cd"><h4>Planning lives in scattered tools</h4><p>A typical trip touched five to nine surfaces: search, maps, a notes app, a spreadsheet, and separate booking sites. Nothing held the whole picture, so the plan existed only in someone's head.</p></div>
@@ -235,6 +246,26 @@ hr{border:none;height:1px;background:var(--bd);margin:48px 0}
 <div class="sl">Final Designs</div>
 <h2 class="sh">AI-powered, warm, adventure-ready</h2>
 <p class="sp">The orange-and-white palette evokes warmth and adventure. AI generates complete itineraries from natural language prompts. The passport feature tracks trips and collects continent stamps, creating engagement beyond trip planning.</p>
+<div class="pm">
+<div class="pm-h">Screen anatomy &middot; the generated itinerary</div>
+<div class="it-p">
+<div class="it-t"><span class="v">Shipped structure</span><span class="r">One prompt, one full draft</span></div>
+<div class="it-b">
+<div class="sk">
+<div class="sk-row"><div class="sk-u hi"></div></div>
+<div class="sk-l">Prompt line stays at the top, so regenerating never means starting over</div>
+<div class="sk-row"><div class="sk-u tall"></div></div>
+<div class="sk-l">Day block, the unit a person actually reasons about</div>
+<div class="sk-row"><div class="sk-u"></div><div class="sk-u"></div></div>
+<div class="sk-l">Individual items inside the day, each one editable and lockable</div>
+<div class="sk-row"><div class="sk-u mute"></div></div>
+<div class="sk-l">Bookings attach to the block they belong to rather than living in a separate tab</div>
+</div>
+<div class="it-n">The layout follows the decision below it: the AI owns the first draft, the person owns every block in it. Locking is placed on the item, not the screen, because people wanted to keep one dinner and regenerate the rest of the day.</div>
+</div>
+</div>
+<p class="pm-cap">Structural breakdown of the shipped screen, not a screenshot. It shows how the regions are ordered and why, not the visual design, which is in the images below.</p>
+</div>
 </div>
 <div class="ww">
 <div class="phones">
@@ -250,13 +281,34 @@ hr{border:none;height:1px;background:var(--bd);margin:48px 0}
 
 <div class="w"><hr>
 <div class="sl">Key Design Decisions</div>
-<h2 class="sh">Three decisions, and what each one cost</h2>
+<h2 class="sh">Four decisions, and what each one cost</h2>
 <p class="sp">Every decision below traded something away. I tried to be explicit about the tradeoff rather than pretend the easy path was free.</p>
+<div class="pm">
+<div class="pm-h">Decision 01 &middot; how much the AI decides</div>
+<div class="dc">
+<div class="dc-q">Should the first screen be a one-tap magic draft, or a draft the person can take apart?</div>
+<div class="dc-o chose"><div class="dc-tag">Chose</div><div class="dc-body"><h5>A full draft in one pass, with every block editable and lockable</h5><p>The app generates a day-by-day itinerary immediately, so the first thing you see is a real plan rather than an empty form. Lock the parts you like, regenerate the rest.</p></div></div>
+<div class="dc-o cut"><div class="dc-tag">Rejected</div><div class="dc-body"><h5>A pure one-tap magic moment you cannot change</h5><p>A draft you cannot edit is worse than no draft. Cost of the choice I made: a slower, more deliberate first screen, traded for trust and a sense of authorship.</p></div></div>
+</div>
+</div>
+<div class="pm">
+<div class="pm-h">Decision 02 &middot; when to ask for an account</div>
+<div class="dc">
+<div class="dc-q">Does the user sign up before or after they see a plan?</div>
+<div class="dc-o chose"><div class="dc-tag">Chose</div><div class="dc-body"><h5>Generate the first itinerary with no account</h5><p>Research showed people quit when a tool asks before it gives. Someone who has already seen a plan they like has a real reason to sign up.</p></div></div>
+<div class="dc-o cut"><div class="dc-tag">Rejected</div><div class="dc-body"><h5>The sign-up wall and preference quiz the tools I walked all used</h5><p>Cost of the choice I made: I lose early account capture and some analytics on those anonymous sessions.</p></div></div>
+</div>
+</div>
+<div class="pm">
+<div class="pm-h">Decision 03 &middot; what the passport is allowed to do</div>
+<div class="dc">
+<div class="dc-q">Should the reward system pull people back, or push them?</div>
+<div class="dc-o chose"><div class="dc-tag">Chose</div><div class="dc-body"><h5>Pull only, a continent stamped when a trip is done</h5><p>Finished trips become a collection worth returning to, and the reward stays tied to real travel.</p></div></div>
+<div class="dc-o cut"><div class="dc-tag">Rejected</div><div class="dc-body"><h5>Streaks, guilt notifications, daily login bait</h5><p>Cost of the choice I made: weaker short-term engagement hooks, in exchange for not manufacturing fake urgency.</p></div></div>
+</div>
+</div>
 <div class="cg">
-<div class="cd"><h4>AI drafts fast, the user stays in control</h4><p>The app generates a full day-by-day itinerary in one pass so the first thing you see is a real plan, not an empty form. But a draft you cannot change is worse than no draft, so every block is editable and lockable: lock the parts you like, regenerate the rest. Tradeoff: a slower, more deliberate first screen than a pure one-tap magic moment, in exchange for trust and a sense of authorship.</p></div>
-<div class="cd"><h4>Show value before asking for sign-up</h4><p>Research showed people quit when a tool asks before it gives, so the first itinerary generates without an account. Tradeoff: I lose early account capture and some analytics on those sessions, but a person who has seen a plan they like has a real reason to sign up, instead of a blind wall.</p></div>
 <div class="cd"><h4>Unified booking, not another tab</h4><p>Bookings attach to the itinerary they belong to, so the plan and the reservations stay in one place instead of scattering across email and apps. Tradeoff: deeper integration work and more states to design, but it is the only way the app holds the whole trip rather than being one more silo.</p></div>
-<div class="cd"><h4>Gamification that rewards, never nags</h4><p>The passport stamps a continent when a trip is done, turning finished trips into a collection worth coming back to. I deliberately kept it pull, not push: no streaks, no guilt notifications, no daily login bait. Tradeoff: weaker short-term engagement hooks, but the reward stays tied to real travel instead of manufacturing fake urgency.</p></div>
 </div>
 </div>
 
@@ -277,7 +329,55 @@ hr{border:none;height:1px;background:var(--bd);margin:48px 0}
 <div class="br"><div class="bl"><span>Would recommend</span><span class="v">91%</span></div><div class="bar"><div class="bf bg" style="width:91%"></div></div></div>
 </div></div>
 <div class="fd s"><div class="sv">Validation</div><h4>The passport screen was the emotional peak</h4><p>Finding: nearly every tester reacted out loud at the Passport screen, the only point in the flow where that happened. Decision: I treated it as the app's signature moment rather than a side feature, pulling the continent stamp into onboarding so people meet it before they have even taken a trip. Result: the moment now anchors the product's identity, and "Passport Approved" became the single most-commented-on detail in later sessions.</p></div>
+<div class="pm">
+<div class="pm-h">Iteration 01 &middot; where the passport is first met</div>
+<div class="ba">
+  <div class="ba-row before">
+    <div class="ba-lab"><span class="t">First build</span><span class="n">Passport met at the end of the flow</span></div>
+    <div class="ba-steps">
+      <span class="st-c keep">Onboard</span><span class="ba-arw">&rarr;</span>
+      <span class="st-c keep">Generate a trip</span><span class="ba-arw">&rarr;</span>
+      <span class="st-c keep">Take the trip</span><span class="ba-arw">&rarr;</span>
+      <span class="st-c cut">First continent stamp, discovered late or not at all</span>
+    </div>
+  </div>
+  <div class="ba-row">
+    <div class="ba-lab"><span class="t">Revised</span><span class="n">The signature moment, moved to the front</span></div>
+    <div class="ba-steps">
+      <span class="st-c keep">Onboard</span><span class="ba-arw">&rarr;</span>
+      <span class="st-c new">Continent stamp, before any trip exists</span><span class="ba-arw">&rarr;</span>
+      <span class="st-c keep">Generate a trip</span><span class="ba-arw">&rarr;</span>
+      <span class="st-c keep">Take the trip</span>
+    </div>
+  </div>
+</div>
+<p class="pm-cap">The stamp was the only point in the flow testers reacted to out loud, and it sat at the end of the flow, behind a discovery task testers had to complete first. Pulling it into onboarding means people meet it before they have taken a trip. Passport discovery scored 88% in testing. <b>Only the revised order shipped.</b></p>
+</div>
 <div class="fd c"><div class="sv">Critical</div><h4>Auth errors lost people at the worst moment</h4><p>Finding: a generic "Invalid code" on the OTP step left testers stuck and unsure whether to wait, retry, or restart. Decision: I rewrote the copy to say what to do next, "Code does not match, check your email," and added a visible resend timer so the path forward was never ambiguous. Result: testers in the follow-up round recovered from a bad code without dropping out, turning a dead end into a self-service fix.</p></div>
+<div class="pm">
+<div class="pm-h">Iteration 02 &middot; the OTP dead end</div>
+<div class="ba">
+  <div class="ba-row before">
+    <div class="ba-lab"><span class="t">First build</span><span class="n">Testers stalled at a bad code</span></div>
+    <div class="ba-steps">
+      <span class="st-c keep">Enter email</span><span class="ba-arw">&rarr;</span>
+      <span class="st-c keep">Enter code</span><span class="ba-arw">&rarr;</span>
+      <span class="st-c cut">"Invalid code", no next step</span>
+    </div>
+  </div>
+  <div class="ba-row">
+    <div class="ba-lab"><span class="t">Revised</span><span class="n">Testers recovered without dropping out</span></div>
+    <div class="ba-steps">
+      <span class="st-c keep">Enter email</span><span class="ba-arw">&rarr;</span>
+      <span class="st-c keep">Enter code</span><span class="ba-arw">&rarr;</span>
+      <span class="st-c new">"Code does not match, check your email"</span><span class="ba-arw">&rarr;</span>
+      <span class="st-c new">Visible resend timer</span><span class="ba-arw">&rarr;</span>
+      <span class="st-c keep">Retry</span>
+    </div>
+  </div>
+</div>
+<p class="pm-cap">Same two screens, different exit. The change was copy plus one visible timer, so the path forward was never ambiguous. <b>Only the revised version shipped.</b></p>
+</div>
 </div>
 
 <div class="w"><hr>

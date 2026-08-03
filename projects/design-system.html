@@ -175,6 +175,7 @@ hr{border:none;height:1px;background:var(--bd);margin:48px 0}
   nav{padding:0 20px}
 }
 </style>
+<link rel="stylesheet" href="../assets/process.css">
 <link rel="stylesheet" media="print" href="../assets/print.css">
 <!-- Microsoft Clarity -->
 <script type="text/javascript">
@@ -264,6 +265,17 @@ hr{border:none;height:1px;background:var(--bd);margin:48px 0}
       <p>Created a "Wall of Inconsistency" in FigJam showing every variant side by side. Presented to product, engineering, and leadership. The visual impact made the problem undeniable. Got buy-in for a dedicated design system workstream within one week.</p>
     </div>
   </div>
+
+  <div class="pm">
+    <div class="pm-h">What the audit and the workshop actually produced</div>
+    <div class="ev">
+      <div class="ev-c"><div class="ev-m">14</div><div class="ev-k">Button styles found</div><p>Alongside 8 input patterns, 5 card layouts, 4 colour palettes and 3 navigation paradigms across the three squads.</p><span class="led">Led to: <b>the consolidation targets</b>, every number below is a variant count I had to argue down.</span></div>
+      <div class="ev-c"><div class="ev-m">3+3</div><div class="ev-k">Workshop participants</div><p>All 3 squad leads, plus the PM and 2 senior engineers, before a single component was designed.</p><span class="led">Led to: <b>the five principles</b>, which then settled trade-off arguments instead of taste arguments.</span></div>
+      <div class="ev-c"><div class="ev-m">3</div><div class="ev-k">Squads reviewing v1</div><p>Core components were reviewed with every squad rather than published and announced.</p><span class="led">Led to: <b>adoption as a design input</b>, not a rollout afterthought.</span></div>
+      <div class="ev-c"><div class="ev-m">AA</div><div class="ev-k">Accessibility bar audited</div><p>Contrast ratios, keyboard navigation, focus indicators, and screen reader support, per component.</p><span class="led">Led to: <b>WCAG 2.1 AA as a baseline</b>, checked at review rather than requested later.</span></div>
+    </div>
+    <p class="pm-cap">Counts are from the interface audit and the principles workshop described above. The audit inventory itself is under NDA, so the counts are quoted rather than the artefact shown.</p>
+  </div>
 </div>
 
 <!-- PRINCIPLES -->
@@ -333,6 +345,79 @@ hr{border:none;height:1px;background:var(--bd);margin:48px 0}
   <h2 class="stitle">Atomic building blocks</h2>
   <p class="stext">I structured the library using atomic design principles: tokens feed into primitives (buttons, inputs), primitives compose into patterns (form groups, card layouts), and patterns assemble into templates (page layouts, workflow steps). Every component includes states, variants, and responsive behavior.</p>
 
+  <div class="pm">
+    <div class="pm-h">Structure &middot; how the library stacks</div>
+    <div class="it">
+      <div class="it-p">
+        <div class="it-t"><span class="v">Foundation</span><span class="r">Tokens shipped first</span></div>
+        <div class="it-b">
+          <div class="sk">
+            <div class="sk-row"><div class="sk-u mute"></div><div class="sk-u mute"></div><div class="sk-u mute"></div></div>
+            <div class="sk-l">Primitives: raw color, pixel sizes, type steps</div>
+            <div class="sk-row"><div class="sk-u hi"></div><div class="sk-u hi"></div><div class="sk-u hi"></div></div>
+            <div class="sk-l">Semantic tokens: what each value means in context</div>
+          </div>
+          <div class="it-n">The split between primitive and semantic is what makes the system themeable. A visual language change edits the mapping, not every component.</div>
+        </div>
+      </div>
+      <div class="it-p v2">
+        <div class="it-t"><span class="v">Composition</span><span class="r">60+ components</span></div>
+        <div class="it-b">
+          <div class="sk">
+            <div class="sk-row"><div class="sk-u"></div><div class="sk-u"></div><div class="sk-u"></div><div class="sk-u"></div></div>
+            <div class="sk-l">Primitives: buttons, inputs, badges</div>
+            <div class="sk-row"><div class="sk-u"></div><div class="sk-u"></div></div>
+            <div class="sk-l">Patterns: form groups, card and table layouts</div>
+            <div class="sk-row"><div class="sk-u tall"></div></div>
+            <div class="sk-l">Templates: page layouts, workflow steps</div>
+          </div>
+          <div class="it-n"><b>Result:</b> each layer only depends on the one below it, so a token change propagates upward without a component rewrite.</div>
+        </div>
+      </div>
+    </div>
+    <p class="pm-cap">Structural breakdown of the shipped library, not a screenshot. Block weight stands in for layer scope; no production UI is represented.</p>
+  </div>
+
+  <div class="pm">
+    <div class="pm-h">Iteration 01 &middot; button consolidation</div>
+    <div class="it">
+      <div class="it-p">
+        <div class="it-t"><span class="v">What I found</span><span class="r">14 button styles</span></div>
+        <div class="it-b">
+          <div class="sk">
+            <div class="sk-row"><div class="sk-u"></div><div class="sk-u"></div><div class="sk-u"></div><div class="sk-u"></div><div class="sk-u"></div></div>
+            <div class="sk-row"><div class="sk-u"></div><div class="sk-u"></div><div class="sk-u"></div><div class="sk-u"></div><div class="sk-u"></div></div>
+            <div class="sk-row"><div class="sk-u"></div><div class="sk-u"></div><div class="sk-u"></div><div class="sk-u"></div></div>
+            <div class="sk-l">Fourteen styles across three squads, no usage rule attached to any of them</div>
+          </div>
+          <div class="it-n">Nothing said which button meant "this is the main action". Squads picked by appearance, so the same intent looked different in every module.</div>
+        </div>
+      </div>
+      <div class="it-p v2">
+        <div class="it-t"><span class="v">Revised</span><span class="r">4 variants</span></div>
+        <div class="it-b">
+          <div class="sk">
+            <div class="sk-row"><div class="sk-u hi tall"></div><div class="sk-u hi tall"></div><div class="sk-u hi tall"></div><div class="sk-u hi tall"></div></div>
+            <div class="sk-l">Primary, secondary, ghost, destructive</div>
+            <div class="sk-row"><div class="sk-u mute"></div><div class="sk-u mute"></div><div class="sk-u mute"></div></div>
+            <div class="sk-l">3 sizes and 5 states carried inside each variant, not added as new styles</div>
+          </div>
+          <div class="it-n"><b>Result:</b> 14 down to 4 purposeful variants, each with a written usage rule. Size and state stopped being reasons to fork a new button.</div>
+        </div>
+      </div>
+    </div>
+    <p class="pm-cap">Schematic of the consolidation, not a screenshot. <b>Only the four-variant set shipped;</b> the left panel is the audit inventory, which is itself under NDA.</p>
+  </div>
+
+  <div class="pm">
+    <div class="pm-h">Decision &middot; how components are structured</div>
+    <div class="dc">
+      <div class="dc-q">Do we ship rigid templates that guarantee consistency, or atomic parts that squads assemble themselves?</div>
+      <div class="dc-o chose"><div class="dc-tag">Chose</div><div class="dc-body"><h5>Composable atomic building blocks</h5><p>Tokens feed primitives, primitives compose into patterns, patterns assemble into templates. This survived use cases nobody had anticipated when the library was scoped.</p></div></div>
+      <div class="dc-o cut"><div class="dc-tag">Rejected</div><div class="dc-body"><h5>Prescriptive page templates</h5><p>Rigid templates break as use cases multiply and would have needed constant rework. The cost of the choice is real: composable parts can be assembled badly, so every component ships with usage guidelines and do/don't examples to constrain it.</p></div></div>
+    </div>
+  </div>
+
   <div class="anatomy">
     <div class="anatomy-card">
       <div class="anatomy-preview" style="gap:8px;flex-wrap:wrap">
@@ -386,6 +471,36 @@ hr{border:none;height:1px;background:var(--bd);margin:48px 0}
     <p>The final product UI is confidential. Contact me directly for a walkthrough.</p>
   </div>
 
+  <div class="pm">
+    <div class="pm-h">Iteration 02 &middot; the document review workflow</div>
+    <div class="it">
+      <div class="it-p">
+        <div class="it-t"><span class="v">Before</span><span class="r">14 steps</span></div>
+        <div class="it-b">
+          <div class="sk">
+            <div class="sk-row"><div class="sk-u"></div><div class="sk-u"></div><div class="sk-u"></div><div class="sk-u"></div><div class="sk-u"></div><div class="sk-u"></div><div class="sk-u"></div></div>
+            <div class="sk-row"><div class="sk-u"></div><div class="sk-u"></div><div class="sk-u"></div><div class="sk-u"></div><div class="sk-u"></div><div class="sk-u"></div><div class="sk-u"></div></div>
+            <div class="sk-l">Fourteen steps, no progress indicator, no saved state</div>
+          </div>
+          <div class="it-n">Users abandoned the flow midway and lost their work, so the next attempt started from the beginning.</div>
+        </div>
+      </div>
+      <div class="it-p v2">
+        <div class="it-t"><span class="v">Revised</span><span class="r">6 steps</span></div>
+        <div class="it-b">
+          <div class="sk">
+            <div class="sk-row"><div class="sk-u hi tall"></div><div class="sk-u hi tall"></div><div class="sk-u hi tall"></div><div class="sk-u hi tall"></div><div class="sk-u hi tall"></div><div class="sk-u hi tall"></div></div>
+            <div class="sk-l">Six steps, each one a guided stage</div>
+            <div class="sk-row"><div class="sk-u mute"></div><div class="sk-u mute"></div><div class="sk-u mute"></div></div>
+            <div class="sk-l">Progress indicator, inline validation, contextual help, auto-save</div>
+          </div>
+          <div class="it-n"><b>Result:</b> users stopped abandoning the flow midway, and could leave and resume without losing work.</div>
+        </div>
+      </div>
+    </div>
+    <p class="pm-cap">Schematic of the step reduction, not a screenshot. Block counts match the step counts; the screens themselves are under NDA.</p>
+  </div>
+
   <div class="card-grid">
     <div class="crd">
       <h4>Document review workflow</h4>
@@ -412,6 +527,15 @@ hr{border:none;height:1px;background:var(--bd);margin:48px 0}
   <div class="slab">Rollout Process</div>
   <h2 class="stitle">How I shipped it across 3 squads</h2>
   <p class="stext">Building the system was only half the challenge. Adoption required buy-in, education, and ongoing support. Here is the phased rollout approach I designed and executed.</p>
+
+  <div class="pm">
+    <div class="pm-h">Decision &middot; what ships first</div>
+    <div class="dc">
+      <div class="dc-q">With one designer and three squads waiting, what is the first thing to publish?</div>
+      <div class="dc-o chose"><div class="dc-tag">Chose</div><div class="dc-body"><h5>Tokens in weeks 3 and 4, as Figma styles and CSS variables at the same time</h5><p>Engineers could adopt color, type, spacing, and elevation before a single component existed. That built momentum and trust early, and every component built afterwards inherited the same values.</p></div></div>
+      <div class="dc-o cut"><div class="dc-tag">Rejected</div><div class="dc-body"><h5>Components first, tokens extracted later</h5><p>It shows progress sooner because a button is visible and a variable is not, but it leaves squads waiting with nothing usable and hardcodes values that have to be unpicked afterwards.</p></div></div>
+    </div>
+  </div>
 
   <div class="timeline">
     <div class="tl-item active"><div class="tl-dot"></div><div class="tl-week">Weeks 1-2</div><div class="tl-title">Audit and alignment</div><div class="tl-desc">Interface audit, stakeholder presentations, principle definition workshop. Got executive buy-in and dedicated time allocation.</div></div>

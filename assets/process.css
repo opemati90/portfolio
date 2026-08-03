@@ -1,0 +1,107 @@
+/* Process modules: shared across every case study.
+   Purpose is to SHOW evolution (explorations, iterations, decisions) rather
+   than assert it in prose. Uses the case-study token set: --sf --sf2 --tx
+   --tx2 --tx3 --bd --bd2 --ac --r --f --serif. */
+
+/* ---------- shared scaffolding ---------- */
+.pm{margin:28px 0}
+.pm-h{font-family:var(--f);font-size:10px;font-weight:600;text-transform:uppercase;
+      letter-spacing:1.4px;color:var(--tx3);margin-bottom:10px}
+.pm-cap{font-size:11px;color:var(--tx3);line-height:1.5;margin-top:10px}
+.pm-cap b{color:var(--tx2);font-weight:600}
+
+/* ---------- 1. before / after flow comparison ---------- */
+.ba{border:1px solid var(--bd);border-radius:var(--r);overflow:hidden;background:var(--bg)}
+.ba-row{padding:18px 20px}
+.ba-row + .ba-row{border-top:1px solid var(--bd)}
+.ba-row.before{background:var(--sf)}
+.ba-lab{display:flex;align-items:baseline;gap:10px;margin-bottom:12px}
+.ba-lab .t{font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:1.1px;color:var(--tx3)}
+.ba-lab .n{font-family:var(--serif);font-size:17px;font-weight:500;color:var(--tx)}
+.ba-steps{display:flex;flex-wrap:wrap;align-items:center;gap:6px}
+.st-c{font-size:11.5px;line-height:1.35;padding:7px 11px;border-radius:6px;
+      background:var(--bg);border:1px solid var(--bd);color:var(--tx2);
+      flex:0 1 auto;min-width:0;max-width:100%}
+.ba-row.before .st-c{background:var(--bg)}
+.st-c.cut{color:var(--tx3);border-style:dashed;text-decoration:line-through;opacity:.75}
+.st-c.new{border-color:var(--ac);color:var(--ac);font-weight:500}
+.st-c.keep{color:var(--tx);font-weight:500}
+.ba-arw{color:var(--tx3);font-size:11px}
+
+/* ---------- 2. competitive audit matrix ---------- */
+.cm{width:100%;max-width:100%;border-collapse:collapse;font-size:12px;
+    border:1px solid var(--bd);border-radius:var(--r)}
+.cm th,.cm td{padding:10px 12px;text-align:left;vertical-align:top;line-height:1.45;
+              overflow-wrap:break-word}
+.cm thead th{background:var(--sf);font-size:9.5px;font-weight:600;text-transform:uppercase;
+             letter-spacing:1px;color:var(--tx3)}
+.cm tbody tr + tr{border-top:1px solid var(--bd)}
+.cm td.tool{font-weight:600;color:var(--tx);white-space:nowrap}
+.cm td.note{color:var(--tx2)}
+.cm .yes{color:#2F6F4F;font-weight:600}
+.cm .no{color:#B02A37;font-weight:600}
+.cm .part{color:#8A5F0E;font-weight:600}
+.cm tr.gap{background:var(--sf)}
+.cm tr.gap td{color:var(--tx);font-weight:500}
+.cm tr.gap td.tool{color:var(--ac)}
+
+/* ---------- 3. iteration: v1 -> v2 ---------- */
+.it{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.it-p{border:1px solid var(--bd);border-radius:var(--r);overflow:hidden;background:var(--bg)}
+.it-p.v2{border-color:var(--bd2)}
+.it-t{padding:10px 14px;border-bottom:1px solid var(--bd);background:var(--sf);
+      display:flex;align-items:center;justify-content:space-between;gap:8px}
+.it-t .v{font-size:9.5px;font-weight:600;text-transform:uppercase;letter-spacing:1.1px;color:var(--tx3)}
+.it-t .r{font-size:10.5px;color:var(--tx3)}
+.it-p.v2 .it-t .r{color:var(--ac);font-weight:600}
+.it-b{padding:16px 14px}
+/* schematic blocks: deliberately abstract, never a faked screenshot */
+.sk{display:flex;flex-direction:column;gap:6px}
+.sk-row{display:flex;gap:6px}
+.sk-u{height:26px;border-radius:4px;background:var(--sf2);flex:1}
+.sk-u.tall{height:52px}
+.sk-u.hi{background:var(--ac);opacity:.18}
+.sk-u.mute{opacity:.5}
+.sk-l{font-size:9.5px;color:var(--tx3);letter-spacing:.4px;margin-top:2px}
+.it-n{margin-top:14px;padding-top:12px;border-top:1px solid var(--bd);font-size:12px;
+      color:var(--tx2);line-height:1.55}
+.it-n b{color:var(--tx);font-weight:600}
+
+/* ---------- 4. decision: chosen vs rejected ---------- */
+.dc{border:1px solid var(--bd);border-radius:var(--r);overflow:hidden}
+.dc-q{padding:14px 18px;background:var(--sf);font-family:var(--serif);font-size:15px;
+      font-weight:500;color:var(--tx);border-bottom:1px solid var(--bd)}
+.dc-o{display:flex;gap:12px;padding:14px 18px;align-items:flex-start}
+.dc-o + .dc-o{border-top:1px solid var(--bd)}
+.dc-tag{flex:0 0 76px;font-size:9.5px;font-weight:600;text-transform:uppercase;
+        letter-spacing:1px;padding-top:2px}
+.dc-o.chose .dc-tag{color:#2F6F4F}
+.dc-o.cut .dc-tag{color:var(--tx3)}
+.dc-o.cut .dc-body h5{color:var(--tx2);text-decoration:line-through;text-decoration-thickness:1px}
+/* an option weighed but not recorded as formally rejected: no strike-through */
+.dc-o.alt .dc-tag{color:var(--tx3)}
+.dc-o.alt .dc-body h5{color:var(--tx2)}
+.dc-body h5{font-size:13px;font-weight:600;color:var(--tx);margin-bottom:3px}
+.dc-body p{font-size:12.5px;color:var(--tx2);line-height:1.55}
+
+/* ---------- 5. research artefact evidence ---------- */
+.ev{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+.ev-c{border:1px solid var(--bd);border-radius:var(--r);padding:16px 18px;background:var(--bg)}
+.ev-m{font-family:var(--serif);font-size:20px;font-weight:500;color:var(--tx);
+      letter-spacing:-0.02em;margin-bottom:2px}
+.ev-k{font-size:9.5px;font-weight:600;text-transform:uppercase;letter-spacing:1px;
+      color:var(--tx3);margin-bottom:8px}
+.ev-c p{font-size:12.5px;color:var(--tx2);line-height:1.55}
+.ev-c .led{display:block;margin-top:8px;padding-top:8px;border-top:1px dashed var(--bd);
+           font-size:12px;color:var(--tx)}
+.ev-c .led b{color:var(--ac);font-weight:600}
+
+@media(max-width:768px){
+  .it{grid-template-columns:1fr}
+  .ev{grid-template-columns:1fr}
+  .ba-steps{gap:5px}
+  .st-c{font-size:11px;padding:6px 9px;white-space:normal}
+  .cm{display:block;overflow-x:auto}
+  .dc-o{flex-direction:column;gap:6px}
+  .dc-tag{flex:none}
+}
