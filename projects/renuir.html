@@ -164,7 +164,6 @@ hr{border:none;height:1px;background:var(--bd);margin:48px 0}
 @media(max-width:768px){.w,.ww{padding:0 20px}.mg,.metrics{grid-template-columns:1fr 1fr}.cg,.tg2,.img-row{grid-template-columns:1fr}.img-row-3{grid-template-columns:1fr 1fr}.wh{grid-template-columns:1fr}nav{padding:0 20px}}
 </style>
 <link rel="stylesheet" href="../assets/a11y.css">
-<link rel="stylesheet" href="../assets/process.css">
 <link rel="stylesheet" media="print" href="../assets/print.css"><!-- Microsoft Clarity -->
 <script type="text/javascript">
     (function(c,l,a,r,i,t,y){
@@ -228,28 +227,11 @@ hr{border:none;height:1px;background:var(--bd);margin:48px 0}
 <h2 class="sh">6 weeks of deep research</h2>
 <p class="sp">I spent 6 weeks in discovery before designing a single screen. I interviewed people who lost items, people who found items, and lost-and-found office operators. I mapped the regulatory landscape across Germany and the EU to understand legal requirements around found property.</p>
 
-<div class="pm">
-<div class="pm-h">What the discovery actually produced</div>
-<div class="ev">
-<div class="ev-c"><div class="ev-m">16</div><div class="ev-k">User interviews</div><p>8 "losers" (people who lost items), 4 "finders," and 4 lost-and-found operators across Berlin, Munich, and Amsterdam.</p><span class="led">Led to: <b>an emotional register, not a utility one</b>, the distress of losing an item is severely underestimated and is not about monetary value.</span></div>
-<div class="ev-c"><div class="ev-m">8</div><div class="ev-k">Solutions audited</div><p>iLost, Tile, Foundit, and BVG Fundburo among them, scored on whether they work across organizations.</p><span class="led">Led to: <b>the infrastructure-first approach</b>, none of the eight offered a true cross-organization protocol.</span></div>
-<div class="ev-c"><div class="ev-m">BGB 965-984</div><div class="ev-k">Regulatory mapping</div><p>German found-property law defines legal obligations for finders. EU GDPR adds constraints on sharing personal data between two strangers.</p><span class="led">Led to: <b>the shape of ownership verification</b>, and to data handling that never exposes personal contact details.</span></div>
-<div class="ev-c"><div class="ev-m">7</div><div class="ev-k">Critical handoff points</div><p>From an end-to-end service blueprint mapping frontstage interactions, backstage processes, and support systems.</p><span class="led">Led to: <b>designing the handoffs, not the screens</b>, these are the moments where items go permanently missing today.</span></div>
-</div>
-<p class="pm-cap">Each row is a research input and the specific decision it forced. Research that changed nothing is not listed.</p>
-</div>
-
-<div class="pm">
-<div class="pm-h">The one criterion that mattered</div>
-<table class="cm"><thead><tr><th>Tool</th><th>Works across organizations</th><th>What I found</th></tr></thead>
-<tbody>
-<tr><td class="tool">Tile</td><td><span class="no">No</span></td><td class="note">Device-only. Solves tracking for tagged objects, not the return of untagged property.</td></tr>
-<tr><td class="tool">iLost</td><td><span class="no">No</span></td><td class="note">Single-organization. Works inside one operator's lost-and-found, not between operators.</td></tr>
-<tr><td class="tool">Foundit</td><td><span class="no">No</span></td><td class="note">One of the eight audited. Like the rest, no protocol spanning organizations or countries.</td></tr>
-<tr><td class="tool">BVG Fundburo</td><td><span class="no">No</span></td><td class="note">A single transit operator's office. Items that cross networks fall out of it.</td></tr>
-<tr class="gap"><td class="tool">The gap</td><td></td><td class="note">No cross-organization protocol existed in any of the eight, so I designed Renuir as the layer between them rather than another siloed inventory.</td></tr>
-</tbody></table>
-<p class="pm-cap">Four of the eight solutions audited. The column is the criterion that decided the product's shape, not a full feature comparison.</p>
+<div class="cg">
+<div class="cd"><h4>User interviews (n=16)</h4><p>Spoke with 8 "losers" (people who lost items), 4 "finders," and 4 lost-and-found operators across Berlin, Munich, and Amsterdam. Key finding: the emotional distress of losing items is severely underestimated. It is not just about the object's monetary value.</p></div>
+<div class="cd"><h4>Competitive analysis</h4><p>Analyzed 8 solutions (iLost, Tile, Foundit, BVG Fundburo). Most were device-only (Tile) or single-organization (iLost). None offered a true cross-organization protocol. This validated our infrastructure-first approach.</p></div>
+<div class="cd"><h4>Regulatory mapping</h4><p>German law (BGB sections 965-984) defines legal obligations for finders. EU GDPR adds complexity around sharing personal data between parties. These constraints directly shaped the ownership verification and data-handling flows.</p></div>
+<div class="cd"><h4>Service blueprint</h4><p>Created an end-to-end blueprint mapping frontstage interactions, backstage processes, and support systems. This revealed the 7 critical handoff points where items typically get lost in the current system.</p></div>
 </div>
 </div>
 
@@ -321,13 +303,7 @@ hr{border:none;height:1px;background:var(--bd);margin:48px 0}
 <p class="sp">Owners prove the item is theirs with serial numbers, receipts, photos, or warranty documents. The return then happens the way that suits them: an in-person handover at a suggested safe public place, confirmed with a 4-digit code, or shipping through an integrated delivery partner with live tracking. When the evidence does not add up, the finder can decline a claim, and the claimant is told respectfully.</p>
 </div>
 
-<div class="ww"><div class="img-row-3">
-<img src="../assets/renuir-ownership.png" alt="Proving ownership with serial numbers, receipts, and photos">
-<img src="../assets/renuir-meetup.png" alt="Arranging a handover at a suggested safe public place">
-<img src="../assets/renuir-delivery.png" alt="Shipping the item through an integrated delivery partner">
-</div>
-<p class="img-caption">The three branches of the return: prove ownership, then hand over in person or ship it.</p>
-<div class="img-box" style="background:#c2cbd2"><img src="../assets/renuir-reject.png" alt="A respectful claim-rejection moment"></div>
+<div class="ww"><div class="img-box" style="background:#c2cbd2"><img src="../assets/renuir-reject.png" alt="A respectful claim-rejection moment"></div>
 <p class="img-caption">Resolution is built to protect both sides, including a respectful decline.</p></div>
 
 <!-- TESTING -->
@@ -353,59 +329,10 @@ hr{border:none;height:1px;background:var(--bd);margin:48px 0}
 </div>
 </div>
 
-<div class="pm">
-<div class="pm-h">Ownership verification, before and after</div>
-<div class="it">
-  <div class="it-p">
-    <div class="it-t"><span class="v">First build</span><span class="r">21% struggled</span></div>
-    <div class="it-b">
-      <div class="sk">
-        <div class="sk-row"><div class="sk-u"></div><div class="sk-u"></div><div class="sk-u"></div><div class="sk-u"></div></div>
-        <div class="sk-row"><div class="sk-u"></div></div>
-        <div class="sk-l">Every proof type offered at once, multi-select</div>
-      </div>
-      <div class="it-n">Verify ownership was the weakest task in the round at 79%. The multi-select interface confused people: it asked them to decide what counted as proof before it had told them.</div>
-    </div>
-  </div>
-  <div class="it-p v2">
-    <div class="it-t"><span class="v">Revised</span><span class="r">One proof type at a time</span></div>
-    <div class="it-b">
-      <div class="sk">
-        <div class="sk-row"><div class="sk-u hi tall"></div></div>
-        <div class="sk-row"><div class="sk-u mute"></div><div class="sk-u mute"></div><div class="sk-u mute"></div></div>
-        <div class="sk-l">One proof type in focus, the rest queued behind it</div>
-      </div>
-      <div class="it-n"><b>Result:</b> progressive disclosure, one proof type at a time with a clear example of what a valid document looks like, instead of a single screen asking for everything.</div>
-    </div>
-  </div>
-</div>
-<p class="pm-cap">Schematic of the change, not a screenshot. <b>Only the revised version shipped;</b> the first build is reconstructed from the finding it fixed.</p>
-</div>
-<div class="pm">
-<div class="pm-h">Handover code error recovery, before and after</div>
-<div class="pba">
-  <div class="pba-row before">
-    <div class="pba-lab"><span class="t">First build</span><span class="n">A dead end at the doorstep</span></div>
-    <div class="pba-steps">
-      <span class="st-c keep">Meet in person</span><span class="pba-arw">&rarr;</span>
-      <span class="st-c keep">Enter the 4-digit code</span><span class="pba-arw">&rarr;</span>
-      <span class="st-c cut">Unclear wrong-code error</span>
-    </div>
-  </div>
-  <div class="pba-row">
-    <div class="pba-lab"><span class="t">Revised</span><span class="n">A named cause and a way back</span></div>
-    <div class="pba-steps">
-      <span class="st-c keep">Meet in person</span><span class="pba-arw">&rarr;</span>
-      <span class="st-c keep">Enter the 4-digit code</span><span class="pba-arw">&rarr;</span>
-      <span class="st-c new">"Code does not match. Ask the other person to show their code screen"</span><span class="pba-arw">&rarr;</span>
-      <span class="st-c new">Retry</span>
-    </div>
-  </div>
-</div>
-<p class="pm-cap">The failure happened with two people standing in front of each other, so the error had to say what to do next, not just that something was wrong. Handover-code entry completed at <b>91%</b>.</p>
-</div>
+<div class="fd c"><div class="sv">Critical</div><h4>Ownership verification too complex on mobile</h4><p>21% struggled with document upload. The multi-select interface confused users. Simplified to progressive disclosure: one proof type at a time with clear examples.</p></div>
 <div class="fd i"><div class="sv">Improvement</div><h4>Meeting location suggestions needed context</h4><p>Users loved safe meeting spots but wanted to know why they were "safe." Added rationale labels: "Police station: public, CCTV, staff present."</p></div>
 <div class="fd s"><div class="sv">Validation</div><h4>Match confidence score built immediate trust</h4><p>5 of the 6 moderated testers said the "98% match" indicator gave them confidence the system was working. Without it, users questioned whether the match was real.</p></div>
+<div class="fd i"><div class="sv">Improvement</div><h4>Handover code needed better error recovery</h4><p>Wrong code error was unclear. Added: "Code does not match. Ask the other person to show their code screen" with retry.</p></div>
 </div>
 
 <!-- REFLECTIONS -->

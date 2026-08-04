@@ -164,7 +164,6 @@ hr{border:none;height:1px;background:var(--bd);margin:48px 0}
 @media(max-width:768px){.w,.ww{padding:0 20px}.mg,.metrics{grid-template-columns:1fr 1fr}.cg,.tg2,.img-row{grid-template-columns:1fr}.img-row-3{grid-template-columns:1fr 1fr}.wh{grid-template-columns:1fr}nav{padding:0 20px}}
 </style>
 <link rel="stylesheet" href="../assets/a11y.css">
-<link rel="stylesheet" href="../assets/process.css">
 <link rel="stylesheet" media="print" href="../assets/print.css">
 <!-- Microsoft Clarity -->
 <script type="text/javascript">
@@ -206,14 +205,6 @@ hr{border:none;height:1px;background:var(--bd);margin:48px 0}
 <div class="sl">Research</div>
 <h2 class="sh">Where confidence broke down</h2>
 <p class="sp">I ran interviews with international students and sponsoring parents, then walked the existing funnel analytics step by step to see where intent turned into abandonment. The pattern was consistent: people did not drop out because the product was hard to use. They dropped out because at each step they were asked to trust the platform with more, and the interface gave them less to trust.</p>
-<div class="pm">
-<div class="pm-h">What the discovery actually produced</div>
-<div class="ev">
-<div class="ev-c"><div class="ev-m">8-12</div><div class="ev-k">Students and sponsoring parents</div><p>Tested with the redesigned flow and the original run side by side. Interviews with the same audience came first; I did not log a separate interview count.</p><span class="led">Led to: <b>trust before product</b>, first-time senders looked for bank-style reassurance signals and the old site gave them marketing copy.</span></div>
-<div class="ev-c"><div class="ev-m">Funnel</div><div class="ev-k">Existing analytics, walked step by step</div><p>I went through the live funnel one step at a time to see where intent turned into abandonment.</p><span class="led">Led to: <b>the verification reorder</b>, drop-off clustered at sign-up and KYC, not at fee disclosure.</span></div>
-</div>
-<p class="pm-cap">Each input and the specific decision it forced. The sample was enough to find the big trust breaks and too small to trust the percentages, which is why the design-stage numbers are labelled as such.</p>
-</div>
 <div class="fd c"><div class="sv">Funnel drop-off</div><h4>The break was at sign-up and KYC, not pricing</h4><p>Most abandonment clustered at account creation and identity verification, not at the fee disclosure. People reached the verification step willing to pay, then stalled when asked to upload documents with no explanation of why or what happened next.</p></div>
 <div class="fd i"><div class="sv">Trust barrier</div><h4>"How do I know this is not a scam?"</h4><p>First-time senders looked for the same reassurance signals their bank gives them: a real company, named universities, and confirmation that the money actually landed. The old site led with marketing copy instead, which read as a warning rather than a welcome.</p></div>
 <div class="fd i"><div class="sv">KYC friction</div><h4>Verification felt like an interrogation</h4><p>The onboarding asked for documents up front with no framing. Parents in particular wanted to know which document, why it was needed, and that their data was handled responsibly before they would proceed.</p></div>
@@ -232,53 +223,16 @@ hr{border:none;height:1px;background:var(--bd);margin:48px 0}
 <div class="w"><hr>
 <div class="sl">Design Decisions</div>
 <h2 class="sh">Key decisions, and the tradeoffs behind them</h2>
-<div class="pm">
-<div class="dc"><div class="dc-q">Proof first, or product first?</div>
- <div class="dc-o chose"><div class="dc-tag">Chose</div><div class="dc-body"><h5>Trust before product</h5><p>The site opens with concrete proof: named universities supported, country coverage, and real sender outcomes, before any feature copy. For a first-time high-stakes transfer, earning belief outranks shaving a scroll.</p></div></div>
- <div class="dc-o alt"><div class="dc-tag">Alternative</div><div class="dc-body"><h5>Feature-led hero, as the old site had it</h5><p>Cost of the call: the hero is slower to reach the call to action. The old feature-led version read as a warning rather than a welcome to first-time senders.</p></div></div>
-</div>
-</div>
-<div class="pm">
-<div class="dc"><div class="dc-q">Show the full cost before sign-up, or at the end?</div>
- <div class="dc-o chose"><div class="dc-tag">Chose</div><div class="dc-body"><h5>Transparent FX and fees up front</h5><p>The full cost, including the exchange rate and any fee, is shown before sign-up. Hidden costs were the single fastest way to lose a sender's trust.</p></div></div>
- <div class="dc-o alt"><div class="dc-tag">Alternative</div><div class="dc-body"><h5>Disclose at the end of the flow</h5><p>Cost of the call: showing the margin early can look less competitive at a glance.</p></div></div>
-</div>
-</div>
-<div class="pm">
-<div class="dc"><div class="dc-q">How much of the transfer's progress does the business expose?</div>
- <div class="dc-o chose"><div class="dc-tag">Chose</div><div class="dc-body"><h5>Live status from initiated to received</h5><p>Every transfer shows where the money is, with timestamps, through to receipt by the university. Visibility was exactly what parents asked for, and it cut payment-status support tickets 27% in design-stage testing.</p></div></div>
- <div class="dc-o alt"><div class="dc-tag">Alternative</div><div class="dc-body"><h5>Confirmation only, no intermediate states</h5><p>Cost of the call: live status commits the business to surfacing delays it would rather not advertise.</p></div></div>
-</div>
-</div>
-<div class="pm">
-<div class="dc"><div class="dc-q">One dense verification form, or several explained steps?</div>
- <div class="dc-o chose"><div class="dc-tag">Chose</div><div class="dc-body"><h5>Simplified, explained KYC</h5><p>Verification breaks into short steps, each stating which document is needed, why, and how the data is handled. The framing turned the most abandoned step into one people were willing to finish.</p></div></div>
- <div class="dc-o alt"><div class="dc-tag">Alternative</div><div class="dc-body"><h5>A single dense document upload</h5><p>Cost of the call: a few extra screens. That was the version people described as an interrogation.</p></div></div>
-</div>
-</div>
-</div>
+<div class="cg">
+<div class="cd"><h4>Trust before product</h4><p>The site now opens with concrete proof: named universities supported, country coverage, and real sender outcomes, before any feature copy. Tradeoff: the hero is slower to get to the call to action, but for a first-time high-stakes transfer, earning belief outranks shaving a scroll.</p></div>
+<div class="cd"><h4>Transparent FX and fees up front</h4><p>The full cost, including the exchange rate and any fee, is shown before sign-up rather than at the end. Tradeoff: it exposes the margin earlier and can look less competitive at a glance, but hidden costs were the single fastest way to lose a sender's trust, so honesty was the safer bet.</p></div>
+<div class="cd"><h4>Live payment status tracking</h4><p>Every transfer shows where the money is, from initiated to received by the university, with timestamps. Tradeoff: it commits the business to surfacing delays it would rather not advertise, but visibility was exactly what parents asked for and what cut support load.</p></div>
+<div class="cd"><h4>Simplified, explained KYC</h4><p>Verification is broken into short steps, each one stating which document is needed, why, and how the data is handled. Tradeoff: a few extra screens instead of one dense form, but the framing turned the most abandoned step into one people were willing to finish.</p></div>
+</div></div>
 
 <div class="w"><hr>
 <div class="sl">Final Designs</div>
 <h2 class="sh">The solution, delivered</h2>
-<div class="pm">
-<div class="pm-h">Anatomy of the marketing site</div>
-<div class="it">
-  <div class="it-p">
-    <div class="it-t"><span class="v">Structure</span><span class="r">Proof above features</span></div>
-    <div class="it-b">
-      <div class="sk">
-        <div class="sk-row"><div class="sk-u hi tall"></div></div>
-        <div class="sk-row"><div class="sk-u"></div><div class="sk-u"></div><div class="sk-u"></div></div>
-        <div class="sk-row"><div class="sk-u mute"></div><div class="sk-u mute"></div></div>
-        <div class="sk-l">Proof band first, then coverage and outcomes, then feature copy</div>
-      </div>
-      <div class="it-n">The top block carries the reassurance signals people said they looked for: a real company, named universities, and country coverage. Sender outcomes sit next as evidence that money lands. Feature copy, which the old site led with, is pushed below all of it. The call to action is deliberately further down the page than a conversion-first layout would put it.</div>
-    </div>
-  </div>
-</div>
-<p class="pm-cap">Structural breakdown of the shipped page, not a screenshot and not an original wireframe.</p>
-</div>
 </div>
 <div class="ww"><div class="img-box" style="background:#F5F7F9"><img src="../assets/pay4me.jpg" alt="Pay4Me Finance"></div></div>
 
@@ -296,30 +250,7 @@ hr{border:none;height:1px;background:var(--bd);margin:48px 0}
 <div class="br"><div class="bl"><span>Original flow</span><span class="v">61%</span></div><div class="bar"><div class="bf by" style="width:61%"></div></div></div>
 </div>
 </div>
-<div class="pm">
-<div class="pm-h">Verification moved out of the way of the quote, before and after</div>
-<div class="pba">
-  <div class="pba-row before">
-    <div class="pba-lab"><span class="t">First build</span><span class="n">Several people backed out at KYC</span></div>
-    <div class="pba-steps">
-      <span class="st-c keep">Start a payment</span><span class="pba-arw">&rarr;</span>
-      <span class="st-c cut">Verify identity, documents requested with no reason given</span><span class="pba-arw">&rarr;</span>
-      <span class="st-c keep">See final cost</span><span class="pba-arw">&rarr;</span>
-      <span class="st-c keep">Pay</span>
-    </div>
-  </div>
-  <div class="pba-row">
-    <div class="pba-lab"><span class="t">Revised</span><span class="n">Cost known before anything is asked for</span></div>
-    <div class="pba-steps">
-      <span class="st-c keep">Start a payment</span><span class="pba-arw">&rarr;</span>
-      <span class="st-c new">Full transparent quote, FX and fees</span><span class="pba-arw">&rarr;</span>
-      <span class="st-c new">Verify identity, each document with a one-line reason</span><span class="pba-arw">&rarr;</span>
-      <span class="st-c keep">Pay</span>
-    </div>
-  </div>
-</div>
-<p class="pm-cap">People were being asked to hand over documents before they knew what the transfer would cost. Two steps swapped, plus a reason attached to each request. Completion through verification rose noticeably in the next round, and onboarding completion finished <b>31%</b> up, with the largest gain at this step.</p>
-</div>
+<div class="fd s"><div class="sv">What we changed</div><h4>Verification moved out of the way of the quote</h4><p>In early tests several people backed out when KYC appeared before they had seen their final cost. We reordered the flow so people see the full transparent quote first, then verify, and added a one-line reason to each document request. Completion through the verification step rose noticeably in the next round.</p></div>
 </div>
 
 <div class="w"><hr>

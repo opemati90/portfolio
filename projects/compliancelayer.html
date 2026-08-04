@@ -89,7 +89,6 @@ hr{border:none;height:1px;background:var(--bd);margin:48px 0}
 @media(max-width:768px){.w,.ww{padding:0 20px}.mg,.metrics{grid-template-columns:1fr 1fr}.cg,.wh{grid-template-columns:1fr}nav{padding:0 20px}}
 </style>
 <link rel="stylesheet" href="../assets/a11y.css">
-<link rel="stylesheet" href="../assets/process.css">
 <link rel="stylesheet" media="print" href="../assets/print.css">
 <!-- Microsoft Clarity -->
 <script type="text/javascript">
@@ -165,26 +164,6 @@ hr{border:none;height:1px;background:var(--bd);margin:48px 0}
 <span class="fn fn-a">Write the fix</span><span class="fa">→</span>
 <span class="fn fn-e">Sealed certificate</span>
 </div>
-<div class="pm">
-<div class="pm-h">Anatomy of the report</div>
-<div class="it-p">
-<div class="it-t"><span class="v">Shipped structure</span><span class="r">One scan, four auditor questions</span></div>
-<div class="it-b">
-<div class="sk">
-<div class="sk-row"><div class="sk-u hi"></div></div>
-<div class="sk-l">Score first, so a non-technical reader knows where they stand before any detail</div>
-<div class="sk-row"><div class="sk-u"></div><div class="sk-u"></div></div>
-<div class="sk-l">What passed, next to what is breaking, rather than a list of failures alone</div>
-<div class="sk-row"><div class="sk-u tall"></div></div>
-<div class="sk-l">Per finding: the article behind it, then the fix, in that order</div>
-<div class="sk-row"><div class="sk-u mute"></div></div>
-<div class="sk-l">Seal: timestamp and permanent URL, the part an auditor cites</div>
-</div>
-<div class="it-n">The order is the argument. A finding that led with the fix would read as an opinion, so the clause is always above it and the timestamped seal is always under it.</div>
-</div>
-</div>
-<p class="pm-cap">Structural breakdown of the shipped report, not a screenshot and not an original wireframe.</p>
-</div>
 </div>
 <div class="ww"><div class="img-box"><img src="../assets/cl-dashboard.png" alt="ComplianceLayer dashboard: plan, score, findings, and recent scans"></div>
 <p class="img-caption">The operator dashboard: score, findings, monitors, and recent scans.</p></div>
@@ -203,27 +182,6 @@ hr{border:none;height:1px;background:var(--bd);margin:48px 0}
 <div class="ww"><div class="img-box"><img src="../assets/cl-regulator.png" alt="The four pillars of the ComplianceLayer report"></div></div>
 <div class="w">
 <p class="sp">The second decision followed straight from discovery: refuse to pick one audience. The same scan produces two outputs, a clause-by-clause report for the person who gets the letter, and a developer-ready patch, branded as your own, for the agency that ships the fix. One engine, two surfaces, so neither reader has to translate the other's language.</p>
-<div class="pm">
-<div class="dc">
-<div class="dc-q">The lawyer and the developer never share a language. Which one does the output speak?</div>
-<div class="dc-o chose"><div class="dc-tag">Chose</div><div class="dc-body"><h5>One engine, two surfaces</h5><p>The same scan produces a clause-by-clause report for the person who gets the letter and a developer-ready patch, brandable as the agency's own, for whoever ships the fix.</p></div></div>
-<div class="dc-o alt"><div class="dc-tag">Alternative</div><div class="dc-body"><h5>Picking one audience and making the other translate</h5><p>Cost of the choice I made: two surfaces to design and keep in sync off a single engine, instead of one clean product story.</p></div></div>
-</div>
-</div>
-<div class="pm">
-<div class="dc">
-<div class="dc-q">Is a finding the scanner cannot anchor still worth showing?</div>
-<div class="dc-o chose"><div class="dc-tag">Chose</div><div class="dc-body"><h5>If it could not be traced to a real article and turned into a checkable fix, it was cut</h5><p>Every line cites an article a developer can verify, and every remediation reads as a patch rather than advice. A reviewer can trace the claim, verify it, or throw it out.</p></div></div>
-<div class="dc-o cut"><div class="dc-tag">Rejected</div><div class="dc-body"><h5>Invented severity scores and vague warnings</h5><p>They make a report look thorough and are the fastest way to lose an auditor. Cost of the choice I made: a shorter report that scores worse on apparent coverage than one padded with unanchored warnings.</p></div></div>
-</div>
-</div>
-<div class="pm">
-<div class="dc">
-<div class="dc-q">Does the first scan run before or after an account?</div>
-<div class="dc-o chose"><div class="dc-tag">Chose</div><div class="dc-body"><h5>First scan free, no signup</h5><p>The fastest way to earn trust in a category built on fear is to let someone watch their own site get graded.</p></div></div>
-<div class="dc-o alt"><div class="dc-tag">Alternative</div><div class="dc-body"><h5>Gating the report behind an account</h5><p>Cost of the choice I made: the most valuable output is given away before anyone has committed anything, and anonymous sessions tell me far less about who is scanning.</p></div></div>
-</div>
-</div>
 </div>
 <div class="ww"><div class="img-box"><img src="../assets/cl-audiences.png" alt="Two audiences: the person who gets the letter and the one who writes the fix"></div></div>
 <div class="w">
@@ -248,36 +206,13 @@ hr{border:none;height:1px;background:var(--bd);margin:48px 0}
 <div class="cd"><h4>No clause, no finding</h4><p>Vague warnings were removed until every line cited an article a developer could verify.</p></div>
 <div class="cd"><h4>Fixes that paste</h4><p>Remediations were rewritten until they read as a patch, not advice.</p></div>
 </div>
-<div class="pm">
-<div class="pm-h">What survives in a finding, before and after</div>
-<div class="pba">
-  <div class="pba-row before">
-    <div class="pba-lab"><span class="t">Before tuning</span><span class="n">Alarming, hard to act on</span></div>
-    <div class="pba-steps">
-      <span class="st-c keep">Scan the page</span><span class="pba-arw">&rarr;</span>
-      <span class="st-c cut">Vague warning, no article</span><span class="pba-arw">&rarr;</span>
-      <span class="st-c cut">Remediation written as advice</span>
-    </div>
-  </div>
-  <div class="pba-row">
-    <div class="pba-lab"><span class="t">After tuning</span><span class="n">Traceable, or it is not shipped</span></div>
-    <div class="pba-steps">
-      <span class="st-c keep">Scan the page</span><span class="pba-arw">&rarr;</span>
-      <span class="st-c new">Named article a developer can verify</span><span class="pba-arw">&rarr;</span>
-      <span class="st-c new">Copy-paste patch</span><span class="pba-arw">&rarr;</span>
-      <span class="st-c new">Sealed into the certificate</span>
-    </div>
-  </div>
-</div>
-<p class="pm-cap">The change came from pointing the scanner at real production sites and reading the output as a sceptical auditor would. <b>This was self-QA, not user research,</b> and the before state is my own first build, not another product.</p>
-</div>
 </div>
 
 <div class="w"><hr>
 <div class="sl">Results</div>
 <h2 class="sh">Live, and since widened</h2>
-<p class="sp">The scanner shipped and still runs: a free first scan with no signup, a scored certificate at a permanent URL, and monitors that re-scan on a schedule. It collapsed an expensive, lawyer-shaped process into a one-minute report two different readers could act on.</p>
-<p class="sp">Since then it has been rebuilt as <b>Attestloop</b> and the scope has widened. Where this case study scanned a deployed site against EAA, GDPR, DSA and NIS2, the product now also scans repositories and AI systems, maps findings to SOC 2, ISO 27001 and the EU AI Act, and keeps the evidence a buyer asks for. The clause-then-fix pattern designed here is what the wider product still runs on.</p>
+<p class="sp">The scanner shipped and still runs: a free first scan with no signup, a scored certificate at a permanent URL, and monitors that re-scan on a schedule.</p>
+<p class="sp">Since then it has been rebuilt as <b>Attestloop</b>. Where this work scanned a deployed site against EAA, GDPR, DSA and NIS2, the product now also scans repositories and AI systems. The clause-then-fix pattern designed here is what it still runs on.</p>
 <div class="cta-row" style="margin-top:8px">
 <a href="https://compliancelayer-production.up.railway.app/" target="_blank" rel="noopener" class="btnp">Try it live on Attestloop ↗</a>
 </div>

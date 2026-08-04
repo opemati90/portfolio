@@ -164,7 +164,6 @@ hr{border:none;height:1px;background:var(--bd);margin:48px 0}
 @media(max-width:768px){.w,.ww{padding:0 20px}.mg,.metrics{grid-template-columns:1fr 1fr}.cg,.tg2,.img-row{grid-template-columns:1fr}.img-row-3{grid-template-columns:1fr 1fr}.wh{grid-template-columns:1fr}nav{padding:0 20px}}
 </style>
 <link rel="stylesheet" href="../assets/a11y.css">
-<link rel="stylesheet" href="../assets/process.css">
 <link rel="stylesheet" media="print" href="../assets/print.css">
 <!-- Microsoft Clarity -->
 <script type="text/javascript">
@@ -215,28 +214,6 @@ hr{border:none;height:1px;background:var(--bd);margin:48px 0}
 <div class="cg">
 <div class="cd"><h4>Interview findings</h4><p>Users wanted three things: see total balance in their local currency, send crypto as easily as a bank transfer, and understand fees before confirming anything.</p></div>
 <div class="cd"><h4>Competitive gaps</h4><p>All competitors use blockchain jargon in their UI. None show fees upfront. Onboarding flows average 8+ steps. No competitor effectively explains what users are doing at each step.</p></div>
-
-
-</div>
-<div class="pm">
-<div class="pm-h">What the research actually produced</div>
-<div class="ev">
-<div class="ev-c"><div class="ev-m">12</div><div class="ev-k">Interviews</div><p>People who hold crypto casually or are interested but intimidated.</p><span class="led">Led to: <b>fiat-first balances</b>, every participant asked what their holdings were worth in local currency.</span></div>
-<div class="ev-c"><div class="ev-m">4</div><div class="ev-k">Wallets audited</div><p>Coinbase Wallet, MetaMask, Trust Wallet and Phantom, scored on language, fee disclosure and onboarding length.</p><span class="led">Led to: <b>plain language and upfront fees</b>, the two things no audited wallet did.</span></div>
-</div>
-<p class="pm-cap">Two inputs, and the specific decision each one forced. Research that changed nothing is not listed.</p>
-</div>
-<div class="pm">
-<div class="pm-h">Four wallets, three criteria</div>
-<table class="cm"><thead><tr><th>Wallet</th><th>Plain language in the UI</th><th>Fees shown before confirming</th><th>Onboarding length</th></tr></thead>
-<tbody>
-<tr><td class="tool">Coinbase Wallet</td><td><span class="no">No</span></td><td><span class="no">No</span></td><td class="note">not scored separately</td></tr>
-<tr><td class="tool">MetaMask</td><td><span class="no">No</span></td><td><span class="no">No</span></td><td class="note">not scored separately</td></tr>
-<tr><td class="tool">Trust Wallet</td><td><span class="no">No</span></td><td><span class="no">No</span></td><td class="note">not scored separately</td></tr>
-<tr><td class="tool">Phantom</td><td><span class="no">No</span></td><td><span class="no">No</span></td><td class="note">not scored separately</td></tr>
-<tr class="gap"><td class="tool">The gap</td><td><span class="yes">Yes</span></td><td><span class="yes">Yes</span></td><td class="note">One idea per screen, and no blockchain term a user has to learn before they can act</td></tr>
-</tbody></table>
-<p class="pm-cap">Only the criteria the audit actually scored are shown. Onboarding length was recorded as an average across the four, <b>8+ steps</b>, so no per-wallet figure is claimed here.</p>
 </div></div>
 
 <div class="w"><hr>
@@ -259,37 +236,6 @@ hr{border:none;height:1px;background:var(--bd);margin:48px 0}
 <div class="sl">Final Designs</div>
 <h2 class="sh">Dark, clean, confidence-building</h2>
 <p class="sp">The dark theme signals premium and security. Every screen prioritizes the user's balance and recent activity. Blockchain jargon is replaced with plain language. Fees are shown upfront, never hidden.</p>
-<div class="pm">
-<div class="pm-h">Anatomy of the wallet home</div>
-<div class="it">
-  <div class="it-p">
-    <div class="it-t"><span class="v">Structure</span><span class="r">Balance first, activity second</span></div>
-    <div class="it-b">
-      <div class="sk">
-        <div class="sk-row"><div class="sk-u hi tall"></div></div>
-        <div class="sk-row"><div class="sk-u"></div><div class="sk-u"></div><div class="sk-u"></div></div>
-        <div class="sk-row"><div class="sk-u mute"></div></div>
-        <div class="sk-row"><div class="sk-u mute"></div></div>
-        <div class="sk-l">Local-currency balance, then send and receive actions, then recent activity</div>
-      </div>
-      <div class="it-n">The balance block leads because interviewees judged their position in local currency, not token amounts. Actions sit directly under it so sending is one reach from the number that prompted it. History fills the rest of the screen because it is scanned, not acted on.</div>
-    </div>
-  </div>
-</div>
-<p class="pm-cap">Structural breakdown of the shipped screen, not a screenshot and not an original wireframe.</p>
-</div>
-<div class="pm">
-<div class="dc"><div class="dc-q">Dark or light as the default theme for a money app?</div>
- <div class="dc-o chose"><div class="dc-tag">Chose</div><div class="dc-body"><h5>Dark as the only theme</h5><p>Dark signals premium and security. In testing, 10 of 12 participants described the dark interface as "more secure" and "more professional".</p></div></div>
- <div class="dc-o cut"><div class="dc-tag">Rejected</div><div class="dc-body"><h5>A light theme matching the audited wallets</h5><p>It is what the competitors ship, so it would have been the safe call. The trust reading in testing was measured against those light-themed competitors, and dark won it.</p></div></div>
-</div>
-</div>
-<div class="pm">
-<div class="dc"><div class="dc-q">Teach the blockchain vocabulary, or replace it?</div>
- <div class="dc-o chose"><div class="dc-tag">Chose</div><div class="dc-body"><h5>Plain language everywhere in the UI</h5><p>Every audited wallet uses blockchain jargon and none of them explains what the user is doing at each step. The product target was a wallet that reads like a banking app, so the vocabulary had to go.</p></div></div>
- <div class="dc-o cut"><div class="dc-tag">Rejected</div><div class="dc-body"><h5>Keep the industry-standard terms and explain them</h5><p>"Gas fees" confused every participant in testing. Explaining a term at the moment someone is about to move money is a cost paid on every transaction, not once.</p></div></div>
-</div>
-</div>
 </div>
 <div class="ww">
 <div class="img-box img-dark"><img src="../assets/bitchain-onboard.png" alt="Onboarding"></div>
@@ -319,56 +265,8 @@ hr{border:none;height:1px;background:var(--bd);margin:48px 0}
 <div class="br"><div class="bl"><span>Would recommend</span><span class="v">88%</span></div><div class="bar"><div class="bf bg" style="width:88%"></div></div></div>
 </div></div>
 <div class="fd s"><div class="sv">Validation</div><h4>Dark theme increased trust perception</h4><p>10/12 users said the dark interface felt "more secure" and "more professional" compared to light-themed competitors.</p></div>
-<div class="pm">
-<div class="pm-h">The send flow, before and after</div>
-<div class="it">
-  <div class="it-p">
-    <div class="it-t"><span class="v">First build</span><span class="r">3 of 12 sent to an invalid address</span></div>
-    <div class="it-b">
-      <div class="sk">
-        <div class="sk-row"><div class="sk-u tall"></div></div>
-        <div class="sk-row"><div class="sk-u mute"></div></div>
-        <div class="sk-l">Typed address field, no validation</div>
-      </div>
-      <div class="it-n">Three participants entered an invalid wallet address and nothing caught it before the confirm step. Send was the weakest task at 85% completion.</div>
-    </div>
-  </div>
-  <div class="it-p v2">
-    <div class="it-t"><span class="v">Revised</span><span class="r">Scanner promoted, entry validated live</span></div>
-    <div class="it-b">
-      <div class="sk">
-        <div class="sk-row"><div class="sk-u hi tall"></div></div>
-        <div class="sk-row"><div class="sk-u"></div></div>
-        <div class="sk-l">QR scanner as the primary input, typed address below it</div>
-      </div>
-      <div class="it-n"><b>Result:</b> the QR scanner became the primary input and typed addresses are validated in real time, so an invalid address is caught while it is being entered rather than at confirmation.</div>
-    </div>
-  </div>
-</div>
-<p class="pm-cap">Schematic of the change, not a screenshot. <b>Only the revised version shipped;</b> the first build is reconstructed from the finding it fixed.</p>
-</div>
-<div class="pm">
-<div class="pm-h">Network fees, before and after</div>
-<div class="pba">
-  <div class="pba-row before">
-    <div class="pba-lab"><span class="t">First build</span><span class="n">"Gas fees" confused every participant</span></div>
-    <div class="pba-steps">
-      <span class="st-c keep">Enter amount</span><span class="pba-arw">&rarr;</span>
-      <span class="st-c keep">Confirm</span><span class="pba-arw">&rarr;</span>
-      <span class="st-c cut">"Gas fee" revealed after confirming</span>
-    </div>
-  </div>
-  <div class="pba-row">
-    <div class="pba-lab"><span class="t">Revised</span><span class="n">Fee named and priced before the commit</span></div>
-    <div class="pba-steps">
-      <span class="st-c keep">Enter amount</span><span class="pba-arw">&rarr;</span>
-      <span class="st-c new">"Network fee" shown with amount and a plain-language tooltip</span><span class="pba-arw">&rarr;</span>
-      <span class="st-c keep">Confirm</span>
-    </div>
-  </div>
-</div>
-<p class="pm-cap">Two changes in one: the term was renamed from "gas fee" to "network fee", and the amount moved ahead of the confirmation instead of behind it.</p>
-</div>
+<div class="fd i"><div class="sv">Improvement</div><h4>Send flow needed address validation</h4><p>3 users entered invalid wallet addresses. Added real-time validation and a QR scanner as the primary input.</p></div>
+<div class="fd c"><div class="sv">Critical</div><h4>"Gas fees" confused everyone</h4><p>Renamed to "Network fee" with a plain-language tooltip. Showed fee amount before confirming, not after.</p></div>
 </div>
 
 <div class="w"><hr>

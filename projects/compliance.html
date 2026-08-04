@@ -164,7 +164,6 @@ hr{border:none;height:1px;background:var(--bd);margin:48px 0}
 @media(max-width:768px){.w,.ww{padding:0 20px}.mg,.metrics{grid-template-columns:1fr 1fr}.cg,.tg2,.img-row{grid-template-columns:1fr}.img-row-3{grid-template-columns:1fr 1fr}.wh{grid-template-columns:1fr}nav{padding:0 20px}}
 </style>
 <link rel="stylesheet" href="../assets/a11y.css">
-<link rel="stylesheet" href="../assets/process.css">
 <link rel="stylesheet" media="print" href="../assets/print.css">
 <!-- Microsoft Clarity -->
 <script type="text/javascript">
@@ -215,15 +214,11 @@ hr{border:none;height:1px;background:var(--bd);margin:48px 0}
 <div class="sl">Research</div>
 <h2 class="sh">30+ sessions with enterprise users</h2>
 <p class="sp">I ran moderated sessions with sustainability managers, analysts, and regulatory leads across energy, finance, manufacturing, and tech. There was no prior design work to build on, but the product was instrumented: the 67% abandon rate and the 4.5-hour median completion time came from product analytics and the recurring complaints in the support queue, which is what made the case for the rebuild concrete.</p>
-<div class="pm">
-<div class="pm-h">What the 30+ sessions actually produced</div>
-<div class="ev">
-<div class="ev-c"><div class="ev-m">16</div><div class="ev-k">User interviews</div><p>Users were not confused by the data itself, but by the system's inability to show where they were and what came next.</p><span class="led">Led to: <b>the persistent step indicator</b>, progress visibility was the single most requested thing.</span></div>
-<div class="ev-c"><div class="ev-m">8</div><div class="ev-k">Task analyses</div><p>Observed real submissions. The most common workaround was a spreadsheet kept alongside the platform to track progress by hand.</p><span class="led">Led to: <b>auto-save and resume</b>, if people track progress outside the tool, the tool is not holding it.</span></div>
-<div class="ev-c"><div class="ev-m">3</div><div class="ev-k">Squads aligned in workshops</div><p>Assumption-testing workshops with product, engineering, and policy.</p><span class="led">Led to: <b>the 30% engagement lift</b>, the changes that shipped were the ones validated in these sessions.</span></div>
-<div class="ev-c"><div class="ev-m">8 of 14</div><div class="ev-k">Steps cleared by policy</div><p>Regulatory mapping with policy experts, separating what compliance actually requires from what legacy process had accumulated.</p><span class="led">Led to: <b>the cut from 14 steps to 6</b>, without weakening a single compliance requirement.</span></div>
-</div>
-<p class="pm-cap">Each row is a research input and the decision it forced. Research that changed nothing is not listed.</p>
+<div class="cg">
+<div class="cd"><h4>User interviews (n=16)</h4><p>Users were not confused by the data itself, but by the system's inability to show where they were and what came next. Progress visibility was the #1 request.</p></div>
+<div class="cd"><h4>Task analysis (n=8)</h4><p>Observed real submissions. Most common workaround: spreadsheets maintained alongside the platform to track progress manually.</p></div>
+<div class="cd"><h4>Stakeholder workshops</h4><p>Facilitated assumption-testing workshops with product, engineering, and policy. Changes validated through these sessions drove the 30% engagement lift.</p></div>
+<div class="cd"><h4>Regulatory mapping</h4><p>Worked with policy experts: 8 of 14 steps could be consolidated without compliance risk. Legal requirements vs. legacy artifacts.</p></div>
 </div></div>
 
 <div class="w"><hr>
@@ -239,51 +234,15 @@ hr{border:none;height:1px;background:var(--bd);margin:48px 0}
 <div class="w"><hr>
 <div class="sl">Design Decisions</div>
 <h2 class="sh">From 14 steps to 6</h2>
-<div class="pm">
-<div class="pm-h">The submission itself, before and after</div>
-<div class="pba">
-  <div class="pba-row before">
-    <div class="pba-lab"><span class="t">Before</span><span class="n">14 steps, 67% abandoned</span></div>
-    <div class="pba-steps">
-      <span class="st-c keep">Organization</span><span class="pba-arw">&rarr;</span>
-      <span class="st-c keep">Scope coverage</span><span class="pba-arw">&rarr;</span>
-      <span class="st-c keep">Target details</span><span class="pba-arw">&rarr;</span>
-      <span class="st-c keep">Review</span><span class="pba-arw">&rarr;</span>
-      <span class="st-c keep">Documentation</span><span class="pba-arw">&rarr;</span>
-      <span class="st-c keep">Submit</span><span class="pba-arw">&rarr;</span>
-      <span class="st-c cut">8 further steps, established by regulatory mapping as legacy artifacts
-      rather than legal requirements, and consolidated away</span>
-    </div>
-  </div>
-  <div class="pba-row">
-    <div class="pba-lab"><span class="t">After</span><span class="n">6 steps, 18% abandoned</span></div>
-    <div class="pba-steps">
-      <span class="st-c keep">Organization</span><span class="pba-arw">&rarr;</span>
-      <span class="st-c keep">Scope coverage</span><span class="pba-arw">&rarr;</span>
-      <span class="st-c keep">Target details</span><span class="pba-arw">&rarr;</span>
-      <span class="st-c new">Review + AI</span><span class="pba-arw">&rarr;</span>
-      <span class="st-c keep">Documentation</span><span class="pba-arw">&rarr;</span>
-      <span class="st-c keep">Submit</span>
-    </div>
-  </div>
-</div>
-<p class="pm-cap">Regulatory mapping with policy experts established that <b>8 of the 14 steps</b> were legacy artifacts rather than legal requirements, so they were consolidated away. Those eight are shown as one block rather than named, because the submission content is under NDA. The six that remain are the six that shipped, and abandonment fell from <b>67% to 18%</b>.</p>
+<div class="flow">
+<div class="fn fn-s">Start</div><span class="fa">→</span><div class="fn fn-a">Organization</div><span class="fa">→</span><div class="fn fn-a">Scope coverage</div><span class="fa">→</span><div class="fn fn-a">Target details</div><span class="fa">→</span><div class="fn fn-a">Review + AI</div><span class="fa">→</span><div class="fn fn-a">Documentation</div><span class="fa">→</span><div class="fn fn-e">Submit</div>
 </div>
 <div class="cg">
 <div class="cd"><h4>Step progress indicator</h4><p>Persistent 6-step bar showing completion, current position, and estimated time. Users can jump between completed steps without losing data.</p></div>
 <div class="cd"><h4>Auto-save + resume</h4><p>Submissions auto-save every 30 seconds and resume exactly where the user left off. Eliminated the #1 complaint.</p></div>
 <div class="cd"><h4>AI-powered scope analysis</h4><p>Recommendation features surfacing guidance from unstructured documents. Users can trust, audit, and override AI outputs.</p></div>
 <div class="cd"><h4>Inline validation</h4><p>Replaced post-submission errors with inline guidance. Users see what is needed as they work, not after they submit.</p></div>
-</div>
-<div class="pm">
-<div class="dc">
- <div class="dc-q">Should the scope analysis decide, or suggest?</div>
- <div class="dc-o chose"><div class="dc-tag">Chose</div><div class="dc-body"><h5>Recommend, explain, let the user decide</h5><p>The AI surfaces guidance from unstructured documents as a recommendation the user can trust, audit, or override. Expert users want control, and in a submission that affects billion-euro climate commitments they are accountable for the answer, not the tool.</p></div></div>
- <div class="dc-o alt"><div class="dc-tag">Alternative</div><div class="dc-body"><h5>Let the AI fill the step directly</h5><p>Faster on paper, but it removes the audit trail the reviewer signs off against, and it asks for trust the feature had not earned. AI recommendation trust scored 3.8 out of 5, the lowest of the validated findings, which is exactly why it stayed a suggestion.</p></div></div>
-</div>
-<p class="pm-cap">The tradeoff I took: a slower step in exchange for an output an expert will actually put their name on.</p>
-</div>
-</div>
+</div></div>
 
 <div class="w"><hr>
 <div class="sl">Results</div>

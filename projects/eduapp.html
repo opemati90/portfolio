@@ -164,7 +164,6 @@ hr{border:none;height:1px;background:var(--bd);margin:48px 0}
 @media(max-width:768px){.w,.ww{padding:0 20px}.mg,.metrics{grid-template-columns:1fr 1fr}.cg,.tg2,.img-row{grid-template-columns:1fr}.img-row-3{grid-template-columns:1fr 1fr}.wh{grid-template-columns:1fr}nav{padding:0 20px}}
 </style>
 <link rel="stylesheet" href="../assets/a11y.css">
-<link rel="stylesheet" href="../assets/process.css">
 <link rel="stylesheet" media="print" href="../assets/print.css">
 <!-- Microsoft Clarity -->
 <script type="text/javascript">
@@ -201,7 +200,7 @@ hr{border:none;height:1px;background:var(--bd);margin:48px 0}
 <div class="sl">The Problem</div>
 <h2 class="sh">The real problem was the phone and the network, not the curriculum</h2>
 <p class="sp">Nigerian secondary students preparing for WAEC, NECO, and JAMB do not lack motivation or content. They lack edtech built for the devices and networks they actually have: entry-level Android phones with 1 to 3GB of RAM, shared data plans, and 2G/3G coverage that drops on the bus and at home. Most existing tools assume Western infrastructure, so they are too heavy to install, too data-hungry to open, and useless the moment the signal goes.</p>
-<p class="sp">The hardest constraints here were physical, not pedagogical. If an app cannot load in seconds on a cheap phone, stay under a few megabytes, and work fully offline, none of the adaptive-learning cleverness reaches the student. So the brief was narrow on purpose: curriculum-aligned, adaptive exam prep that is fast and useful with no connection at all.</p>
+<p class="sp">My point of view going in was that the hardest design constraints were not pedagogical but physical. If an app could not load in seconds on a cheap phone, stay under a few megabytes, and work fully offline, none of the adaptive-learning cleverness would ever reach the student. So the brief I set was narrow on purpose: make curriculum-aligned, adaptive exam prep that is fast and useful with no connection at all.</p>
 </div>
 
 <div class="w"><hr>
@@ -213,42 +212,6 @@ hr{border:none;height:1px;background:var(--bd);margin:48px 0}
 <div class="cd"><h4>Teacher interviews (n=4)</h4><p>Teachers wanted curriculum alignment (WAEC/NECO syllabus), student progress tracking, and a supplement to classroom teaching.</p></div>
 <div class="cd"><h4>Device audit (n=8)</h4><p>Mix of Android 8-12, screens 5-6.5 inches, 1-3GB RAM. App must be under 15MB and load in under 2 seconds on 3G.</p></div>
 <div class="cd"><h4>Competitive analysis</h4><p>Analyzed uLesson, Tuteria, PrepClass, Khan Academy. Gap: none offered true offline-first with curriculum-aligned adaptive learning.</p></div>
-
-
-
-</div>
-<div class="pm">
-<div class="pm-h">What the field research produced</div>
-<div class="ev">
-<div class="ev-c"><div class="ev-m">10</div><div class="ev-k">Student interviews</div><p>Secondary students across Lagos, asked how and where they actually study.</p><span class="led">Led to: <b>offline-first as the product</b>, the number one request was "let me study without data".</span></div>
-<div class="ev-c"><div class="ev-m">4</div><div class="ev-k">Teacher interviews</div><p>Plus 2 school administrators, and classroom observation in session.</p><span class="led">Led to: <b>WAEC/NECO curriculum alignment</b> and class-level progress visibility, a supplement rather than a replacement.</span></div>
-<div class="ev-c"><div class="ev-m">8</div><div class="ev-k">Devices audited</div><p>Android 8-12, screens 5 to 6.5 inches, 1 to 3GB RAM.</p><span class="led">Led to: <b>the hard budgets</b>, under 15MB and under 2 seconds to load on 3G.</span></div>
-<div class="ev-c"><div class="ev-m">4</div><div class="ev-k">Competitors analyzed</div><p>uLesson, Tuteria, PrepClass and Khan Academy.</p><span class="led">Led to: <b>the positioning</b>, none combined true offline-first with curriculum-aligned adaptive learning.</span></div>
-</div>
-<p class="pm-cap">Each input and the decision it forced. Research that changed nothing is not listed.</p>
-</div>
-<div class="pm">
-<div class="pm-h">Where the gap was</div>
-<table class="cm"><thead><tr><th>Tool</th><th>True offline-first with curriculum-aligned adaptive learning</th><th>What I found</th></tr></thead>
-<tbody>
-<tr><td class="tool">uLesson</td><td><span class="no">No</span></td><td class="note">Part of the Nigerian set analysed; none of the four combined the two.</td></tr>
-<tr><td class="tool">Tuteria</td><td><span class="no">No</span></td><td class="note">Part of the Nigerian set analysed; none of the four combined the two.</td></tr>
-<tr><td class="tool">PrepClass</td><td><span class="no">No</span></td><td class="note">Part of the Nigerian set analysed; none of the four combined the two.</td></tr>
-<tr><td class="tool">Khan Academy</td><td><span class="no">No</span></td><td class="note">Part of the set analysed; none of the four combined the two.</td></tr>
-<tr class="gap"><td class="tool">The gap</td><td><span class="yes">Yes</span></td><td class="note">Download over WiFi, study with zero data, every lesson mapped to the syllabus, difficulty adapting to quiz results.</td></tr>
-</tbody></table>
-<p class="pm-cap">One criterion only, because that combination is the only thing the analysis scored. I have not rated these tools on anything my own notes do not cover.</p>
-</div>
-<div class="pm">
-<div class="pm-h">From measured constraint to design decision</div>
-<table class="cm"><thead><tr><th>Measured constraint</th><th>Source</th><th>What it forced in the design</th></tr></thead>
-<tbody>
-<tr><td class="tool">1 to 3GB RAM, Android 8-12</td><td class="note">Device audit, n=8</td><td class="note">App budget set at under 15MB, so heavy media and framework weight were off the table from day one.</td></tr>
-<tr><td class="tool">2G/3G coverage that drops</td><td class="note">Student interviews, studying in transit</td><td class="note">Every screen loads in under 2 seconds on 3G, and study works fully offline after a WiFi download.</td></tr>
-<tr><td class="tool">Shared and rationed data plans</td><td class="note">Student interviews, n=10</td><td class="note">Text-first content with video as an optional WiFi-time extra, never a requirement.</td></tr>
-<tr><td class="tool">Screens 5 to 6.5 inches, used on a moving bus</td><td class="note">Device audit and field observation</td><td class="note">Larger touch targets, sunlight-readable text, auto-save every 30 seconds.</td></tr>
-</tbody></table>
-<p class="pm-cap">The thesis of this project is that the binding constraints were physical, not pedagogical. This is the chain from measurement to decision.</p>
 </div></div>
 
 <div class="w"><hr>
@@ -269,39 +232,7 @@ hr{border:none;height:1px;background:var(--bd);margin:48px 0}
 <div class="cd"><h4>Curriculum-aligned</h4><p>Every lesson maps to WAEC/NECO syllabus. Search by subject, topic, and exam year.</p></div>
 <div class="cd"><h4>Adaptive paths</h4><p>Quiz results adjust difficulty and recommend review topics. Struggling with quadratics? The app surfaces prerequisite algebra first.</p></div>
 <div class="cd"><h4>Ultra-light UI</h4><p>App under 15MB. Every screen loads in under 2 seconds on 3G. Text-first, video optional for WiFi.</p></div>
-</div>
-<div class="pm">
-<div class="dc"><div class="dc-q">Is offline a fallback mode, or the way the product works?</div>
- <div class="dc-o chose"><div class="dc-tag">Chose</div><div class="dc-body"><h5>Offline-first, with sync on reconnect</h5><p>Lessons download over WiFi and students study completely offline; progress syncs when connectivity returns. In testing, 7 of 8 students named offline access as the reason they would pick this over competitors.</p></div></div>
- <div class="dc-o cut"><div class="dc-tag">Rejected</div><div class="dc-body"><h5>Streaming with an offline fallback</h5><p>It assumes Western infrastructure. On 2G/3G that drops on the bus and at home, an app built around a live connection is useless the moment the signal goes.</p></div></div>
-</div>
-</div>
-<div class="pm">
-<div class="dc"><div class="dc-q">Video-led lessons, or text-led?</div>
- <div class="dc-o chose"><div class="dc-tag">Chose</div><div class="dc-body"><h5>Text-first, video optional for WiFi</h5><p>It is what fits inside a 15MB app that loads in under 2 seconds on 3G, and it respects a shared, rationed data plan.</p></div></div>
- <div class="dc-o cut"><div class="dc-tag">Rejected</div><div class="dc-body"><h5>Video as the default teaching format</h5><p>Cost of the call: video is the more engaging format and the one competitors lead with. It cannot be delivered inside the device and data budgets the audit produced, so it became an extra rather than the spine.</p></div></div>
-</div>
-</div>
-<div class="pm">
-<div class="pm-h">Anatomy of a lesson screen on a 5-inch phone</div>
-<div class="it">
-  <div class="it-p">
-    <div class="it-t"><span class="v">Structure</span><span class="r">Text-first, targets sized for a moving bus</span></div>
-    <div class="it-b">
-      <div class="sk">
-        <div class="sk-row"><div class="sk-u hi tall"></div></div>
-        <div class="sk-row"><div class="sk-u"></div></div>
-        <div class="sk-row"><div class="sk-u"></div></div>
-        <div class="sk-row"><div class="sk-u mute"></div></div>
-        <div class="sk-l">Lesson text carries the teaching, answer targets sized large, optional video last</div>
-      </div>
-      <div class="it-n">Text leads because it is what fits in the size and speed budget and what works with no connection. Interactive targets are oversized for one-handed use in transit, and text is set for sunlight readability. The optional video sits at the bottom, marked as a WiFi-time extra so nobody spends data on it by accident.</div>
-    </div>
-  </div>
-</div>
-<p class="pm-cap">Structural breakdown of the shipped screen, not a screenshot and not an original wireframe.</p>
-</div>
-</div>
+</div></div>
 <div class="ww"><div class="img-box"><img src="../assets/eduapp-cbt.png" alt="Practice exactly like the real exam: a CBT interface mirroring JAMB"></div>
 <p class="img-caption">A CBT practice mode that mirrors the real JAMB exam, so speed and confidence build before exam day.</p></div>
 
@@ -322,29 +253,7 @@ hr{border:none;height:1px;background:var(--bd);margin:48px 0}
 <div class="br"><div class="bl"><span>Quiz engagement</span><span class="v">4.5 / 5</span></div><div class="bar"><div class="bf bg" style="width:90%"></div></div></div>
 </div></div>
 <div class="fd s"><div class="sv">Validation</div><h4>Offline mode was the most valued feature</h4><p>7/8 students said offline access was the reason they would use EduApp over competitors.</p></div>
-<div class="pm">
-<div class="pm-h">The quiz timer, before and after</div>
-<div class="pba">
-  <div class="pba-row before">
-    <div class="pba-lab"><span class="t">First build</span><span class="n">The timer caused anxiety</span></div>
-    <div class="pba-steps">
-      <span class="st-c keep">Pick a topic</span><span class="pba-arw">&rarr;</span>
-      <span class="st-c cut">Timed quiz, no choice</span><span class="pba-arw">&rarr;</span>
-      <span class="st-c keep">Results</span>
-    </div>
-  </div>
-  <div class="pba-row">
-    <div class="pba-lab"><span class="t">Revised</span><span class="n">Untimed practice by default</span></div>
-    <div class="pba-steps">
-      <span class="st-c keep">Pick a topic</span><span class="pba-arw">&rarr;</span>
-      <span class="st-c new">Practice mode, untimed, as the default</span><span class="pba-arw">&rarr;</span>
-      <span class="st-c new">Timed mode available for exam prep</span><span class="pba-arw">&rarr;</span>
-      <span class="st-c keep">Results</span>
-    </div>
-  </div>
-</div>
-<p class="pm-cap">The timer was doing exam-day work during everyday study. Making it opt-in kept the CBT practice mode that mirrors the real JAMB clock, without putting that pressure on a student revising on the bus.</p>
-</div>
+<div class="fd c"><div class="sv">Critical</div><h4>Quiz timer caused anxiety</h4><p>Changed to optional timer with untimed "practice mode" as default. Timed mode for exam prep only.</p></div>
 </div>
 
 <div class="w"><hr>
