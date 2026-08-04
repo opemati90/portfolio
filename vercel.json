@@ -1,0 +1,9 @@
+{
+  "redirects": [
+    {
+      "source": "/projects/compliancelayer.html",
+      "destination": "/projects/attestloop.html",
+      "permanent": true
+    }
+  ]
+}
