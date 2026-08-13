@@ -111,7 +111,7 @@ hr{border:none;height:1px;background:var(--bd);margin:48px 0}
 .img-row img{border-radius:var(--r);border:1px solid var(--bd);width:100%}
 .img-row-3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;margin:24px 0}
 .img-row-3 img{border-radius:var(--r);border:1px solid var(--bd);width:100%}
-.img-caption{font-size:11px;color:var(--tx3);text-align:center;margin-top:8px}
+.img-caption{font-size:11px;color:var(--tx3);text-align:center;margin-top:8px;margin-bottom:48px}
 
 /* Personas */
 .pr{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;margin:20px 0}
@@ -184,8 +184,12 @@ hr{border:none;height:1px;background:var(--bd);margin:48px 0}
 <div class="mg">
 <div class="mc"><dt>Role</dt><dd>Lead Product Designer</dd></div>
 <div class="mc"><dt>Platform</dt><dd>iOS + Android</dd></div>
+<div class="mc"><dt>Surfaces</dt><dd>B2C + B2B</dd></div>
+<div class="mc"><dt>Scope</dt><dd>47 screens, end to end</dd></div>
+<div class="mc"><dt>Discovery</dt><dd>6 weeks, before any screen</dd></div>
+<div class="mc"><dt>Interviews</dt><dd>16, plus operator sessions</dd></div>
+<div class="mc"><dt>Usability</dt><dd>24 users, 2 rounds</dd></div>
 <div class="mc"><dt>Status</dt><dd>TestFlight, live Jul 2026</dd></div>
-<div class="mc"><dt>Users Tested</dt><dd>24 across 2 rounds</dd></div>
 </div>
 </div></section>
 
@@ -278,33 +282,54 @@ hr{border:none;height:1px;background:var(--bd);margin:48px 0}
 </div>
 </div>
 
-<!-- FINAL DESIGNS: ONBOARDING -->
+<!-- FINAL DESIGNS: THE RETURN LOOP, STEP BY STEP -->
 <div class="w"><hr>
 <div class="sl">Final Designs</div>
-<h2 class="sh">Onboarding and item reporting</h2>
-<p class="sp">The onboarding communicates three value props through illustrated screens: report, match, return. Sign-up uses email plus OTP for simplicity, with Google SSO as an alternative. Item reporting is camera-first: photograph the item, add details, pin the location, and post.</p>
+<h2 class="sh">Walking the return loop</h2>
+<p class="sp">The product is one loop with six moments, and each one either builds trust or spends it. What follows is that loop in order, from the minute someone realises an item is gone to the moment it is back, including the path where the claim is refused.</p>
 </div>
 
-<div class="ww"><div class="img-box img-dark"><img src="../assets/renuir-post-onboard.png" alt="Renuir onboarding and the report flow"></div>
+<div class="w">
+<h2 class="sh">Reporting a loss, camera first</h2>
+<p class="sp">Onboarding communicates three value props through illustrated screens: report, match, return. Sign-up is email plus OTP for simplicity, with Google SSO as the alternative. Reporting is camera-first: photograph the item, add details, pin the location, post. The person doing this has just lost something, so the flow asks for the least it can get away with.</p>
+</div>
+<div class="ww"><div class="img-box img-dark"><img src="../assets/renuir-post-onboard.png" alt="Renuir onboarding and the camera-first report flow"></div>
 <p class="img-caption">Onboarding, then a camera-first flow to report an item.</p></div>
 
-<!-- MATCHING + CHAT -->
 <div class="w">
-<h2 class="sh">Matching, verification, and communication</h2>
-<p class="sp">When the AI finds a potential match, both parties see a match confidence score (e.g., 98%). The finder reviews ownership proof (serial numbers, photos, purchase receipts) before approving. In-app messaging coordinates the return without sharing personal contact details.</p>
+<h2 class="sh">The match, and a private channel</h2>
+<p class="sp">When the AI finds a candidate, both sides see a match confidence score rather than a bare yes. In-app messaging then coordinates the return without either party handing over a phone number or an address, which is the single biggest objection finders raised in research.</p>
 </div>
+<div class="ww"><div class="img-box img-dark"><img src="../assets/renuir-chat-match.png" alt="AI match confidence score and the in-app chat"></div>
+<p class="img-caption">Match confidence, then a private chat that never exposes contact details.</p></div>
 
-<div class="ww"><div class="img-box img-dark"><img src="../assets/renuir-chat-match.png" alt="AI match confidence and in-app chat"></div>
-<p class="img-caption">Match confidence, then a private chat to coordinate the return.</p></div>
-
-<!-- RETURN + RESOLUTION -->
 <div class="w">
-<h2 class="sh">Return on the owner's terms, safely</h2>
-<p class="sp">Owners prove the item is theirs with serial numbers, receipts, photos, or warranty documents. The return then happens the way that suits them: an in-person handover at a suggested safe public place, confirmed with a 4-digit code, or shipping through an integrated delivery partner with live tracking. When the evidence does not add up, the finder can decline a claim, and the claimant is told respectfully.</p>
+<h2 class="sh">Proving the item is yours</h2>
+<p class="sp">Ownership is established with serial numbers, receipts, photos, or warranty documents, and the finder reviews the proof before approving. This is the step that carries the most fraud risk and, as testing later showed, the most friction.</p>
 </div>
+<div class="ww"><div class="img-box img-dark"><img src="../assets/renuir-ownership.png" alt="The ownership verification flow, from claim through proof review to approval"></div>
+<p class="img-caption">The full verification flow: claim, evidence, review, decision.</p></div>
 
+<div class="w">
+<h2 class="sh">Handing it over in person</h2>
+<p class="sp">For an in-person return, the app suggests a safe public place and confirms the handover with a four-digit code, so neither person has to judge whether a stranger is trustworthy on the spot. The code is the proof that the item actually changed hands.</p>
+</div>
+<div class="ww"><div class="img-box img-dark"><img src="../assets/renuir-meetup.png" alt="Safe meetup coordination with a location suggestion and a four-digit handover code"></div>
+<p class="img-caption">A suggested public location, then a four-digit code to confirm the handover.</p></div>
+
+<div class="w">
+<h2 class="sh">Or shipping it, tracked</h2>
+<p class="sp">Not everyone wants to meet. The second path ships through an integrated delivery partner with live tracking, so a finder can return an item without ever meeting the owner. Offering both is what makes the loop work for people with opposite comfort levels.</p>
+</div>
+<div class="ww"><div class="img-box img-dark"><img src="../assets/renuir-delivery.png" alt="The shipping return path with label, tracking, and confirmation"></div>
+<p class="img-caption">The shipping path, for finders who would rather not meet anyone.</p></div>
+
+<div class="w">
+<h2 class="sh">When the evidence does not add up</h2>
+<p class="sp">A claim can be wrong, or dishonest. The finder can decline, and the claimant is told respectfully rather than left guessing. Designing the refusal properly matters more than it sounds: it is the moment the platform either protects both sides or makes an enemy of one.</p>
+</div>
 <div class="ww"><div class="img-box" style="background:#c2cbd2"><img src="../assets/renuir-reject.png" alt="A respectful claim-rejection moment"></div>
-<p class="img-caption">Resolution is built to protect both sides, including a respectful decline.</p></div>
+<p class="img-caption">The decline path, written to protect the finder without accusing the claimant.</p></div>
 
 <!-- TESTING -->
 <div class="w"><hr>
