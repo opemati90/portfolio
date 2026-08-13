@@ -324,6 +324,18 @@ h1{
 .exp-c{font-size:13.5px;color:var(--ink-2);font-weight:500}
 .exp-loc{font-family:var(--mono);font-size:11px;color:var(--ink-3);text-align:right;padding-top:6px}
 
+/* PEER RECOMMENDATIONS */
+.rec-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.rec{border:1px solid var(--line);border-radius:var(--r);padding:26px 26px 22px;background:var(--bg);display:flex;flex-direction:column}
+.rec blockquote{font-family:var(--serif);font-size:17px;line-height:1.5;letter-spacing:-0.01em;color:var(--ink);margin-bottom:20px;flex:1}
+.rec-by{border-top:1px solid var(--line);padding-top:14px}
+.rec-n{font-size:13.5px;font-weight:600;letter-spacing:-0.005em}
+.rec-r{font-size:12.5px;color:var(--ink-2);margin-top:2px;line-height:1.45}
+.rec-rel{font-family:var(--mono);font-size:10.5px;text-transform:uppercase;letter-spacing:0.06em;color:var(--ink-3);margin-top:8px}
+.rec-src{margin-top:22px;font-size:13px;color:var(--ink-2)}
+.rec-src a{color:var(--accent);font-weight:500}
+.rec-src a:hover{text-decoration:underline}
+
 /* CTA */
 .cta-wrap{padding:0 0 56px}
 .cta-card{
@@ -397,6 +409,7 @@ footer{
 @media(max-width:1000px){
   .feat{grid-template-columns:1fr}
   .feat .info{border-left:none;border-top:1px solid var(--line)}
+  .rec-grid{grid-template-columns:1fr}
   .about-wrap{grid-template-columns:1fr;gap:48px}
   .foot-wrap{grid-template-columns:1fr 1fr;gap:32px}
 }
@@ -409,6 +422,7 @@ footer{
   .more-list a{grid-template-columns:1fr;gap:4px;padding:16px 0}
   .mw-a{display:none}
   .about-cols{grid-template-columns:1fr;gap:24px}
+  .rec-grid{grid-template-columns:1fr}
   .exp{grid-template-columns:1fr;gap:8px}
   .exp-loc{text-align:left}
   .exp-d{padding-top:0}
@@ -444,6 +458,7 @@ footer{
   <div class="nr">
     <a href="#work">Work</a>
     <a href="#about">About</a>
+    <a href="#recommendations">Recommendations</a>
     <a href="#contact" class="cta">Get in touch</a>
   </div>
 </nav>
@@ -505,9 +520,9 @@ footer{
           </div>
           <div class="info-bot">
             <div class="impact">
-              <div class="imp-i"><div class="imp-n">Solo</div><div class="imp-l">Owned end to end</div></div>
-              <div class="imp-i"><div class="imp-n">Live</div><div class="imp-l">On anstoss.io</div></div>
-              <div class="imp-i"><div class="imp-n">AI</div><div class="imp-l">Scoped to assist</div></div>
+              <div class="imp-i"><div class="imp-n">10+</div><div class="imp-l">Tools replaced</div></div>
+              <div class="imp-i"><div class="imp-n">4</div><div class="imp-l">Roles, one app</div></div>
+              <div class="imp-i"><div class="imp-n">Live</div><div class="imp-l">Android + iOS</div></div>
             </div>
             <span class="read">Read case study →</span>
           </div>
@@ -581,8 +596,8 @@ footer{
           <div class="info-bot">
             <div class="impact">
               <div class="imp-i"><div class="imp-n">47</div><div class="imp-l">Screens</div></div>
-              <div class="imp-i"><div class="imp-n">8</div><div class="imp-l">Locales</div></div>
-              <div class="imp-i"><div class="imp-n">B2C+B2B</div><div class="imp-l">Surfaces</div></div>
+              <div class="imp-i"><div class="imp-n">94%</div><div class="imp-l">Task completion</div></div>
+              <div class="imp-i"><div class="imp-n">84</div><div class="imp-l">SUS score</div></div>
             </div>
             <span class="read">Read case study →</span>
           </div>
@@ -606,7 +621,7 @@ footer{
           <div class="info-bot">
             <div class="impact">
               <div class="imp-i"><div class="imp-n">14→6</div><div class="imp-l">Steps</div></div>
-              <div class="imp-i"><div class="imp-n">1000s</div><div class="imp-l">Companies</div></div>
+              <div class="imp-i"><div class="imp-n">67&rarr;18%</div><div class="imp-l">Abandon rate</div></div>
               <div class="imp-i"><div class="imp-n">30+</div><div class="imp-l">Research Sessions</div></div>
             </div>
             <span class="read">Read case study →</span>
@@ -697,6 +712,45 @@ footer{
         </div>
       </div>
     </div>
+  </div>
+</section>
+
+<!-- RECOMMENDATIONS -->
+<section class="s" id="recommendations">
+  <div class="w">
+    <div class="section-head">
+      <div class="left">
+        <h2 class="st rv">What the people I worked with say.</h2>
+        <p class="sd rv">Unedited except for length. Each one is a public LinkedIn recommendation, with the working relationship stated.</p>
+      </div>
+    </div>
+    <div class="rec-grid">
+      <div class="rec rv">
+        <blockquote>&ldquo;Together, we have crafted dashboards and intricate user flows. Opeyemi has a quick understanding and has the ability to adapt functions and patterns across different screen flows effectively.&rdquo;</blockquote>
+        <div class="rec-by">
+          <div class="rec-n">Judith Biedenkapp</div>
+          <div class="rec-r">Senior Product Designer for Enterprises</div>
+          <div class="rec-rel">Reported to Opeyemi</div>
+        </div>
+      </div>
+      <div class="rec rv">
+        <blockquote>&ldquo;He combines an innate understanding of user needs with business goals, creating intuitive and visually compelling designs. His data-driven approach and fluency in design tools bring innovation to the team.&rdquo;</blockquote>
+        <div class="rec-by">
+          <div class="rec-n">Stanley Agu</div>
+          <div class="rec-r">Entrepreneur and Business Architect, two-time founder</div>
+          <div class="rec-rel">Worked with Opeyemi</div>
+        </div>
+      </div>
+      <div class="rec rv">
+        <blockquote>&ldquo;A professional who stands out with his ability to translate intricate user and business needs into intuitive and meaningful designs, a testament to his expertise in User Experience and User Interface Design.&rdquo;</blockquote>
+        <div class="rec-by">
+          <div class="rec-n">Oyindamola Akinleye</div>
+          <div class="rec-r">Senior Product Designer at Zalando, design mentor</div>
+          <div class="rec-rel">Was Opeyemi&rsquo;s mentor</div>
+        </div>
+      </div>
+    </div>
+    <p class="rec-src rv">All three are verifiable on <a href="https://www.linkedin.com/in/ajimatiopeyemi/details/recommendations/" target="_blank" rel="noopener">LinkedIn &#8599;</a></p>
   </div>
 </section>
 
