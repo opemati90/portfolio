@@ -221,7 +221,7 @@ hr{border:none;height:1px;background:var(--bd);margin:48px 0}
 
 <div class="w">
   <div class="nda">
-    <div class="nda-icon">🔒</div>
+    <div class="nda-icon"></div>
     <div>
       <h4>Work under NDA</h4>
       <p>Due to a non-disclosure agreement, I cannot show the final production UI. This case study focuses on my process, methodology, design decisions, and measurable outcomes. The component previews shown are simplified representations, not actual product screens.</p>
@@ -294,40 +294,25 @@ hr{border:none;height:1px;background:var(--bd);margin:48px 0}
   <div class="w" style="padding:0">
     <hr>
     <div class="slab">Design Tokens</div>
-    <h2 class="stitle">The foundation layer</h2>
-    <p class="stext">I established a token architecture that separates primitive values (raw colors, pixel sizes) from semantic tokens (what they mean in context). This lets us theme the system and maintain consistency even as the visual language evolves.</p>
+    <h2 class="stitle">Separating primitive values from meaning</h2>
+    <p class="stext">The architecture separates primitive values from semantic tokens. Primitives are raw colours and pixel sizes; semantic tokens name what a value means in context. Engineers consume the semantic layer only, so the visual language can change without touching product code, and a designer and an engineer arguing about a state are arguing about the same named thing.</p>
   </div>
 
   <div class="ds-visual">
     <div class="token-grid">
       <div class="token-group">
-        <h5>Color primitives</h5>
-        <div class="token-row"><div class="token-swatch" style="background:#0A0A0A"></div><div><div class="token-label">Gray 900</div><div class="token-value">--gray-900: #0A0A0A</div></div></div>
-        <div class="token-row"><div class="token-swatch" style="background:#555"></div><div><div class="token-label">Gray 600</div><div class="token-value">--gray-600: #555555</div></div></div>
-        <div class="token-row"><div class="token-swatch" style="background:#999"></div><div><div class="token-label">Gray 400</div><div class="token-value">--gray-400: #999999</div></div></div>
-        <div class="token-row"><div class="token-swatch" style="background:#EBEBEB"></div><div><div class="token-label">Gray 200</div><div class="token-value">--gray-200: #EBEBEB</div></div></div>
-        <div class="token-row"><div class="token-swatch" style="background:#F5F5F5"></div><div><div class="token-label">Gray 100</div><div class="token-value">--gray-100: #F5F5F5</div></div></div>
-        <div class="token-row"><div class="token-swatch" style="background:#16A34A"></div><div><div class="token-label">Green 600</div><div class="token-value">--green-600: #16A34A</div></div></div>
-        <div class="token-row"><div class="token-swatch" style="background:#DC2626"></div><div><div class="token-label">Red 600</div><div class="token-value">--red-600: #DC2626</div></div></div>
+        <h5>Primitive</h5>
+        <div class="token-row"><div class="token-swatch" style="background:#0A0A0A"></div><div><div class="token-label">Gray 900</div><div class="token-value">a raw value, no meaning</div></div></div>
+        <div class="token-row"><div class="token-swatch" style="background:#16A34A"></div><div><div class="token-label">Green 600</div><div class="token-value">a raw value, no meaning</div></div></div>
       </div>
       <div class="token-group">
-        <h5>Spacing scale</h5>
-        <div class="spacing-row"><div class="spacing-label">4px</div><div class="spacing-block" style="width:16px"></div></div>
-        <div class="spacing-row"><div class="spacing-label">8px</div><div class="spacing-block" style="width:32px"></div></div>
-        <div class="spacing-row"><div class="spacing-label">12px</div><div class="spacing-block" style="width:48px"></div></div>
-        <div class="spacing-row"><div class="spacing-label">16px</div><div class="spacing-block" style="width:64px"></div></div>
-        <div class="spacing-row"><div class="spacing-label">24px</div><div class="spacing-block" style="width:96px"></div></div>
-        <div class="spacing-row"><div class="spacing-label">32px</div><div class="spacing-block" style="width:128px"></div></div>
-        <div class="spacing-row"><div class="spacing-label">48px</div><div class="spacing-block" style="width:192px"></div></div>
+        <h5>Semantic</h5>
+        <div class="token-row"><div class="token-swatch" style="background:#0A0A0A"></div><div><div class="token-label">text-primary</div><div class="token-value">what it means in context</div></div></div>
+        <div class="token-row"><div class="token-swatch" style="background:#16A34A"></div><div><div class="token-label">status-validated</div><div class="token-value">what it means in context</div></div></div>
       </div>
       <div class="token-group">
-        <h5>Typography scale</h5>
-        <div style="margin-bottom:12px"><div style="font-size:24px;font-weight:700;letter-spacing:-0.03em;line-height:1.2">Heading XL</div><div class="token-value">24px / 700 / -0.03em</div></div>
-        <div style="margin-bottom:12px"><div style="font-size:18px;font-weight:600;letter-spacing:-0.02em">Heading L</div><div class="token-value">18px / 600 / -0.02em</div></div>
-        <div style="margin-bottom:12px"><div style="font-size:14px;font-weight:600">Heading M</div><div class="token-value">14px / 600</div></div>
-        <div style="margin-bottom:12px"><div style="font-size:14px;color:var(--tx2)">Body</div><div class="token-value">14px / 400 / 1.55 lh</div></div>
-        <div style="margin-bottom:12px"><div style="font-size:12px;color:var(--tx3)">Caption</div><div class="token-value">12px / 400 / 1.4 lh</div></div>
-        <div><div style="font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:1px;color:var(--tx3)">OVERLINE</div><div class="token-value">10px / 600 / uppercase</div></div>
+        <h5>Why the split</h5>
+        <p class="stext" style="font-size:13px;margin:0">Squads referenced raw hexes, so a brand change meant hunting values across three codebases. Naming by meaning made the palette swappable and gave reviewers a vocabulary for arguing about intent rather than about colour.</p>
       </div>
     </div>
   </div>
@@ -388,7 +373,7 @@ hr{border:none;height:1px;background:var(--bd);margin:48px 0}
   <p class="stext">The design system now powers every screen in the platform. Here is where the components live in context. Due to NDA, I cannot show the actual product UI, but I can share the structural patterns.</p>
 
   <div class="redacted">
-    <div class="redacted-icon">🔒</div>
+    <div class="redacted-icon"></div>
     <h4>Production screens under NDA</h4>
     <p>Due to confidentiality, some interface details are simplified or omitted. I can discuss the process, decisions and collaboration model in more detail in an interview.</p>
   </div>
