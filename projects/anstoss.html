@@ -107,15 +107,15 @@ hr{border:none;height:1px;background:var(--bd);margin:48px 0}
 <section class="hero"><div class="w">
 <div class="tags"><span class="tg">Product Management</span><span class="tg">0 to 1</span><span class="tg">AI Product</span><span class="tg">Side Project</span><span class="tg">Android &amp; iOS</span><span class="tg">In store review</span></div>
 <h1>Anstoss: one app for the <em>whole club</em>.</h1>
-<p class="lead">Amateur football clubs run on a pile of tools that were never built for them: WhatsApp for chat, Doodle for RSVPs, a PDF for the lineup, a spreadsheet for the table. Anstoss replaces all of it with one white-label app in the club's own colours. A side project I took end to end on my own: the research, the UX, and the code, for Android and iOS.</p>
+<p class="lead">Amateur football clubs run on a pile of tools that were never built for them: WhatsApp for chat, Doodle for RSVPs, a PDF for the lineup, a spreadsheet for the table. Anstoss replaces all of it with one white-label app in the club's own colours. An independent side project where I owned the product decisions: the research, the workflows and the interface, taken to functional Android and iOS builds with AI-assisted tooling.</p>
 <div class="cta-row">
 <a href="https://anstoss.io/" target="_blank" rel="noopener" class="btnp">Visit the live site at anstoss.io ↗</a>
 <a href="#research" class="btng">Read the process</a>
 </div>
 <div class="mg">
-<div class="mc"><dt>Role</dt><dd>Product, design and build, solo</dd></div>
+<div class="mc"><dt>Role</dt><dd>Product Designer, independent side project</dd></div>
 <div class="mc"><dt>Platform</dt><dd>Android &amp; iOS</dd></div>
-<div class="mc"><dt>Scope</dt><dd>Owned end to end</dd></div>
+<div class="mc"><dt>Scope</dt><dd>Strategy, research, UX/UI, AI-assisted prototyping, testing</dd></div>
 <div class="mc"><dt>Users</dt><dd>4 roles, one app</dd></div>
 <div class="mc"><dt>Replaces</dt><dd>A 10+ tool stack</dd></div>
 <div class="mc"><dt>Feature gate</dt><dd>6 questions, most failed</dd></div>
@@ -136,7 +136,7 @@ hr{border:none;height:1px;background:var(--bd);margin:48px 0}
 
 <div class="w" id="research"><hr>
 <div class="sl">Research</div>
-<h2 class="sh">I started inside the problem</h2>
+<h2 class="sh">Research and current-state analysis</h2>
 <p class="sp">Anstoss began as my own Sunday-morning admin. I help run an amateur side, so the tool-chaos was lived, not researched from a distance. To turn that into a brief I did three things: mapped every tool a club touches across a single match week, ran informal interviews with coaches and club admins at other clubs, and read the support threads where volunteers ask each other how to keep a squad organised. Three patterns came back every time.</p>
 <div class="fd"><h4>The coach is also the admin</h4><p>One volunteer owns comms, attendance, lineup, and the kit. Any tool that adds work, however small, gets dropped by the next fixture.</p></div>
 <div class="fd"><h4>Information is scattered and stale</h4><p>The lineup lives in a screenshot, RSVPs in a poll, the table in a browser tab. Nothing is a source of truth, so the same questions get re-asked in the group every week.</p></div>
@@ -145,7 +145,7 @@ hr{border:none;height:1px;background:var(--bd);margin:48px 0}
 
 <div class="w"><hr>
 <div class="sl">Define</div>
-<h2 class="sh">The bet, and the gate every feature had to pass</h2>
+<h2 class="sh">Product hypothesis and prioritisation criteria</h2>
 <p class="sp">The bet: a club will replace ten tools with one, but only if the one feels like the club rather than like software. With no PM to argue with and no roadmap to hide behind, I needed a gate that would stop me building things I merely found interesting. Every feature that tempted its way in had to answer these six questions first, and most did not.</p>
 <div class="wh">
 <div class="wh-item"><strong>Who</strong><p>Volunteer coaches, players, and parents at amateur and youth clubs.</p></div>
@@ -186,7 +186,7 @@ hr{border:none;height:1px;background:var(--bd);margin:48px 0}
 
 <div class="w"><hr>
 <div class="sl">Design Decisions</div>
-<h2 class="sh">The club's identity, not mine</h2>
+<h2 class="sh">Club identity influenced adoption</h2>
 <p class="sp">Because belonging was the deepest insight, the headline design decision was white-label by default: club colours, crest, and kit, with no generic blue and no Anstoss branding on top of someone else's identity. The in-app surfaces, match day and team chat, are designed to feel like the club's own product, down to translating messages so a mixed-language squad can still read the group.</p>
 </div>
 <div class="ww"><div class="img-box img-dark"><img src="../assets/anstoss-inapp.png" alt="In-app match day and team chat, themed in the club's colours"></div>
@@ -198,7 +198,7 @@ hr{border:none;height:1px;background:var(--bd);margin:48px 0}
 
 <div class="w"><hr>
 <div class="sl">Prioritisation</div>
-<h2 class="sh">What I said no to, and what it cost</h2>
+<h2 class="sh">Scope decisions and trade-offs</h2>
 <p class="sp">The hardest product work on Anstoss was not choosing features. It was refusing them while being the only person who would feel the pain of refusing. Three calls shaped the product more than anything I built.</p>
 <div class="cg">
 <div class="cd"><h4>No generic theme, ever</h4><p>White-label per club was the whole bet, so I would not ship a default blue skin to make onboarding faster. <strong>The cost:</strong> every club starts from a blank crest, and there is no single screenshot of "Anstoss" to market. I would now ship a strong default identity a club edits down, rather than one it builds up from nothing.</p></div>
@@ -219,11 +219,11 @@ hr{border:none;height:1px;background:var(--bd);margin:48px 0}
 
 <div class="w"><hr>
 <div class="sl">Build</div>
-<h2 class="sh">I didn't hand this off. I shipped it.</h2>
-<p class="sp">Writing the code myself changed the design. When a feature was mine to build and not just to spec, the ones that only worked in a mockup got cut before they wasted a sprint. The design held because it had to compile.</p>
+<h2 class="sh">From design to a functional product</h2>
+<p class="sp">I used Claude Code and Cursor to turn detailed product requirements and interface designs into functional Android and iOS builds. My responsibility stayed product design: defining the workflows, reviewing the generated implementation, testing behaviour, finding edge cases and iterating on usability. Functional testing exposed constraints that were not visible in a static prototype, and features that only worked in a mockup were cut before they reached a build.</p>
 <div class="fd"><h4>The floating overlay</h4><p>The signature feature surfaces key actions on top of other apps. Designing it meant living inside real Android constraints, overlay permissions, draw-over behaviour, and battery. It had to be useful in one tap and invisible the rest of the time.</p></div>
 <div class="fd"><h4>AI that keeps the coach deciding</h4><p>AI surfaces squad insights but never picks the lineup. I designed it as suggestions a coach accepts or ignores, so the bench decision stays with the person who has to answer for it on Sunday.</p></div>
-<div class="fd"><h4>Shipping reality</h4><p>Getting to the store meant app signing, deep-link verification, and a review queue, the unglamorous work that decides whether a design ever reaches a phone. Coding it with AI build tools kept that loop short enough to learn from.</p></div>
+<div class="fd"><h4>Shipping reality</h4><p>Getting to the store meant app signing, deep-link verification, and a review queue, the unglamorous work that decides whether a design ever reaches a phone. AI-assisted tooling kept that loop short enough to learn from.</p></div>
 </div>
 
 <div class="w"><hr>
@@ -240,7 +240,7 @@ hr{border:none;height:1px;background:var(--bd);margin:48px 0}
 <div class="w"><hr>
 <div class="sl">Results</div>
 <h2 class="sh">Where the product stands</h2>
-<p class="sp">Anstoss is built for Android and iOS and submitted for store review. It is free for amateur clubs, with a white-label build per club, and the floating overlay and AI features work in the current builds. It replaced the ten-tool stack with one app, and proved out a design-engineering way of working: research the problem, design the system, write the code, and let real use reshape it.</p>
+<p class="sp">Anstoss is built for Android and iOS and submitted for store review. It is free for amateur clubs, with a white-label build per club, and the floating overlay and AI features work in the current builds. It replaced the ten-tool stack with one app, and proved out a way of working: research the problem, design the system, reach a functional build with AI-assisted tooling, and let real use reshape it.</p>
 <div class="cta-row" style="margin-top:8px">
 <a href="https://anstoss.io/" target="_blank" rel="noopener" class="btnp">See it live at anstoss.io ↗</a>
 </div>

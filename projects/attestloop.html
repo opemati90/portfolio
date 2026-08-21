@@ -104,15 +104,15 @@ hr{border:none;height:1px;background:var(--bd);margin:48px 0}
 <main id="main" tabindex="-1">
 
 <section class="hero"><div class="w">
-<div class="tags"><span class="tg">Design Engineer</span><span class="tg">B2B SaaS</span><span class="tg">Live Product</span><span class="tg">Compliance UX</span></div>
+<div class="tags"><span class="tg">Product Experiment</span><span class="tg">B2B SaaS</span><span class="tg">Live Product</span><span class="tg">Compliance UX</span></div>
 <h1>Attestloop: read the fine print, so you <em>don't pay for it</em>.</h1>
-<p class="lead">EU digital regulation arrived all at once: the EAA is enforced, alongside GDPR, the DSA, and NIS2. Most teams have no idea which clause their site is breaking, or how to fix it. Attestloop scans a site, names the exact clause, and writes the remediation: evidence for an auditor, a patch for a developer. I ran the UX and shipped it as a live product.</p>
+<p class="lead">EU digital regulation arrived all at once: the EAA is enforced, alongside GDPR, the DSA, and NIS2. Most teams have no idea which clause their site is breaking, or how to fix it. Attestloop scans a site, names the exact clause, and writes the remediation: evidence for an auditor, a patch for a developer. I defined the problem, designed the workflow and report, and used AI-assisted tooling to produce a functional implementation I could test against real sites.</p>
 <div class="cta-row">
 <a href="https://compliancelayer-production.up.railway.app/" target="_blank" rel="noopener" class="btnp">Try it live ↗</a>
 <a href="#research" class="btng">Read the process</a>
 </div>
 <div class="mg">
-<div class="mc"><dt>Role</dt><dd>UX &amp; Design Engineer</dd></div>
+<div class="mc"><dt>Role</dt><dd>Product Designer, AI-assisted prototype</dd></div>
 <div class="mc"><dt>Type</dt><dd>B2B SaaS</dd></div>
 <div class="mc"><dt>Frameworks</dt><dd>EAA, GDPR, DSA, NIS2</dd></div>
 <div class="mc"><dt>Time to report</dt><dd>About one minute</dd></div>
@@ -173,7 +173,7 @@ hr{border:none;height:1px;background:var(--bd);margin:48px 0}
 
 <div class="w"><hr>
 <div class="sl">Design Decisions</div>
-<h2 class="sh">Everything a regulator would ask for</h2>
+<h2 class="sh">Report structure and traceability</h2>
 <p class="sp">I structured the report around the four questions an auditor actually asks. That structure was also a guardrail: every finding has to cite a real article, propose a real fix, and stand up as evidence, or it does not ship.</p>
 <div class="cg">
 <div class="cd"><h4>The clause, named</h4><p>Every finding points to the exact article behind it, such as a specific GDPR Article 13 disclosure gap. No invented severity scores.</p></div>
@@ -199,11 +199,11 @@ hr{border:none;height:1px;background:var(--bd);margin:48px 0}
 
 <div class="w"><hr>
 <div class="sl">Build</div>
-<h2 class="sh">Designed and shipped, not just specced</h2>
-<p class="sp">I built it as a live service rather than a spec, so every decision had to survive contact with a real scan instead of looking right in a deck.</p>
+<h2 class="sh">From design to a functional prototype</h2>
+<p class="sp">I took it to a functional service rather than a spec, so every decision had to survive contact with a real scan instead of looking right in a deck.</p>
 <div class="fd"><h4>The certificate is the credibility</h4><p>A compliance buyer trusts a dated, verifiable record at a permanent URL, not a number on a landing page. So I designed the output to read like evidence an auditor would accept, down to the timestamp and the article reference, because that is the difference between a tool they cite and a tool they ignore.</p></div>
 <div class="fd"><h4>AI you can audit</h4><p>The scanner uses models to read pages and draft fixes, but every finding is anchored to a named clause and a checkable patch. A reviewer can trace the claim, verify it, or throw it out, the machine proposes and the human disposes.</p></div>
-<div class="fd"><h4>Built with AI tooling</h4><p>I moved from concept to a live, scanning product using AI build tools, treating prototyping in code as the design medium, not a step after it.</p></div>
+<div class="fd"><h4>AI-assisted implementation</h4><p>I moved from concept to a live, scanning product using AI build tools, using AI-assisted tooling to reach a working build I could test, rather than stopping at a specification.</p></div>
 </div>
 
 <div class="w"><hr>
@@ -218,7 +218,7 @@ hr{border:none;height:1px;background:var(--bd);margin:48px 0}
 
 <div class="w"><hr>
 <div class="sl">Results</div>
-<h2 class="sh">Live, and still growing</h2>
+<h2 class="sh">Current status and scope</h2>
 <p class="sp">The scanner shipped and still runs: a free first scan with no signup, a scored certificate at a permanent URL, and monitors that re-scan on a schedule.</p>
 <p class="sp">It has grown since. Where this work scanned a deployed site against EAA, GDPR, DSA and NIS2, Attestloop now also scans repositories and AI systems, and maps findings to SOC 2, ISO 27001 and the EU AI Act. The clause-then-fix pattern designed here is what it still runs on.</p>
 <div class="cta-row" style="margin-top:8px">

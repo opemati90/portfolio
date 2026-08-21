@@ -118,6 +118,7 @@ hr{border:none;height:1px;background:var(--bd);margin:48px 0}
 .pc{background:var(--sf);border:1px solid var(--bd);border-radius:10px;padding:22px}
 .pc h4{font-size:14px;font-weight:600;margin-bottom:2px}
 .pc .rl{font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:1px;color:var(--tx3);margin-bottom:10px}
+.rolefact{font-size:12.5px;color:var(--tx2);line-height:1.55;padding-left:10px;border-left:2px solid var(--bd2);margin-bottom:12px}
 .pc blockquote{font-style:italic;font-size:12.5px;color:var(--tx2);border-left:2px solid var(--bd2);padding-left:10px;margin-bottom:12px;line-height:1.5}
 .pc dl dt{font-size:9px;font-weight:600;text-transform:uppercase;letter-spacing:1px;color:var(--tx3);margin-top:10px}
 .pc dl dd{font-size:12px;color:var(--tx2);line-height:1.5}
@@ -188,16 +189,16 @@ hr{border:none;height:1px;background:var(--bd);margin:48px 0}
 <div class="mc"><dt>Scope</dt><dd>47 screens, end to end</dd></div>
 <div class="mc"><dt>Discovery</dt><dd>6 weeks, before any screen</dd></div>
 <div class="mc"><dt>Interviews</dt><dd>16, plus operator sessions</dd></div>
-<div class="mc"><dt>Usability</dt><dd>24 users, 2 rounds</dd></div>
+<div class="mc"><dt>Evidence</dt><dd>Prototype usability testing, 24 users</dd></div>
 <div class="mc"><dt>Status</dt><dd>In TestFlight</dd></div>
 </div>
 </div></section>
 
 <div class="w"><div class="metrics">
 <div class="mt"><div class="n">47</div><div class="l">Screens designed, end to end</div></div>
-<div class="mt"><div class="n">94%</div><div class="l">Report task completion, in Maze</div></div>
-<div class="mt"><div class="n">4.3/5</div><div class="l">Trust score, moderated round</div></div>
-<div class="mt"><div class="n">84</div><div class="l">SUS, moderated round</div></div>
+<div class="mt"><div class="n">94%</div><div class="l">Report task completion, unmoderated prototype test</div></div>
+<div class="mt"><div class="n">4.3/5</div><div class="l">Trust score, moderated prototype round</div></div>
+<div class="mt"><div class="n">84</div><div class="l">SUS, moderated prototype round</div></div>
 </div></div>
 
 <div class="ww"><div class="img-box" style="background:#c3c8ce"><img src="../assets/renuir-home.png" alt="Renuir home screen in hand"></div></div>
@@ -229,12 +230,12 @@ hr{border:none;height:1px;background:var(--bd);margin:48px 0}
 <div class="w"><hr>
 <div class="sl">Research</div>
 <h2 class="sh">6 weeks of deep research</h2>
-<p class="sp">I spent 6 weeks in discovery before designing a single screen. I interviewed people who lost items, people who found items, and lost-and-found office operators. I mapped the regulatory landscape across Germany and the EU to understand legal requirements around found property.</p>
+<p class="sp">I spent 6 weeks in discovery before designing a single screen. I interviewed people who lost items, people who found items, and lost-and-found office operators. I mapped the EU regulatory landscape to understand legal requirements around found property.</p>
 
 <div class="cg">
 <div class="cd"><h4>User interviews (n=16)</h4><p>Spoke with 8 "losers" (people who lost items), 4 "finders," and 4 lost-and-found operators across three European cities. Key finding: the emotional distress of losing items is severely underestimated. It is not just about the object's monetary value.</p></div>
-<div class="cd"><h4>Competitive analysis</h4><p>Analyzed 8 solutions (iLost, Tile, Foundit, BVG Fundburo). Most were device-only (Tile) or single-organization (iLost). None offered a true cross-organization protocol. This validated our infrastructure-first approach.</p></div>
-<div class="cd"><h4>Regulatory mapping</h4><p>German law (BGB sections 965-984) defines legal obligations for finders. EU GDPR adds complexity around sharing personal data between parties. These constraints directly shaped the ownership verification and data-handling flows.</p></div>
+<div class="cd"><h4>Competitive analysis</h4><p>Analyzed 8 solutions (iLost, Tile, Foundit, and a major transit operator lost-property service). Most were device-only (Tile) or single-organization (iLost). None offered a true cross-organization protocol. This validated our infrastructure-first approach.</p></div>
+<div class="cd"><h4>Regulatory mapping</h4><p>National found-property law (BGB sections 965-984) defines legal obligations for finders. EU GDPR adds complexity around sharing personal data between parties. These constraints directly shaped the ownership verification and data-handling flows.</p></div>
 <div class="cd"><h4>Service blueprint</h4><p>Created an end-to-end blueprint mapping frontstage interactions, backstage processes, and support systems. This revealed the 7 critical handoff points where items typically get lost in the current system.</p></div>
 </div>
 </div>
@@ -246,19 +247,19 @@ hr{border:none;height:1px;background:var(--bd);margin:48px 0}
 
 <div class="pr">
 <div class="pc"><h4>Sara, 28</h4><div class="rl">The Owner (Lost Item)</div>
-<blockquote>"I left my wallet on the S-Bahn. By the time I realized, I had no idea where to start looking."</blockquote>
+<p class="rolefact">Realises the loss hours later, with no idea where to start looking.</p>
 <dl><dt>Goals</dt><dd>Report lost items quickly, get notified if found, verify and recover securely</dd>
 <dt>Frustrations</dt><dd>No centralized search, emotional stress, privacy concerns about sharing personal info with strangers</dd>
 <dt>Trust need</dt><dd>High. Needs to know the platform and the finder are both legitimate</dd></dl>
 </div>
 <div class="pc"><h4>Marcus, 35</h4><div class="rl">The Finder</div>
-<blockquote>"I found someone's bag at a cafe. I wanted to return it but had no idea how without it being awkward."</blockquote>
+<p class="rolefact">Wants to return a bag found in a cafe without the handover being awkward or risky.</p>
 <dl><dt>Goals</dt><dd>Return items without hassle or obligation, no need to meet strangers, feel good about helping</dd>
 <dt>Frustrations</dt><dd>Social awkwardness, liability concerns, time commitment uncertainty</dd>
 <dt>Trust need</dt><dd>Medium. Wants assurance they will not be blamed for theft or damage</dd></dl>
 </div>
 <div class="pc"><h4>Katja, 42</h4><div class="rl">The Operator (B2B)</div>
-<blockquote>"Our lost-and-found office is drowning in unclaimed items. We need a system that works with our existing processes."</blockquote>
+<p class="rolefact">Runs a lost-and-found office full of unclaimed items and needs something that fits existing processes.</p>
 <dl><dt>Goals</dt><dd>Reduce unclaimed items, automate matching, integrate with existing tools</dd>
 <dt>Frustrations</dt><dd>Manual processes, storage costs, regulatory compliance burden</dd>
 <dt>Trust need</dt><dd>Institutional. Needs data security proof and GDPR compliance</dd></dl>
@@ -369,7 +370,7 @@ hr{border:none;height:1px;background:var(--bd);margin:48px 0}
 <div class="cd"><p>In a platform where strangers exchange personal belongings, every interaction must build trust. Trust is not a feature. It emerges from dozens of small decisions: clear language, verification steps, safety features, and transparent processes.</p></div>
 <div class="cd"><h4>0 to 1 requires ruthless prioritization</h4><p>With limited resources, I developed the framework "What is the minimum viable trust?" The smallest set of features that makes someone comfortable handing belongings to a stranger through the platform.</p></div>
 <div class="cd"><h4>The design system scales the product</h4><p>The component library I built supports the mobile app, a B2B admin dashboard, and API documentation from the same token set. New flows can be assembled in hours, not weeks.</p></div>
-<div class="cd"><h4>Regulatory constraints improve design</h4><p>German found-property law and GDPR initially felt like obstacles. They turned out to be forcing functions that made the verification flow more trustworthy. Legal requirements and good UX aligned perfectly.</p></div>
+<div class="cd"><h4>Regulatory constraints improve design</h4><p>Found-property law and GDPR initially felt like obstacles. They turned out to be forcing functions that made the verification flow more trustworthy. Legal requirements and good UX aligned perfectly.</p></div>
 </div>
 </div>
 
