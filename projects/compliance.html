@@ -95,6 +95,7 @@ hr{border:none;height:1px;background:var(--bd);margin:48px 0}
 .cd{background:var(--sf);border:1px solid var(--bd);border-radius:10px;padding:22px}
 .cd h4{font-size:13px;font-weight:600;margin-bottom:5px}
 .cd p{font-size:12.5px;color:var(--tx2);line-height:1.55}
+.pm-note{font-size:13px;color:var(--tx3);line-height:1.6;margin-top:14px}
 .cd .stat{font-size:22px;font-weight:700;margin-bottom:5px}
 
 /* 5W1H */
@@ -218,15 +219,36 @@ hr{border:none;height:1px;background:var(--bd);margin:48px 0}
 <div class="cg">
 <div class="cd"><h4>User interviews (n=16)</h4><p>Users were not confused by the data itself, but by the system's inability to show where they were and what came next. Progress visibility was the #1 request.</p></div>
 <div class="cd"><h4>Task analysis (n=8)</h4><p>Observed real submissions. Most common workaround: spreadsheets maintained alongside the platform to track progress manually.</p></div>
-<div class="cd"><h4>Stakeholder workshops</h4><p>Facilitated assumption-testing workshops with product, engineering, and policy. These sessions settled the scope disagreements that had stalled the redesign. The 30% engagement lift is a production analytics figure measured after launch, not an attribution to any single change.</p></div>
+<div class="cd"><h4>Stakeholder workshops</h4><p>Facilitated assumption-testing workshops with product, engineering, and policy. The 30% engagement lift is a production analytics figure measured after launch, not an attribution to any single change.</p></div>
 <div class="cd"><h4>Regulatory mapping</h4><p>Worked with policy experts: 8 of 14 steps could be consolidated without compliance risk. Legal requirements vs. legacy artifacts.</p></div>
 </div></div>
 
 <div class="w"><hr>
+<div class="w"><hr>
+<div class="sl">Alignment</div>
+<h2 class="sh">The redesign was stalled before it was a design problem</h2>
+<p class="sp">The redesign had stalled on scope before I joined it, and the disagreement was between functions rather than between people: product, engineering and climate policy each held a different assumption about which of the fourteen steps were legally required. Nobody could concede ground because nobody could prove their assumption.</p>
+<p class="sp">I ran the workshops as assumption testing rather than as prioritisation. Each step was put on the table as a claim to be checked against the regulation with the policy specialists in the room, which converted an argument about opinion into an audit against a document. That produced the number the whole project then hung on: <strong>8 of the 14 steps were legacy artifacts, not legal requirements</strong>. Once that was on paper the scope argument ended, and three squads committed to the same six-step target.</p>
+<p class="sp">The analytics did the other half of the work. A 67% abandon rate and a 4.5-hour median completion time, both already instrumented, made the case concrete enough that the rebuild stopped being a design preference and became a business problem.</p>
+</div>
+
+<div class="w"><hr>
+<div class="sl">Synthesis</div>
+<h2 class="sh">The root cause, and the diagnosis I rejected</h2>
+<p class="sp">The obvious reading of a 67% abandon rate on a climate-data tool is that the data is too hard. The research did not support that. Users were not confused by the numbers they were being asked for; they were confused about where they were in a process and whether their work still existed. The spreadsheets people maintained alongside the platform were not shadow data, they were shadow <em>progress tracking</em>, which is the capability the product was missing.</p>
+<p class="sp">That reframed the causal chain. A multi-session expert task had been built as a single rigid form, so requirements surfaced only as errors, there was nowhere to stop safely, and people left and rebuilt their state elsewhere. The failure was continuity and orientation, not comprehension. Everything after this followed from that one distinction, and the outcome supported it: progress indication, auto-save and explicit confirmations moved completion more than any change to the form fields themselves.</p>
+<div class="cg">
+<div class="cd"><h4>Symptom</h4><p>67% abandon rate, 4.5-hour median completion, recurring support complaints.</p></div>
+<div class="cd"><h4>The tempting diagnosis</h4><p>The data model is too complex for the people submitting it. Simplify what is asked.</p></div>
+<div class="cd"><h4>What research showed</h4><p>Comprehension was fine. Orientation was not. Progress visibility was the single most requested thing across 16 interviews.</p></div>
+<div class="cd"><h4>The actual cause</h4><p>A multi-session task modelled as a one-shot form: no persistence, no position, late validation.</p></div>
+</div>
+</div>
+
 <div class="sl">Archetypes</div>
 <h2 class="sh">Three roles, one workflow</h2>
 <p class="sp">These are synthesised archetypes built from the research sessions, not individual participants. Each one summarises a role, what it owns, and what blocks it.</p>
-<p class="sp">The 30 sessions clustered into three working roles, each with a different relationship to the submission. I designed for all three rather than a single primary user.</p>
+<p class="sp">The 30 sessions clustered into three working roles, each with a different relationship to the submission. I designed for all three, which is the trade-off covered below.</p>
 <div class="pr">
 <div class="pc"><h4>The Submission Owner</h4><div class="rl">Sustainability Manager</div><p class="rolefact">Spends more time working around the tool than doing the analysis.</p><dl><dt>Owns</dt><dd>Getting the submission complete and on time</dd><dt>Blocked by</dt><dd>No progress saving, requirements that surface late</dd></dl></div>
 <div class="pc"><h4>The Data Provider</h4><div class="rl">Climate Analyst</div><p class="rolefact">Knows what data is required, but the system makes it hard to supply.</p><dl><dt>Owns</dt><dd>Document accuracy and scope coverage</dd><dt>Blocked by</dt><dd>Rigid input formats, no inline guidance</dd></dl></div>
@@ -245,6 +267,16 @@ hr{border:none;height:1px;background:var(--bd);margin:48px 0}
 <div class="cd"><h4>AI-powered scope analysis</h4><p>Recommendation features surfacing guidance from unstructured documents. Users can trust, audit, and override AI outputs.</p></div>
 <div class="cd"><h4>Inline validation</h4><p>Replaced post-submission errors with inline guidance. Users see what is needed as they work, not after they submit.</p></div>
 </div></div>
+
+<div class="w"><hr>
+<div class="sl">Trade-offs</div>
+<h2 class="sh">Two directions I turned down</h2>
+<div class="cg">
+<div class="cd"><h4>Rejected: design for one primary user</h4><p>The 30 sessions clustered into three working roles with genuinely opposed needs. The submission owner wants to stop and resume, the analyst wants input guidance, the reviewer wants status at a glance. Optimising for the submission owner alone would have produced a cleaner flow and a faster build.</p><p><strong>Why not:</strong> the reviewer is the reason a submission completes at all, and leaving them on manual status tracking would have moved the bottleneck rather than removed it. I designed for all three and accepted a wider surface.</p></div>
+<div class="cd"><h4>Rejected: let the AI decide</h4><p>The scope analysis could have filled the step directly instead of recommending. That version demos better and saves the user more time.</p><p><strong>Why not:</strong> testing showed reviewers would not accept a recommendation they could not audit. Trust scored 3.8 out of 5, the lowest of the validated findings, and this is a submission a company answers for publicly. The AI recommends, shows its source, explains itself and can be overridden; the decision stays with the person accountable for it.</p></div>
+</div>
+<p class="pm-note">Both rejections cost something. Three roles meant more screens and a longer build. Recommendation over automation meant the most impressive version of the AI feature is the one that did not ship.</p>
+</div>
 
 <div class="w"><hr>
 <div class="sl">Results</div>
