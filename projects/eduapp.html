@@ -93,7 +93,7 @@ hr{border:none;height:1px;background:var(--bd);margin:48px 0}
 /* Cards */
 .cg{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:20px 0}
 .cd{background:var(--sf);border:1px solid var(--bd);border-radius:10px;padding:22px}
-.cd h4{font-size:13px;font-weight:600;margin-bottom:5px}
+.cd h3{font-size:13px;font-weight:600;margin-bottom:5px}
 .cd p{font-size:12.5px;color:var(--tx2);line-height:1.55}
 .cd .stat{font-size:22px;font-weight:700;margin-bottom:5px}
 
@@ -116,7 +116,7 @@ hr{border:none;height:1px;background:var(--bd);margin:48px 0}
 /* Personas */
 .pr{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;margin:20px 0}
 .pc{background:var(--sf);border:1px solid var(--bd);border-radius:10px;padding:22px}
-.pc h4{font-size:14px;font-weight:600;margin-bottom:2px}
+.pc h3{font-size:14px;font-weight:600;margin-bottom:2px}
 .pc .rl{font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:1px;color:var(--tx3);margin-bottom:10px}
 .pc blockquote{font-style:italic;font-size:12.5px;color:var(--tx2);border-left:2px solid var(--bd2);padding-left:10px;margin-bottom:12px;line-height:1.5}
 .pc dl dt{font-size:9px;font-weight:600;text-transform:uppercase;letter-spacing:1px;color:var(--tx3);margin-top:10px}
@@ -133,7 +133,7 @@ hr{border:none;height:1px;background:var(--bd);margin:48px 0}
 /* Testing */
 .tg2{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:20px 0}
 .tc{background:var(--sf);border:1px solid var(--bd);border-radius:10px;padding:22px}
-.tc h4{font-size:13px;font-weight:600;margin-bottom:14px}
+.tc h3{font-size:13px;font-weight:600;margin-bottom:14px}
 .br{margin-bottom:12px}
 .bl{display:flex;justify-content:space-between;font-size:12px;margin-bottom:3px}
 .bl .v{font-weight:600}
@@ -142,11 +142,11 @@ hr{border:none;height:1px;background:var(--bd);margin:48px 0}
 .bg{background:#2F6F4F}.ba{background:var(--ac)}.by{background:#8A5F0E}
 
 /* Findings */
-.fd{background:var(--sf);border-radius:0 10px 10px 0;padding:18px 22px;margin-bottom:10px;border-left:3px solid}
-.fd.c{border-color:#B02A37}.fd.i{border-color:var(--tx)}.fd.s{border-color:#2F6F4F}
+.fd{background:var(--sf);border-radius:10px;padding:18px 22px;margin-bottom:10px;border:1px solid var(--bd)}
+.fd.c .sv{color:#B02A37}.fd.i .sv{color:var(--tx)}.fd.s .sv{color:#2F6F4F}
 .fd .sv{font-size:9px;font-weight:600;text-transform:uppercase;letter-spacing:1px;margin-bottom:2px}
 .fd.c .sv{color:#B02A37}.fd.i .sv{color:var(--tx)}.fd.s .sv{color:#2F6F4F}
-.fd h4{font-size:13px;font-weight:600;margin-bottom:2px}
+.fd h3{font-size:13px;font-weight:600;margin-bottom:2px}
 .fd p{font-size:12px;color:var(--tx2);line-height:1.5}
 
 /* Back */
@@ -157,7 +157,7 @@ hr{border:none;height:1px;background:var(--bd);margin:48px 0}
 /* NDA */
 .nda{background:var(--sf);border:1px solid var(--bd);border-radius:10px;padding:18px 22px;display:flex;align-items:flex-start;gap:10px;margin:20px 0}
 .nda-icon{font-size:16px;margin-top:1px}
-.nda h4{font-size:12px;font-weight:600;margin-bottom:2px}
+.nda .nda-t{font-size:12px;font-weight:600;margin-bottom:2px;color:var(--tx);line-height:1.4}
 .nda p{font-size:11.5px;color:var(--tx2);line-height:1.5}
 
 @media(max-width:900px){.pr{grid-template-columns:1fr}.wh{grid-template-columns:1fr 1fr}}
@@ -193,7 +193,7 @@ hr{border:none;height:1px;background:var(--bd);margin:48px 0}
 </div>
 <p class="img-caption" style="margin-top:10px">Figures reported by the live product at eduapp.futsolins.com, not a controlled study I ran. I treat them as evidence the approach is working at scale, not as proof my design alone caused them.</p></div>
 
-<div class="ww"><div class="img-box"><img src="../assets/eduapp-hero.png" alt="EduApp live product: AI tutor explaining an exam answer with mastery tracking"></div>
+<div class="ww"><div class="img-box"><img src="../assets/eduapp-hero.webp" alt="EduApp live product: AI tutor explaining an exam answer with mastery tracking"></div>
 <p class="img-caption">The live product at eduapp.futsolins.com: an AI tutor that explains answers and tracks mastery.</p></div>
 
 <div class="w"><hr>
@@ -208,10 +208,10 @@ hr{border:none;height:1px;background:var(--bd);margin:48px 0}
 <h2 class="sh">Field research in Lagos</h2>
 <p class="sp">I interviewed 10 secondary school students, 4 teachers, and 2 school administrators across Lagos. Observed classroom dynamics, tested device capabilities, and mapped the actual learning journey.</p>
 <div class="cg">
-<div class="cd"><h4>Student interviews (n=10)</h4><p>Students wanted bite-sized content for commutes, interactive quizzes that feel like games, and offline access. The #1 request: "Let me study without data."</p></div>
-<div class="cd"><h4>Teacher interviews (n=4)</h4><p>Teachers wanted curriculum alignment (WAEC/NECO syllabus), student progress tracking, and a supplement to classroom teaching.</p></div>
-<div class="cd"><h4>Device audit (n=8)</h4><p>Mix of Android 8-12, screens 5-6.5 inches, 1-3GB RAM. App must be under 15MB and load in under 2 seconds on 3G.</p></div>
-<div class="cd"><h4>Competitive analysis</h4><p>Analyzed uLesson, Tuteria, PrepClass, Khan Academy. Gap: none offered true offline-first with curriculum-aligned adaptive learning.</p></div>
+<div class="cd"><h3>Student interviews (n=10)</h3><p>Students wanted bite-sized content for commutes, interactive quizzes that feel like games, and offline access. The #1 request: "Let me study without data."</p></div>
+<div class="cd"><h3>Teacher interviews (n=4)</h3><p>Teachers wanted curriculum alignment (WAEC/NECO syllabus), student progress tracking, and a supplement to classroom teaching.</p></div>
+<div class="cd"><h3>Device audit (n=8)</h3><p>Mix of Android 8-12, screens 5-6.5 inches, 1-3GB RAM. App must be under 15MB and load in under 2 seconds on 3G.</p></div>
+<div class="cd"><h3>Competitive analysis</h3><p>Analyzed uLesson, Tuteria, PrepClass, Khan Academy. Gap: none offered true offline-first with curriculum-aligned adaptive learning.</p></div>
 </div></div>
 
 <div class="w"><hr>
@@ -219,19 +219,19 @@ hr{border:none;height:1px;background:var(--bd);margin:48px 0}
 <h2 class="sh">Three archetypes the research kept surfacing</h2>
 <p class="sp">These are not invented profiles. Each one is a pattern that came up repeatedly across the student, teacher, and administrator interviews, named so the team could design against a real constraint rather than an average user.</p>
 <div class="pr">
-<div class="pc"><h4>The data-rationing commuter</h4><div class="rl">SS2-SS3, urban, studies in transit</div><blockquote>"I study on the bus to school. I need something that works without data."</blockquote><dl><dt>Pattern</dt><dd>Owns the phone but rations a shared data plan, so download-once-study-offline is the only model that fits her day.</dd><dt>Design implication</dt><dd>Offline-first is the product, not a feature. WiFi-time download, zero-data study.</dd></dl></div>
-<div class="pc"><h4>The borrowed-device self-pacer</h4><div class="rl">SS3, smaller town, evening study</div><blockquote>"Maths is hard and my teacher moves too fast."</blockquote><dl><dt>Pattern</dt><dd>Studies in short evening windows on a phone borrowed from a parent or sibling, falling behind in class on the topics that compound.</dd><dt>Design implication</dt><dd>Adaptive paths that surface prerequisites; progress that survives logging in on a shared device.</dd></dl></div>
-<div class="pc"><h4>The over-stretched teacher</h4><div class="rl">Classroom of 50-60, limited tech</div><blockquote>"I have 60 students. I need to know who is falling behind."</blockquote><dl><dt>Pattern</dt><dd>Wants a supplement to classroom teaching, not a replacement, and needs to spot the students slipping without grading every quiz by hand.</dd><dt>Design implication</dt><dd>Curriculum alignment to the WAEC/NECO syllabus and lightweight class-level progress visibility.</dd></dl></div>
+<div class="pc"><h3>The data-rationing commuter</h3><div class="rl">SS2-SS3, urban, studies in transit</div><blockquote>"I study on the bus to school. I need something that works without data."</blockquote><dl><dt>Pattern</dt><dd>Owns the phone but rations a shared data plan, so download-once-study-offline is the only model that fits her day.</dd><dt>Design implication</dt><dd>Offline-first is the product, not a feature. WiFi-time download, zero-data study.</dd></dl></div>
+<div class="pc"><h3>The borrowed-device self-pacer</h3><div class="rl">SS3, smaller town, evening study</div><blockquote>"Maths is hard and my teacher moves too fast."</blockquote><dl><dt>Pattern</dt><dd>Studies in short evening windows on a phone borrowed from a parent or sibling, falling behind in class on the topics that compound.</dd><dt>Design implication</dt><dd>Adaptive paths that surface prerequisites; progress that survives logging in on a shared device.</dd></dl></div>
+<div class="pc"><h3>The over-stretched teacher</h3><div class="rl">Classroom of 50-60, limited tech</div><blockquote>"I have 60 students. I need to know who is falling behind."</blockquote><dl><dt>Pattern</dt><dd>Wants a supplement to classroom teaching, not a replacement, and needs to spot the students slipping without grading every quiz by hand.</dd><dt>Design implication</dt><dd>Curriculum alignment to the WAEC/NECO syllabus and lightweight class-level progress visibility.</dd></dl></div>
 </div></div>
 
 <div class="w"><hr>
 <div class="sl">Design Decisions</div>
 <h2 class="sh">Built for the real Nigeria</h2>
 <div class="cg">
-<div class="cd"><h4>Offline-first</h4><p>Lessons download over WiFi. Students study completely offline. Progress syncs when connectivity returns.</p></div>
-<div class="cd"><h4>Curriculum-aligned</h4><p>Every lesson maps to WAEC/NECO syllabus. Search by subject, topic, and exam year.</p></div>
-<div class="cd"><h4>Adaptive paths</h4><p>Quiz results adjust difficulty and recommend review topics. Struggling with quadratics? The app surfaces prerequisite algebra first.</p></div>
-<div class="cd"><h4>Ultra-light UI</h4><p>App under 15MB. Every screen loads in under 2 seconds on 3G. Text-first, video optional for WiFi.</p></div>
+<div class="cd"><h3>Offline-first</h3><p>Lessons download over WiFi. Students study completely offline. Progress syncs when connectivity returns.</p></div>
+<div class="cd"><h3>Curriculum-aligned</h3><p>Every lesson maps to WAEC/NECO syllabus. Search by subject, topic, and exam year.</p></div>
+<div class="cd"><h3>Adaptive paths</h3><p>Quiz results adjust difficulty and recommend review topics. Struggling with quadratics? The app surfaces prerequisite algebra first.</p></div>
+<div class="cd"><h3>Ultra-light UI</h3><p>App under 15MB. Every screen loads in under 2 seconds on 3G. Text-first, video optional for WiFi.</p></div>
 </div></div>
 <div class="ww"><div class="img-box"><img src="../assets/eduapp-cbt.png" alt="Practice exactly like the real exam: a CBT interface mirroring JAMB"></div>
 <p class="img-caption">A CBT practice mode that mirrors the real JAMB exam, so speed and confidence build before exam day.</p></div>
@@ -240,20 +240,20 @@ hr{border:none;height:1px;background:var(--bd);margin:48px 0}
 <div class="sl">Testing</div>
 <h2 class="sh">Tested with students and teachers in Lagos</h2>
 <div class="tg2">
-<div class="tc"><h4>Task completion</h4>
+<div class="tc"><h3>Task completion</h3>
 <div class="br"><div class="bl"><span>Complete onboarding</span><span class="v">94%</span></div><div class="bar"><div class="bf bg" style="width:94%"></div></div></div>
 <div class="br"><div class="bl"><span>Find a topic</span><span class="v">88%</span></div><div class="bar"><div class="bf ba" style="width:88%"></div></div></div>
 <div class="br"><div class="bl"><span>Complete a quiz</span><span class="v">92%</span></div><div class="bar"><div class="bf bg" style="width:92%"></div></div></div>
 <div class="br"><div class="bl"><span>Download for offline</span><span class="v">79%</span></div><div class="bar"><div class="bf by" style="width:79%"></div></div></div>
 </div>
-<div class="tc"><h4>Key metrics</h4>
+<div class="tc"><h3>Key metrics</h3>
 <div class="br"><div class="bl"><span>SUS Score</span><span class="v">83 / 100</span></div><div class="bar"><div class="bf bg" style="width:83%"></div></div></div>
 <div class="br"><div class="bl"><span>Onboarding time</span><span class="v">42 seconds</span></div><div class="bar"><div class="bf bg" style="width:30%"></div></div></div>
 <div class="br"><div class="bl"><span>Daily return rate</span><span class="v">68%</span></div><div class="bar"><div class="bf ba" style="width:68%"></div></div></div>
 <div class="br"><div class="bl"><span>Quiz engagement</span><span class="v">4.5 / 5</span></div><div class="bar"><div class="bf bg" style="width:90%"></div></div></div>
 </div></div>
-<div class="fd s"><div class="sv">Validation</div><h4>Offline mode was the most valued feature</h4><p>7/8 students said offline access was the reason they would use EduApp over competitors.</p></div>
-<div class="fd c"><div class="sv">Critical</div><h4>Quiz timer caused anxiety</h4><p>Changed to optional timer with untimed "practice mode" as default. Timed mode for exam prep only.</p></div>
+<div class="fd s"><div class="sv">Validation</div><h3>Offline mode was the most valued feature</h3><p>7/8 students said offline access was the reason they would use EduApp over competitors.</p></div>
+<div class="fd c"><div class="sv">Critical</div><h3>Quiz timer caused anxiety</h3><p>Changed to optional timer with untimed "practice mode" as default. Timed mode for exam prep only.</p></div>
 </div>
 
 <div class="w"><hr>
@@ -261,8 +261,8 @@ hr{border:none;height:1px;background:var(--bd);margin:48px 0}
 <h2 class="sh">Students preparing better, at scale</h2>
 <p class="sp">In production the design decisions held up where it counts: on real phones, on real networks, during real exam seasons. The offline-first, curriculum-aligned, adaptive approach turned into measurable preparation.</p>
 <div class="cg">
-<div class="cd"><h4>15k+ active students, 2M+ questions solved</h4><p>The light, offline-first build let students practice on the bus and at home, not just on WiFi, which is exactly what the research asked for.</p></div>
-<div class="cd"><h4>92% pass rate, +12% weekly mastery</h4><p>Adaptive paths and CBT practice that mirrors the real exam moved students from rote memorisation to measured, improving preparation.</p></div>
+<div class="cd"><h3>15k+ active students, 2M+ questions solved</h3><p>The light, offline-first build let students practice on the bus and at home, not just on WiFi, which is exactly what the research asked for.</p></div>
+<div class="cd"><h3>92% pass rate, +12% weekly mastery</h3><p>Adaptive paths and CBT practice that mirrors the real exam moved students from rote memorisation to measured, improving preparation.</p></div>
 </div>
 </div>
 
@@ -271,7 +271,7 @@ hr{border:none;height:1px;background:var(--bd);margin:48px 0}
 <h2 class="sh">Design for constraints, not ideals</h2>
 <div class="cg">
 <div class="cd"><p>Great UX is not beautiful pixels on 4K screens. It is an interface that loads in 2 seconds on a phone with 1GB RAM and intermittent 3G.</p></div>
-<div class="cd"><h4>Local context changes everything</h4><p>Studying on a Lagos bus is fundamentally different from studying at a desk. Larger touch targets, sunlight-readable text, auto-save every 30 seconds.</p></div>
+<div class="cd"><h3>Local context changes everything</h3><p>Studying on a Lagos bus is fundamentally different from studying at a desk. Larger touch targets, sunlight-readable text, auto-save every 30 seconds.</p></div>
 </div></div>
 <div class="bk"><a href="../index.html" class="bk-btn">← Back to portfolio</a></div>
 </main>

@@ -93,7 +93,7 @@ hr{border:none;height:1px;background:var(--bd);margin:48px 0}
 /* Cards */
 .cg{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:20px 0}
 .cd{background:var(--sf);border:1px solid var(--bd);border-radius:10px;padding:22px}
-.cd h4{font-size:13px;font-weight:600;margin-bottom:5px}
+.cd h3{font-size:13px;font-weight:600;margin-bottom:5px}
 .cd p{font-size:12.5px;color:var(--tx2);line-height:1.55}
 .cd .stat{font-size:22px;font-weight:700;margin-bottom:5px}
 
@@ -116,7 +116,7 @@ hr{border:none;height:1px;background:var(--bd);margin:48px 0}
 /* Personas */
 .pr{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;margin:20px 0}
 .pc{background:var(--sf);border:1px solid var(--bd);border-radius:10px;padding:22px}
-.pc h4{font-size:14px;font-weight:600;margin-bottom:2px}
+.pc h3{font-size:14px;font-weight:600;margin-bottom:2px}
 .pc .rl{font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:1px;color:var(--tx3);margin-bottom:10px}
 .rolefact{font-size:12.5px;color:var(--tx2);line-height:1.55;padding-left:10px;border-left:2px solid var(--bd2);margin-bottom:12px}
 .pc blockquote{font-style:italic;font-size:12.5px;color:var(--tx2);border-left:2px solid var(--bd2);padding-left:10px;margin-bottom:12px;line-height:1.5}
@@ -134,8 +134,13 @@ hr{border:none;height:1px;background:var(--bd);margin:48px 0}
 /* Testing */
 .tg2{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:20px 0}
 .tc{background:var(--sf);border:1px solid var(--bd);border-radius:10px;padding:22px}
-.tc h4{font-size:13px;font-weight:600;margin-bottom:14px}
+.tc h3{font-size:13px;font-weight:600;margin-bottom:14px}
 .br{margin-bottom:12px}
+.plainmetrics{display:flex;flex-direction:column;gap:0;border:1px solid var(--bd);border-radius:10px;overflow:hidden;margin-top:14px}
+.plainmetrics>div{display:flex;justify-content:space-between;align-items:baseline;gap:16px;padding:11px 16px;border-bottom:1px solid var(--bd)}
+.plainmetrics>div:last-child{border-bottom:none}
+.plainmetrics dt{font-size:12.5px;color:var(--tx2)}
+.plainmetrics dd{font-size:13px;font-weight:600;color:var(--tx)}
 .bl{display:flex;justify-content:space-between;font-size:12px;margin-bottom:3px}
 .bl .v{font-weight:600}
 .bar{height:3px;background:var(--sf2);border-radius:99px;overflow:hidden}
@@ -143,11 +148,11 @@ hr{border:none;height:1px;background:var(--bd);margin:48px 0}
 .bg{background:#2F6F4F}.ba{background:var(--ac)}.by{background:#8A5F0E}
 
 /* Findings */
-.fd{background:var(--sf);border-radius:0 10px 10px 0;padding:18px 22px;margin-bottom:10px;border-left:3px solid}
-.fd.c{border-color:#B02A37}.fd.i{border-color:var(--tx)}.fd.s{border-color:#2F6F4F}
+.fd{background:var(--sf);border-radius:10px;padding:18px 22px;margin-bottom:10px;border:1px solid var(--bd)}
+.fd.c .sv{color:#B02A37}.fd.i .sv{color:var(--tx)}.fd.s .sv{color:#2F6F4F}
 .fd .sv{font-size:9px;font-weight:600;text-transform:uppercase;letter-spacing:1px;margin-bottom:2px}
 .fd.c .sv{color:#B02A37}.fd.i .sv{color:var(--tx)}.fd.s .sv{color:#2F6F4F}
-.fd h4{font-size:13px;font-weight:600;margin-bottom:2px}
+.fd h3{font-size:13px;font-weight:600;margin-bottom:2px}
 .fd p{font-size:12px;color:var(--tx2);line-height:1.5}
 
 /* Back */
@@ -158,7 +163,7 @@ hr{border:none;height:1px;background:var(--bd);margin:48px 0}
 /* NDA */
 .nda{background:var(--sf);border:1px solid var(--bd);border-radius:10px;padding:18px 22px;display:flex;align-items:flex-start;gap:10px;margin:20px 0}
 .nda-icon{font-size:16px;margin-top:1px}
-.nda h4{font-size:12px;font-weight:600;margin-bottom:2px}
+.nda .nda-t{font-size:12px;font-weight:600;margin-bottom:2px;color:var(--tx);line-height:1.4}
 .nda p{font-size:11.5px;color:var(--tx2);line-height:1.5}
 
 @media(max-width:900px){.pr{grid-template-columns:1fr}.wh{grid-template-columns:1fr 1fr}}
@@ -219,10 +224,11 @@ hr{border:none;height:1px;background:var(--bd);margin:48px 0}
 
 <div class="w">
 <div class="cg">
-<div class="cd"><div class="stat">Most</div><h4>Items never returned</h4><p>From our interviews and operator conversations: most lost items in European transit systems are never reunited with their owners, because the process is fragmented.</p></div>
-<div class="cd"><div class="stat">Day 1</div><h4>When people give up</h4><p>Interviewees described stopping the active search within the first day, worn down by friction in reporting and searching.</p></div>
-<div class="cd"><div class="stat">None</div><h4>Unified platforms</h4><p>Our competitive scan found no protocol-layer solution that standardizes lost-and-found across organizations and countries.</p></div>
-<div class="cd"><div class="stat">Blueprint</div><h4>Critical handoff points</h4><p>Our service blueprint surfaced the moments where items get permanently lost in the current system.</p></div>
+<div class="cd"><h3>Most lost items are never returned</h3><p>From our interviews and operator conversations: most lost items in European transit systems are never reunited with their owners, because the process is fragmented across every organisation that touches them.</p></div>
+<div class="cd"><h3>People give up on day one</h3><p>Interviewees described stopping the active search within the first day, worn down by friction in reporting and searching.</p></div>
+<div class="cd"><h3>No unified platform exists</h3><p>Our competitive scan found no protocol-layer solution that standardizes lost-and-found across organizations and countries.</p></div>
+<div class="cd"><h3>The blueprint located the handoffs</h3><p>Our service blueprint surfaced the moments where items get permanently lost in the current system.</p></div>
+</div>
 </div>
 </div>
 
@@ -233,10 +239,10 @@ hr{border:none;height:1px;background:var(--bd);margin:48px 0}
 <p class="sp">I spent 6 weeks in discovery before designing a single screen. I interviewed people who lost items, people who found items, and lost-and-found office operators. I mapped the EU regulatory landscape to understand legal requirements around found property.</p>
 
 <div class="cg">
-<div class="cd"><h4>User interviews (n=16)</h4><p>Spoke with 8 "losers" (people who lost items), 4 "finders," and 4 lost-and-found operators across three European cities. Key finding: the emotional distress of losing items is severely underestimated. It is not just about the object's monetary value.</p></div>
-<div class="cd"><h4>Competitive analysis</h4><p>Analyzed 8 solutions (iLost, Tile, Foundit, and a major transit operator lost-property service). Most were device-only (Tile) or single-organization (iLost). None offered a true cross-organization protocol. This validated our infrastructure-first approach.</p></div>
-<div class="cd"><h4>Regulatory mapping</h4><p>National found-property law (BGB sections 965-984) defines legal obligations for finders. EU GDPR adds complexity around sharing personal data between parties. These constraints directly shaped the ownership verification and data-handling flows.</p></div>
-<div class="cd"><h4>Service blueprint</h4><p>Created an end-to-end blueprint mapping frontstage interactions, backstage processes, and support systems. This revealed the 7 critical handoff points where items typically get lost in the current system.</p></div>
+<div class="cd"><h3>User interviews (n=16)</h3><p>Spoke with 8 "losers" (people who lost items), 4 "finders," and 4 lost-and-found operators across three European cities. Key finding: the emotional distress of losing items is severely underestimated. It is not just about the object's monetary value.</p></div>
+<div class="cd"><h3>Competitive analysis</h3><p>Analyzed 8 solutions (iLost, Tile, Foundit, and a major transit operator lost-property service). Most were device-only (Tile) or single-organization (iLost). None offered a true cross-organization protocol. This validated our infrastructure-first approach.</p></div>
+<div class="cd"><h3>Regulatory mapping</h3><p>National found-property law (BGB sections 965-984) defines legal obligations for finders. EU GDPR adds complexity around sharing personal data between parties. These constraints directly shaped the ownership verification and data-handling flows.</p></div>
+<div class="cd"><h3>Service blueprint</h3><p>Created an end-to-end blueprint mapping frontstage interactions, backstage processes, and support systems. This revealed the 7 critical handoff points where items typically get lost in the current system.</p></div>
 </div>
 </div>
 
@@ -246,19 +252,19 @@ hr{border:none;height:1px;background:var(--bd);margin:48px 0}
 <h2 class="sh">Three user types, fundamentally different trust needs</h2>
 
 <div class="pr">
-<div class="pc"><h4>Sara, 28</h4><div class="rl">The Owner (Lost Item)</div>
+<div class="pc"><h3>Sara, 28</h3><div class="rl">The Owner (Lost Item)</div>
 <p class="rolefact">Realises the loss hours later, with no idea where to start looking.</p>
 <dl><dt>Goals</dt><dd>Report lost items quickly, get notified if found, verify and recover securely</dd>
 <dt>Frustrations</dt><dd>No centralized search, emotional stress, privacy concerns about sharing personal info with strangers</dd>
 <dt>Trust need</dt><dd>High. Needs to know the platform and the finder are both legitimate</dd></dl>
 </div>
-<div class="pc"><h4>Marcus, 35</h4><div class="rl">The Finder</div>
+<div class="pc"><h3>Marcus, 35</h3><div class="rl">The Finder</div>
 <p class="rolefact">Wants to return a bag found in a cafe without the handover being awkward or risky.</p>
 <dl><dt>Goals</dt><dd>Return items without hassle or obligation, no need to meet strangers, feel good about helping</dd>
 <dt>Frustrations</dt><dd>Social awkwardness, liability concerns, time commitment uncertainty</dd>
 <dt>Trust need</dt><dd>Medium. Wants assurance they will not be blamed for theft or damage</dd></dl>
 </div>
-<div class="pc"><h4>Katja, 42</h4><div class="rl">The Operator (B2B)</div>
+<div class="pc"><h3>Katja, 42</h3><div class="rl">The Operator (B2B)</div>
 <p class="rolefact">Runs a lost-and-found office full of unclaimed items and needs something that fits existing processes.</p>
 <dl><dt>Goals</dt><dd>Reduce unclaimed items, automate matching, integrate with existing tools</dd>
 <dt>Frustrations</dt><dd>Manual processes, storage costs, regulatory compliance burden</dd>
@@ -339,26 +345,28 @@ hr{border:none;height:1px;background:var(--bd);margin:48px 0}
 <p class="sp">Tested with people who had recently lost items, frequent public transit users, and hostel travelers. Used both moderated sessions for qualitative depth and Maze for quantitative validation.</p>
 
 <div class="tg2">
-<div class="tc"><h4>Task completion</h4>
+<div class="tc"><h3>Task completion</h3>
 <div class="br"><div class="bl"><span>Report a lost item</span><span class="v">94%</span></div><div class="bar"><div class="bf bg" style="width:94%"></div></div></div>
 <div class="br"><div class="bl"><span>Complete onboarding</span><span class="v">96%</span></div><div class="bar"><div class="bf bg" style="width:96%"></div></div></div>
 <div class="br"><div class="bl"><span>Verify ownership</span><span class="v">79%</span></div><div class="bar"><div class="bf by" style="width:79%"></div></div></div>
 <div class="br"><div class="bl"><span>Schedule meetup</span><span class="v">85%</span></div><div class="bar"><div class="bf ba" style="width:85%"></div></div></div>
 <div class="br"><div class="bl"><span>Enter handover code</span><span class="v">91%</span></div><div class="bar"><div class="bf bg" style="width:91%"></div></div></div>
 </div>
-<div class="tc"><h4>Key metrics</h4>
+<div class="tc"><h3>Key metrics</h3>
 <div class="br"><div class="bl"><span>SUS score</span><span class="v">84 / 100</span></div><div class="bar"><div class="bf bg" style="width:84%"></div></div></div>
 <div class="br"><div class="bl"><span>Trust score</span><span class="v">4.3 / 5</span></div><div class="bar"><div class="bf ba" style="width:86%"></div></div></div>
-<div class="br"><div class="bl"><span>NPS, moderated round</span><span class="v">+52</span></div></div>
-<div class="br"><div class="bl"><span>Median onboarding time</span><span class="v">38 seconds</span></div></div>
-<div class="br"><div class="bl"><span>Median report time</span><span class="v">72 seconds</span></div></div>
 </div>
-</div>
+<dl class="plainmetrics">
+<div><dt>NPS, moderated round</dt><dd>+52</dd></div>
+<div><dt>Median onboarding time</dt><dd>38 seconds</dd></div>
+<div><dt>Median report time</dt><dd>72 seconds</dd></div>
+</dl>
 
-<div class="fd c"><div class="sv">Critical</div><h4>Ownership verification too complex on mobile</h4><p>21% struggled with document upload. The multi-select interface confused users. Simplified to progressive disclosure: one proof type at a time with clear examples.</p></div>
-<div class="fd i"><div class="sv">Improvement</div><h4>Meeting location suggestions needed context</h4><p>Users loved safe meeting spots but wanted to know why they were "safe." Added rationale labels: "Police station: public, CCTV, staff present."</p></div>
-<div class="fd s"><div class="sv">Validation</div><h4>Match confidence score built immediate trust</h4><p>5 of the 6 moderated testers said the "98% match" indicator gave them confidence the system was working. Without it, users questioned whether the match was real.</p></div>
-<div class="fd i"><div class="sv">Improvement</div><h4>Handover code needed better error recovery</h4><p>Wrong code error was unclear. Added: "Code does not match. Ask the other person to show their code screen" with retry.</p></div>
+
+<div class="fd c"><div class="sv">Critical</div><h3>Ownership verification too complex on mobile</h3><p>21% struggled with document upload. The multi-select interface confused users. Simplified to progressive disclosure: one proof type at a time with clear examples.</p></div>
+<div class="fd i"><div class="sv">Improvement</div><h3>Meeting location suggestions needed context</h3><p>Users loved safe meeting spots but wanted to know why they were "safe." Added rationale labels: "Police station: public, CCTV, staff present."</p></div>
+<div class="fd s"><div class="sv">Validation</div><h3>Match confidence score built immediate trust</h3><p>5 of the 6 moderated testers said the "98% match" indicator gave them confidence the system was working. Without it, users questioned whether the match was real.</p></div>
+<div class="fd i"><div class="sv">Improvement</div><h3>Handover code needed better error recovery</h3><p>Wrong code error was unclear. Added: "Code does not match. Ask the other person to show their code screen" with retry.</p></div>
 </div>
 
 <!-- REFLECTIONS -->
@@ -368,9 +376,9 @@ hr{border:none;height:1px;background:var(--bd);margin:48px 0}
 
 <div class="cg">
 <div class="cd"><p>In a platform where strangers exchange personal belongings, every interaction must build trust. Trust is not a feature. It emerges from dozens of small decisions: clear language, verification steps, safety features, and transparent processes.</p></div>
-<div class="cd"><h4>0 to 1 requires ruthless prioritization</h4><p>With limited resources, I developed the framework "What is the minimum viable trust?" The smallest set of features that makes someone comfortable handing belongings to a stranger through the platform.</p></div>
-<div class="cd"><h4>The design system scales the product</h4><p>The component library I designed supports the mobile app, a B2B admin dashboard, and API documentation from the same token set. New flows can be assembled in hours, not weeks.</p></div>
-<div class="cd"><h4>Regulatory constraints improve design</h4><p>Found-property law and GDPR initially felt like obstacles. They turned out to be forcing functions that made the verification flow more trustworthy. Legal requirements and good UX aligned perfectly.</p></div>
+<div class="cd"><h3>0 to 1 requires ruthless prioritization</h3><p>With limited resources, I developed the framework "What is the minimum viable trust?" The smallest set of features that makes someone comfortable handing belongings to a stranger through the platform.</p></div>
+<div class="cd"><h3>The design system scales the product</h3><p>The component library I designed supports the mobile app, a B2B admin dashboard, and API documentation from the same token set. New flows can be assembled in hours, not weeks.</p></div>
+<div class="cd"><h3>Regulatory constraints improve design</h3><p>Found-property law and GDPR initially felt like obstacles. They turned out to be forcing functions that made the verification flow more trustworthy. Legal requirements and good UX aligned perfectly.</p></div>
 </div>
 </div>
 

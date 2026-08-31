@@ -93,7 +93,7 @@ hr{border:none;height:1px;background:var(--bd);margin:48px 0}
 /* Cards */
 .cg{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:20px 0}
 .cd{background:var(--sf);border:1px solid var(--bd);border-radius:10px;padding:22px}
-.cd h4{font-size:13px;font-weight:600;margin-bottom:5px}
+.cd h3{font-size:13px;font-weight:600;margin-bottom:5px}
 .cd p{font-size:12.5px;color:var(--tx2);line-height:1.55}
 .cd .stat{font-size:22px;font-weight:700;margin-bottom:5px}
 
@@ -121,7 +121,7 @@ hr{border:none;height:1px;background:var(--bd);margin:48px 0}
 /* Personas */
 .pr{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;margin:20px 0}
 .pc{background:var(--sf);border:1px solid var(--bd);border-radius:10px;padding:22px}
-.pc h4{font-size:14px;font-weight:600;margin-bottom:2px}
+.pc h3{font-size:14px;font-weight:600;margin-bottom:2px}
 .pc .rl{font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:1px;color:var(--tx3);margin-bottom:10px}
 .pc blockquote{font-style:italic;font-size:12.5px;color:var(--tx2);border-left:2px solid var(--bd2);padding-left:10px;margin-bottom:12px;line-height:1.5}
 .pc dl dt{font-size:9px;font-weight:600;text-transform:uppercase;letter-spacing:1px;color:var(--tx3);margin-top:10px}
@@ -138,7 +138,7 @@ hr{border:none;height:1px;background:var(--bd);margin:48px 0}
 /* Testing */
 .tg2{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:20px 0}
 .tc{background:var(--sf);border:1px solid var(--bd);border-radius:10px;padding:22px}
-.tc h4{font-size:13px;font-weight:600;margin-bottom:14px}
+.tc h3{font-size:13px;font-weight:600;margin-bottom:14px}
 .br{margin-bottom:12px}
 .bl{display:flex;justify-content:space-between;font-size:12px;margin-bottom:3px}
 .bl .v{font-weight:600}
@@ -147,11 +147,11 @@ hr{border:none;height:1px;background:var(--bd);margin:48px 0}
 .bg{background:#2F6F4F}.ba{background:var(--ac)}.by{background:#8A5F0E}
 
 /* Findings */
-.fd{background:var(--sf);border-radius:0 10px 10px 0;padding:18px 22px;margin-bottom:10px;border-left:3px solid}
-.fd.c{border-color:#B02A37}.fd.i{border-color:var(--tx)}.fd.s{border-color:#2F6F4F}
+.fd{background:var(--sf);border-radius:10px;padding:18px 22px;margin-bottom:10px;border:1px solid var(--bd)}
+.fd.c .sv{color:#B02A37}.fd.i .sv{color:var(--tx)}.fd.s .sv{color:#2F6F4F}
 .fd .sv{font-size:9px;font-weight:600;text-transform:uppercase;letter-spacing:1px;margin-bottom:2px}
 .fd.c .sv{color:#B02A37}.fd.i .sv{color:var(--tx)}.fd.s .sv{color:#2F6F4F}
-.fd h4{font-size:13px;font-weight:600;margin-bottom:2px}
+.fd h3{font-size:13px;font-weight:600;margin-bottom:2px}
 .fd p{font-size:12px;color:var(--tx2);line-height:1.5}
 
 /* Back */
@@ -162,7 +162,7 @@ hr{border:none;height:1px;background:var(--bd);margin:48px 0}
 /* NDA */
 .nda{background:var(--sf);border:1px solid var(--bd);border-radius:10px;padding:18px 22px;display:flex;align-items:flex-start;gap:10px;margin:20px 0}
 .nda-icon{font-size:16px;margin-top:1px}
-.nda h4{font-size:12px;font-weight:600;margin-bottom:2px}
+.nda .nda-t{font-size:12px;font-weight:600;margin-bottom:2px;color:var(--tx);line-height:1.4}
 .nda p{font-size:11.5px;color:var(--tx2);line-height:1.5}
 
 @media(max-width:900px){.pr{grid-template-columns:1fr}.wh{grid-template-columns:1fr 1fr}}
@@ -217,21 +217,21 @@ hr{border:none;height:1px;background:var(--bd);margin:48px 0}
 <h2 class="sh">Where planning breaks down</h2>
 <p class="sp">I ran nine interviews with people who had planned a trip in the last three months, walked the planning-to-booking path on the four tools they reached for most, and mapped where intent leaked out of the funnel. Three patterns held across almost everyone.</p>
 <div class="cg">
-<div class="cd"><h4>The blank page is the real blocker</h4><p>Interviewees did not struggle to book once they knew the plan. They struggled to commit to a shape for the trip. Seven of nine had a half-finished plan sitting in notes or saved links they never returned to.</p></div>
-<div class="cd"><h4>Planning lives in scattered tools</h4><p>A typical trip touched five to nine surfaces: search, maps, a notes app, a spreadsheet, and separate booking sites. Nothing held the whole picture, so the plan existed only in someone's head.</p></div>
-<div class="cd"><h4>Existing tools ask before they give</h4><p>The competitive look showed planners that gate value behind sign-up and long preference quizzes. People wanted to see a credible plan first and judge whether the tool understood them before investing anything.</p></div>
-<div class="cd"><h4>Finishing a trip has no payoff</h4><p>Once a trip ended it vanished. Nobody had a place that remembered where they had been, which removed any reason to come back between trips and any sense of momentum.</p></div>
+<div class="cd"><h3>The blank page is the real blocker</h3><p>Interviewees did not struggle to book once they knew the plan. They struggled to commit to a shape for the trip. Seven of nine had a half-finished plan sitting in notes or saved links they never returned to.</p></div>
+<div class="cd"><h3>Planning lives in scattered tools</h3><p>A typical trip touched five to nine surfaces: search, maps, a notes app, a spreadsheet, and separate booking sites. Nothing held the whole picture, so the plan existed only in someone's head.</p></div>
+<div class="cd"><h3>Existing tools ask before they give</h3><p>The competitive look showed planners that gate value behind sign-up and long preference quizzes. People wanted to see a credible plan first and judge whether the tool understood them before investing anything.</p></div>
+<div class="cd"><h3>Finishing a trip has no payoff</h3><p>Once a trip ended it vanished. Nobody had a place that remembered where they had been, which removed any reason to come back between trips and any sense of momentum.</p></div>
 </div>
-<div class="fd i"><div class="sv">Insight</div><h4>The job is to remove the first decision, not add features</h4><p>If the app produces a credible plan the user can react to within the first session, everything downstream gets easier. That reframed the brief from a planning toolbox to a fast draft you stay in control of.</p></div>
+<div class="fd i"><div class="sv">Insight</div><h3>The job is to remove the first decision, not add features</h3><p>If the app produces a credible plan the user can react to within the first session, everything downstream gets easier. That reframed the brief from a planning toolbox to a fast draft you stay in control of.</p></div>
 </div>
 
 <div class="w"><hr>
 <div class="sl">Personas</div>
 <h2 class="sh">Designing for different traveler types</h2>
 <div class="pr">
-<div class="pc"><h4>Yuki, 26</h4><div class="rl">Solo Traveler</div><blockquote>"I plan trips on the fly. I do not want to spend 20 minutes setting up an app."</blockquote><dl><dt>Context</dt><dd>Books long weekends on short notice, often deciding the destination days before flying. Plans entirely on her phone, usually in transit.</dd><dt>Goals</dt><dd>See a credible plan in the first minute and judge whether the app gets her taste before committing anything.</dd><dt>Frustrations</dt><dd>Sign-up walls and preference quizzes that demand effort before showing a single result.</dd></dl></div>
-<div class="pc"><h4>Daniel & Priya, 31</h4><div class="rl">Couple Travelers</div><blockquote>"One of us starts a plan, the other never sees it, and we end up booking twice."</blockquote><dl><dt>Context</dt><dd>Plan two or three bigger trips a year together but rarely at the same time or device. The plan lives in scattered screenshots and a half-dead group chat.</dd><dt>Goals</dt><dd>One shared itinerary both can edit, with bookings attached so nothing gets double-booked or lost.</dd><dt>Frustrations</dt><dd>Tools built for one account, where collaborating means forwarding links and re-explaining decisions.</dd></dl></div>
-<div class="pc"><h4>Marco, 24</h4><div class="rl">Budget Backpacker</div><blockquote>"Once a trip is over it just disappears. There is nothing to show for it."</blockquote><dl><dt>Context</dt><dd>Travels often and cheaply across many countries, optimizing hard on cost. Treats the trips themselves as a collection worth tracking.</dd><dt>Goals</dt><dd>A record of where he has been that builds over time and gives him a reason to come back between trips.</dd><dt>Frustrations</dt><dd>Planners that forget him the moment a trip ends, with no memory and no sense of momentum.</dd></dl></div>
+<div class="pc"><h3>Yuki, 26</h3><div class="rl">Solo Traveler</div><blockquote>"I plan trips on the fly. I do not want to spend 20 minutes setting up an app."</blockquote><dl><dt>Context</dt><dd>Books long weekends on short notice, often deciding the destination days before flying. Plans entirely on her phone, usually in transit.</dd><dt>Goals</dt><dd>See a credible plan in the first minute and judge whether the app gets her taste before committing anything.</dd><dt>Frustrations</dt><dd>Sign-up walls and preference quizzes that demand effort before showing a single result.</dd></dl></div>
+<div class="pc"><h3>Daniel & Priya, 31</h3><div class="rl">Couple Travelers</div><blockquote>"One of us starts a plan, the other never sees it, and we end up booking twice."</blockquote><dl><dt>Context</dt><dd>Plan two or three bigger trips a year together but rarely at the same time or device. The plan lives in scattered screenshots and a half-dead group chat.</dd><dt>Goals</dt><dd>One shared itinerary both can edit, with bookings attached so nothing gets double-booked or lost.</dd><dt>Frustrations</dt><dd>Tools built for one account, where collaborating means forwarding links and re-explaining decisions.</dd></dl></div>
+<div class="pc"><h3>Marco, 24</h3><div class="rl">Budget Backpacker</div><blockquote>"Once a trip is over it just disappears. There is nothing to show for it."</blockquote><dl><dt>Context</dt><dd>Travels often and cheaply across many countries, optimizing hard on cost. Treats the trips themselves as a collection worth tracking.</dd><dt>Goals</dt><dd>A record of where he has been that builds over time and gives him a reason to come back between trips.</dd><dt>Frustrations</dt><dd>Planners that forget him the moment a trip ends, with no memory and no sense of momentum.</dd></dl></div>
 </div></div>
 
 <div class="w"><hr>
@@ -256,10 +256,10 @@ hr{border:none;height:1px;background:var(--bd);margin:48px 0}
 <h2 class="sh">Three decisions, and what each one cost</h2>
 <p class="sp">Every decision below traded something away. I tried to be explicit about the tradeoff rather than pretend the easy path was free.</p>
 <div class="cg">
-<div class="cd"><h4>AI drafts fast, the user stays in control</h4><p>The app generates a full day-by-day itinerary in one pass so the first thing you see is a real plan, not an empty form. But a draft you cannot change is worse than no draft, so every block is editable and lockable: lock the parts you like, regenerate the rest. Tradeoff: a slower, more deliberate first screen than a pure one-tap magic moment, in exchange for trust and a sense of authorship.</p></div>
-<div class="cd"><h4>Show value before asking for sign-up</h4><p>Research showed people quit when a tool asks before it gives, so the first itinerary generates without an account. Tradeoff: I lose early account capture and some analytics on those sessions, but a person who has seen a plan they like has a real reason to sign up, instead of a blind wall.</p></div>
-<div class="cd"><h4>Unified booking, not another tab</h4><p>Bookings attach to the itinerary they belong to, so the plan and the reservations stay in one place instead of scattering across email and apps. Tradeoff: deeper integration work and more states to design, but it is the only way the app holds the whole trip rather than being one more silo.</p></div>
-<div class="cd"><h4>Gamification that rewards, never nags</h4><p>The passport stamps a continent when a trip is done, turning finished trips into a collection worth coming back to. I deliberately kept it pull, not push: no streaks, no guilt notifications, no daily login bait. Tradeoff: weaker short-term engagement hooks, but the reward stays tied to real travel instead of manufacturing fake urgency.</p></div>
+<div class="cd"><h3>AI drafts fast, the user stays in control</h3><p>The app generates a full day-by-day itinerary in one pass so the first thing you see is a real plan, not an empty form. But a draft you cannot change is worse than no draft, so every block is editable and lockable: lock the parts you like, regenerate the rest. Tradeoff: a slower, more deliberate first screen than a pure one-tap magic moment, in exchange for trust and a sense of authorship.</p></div>
+<div class="cd"><h3>Show value before asking for sign-up</h3><p>Research showed people quit when a tool asks before it gives, so the first itinerary generates without an account. Tradeoff: I lose early account capture and some analytics on those sessions, but a person who has seen a plan they like has a real reason to sign up, instead of a blind wall.</p></div>
+<div class="cd"><h3>Unified booking, not another tab</h3><p>Bookings attach to the itinerary they belong to, so the plan and the reservations stay in one place instead of scattering across email and apps. Tradeoff: deeper integration work and more states to design, but it is the only way the app holds the whole trip rather than being one more silo.</p></div>
+<div class="cd"><h3>Gamification that rewards, never nags</h3><p>The passport stamps a continent when a trip is done, turning finished trips into a collection worth coming back to. I deliberately kept it pull, not push: no streaks, no guilt notifications, no daily login bait. Tradeoff: weaker short-term engagement hooks, but the reward stays tied to real travel instead of manufacturing fake urgency.</p></div>
 </div>
 </div>
 
@@ -267,20 +267,20 @@ hr{border:none;height:1px;background:var(--bd);margin:48px 0}
 <div class="sl">Testing</div>
 <h2 class="sh">Validated with 8 travelers</h2>
 <div class="tg2">
-<div class="tc"><h4>Task completion</h4>
+<div class="tc"><h3>Task completion</h3>
 <div class="br"><div class="bl"><span>Complete onboarding</span><span class="v">92%</span></div><div class="bar"><div class="bf bg" style="width:92%"></div></div></div>
 <div class="br"><div class="bl"><span>Create a trip</span><span class="v">96%</span></div><div class="bar"><div class="bf bg" style="width:96%"></div></div></div>
 <div class="br"><div class="bl"><span>Find passport feature</span><span class="v">88%</span></div><div class="bar"><div class="bf ba" style="width:88%"></div></div></div>
 <div class="br"><div class="bl"><span>Share a trip</span><span class="v">85%</span></div><div class="bar"><div class="bf ba" style="width:85%"></div></div></div>
 </div>
-<div class="tc"><h4>Key metrics</h4>
+<div class="tc"><h3>Key metrics</h3>
 <div class="br"><div class="bl"><span>SUS Score</span><span class="v">87 / 100</span></div><div class="bar"><div class="bf bg" style="width:87%"></div></div></div>
 <div class="br"><div class="bl"><span>Onboarding time</span><span class="v">38 seconds</span></div><div class="bar"><div class="bf bg" style="width:30%"></div></div></div>
 <div class="br"><div class="bl"><span>Delight rating</span><span class="v">4.6 / 5</span></div><div class="bar"><div class="bf bg" style="width:92%"></div></div></div>
 <div class="br"><div class="bl"><span>Would recommend</span><span class="v">91%</span></div><div class="bar"><div class="bf bg" style="width:91%"></div></div></div>
 </div></div>
-<div class="fd s"><div class="sv">Validation</div><h4>The passport screen was the emotional peak</h4><p>Finding: nearly every tester reacted out loud at the Passport screen, the only point in the flow where that happened. Decision: I treated it as the app's signature moment rather than a side feature, pulling the continent stamp into onboarding so people meet it before they have even taken a trip. Result: the moment now anchors the product's identity, and "Passport Approved" became the single most-commented-on detail in later sessions.</p></div>
-<div class="fd c"><div class="sv">Critical</div><h4>Auth errors lost people at the worst moment</h4><p>Finding: a generic "Invalid code" on the OTP step left testers stuck and unsure whether to wait, retry, or restart. Decision: I rewrote the copy to say what to do next, "Code does not match, check your email," and added a visible resend timer so the path forward was never ambiguous. Result: testers in the follow-up round recovered from a bad code without dropping out, turning a dead end into a self-service fix.</p></div>
+<div class="fd s"><div class="sv">Validation</div><h3>The passport screen was the emotional peak</h3><p>Finding: nearly every tester reacted out loud at the Passport screen, the only point in the flow where that happened. Decision: I treated it as the app's signature moment rather than a side feature, pulling the continent stamp into onboarding so people meet it before they have even taken a trip. Result: the moment now anchors the product's identity, and "Passport Approved" became the single most-commented-on detail in later sessions.</p></div>
+<div class="fd c"><div class="sv">Critical</div><h3>Auth errors lost people at the worst moment</h3><p>Finding: a generic "Invalid code" on the OTP step left testers stuck and unsure whether to wait, retry, or restart. Decision: I rewrote the copy to say what to do next, "Code does not match, check your email," and added a visible resend timer so the path forward was never ambiguous. Result: testers in the follow-up round recovered from a bad code without dropping out, turning a dead end into a self-service fix.</p></div>
 </div>
 
 <div class="w"><hr>
@@ -288,10 +288,10 @@ hr{border:none;height:1px;background:var(--bd);margin:48px 0}
 <h2 class="sh">Where it landed</h2>
 <p class="sp">Outbound is live and early. These are design and testing outcomes, not adoption claims: the product is still small and the numbers below come from the moderated sessions and the first weeks of real use, so I am reporting them as directional, not proven at scale.</p>
 <div class="cg">
-<div class="cd"><div class="stat">~40s</div><h4>From prompt to a usable first itinerary</h4><p>The AI draft collapsed what used to be hours of cross-tab research into one screen people could react to in under a minute.</p></div>
-<div class="cd"><div class="stat">4.6/5</div><h4>Usability rating across 8 testers</h4><p>One full point below ceiling, with the friction concentrated in sharing and auth rather than the core planning flow.</p></div>
-<div class="cd"><div class="stat">88%</div><h4>Task completion in testing</h4><p>Core tasks completed cleanly; the lower scores on share and passport-discovery drove the next round of fixes.</p></div>
-<div class="cd"><div class="stat">Live</div><h4>Shipped and in front of real travelers</h4><p>The design shipped as a working product at <a href="https://tripoutbound.co/" target="_blank" rel="noopener" style="color:var(--ac);font-weight:600">tripoutbound.co</a>, where iteration now happens against actual usage instead of prototypes.</p></div>
+<div class="cd"><div class="stat">~40s</div><h3>From prompt to a usable first itinerary</h3><p>The AI draft collapsed what used to be hours of cross-tab research into one screen people could react to in under a minute.</p></div>
+<div class="cd"><div class="stat">4.6/5</div><h3>Usability rating across 8 testers</h3><p>One full point below ceiling, with the friction concentrated in sharing and auth rather than the core planning flow.</p></div>
+<div class="cd"><div class="stat">88%</div><h3>Task completion in testing</h3><p>Core tasks completed cleanly; the lower scores on share and passport-discovery drove the next round of fixes.</p></div>
+<div class="cd"><div class="stat">Live</div><h3>Shipped and in front of real travelers</h3><p>The design shipped as a working product at <a href="https://tripoutbound.co/" target="_blank" rel="noopener" style="color:var(--ac);font-weight:600">tripoutbound.co</a>, where iteration now happens against actual usage instead of prototypes.</p></div>
 </div>
 </div>
 
@@ -300,9 +300,9 @@ hr{border:none;height:1px;background:var(--bd);margin:48px 0}
 <h2 class="sh">AI should draft, not decide</h2>
 <div class="cg">
 <div class="cd"><p>The strongest version of the product was not the most automated one. People trusted the AI more when they could overrule it. The control I gave back through editable, lockable blocks was what made the speed feel safe instead of pushy.</p></div>
-<div class="cd"><h4>Emotional milestones in onboarding</h4><p>The "Passport Approved" moment was the single most commented-on decision. Onboarding should not just be functional. It should make users feel something.</p></div>
-<div class="cd"><h4>Error states are conversations</h4><p>"Oops!" is not helpful. "The code does not match, we just sent a new one" is. Every error state is a conversation with an anxious user.</p></div>
-<div class="cd"><h4>Shipping changes the questions</h4><p>Testing told me what confused people; living traffic tells me what they ignore. The next round is less about polish and more about earning the second session.</p></div>
+<div class="cd"><h3>Emotional milestones in onboarding</h3><p>The "Passport Approved" moment was the single most commented-on decision. Onboarding should not just be functional. It should make users feel something.</p></div>
+<div class="cd"><h3>Error states are conversations</h3><p>"Oops!" is not helpful. "The code does not match, we just sent a new one" is. Every error state is a conversation with an anxious user.</p></div>
+<div class="cd"><h3>Shipping changes the questions</h3><p>Testing told me what confused people; living traffic tells me what they ignore. The next round is less about polish and more about earning the second session.</p></div>
 </div></div>
 <div class="bk"><a href="../index.html" class="bk-btn">← Back to portfolio</a></div>
 </main>
