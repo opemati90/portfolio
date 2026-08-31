@@ -172,12 +172,12 @@ nav.scrolled{background:rgba(247,248,249,0.92);border-bottom-color:var(--line)}
 .hero{padding:128px 0 64px;position:relative}
 h1{
   font-family:var(--serif);
-  font-size:clamp(44px,7vw,82px);
+  font-size:clamp(44px,7.6vw,94px);
   font-weight:500;
-  letter-spacing:-0.025em;
-  line-height:1.03;
-  margin-bottom:28px;
-  max-width:18ch;
+  letter-spacing:-0.03em;
+  line-height:1.02;
+  margin-bottom:32px;
+  max-width:17ch;
   font-variation-settings:"opsz" 72;
 }
 .hero h1 em{font-style:italic;font-weight:400;color:var(--accent)}
@@ -250,7 +250,7 @@ h1{
 }
 .feat:hover{border-color:var(--line-2);box-shadow:0 30px 60px -28px rgba(30,40,60,0.22),0 8px 20px -14px rgba(20,22,26,0.12);transform:translateY(-3px)}
 .feat .thumb{
-  position:relative;aspect-ratio:4/3;
+  position:relative;aspect-ratio:16/11;
   display:flex;align-items:center;justify-content:center;
   overflow:hidden;
 }
@@ -267,12 +267,12 @@ h1{
 .feat:hover .wm{border-color:var(--line-2);color:var(--ink)}
 .feat .name{font-family:var(--serif);font-size:30px;font-weight:500;letter-spacing:-0.02em;line-height:1.14;font-variation-settings:"opsz" 60}
 .feat .desc{font-size:14.5px;color:var(--ink-2);line-height:1.6}
-.feat .info-bot{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-top:20px;border-top:1px dashed var(--line)}
-.feat .impact{display:flex;gap:24px}
+.feat .info-bot{display:flex;flex-direction:column;align-items:stretch;gap:14px;padding-top:20px;border-top:1px dashed var(--line)}
+.feat .impact{display:flex;gap:26px;flex-wrap:wrap}
 .feat .imp-i{display:flex;flex-direction:column;gap:2px}
 .feat .imp-n{font-family:var(--serif);font-size:18px;font-weight:500;letter-spacing:-0.015em;color:var(--ink);font-variant-numeric:tabular-nums}
-.feat .imp-l{font-size:10.5px;color:var(--ink-3);text-transform:uppercase;letter-spacing:0.06em}
-.feat .read{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:500;color:var(--ink);transition:gap var(--d-base) var(--spring)}
+.feat .imp-l{font-size:10px;color:var(--ink-3);text-transform:uppercase;letter-spacing:0.05em;white-space:nowrap}
+.feat .read{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:500;color:var(--ink);white-space:nowrap;align-self:flex-end;transition:gap var(--d-base) var(--spring)}
 .feat:hover .read{gap:12px}
 
 /* WORK - more work list */
@@ -281,6 +281,9 @@ h1{
 .exp-slot-p{font-size:15px;color:var(--ink-2);line-height:1.6;max-width:62ch;margin-bottom:22px}
 .more{margin-top:56px;border-top:1px solid var(--line);padding-top:28px}
 .more-h{font-family:var(--mono);font-size:11px;font-weight:500;text-transform:uppercase;letter-spacing:0.08em;color:var(--ink-3);margin-bottom:6px}
+.more-group{margin-top:26px}
+.more-group:first-of-type{margin-top:16px}
+.more-cat{font-family:var(--mono);font-size:10.5px;text-transform:uppercase;letter-spacing:0.07em;color:var(--ink);font-weight:500;padding-bottom:8px;border-bottom:1px solid var(--line-2)}
 .more-list{list-style:none}
 .more-list li{border-bottom:1px solid var(--line)}
 .more-list li:last-child{border-bottom:none}
@@ -503,7 +506,7 @@ footer{
 
       <a href="projects/compliance.html" class="feat rv">
         <div class="thumb" style="background:linear-gradient(135deg,#F8F9FC 0%,#EDF1F6 100%)">
-          <img src="assets/sbti-upload.png" alt="Target Validation Platform">
+          <img width="1440" height="1024" src="assets/sbti-upload.png" alt="Target Validation Platform">
         </div>
         <div class="info">
           <div class="info-top">
@@ -528,7 +531,7 @@ footer{
 
       <a href="projects/design-system.html" class="feat rv">
         <div class="thumb" style="background:linear-gradient(135deg,#FAFBFC 0%,#EDEFF2 100%)">
-          <img src="assets/design-system-thumb.png" alt="Enterprise Design System">
+          <img width="1200" height="800" loading="lazy" decoding="async" src="assets/design-system-thumb.png" alt="Enterprise Design System">
         </div>
         <div class="info">
           <div class="info-top">
@@ -553,7 +556,7 @@ footer{
 
       <a href="projects/renuir.html" class="feat rv">
         <div class="thumb" style="background:linear-gradient(135deg,#0A0A0A 0%,#1A1A1A 100%)">
-          <img src="assets/renuir-chat-match.png" alt="Renuir">
+          <img width="1500" height="1125" loading="lazy" decoding="async" src="assets/renuir-chat-match.png" alt="Renuir">
         </div>
         <div class="info">
           <div class="info-top">
@@ -585,7 +588,7 @@ footer{
 
       <a href="projects/anstoss.html" class="feat rv">
         <div class="thumb" style="background:linear-gradient(135deg,#0E1A24 0%,#0A1117 100%)">
-          <img src="assets/anstoss-site.jpg" alt="Anstoss, the app for amateur football clubs">
+          <img width="1600" height="789" loading="lazy" decoding="async" src="assets/anstoss-site.jpg" alt="Anstoss, the app for amateur football clubs">
         </div>
         <div class="info">
           <div class="info-top">
@@ -612,17 +615,33 @@ footer{
     <!-- MORE WORK -->
     <div class="more rv">
       <h3 class="more-h">Additional work and product experiments</h3>
-      <ul class="more-list">
-        <li><a href="projects/attestloop.html"><span class="mw-n">Attestloop</span><span class="mw-d">Compliance findings made reviewable, an AI-assisted functional prototype</span><span class="mw-a" aria-hidden="true">→</span></a></li>
-        <li><a href="projects/compliancebox.html"><span class="mw-n">ComplianceBox</span><span class="mw-d">One control model mapped across ISO 27001, NIS2, GDPR, and SOC 2</span><span class="mw-a" aria-hidden="true">→</span></a></li>
-        <li><a href="projects/climate-compass.html"><span class="mw-n">Climate Compass</span><span class="mw-d">Behaviour design that turns climate paralysis into one shared action a week</span><span class="mw-a" aria-hidden="true">→</span></a></li>
-        <li><a href="projects/eduapp.html"><span class="mw-n">EduApp</span><span class="mw-d">Offline-first e-learning for Nigerian students, 15k+ active</span><span class="mw-a" aria-hidden="true">→</span></a></li>
-        <li><a href="projects/fivo.html"><span class="mw-n">Fivo AI</span><span class="mw-d">An AI meeting assistant, +52% sign-ups after the redesign</span><span class="mw-a" aria-hidden="true">→</span></a></li>
-        <li><a href="projects/pay4me.html"><span class="mw-n">Pay4Me Finance</span><span class="mw-d">Trust-first tuition transfers across 150+ countries</span><span class="mw-a" aria-hidden="true">→</span></a></li>
-        <li><a href="projects/paywise.html"><span class="mw-n">PayWise</span><span class="mw-d">Card and expense management for a multi-card wallet</span><span class="mw-a" aria-hidden="true">→</span></a></li>
-        <li><a href="projects/raridex.html"><span class="mw-n">Raridex</span><span class="mw-d">Analytics and CRM with real-time reporting</span><span class="mw-a" aria-hidden="true">→</span></a></li>
-        <li><a href="projects/outbound.html"><span class="mw-n">Outbound</span><span class="mw-d">AI travel planning and itinerary management</span><span class="mw-a" aria-hidden="true">→</span></a></li>
-      </ul>
+
+      <div class="more-group">
+        <p class="more-cat">Compliance and climate</p>
+        <ul class="more-list">
+          <li><a href="projects/attestloop.html"><span class="mw-n">Attestloop</span><span class="mw-d">Compliance findings made reviewable, an AI-assisted functional prototype</span><span class="mw-a" aria-hidden="true">→</span></a></li>
+          <li><a href="projects/compliancebox.html"><span class="mw-n">ComplianceBox</span><span class="mw-d">One control model mapped across ISO 27001, NIS2, GDPR, and SOC 2</span><span class="mw-a" aria-hidden="true">→</span></a></li>
+          <li><a href="projects/climate-compass.html"><span class="mw-n">Climate Compass</span><span class="mw-d">Behaviour design that turns climate paralysis into one shared action a week</span><span class="mw-a" aria-hidden="true">→</span></a></li>
+        </ul>
+      </div>
+
+      <div class="more-group">
+        <p class="more-cat">Fintech and payments</p>
+        <ul class="more-list">
+          <li><a href="projects/pay4me.html"><span class="mw-n">Pay4Me Finance</span><span class="mw-d">Trust-first tuition transfers across 150+ countries</span><span class="mw-a" aria-hidden="true">→</span></a></li>
+          <li><a href="projects/paywise.html"><span class="mw-n">PayWise</span><span class="mw-d">Card and expense management for a multi-card wallet</span><span class="mw-a" aria-hidden="true">→</span></a></li>
+        </ul>
+      </div>
+
+      <div class="more-group">
+        <p class="more-cat">AI, analytics and consumer</p>
+        <ul class="more-list">
+          <li><a href="projects/fivo.html"><span class="mw-n">Fivo AI</span><span class="mw-d">An AI meeting assistant, +52% sign-ups after the redesign</span><span class="mw-a" aria-hidden="true">→</span></a></li>
+          <li><a href="projects/raridex.html"><span class="mw-n">Raridex</span><span class="mw-d">Analytics and CRM with real-time reporting</span><span class="mw-a" aria-hidden="true">→</span></a></li>
+          <li><a href="projects/outbound.html"><span class="mw-n">Outbound</span><span class="mw-d">AI travel planning and itinerary management</span><span class="mw-a" aria-hidden="true">→</span></a></li>
+          <li><a href="projects/eduapp.html"><span class="mw-n">EduApp</span><span class="mw-d">Offline-first e-learning for Nigerian students, 15k+ active</span><span class="mw-a" aria-hidden="true">→</span></a></li>
+        </ul>
+      </div>
     </div>
   </div>
 </section>

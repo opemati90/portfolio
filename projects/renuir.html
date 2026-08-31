@@ -206,7 +206,7 @@ hr{border:none;height:1px;background:var(--bd);margin:48px 0}
 <div class="mt"><div class="n">84</div><div class="l">SUS, moderated prototype round</div></div>
 </div></div>
 
-<div class="ww"><div class="img-box" style="background:#c3c8ce"><img src="../assets/renuir-home.png" alt="Renuir home screen in hand"></div></div>
+<div class="ww"><div class="img-box" style="background:#c3c8ce"><img width="1500" height="1125" src="../assets/renuir-home.png" alt="Renuir home screen in hand"></div></div>
 
 <!-- PROBLEM -->
 <div class="w"><hr>
@@ -300,42 +300,42 @@ hr{border:none;height:1px;background:var(--bd);margin:48px 0}
 <h2 class="sh">Reporting a loss, camera first</h2>
 <p class="sp">Onboarding communicates three value props through illustrated screens: report, match, return. Sign-up is email plus OTP for simplicity, with Google SSO as the alternative. Reporting is camera-first: photograph the item, add details, pin the location, post. The person doing this has just lost something, so the flow asks for the least it can get away with.</p>
 </div>
-<div class="ww"><div class="img-box img-dark"><img src="../assets/renuir-post-onboard.png" alt="Renuir onboarding and the camera-first report flow"></div>
+<div class="ww"><div class="img-box img-dark"><img width="1500" height="1125" loading="lazy" decoding="async" src="../assets/renuir-post-onboard.png" alt="Renuir onboarding and the camera-first report flow"></div>
 <p class="img-caption">Onboarding, then a camera-first flow to report an item.</p></div>
 
 <div class="w">
 <h2 class="sh">The match, and a private channel</h2>
 <p class="sp">When the AI finds a candidate, both sides see a match confidence score rather than a bare yes. In-app messaging then coordinates the return without either party handing over a phone number or an address, which is the single biggest objection finders raised in research.</p>
 </div>
-<div class="ww"><div class="img-box img-dark"><img src="../assets/renuir-chat-match.png" alt="AI match confidence score and the in-app chat"></div>
+<div class="ww"><div class="img-box img-dark"><img width="1500" height="1125" loading="lazy" decoding="async" src="../assets/renuir-chat-match.png" alt="AI match confidence score and the in-app chat"></div>
 <p class="img-caption">Match confidence, then a private chat that never exposes contact details.</p></div>
 
 <div class="w">
 <h2 class="sh">Proving the item is yours</h2>
 <p class="sp">Ownership is established with serial numbers, receipts, photos, or warranty documents, and the finder reviews the proof before approving. This is the step that carries the most fraud risk and, as testing later showed, the most friction.</p>
 </div>
-<div class="ww"><div class="img-box img-dark"><img src="../assets/renuir-ownership.png" alt="The ownership verification flow, from claim through proof review to approval"></div>
+<div class="ww"><div class="img-box img-dark"><img width="2000" height="851" loading="lazy" decoding="async" src="../assets/renuir-ownership.png" alt="The ownership verification flow, from claim through proof review to approval"></div>
 <p class="img-caption">The full verification flow: claim, evidence, review, decision.</p></div>
 
 <div class="w">
 <h2 class="sh">Handing it over in person</h2>
 <p class="sp">For an in-person return, the app suggests a safe public place and confirms the handover with a four-digit code, so neither person has to judge whether a stranger is trustworthy on the spot. The code is the proof that the item actually changed hands.</p>
 </div>
-<div class="ww"><div class="img-box img-dark"><img src="../assets/renuir-meetup.png" alt="Safe meetup coordination with a location suggestion and a four-digit handover code"></div>
+<div class="ww"><div class="img-box img-dark"><img width="2000" height="823" loading="lazy" decoding="async" src="../assets/renuir-meetup.png" alt="Safe meetup coordination with a location suggestion and a four-digit handover code"></div>
 <p class="img-caption">A suggested public location, then a four-digit code to confirm the handover.</p></div>
 
 <div class="w">
 <h2 class="sh">Or shipping it, tracked</h2>
 <p class="sp">Not everyone wants to meet. The second path ships through an integrated delivery partner with live tracking, so a finder can return an item without ever meeting the owner. Offering both is what makes the loop work for people with opposite comfort levels.</p>
 </div>
-<div class="ww"><div class="img-box img-dark"><img src="../assets/renuir-delivery.png" alt="The shipping return path with label, tracking, and confirmation"></div>
+<div class="ww"><div class="img-box img-dark"><img width="2000" height="653" loading="lazy" decoding="async" src="../assets/renuir-delivery.png" alt="The shipping return path with label, tracking, and confirmation"></div>
 <p class="img-caption">The shipping path, for finders who would rather not meet anyone.</p></div>
 
 <div class="w">
 <h2 class="sh">When the evidence does not add up</h2>
 <p class="sp">A claim can be wrong, or dishonest. The finder can decline, and the claimant is told respectfully rather than left guessing. Designing the refusal properly matters more than it sounds: it is the moment the platform either protects both sides or makes an enemy of one.</p>
 </div>
-<div class="ww"><div class="img-box" style="background:#c2cbd2"><img src="../assets/renuir-reject.png" alt="A respectful claim-rejection moment"></div>
+<div class="ww"><div class="img-box" style="background:#c2cbd2"><img width="1500" height="1125" loading="lazy" decoding="async" src="../assets/renuir-reject.png" alt="A respectful claim-rejection moment"></div>
 <p class="img-caption">The decline path, written to protect the finder without accusing the claimant.</p></div>
 
 <!-- TESTING -->
@@ -375,10 +375,10 @@ hr{border:none;height:1px;background:var(--bd);margin:48px 0}
 <h2 class="sh">Designing for trust is the hardest problem</h2>
 
 <div class="cg">
-<div class="cd"><p>In a platform where strangers exchange personal belongings, every interaction must build trust. Trust is not a feature. It emerges from dozens of small decisions: clear language, verification steps, safety features, and transparent processes.</p></div>
+<div class="cd"><p>Strangers hand each other belongings through this product, so the interface is doing two jobs at once: moving the item, and giving both sides a reason to believe the other will show up. No single screen carries that. It is built out of the wording on the claim form, the proof we ask for, the meetup place we suggest, and the code exchanged at handover.</p></div>
 <div class="cd"><h3>0 to 1 requires ruthless prioritization</h3><p>With limited resources, I developed the framework "What is the minimum viable trust?" The smallest set of features that makes someone comfortable handing belongings to a stranger through the platform.</p></div>
 <div class="cd"><h3>The design system scales the product</h3><p>The component library I designed supports the mobile app, a B2B admin dashboard, and API documentation from the same token set. New flows can be assembled in hours, not weeks.</p></div>
-<div class="cd"><h3>Regulatory constraints improve design</h3><p>Found-property law and GDPR initially felt like obstacles. They turned out to be forcing functions that made the verification flow more trustworthy. Legal requirements and good UX aligned perfectly.</p></div>
+<div class="cd"><h3>Regulatory constraints improve design</h3><p>Found-property law and GDPR initially felt like obstacles. Both push in the same direction as the product: prove ownership before releasing an item, and hold no more personal data than the handover needs. Where they conflicted, the law set the ceiling and the flow was designed under it.</p></div>
 </div>
 </div>
 
