@@ -57,5 +57,5 @@ One spring, `cubic-bezier(0.22,1,0.36,1)`, and one ease, `cubic-bezier(0.4,0,0.2
 ## Known debt
 
 - Two token vocabularies for one palette (`--ink` vs `--tx`), reconciled only by fallback chains in `assets/a11y.css`.
-- `design-system.html` contains no imagery, constrained by NDA.
+- `design-system.html` shows no production UI, constrained by NDA. The button consolidation is now shown as an authored in-page artifact (the audit wall redrawn without client branding, plus the four replacement variants and their states); the remaining sections still rely on prose.
 - The Experience section lists three roles with no scope detail.

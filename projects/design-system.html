@@ -122,6 +122,52 @@ hr{border:none;height:1px;background:var(--bd);margin:48px 0}
 .anatomy-card h3{font-size:13px;font-weight:600;margin-bottom:4px}
 .anatomy-card p{font-size:12px;color:var(--tx2);line-height:1.5}
 
+/* Wall of inconsistency + consolidation artifact */
+.wall{margin:40px 0 0}
+.wall.after{margin-top:44px;padding-top:36px;border-top:1px solid var(--bd)}
+.wall-head{max-width:62ch;margin-bottom:22px}
+.wall-t{font-family:var(--serif);font-size:19px;font-weight:500;letter-spacing:-0.015em;margin-bottom:6px}
+.wall-s{font-size:13px;color:var(--tx2);line-height:1.6}
+.wall-grid{display:flex;flex-wrap:wrap;gap:14px;align-items:center;padding:26px;background:var(--sf);border:1px solid var(--bd);border-radius:12px}
+.wall-n{font-size:12px;color:var(--tx3);margin-top:12px}
+.wall-n b{color:var(--tx);font-weight:600}
+.wall .b,.after-grid .b,.states-row .b{display:inline-flex;align-items:center;gap:6px;font-family:var(--f);white-space:nowrap;cursor:default}
+/* the fourteen, each wrong in its own way */
+.b1{background:#2C6FE4;color:#fff;padding:9px 18px;border-radius:4px;font-size:13px;font-weight:600}
+.b2{background:#1B4FA8;color:#fff;padding:6px 12px;border-radius:14px;font-size:11px;font-weight:400}
+.b3{background:#3D7BE8;color:#fff;padding:11px 22px;border-radius:2px;font-size:11px;font-weight:700;letter-spacing:0.09em}
+.b4{background:transparent;color:#2C6FE4;padding:8px 16px;border-radius:6px;font-size:13px;font-weight:500;border:2px solid #2C6FE4}
+.b5{background:#12325F;color:#fff;padding:10px 14px;border-radius:8px;font-size:12px;font-weight:500}
+.b6{background:#5B8DEF;color:#fff;padding:7px 20px;border-radius:20px;font-size:12px;font-weight:600}
+.b7{background:#EDF1F8;color:#2C6FE4;padding:9px 13px;border-radius:3px;font-size:12px;font-weight:400}
+.b8{background:#2C6FE4;color:#fff;padding:13px 26px;border-radius:6px;font-size:14px;font-weight:500}
+.b9{background:#0F9D6B;color:#fff;padding:8px 15px;border-radius:5px;font-size:10.5px;font-weight:700;letter-spacing:0.06em}
+.b10{background:#fff;color:#333;padding:8px 16px;border-radius:4px;font-size:12px;font-weight:500;border:1px solid #B9C2CE;box-shadow:0 1px 0 rgba(0,0,0,0.06)}
+.b11{background:#2C6FE4;color:#fff;padding:5px 11px;border-radius:6px;font-size:10.5px;font-weight:500}
+.b12{background:#111;color:#fff;padding:10px 17px;border-radius:0;font-size:12.5px;font-weight:600}
+.b13{background:transparent;color:#1B4FA8;padding:8px 6px;border-radius:0;font-size:13px;font-weight:500;text-decoration:underline;text-underline-offset:3px}
+.b14{background:#7A5BE8;color:#fff;padding:9px 19px;border-radius:10px;font-size:12px;font-weight:500}
+/* the four */
+.after-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+.av{background:var(--sf);border:1px solid var(--bd);border-radius:12px;padding:20px 18px;display:flex;flex-direction:column;gap:14px;align-items:flex-start}
+.av-n{font-size:12px;color:var(--tx2);line-height:1.55}
+.av-n b{display:block;color:var(--tx);font-weight:600;font-size:12.5px;margin-bottom:2px}
+.b.p{background:var(--tx);color:var(--bg);padding:9px 17px;border-radius:8px;font-size:12.5px;font-weight:500}
+.b.sc{background:var(--bg);color:var(--tx);padding:9px 17px;border-radius:8px;font-size:12.5px;font-weight:500;border:1px solid var(--bd2)}
+.b.gh{background:transparent;color:var(--tx2);padding:9px 12px;border-radius:8px;font-size:12.5px;font-weight:500}
+.b.ds{background:#B02A37;color:#fff;padding:9px 17px;border-radius:8px;font-size:12.5px;font-weight:500}
+.states{margin-top:22px;padding:22px;background:var(--sf);border:1px solid var(--bd);border-radius:12px}
+.states-t{font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:1.5px;color:var(--tx3);margin-bottom:14px}
+.states-row{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+.st-h{background:#000}
+.st-a{background:#000;transform:translateY(1px)}
+.st-d{opacity:0.38}
+.st-f{box-shadow:0 0 0 2px var(--bg),0 0 0 4px var(--ac)}
+.st-l .sp{width:10px;height:10px;border-radius:50%;border:1.6px solid rgba(255,255,255,0.35);border-top-color:#fff;display:inline-block;animation:dsspin 0.7s linear infinite}
+@keyframes dsspin{to{transform:rotate(360deg)}}
+@media (max-width:620px){.after-grid{grid-template-columns:1fr}.wall-grid{padding:18px;gap:10px}}
+@media (prefers-reduced-motion:reduce){.st-l .sp{animation:none}}
+
 /* Fake button components */
 .ds-btn{display:inline-flex;align-items:center;gap:6px;padding:8px 16px;border-radius:6px;font-size:12px;font-weight:500;font-family:var(--f)}
 .ds-btn-primary{background:var(--tx);color:#fff}
@@ -269,6 +315,56 @@ hr{border:none;height:1px;background:var(--bd);margin:48px 0}
     <div class="crd">
       <h3>How I presented it</h3>
       <p>Created a "Wall of Inconsistency" in FigJam showing every variant side by side. Presented to product, engineering, and leadership. The visual impact made the problem undeniable. Got buy-in for a dedicated design system workstream within one week.</p>
+    </div>
+  </div>
+</div>
+
+<div class="w">
+  <div class="wall">
+    <div class="wall-head">
+      <p class="wall-t">The wall of inconsistency, redrawn</p>
+      <p class="wall-s">Fourteen button styles found in the audit, reconstructed from my inventory with the client's colour and brand removed. Every difference shown here is one an engineer had to guess at: radius, weight, casing, height, border, and four unrelated notions of what "primary" meant.</p>
+    </div>
+    <div class="wall-grid">
+      <span class="b b1">Submit</span>
+      <span class="b b2">Submit</span>
+      <span class="b b3">SUBMIT</span>
+      <span class="b b4">Submit</span>
+      <span class="b b5">Submit &rsaquo;</span>
+      <span class="b b6">Submit</span>
+      <span class="b b7">submit</span>
+      <span class="b b8">Submit</span>
+      <span class="b b9">SUBMIT</span>
+      <span class="b b10">Submit</span>
+      <span class="b b11">Submit</span>
+      <span class="b b12">Submit</span>
+      <span class="b b13">Submit</span>
+      <span class="b b14">Submit</span>
+    </div>
+    <p class="wall-n"><b>14 styles.</b> Six radii, five type sizes, three casings, four colours competing for the same meaning.</p>
+  </div>
+
+  <div class="wall after">
+    <div class="wall-head">
+      <p class="wall-t">What replaced them</p>
+      <p class="wall-s">Four variants with written rules for when each applies, each shipping the full state set. Consolidation was not a visual preference: it removed the question an engineer had to answer on every screen.</p>
+    </div>
+    <div class="after-grid">
+      <div class="av"><span class="b p">Submit</span><p class="av-n"><b>Primary</b>One per view. The action the screen exists for.</p></div>
+      <div class="av"><span class="b sc">Submit</span><p class="av-n"><b>Secondary</b>Supporting actions that do not commit anything.</p></div>
+      <div class="av"><span class="b gh">Submit</span><p class="av-n"><b>Ghost</b>Tertiary and in-table actions where weight would crowd the data.</p></div>
+      <div class="av"><span class="b ds">Submit</span><p class="av-n"><b>Destructive</b>Irreversible only, never adjacent to primary.</p></div>
+    </div>
+    <div class="states">
+      <p class="states-t">Every variant, every state</p>
+      <div class="states-row">
+        <span class="b p">Default</span>
+        <span class="b p st-h">Hover</span>
+        <span class="b p st-a">Active</span>
+        <span class="b p st-d">Disabled</span>
+        <span class="b p st-l"><i class="sp"></i>Loading</span>
+        <span class="b p st-f">Focus</span>
+      </div>
     </div>
   </div>
 </div>
