@@ -33,14 +33,16 @@
   }
 
   var items = [];
-  var used = {};
 
   heads.forEach(function (h) {
     var id = h.id;
     if (!id) {
-      id = slug(h.textContent) || 'section';
-      if (used[id]) id = id + '-' + used[id]++;
-      else used[id] = 1;
+      var base = slug(h.textContent) || 'section';
+      id = base;
+      // Check the whole document, not just the ids this script made.
+      // Two pages already carry a hand-written id="research".
+      var n = 2;
+      while (document.getElementById(id)) { id = base + '-' + n++; }
       h.id = id;
     }
     // Prefer the small label above the heading ("Research", "Delivery"),
@@ -87,22 +89,30 @@
   // listener, so this costs nothing per frame.
   if (!('IntersectionObserver' in window)) return;
 
-  var visible = {};
-  var observer = new IntersectionObserver(function (entries) {
-    entries.forEach(function (entry) {
-      visible[entry.target.id] = entry.isIntersecting;
-    });
+  var LINE = 96; // just below the fixed page header
+
+  function mark() {
     var current = null;
     for (var i = 0; i < items.length; i++) {
-      if (visible[items[i].id]) { current = items[i]; break; }
+      if (items[i].el.getBoundingClientRect().top <= LINE) current = items[i];
+      else break;
     }
+    // Before the first heading, nothing is current rather than everything.
     items.forEach(function (item) {
       var on = item === current;
       item.link.classList.toggle('is-current', on);
       if (on) item.link.setAttribute('aria-current', 'true');
       else item.link.removeAttribute('aria-current');
     });
-  }, { rootMargin: '-72px 0px -55% 0px', threshold: 0 });
+  }
 
+  // The observer is only a cheap trigger to recompute. Each heading
+  // crossing the line fires it, and mark() reads real positions, so the
+  // marking is correct however tall the section is.
+  var observer = new IntersectionObserver(mark, {
+    rootMargin: '-' + LINE + 'px 0px 0px 0px',
+    threshold: 0
+  });
   items.forEach(function (item) { observer.observe(item.el); });
+  mark();
 })();

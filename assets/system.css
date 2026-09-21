@@ -136,11 +136,6 @@ h1 em,.st em,.sh em,.about-lead em,.hero-p em,.foot-h em{
 }
 .btn,.bk-btn,input,textarea,select{border-radius:var(--r-sm)}
 
-/* ---------- focus ----------
-   Kept from the accessibility layer, restated here because the
-   accent token moved. */
-:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
-
 /* ---------- motion ----------
    The dial is low on purpose. A hiring manager scanning on a
    train does not need choreography, and every extra transition
@@ -208,11 +203,18 @@ h1 em,.st em,.sh em,.about-lead em,.hero-p em,.foot-h em{
 .toc ol{counter-reset:toc}
 
 /* The heading a contents link jumps to must clear the fixed nav. */
-h2.sh{scroll-margin-top:84px}
+.sh{scroll-margin-top:84px}
 
 @media(max-width:768px){
-  .toc{margin-left:20px;margin-right:20px;padding:18px 20px 20px}
-  .toc ol{columns:1}
+  /* The .w wrapper already pads to the page spine; the old margin here
+     inset the contents block a second time. */
+  .toc{padding:18px 20px 20px}
+  /* Two columns are kept on small screens. a11y.css gives every nav
+     link a 44px touch target, and a single column of 13 of those is
+     taller than a phone viewport, which defeats the point of a map. */
+  .toc ol{columns:2;column-gap:20px}
+  .toc a{font-size:13px}
+  .toc a::before{margin-right:7px}
 }
 
 /* Metric captions. These sit under a large figure, so they stay
@@ -241,3 +243,56 @@ h2.sh{scroll-margin-top:84px}
 @media(max-width:440px){
   nav .nr a[href="#work"]{display:none!important}
 }
+
+/* ============================================================
+   Corrections from the adversarial review of the first pass.
+   Each block names the defect it closes.
+   ============================================================ */
+
+/* The contact headline was the one heading still on the old scale:
+   56px at weight 500 next to a 55px/600 h1, because it matched none
+   of the h1 / .st / .sh selectors above. */
+.cta-card h2{
+  font-size:clamp(30px,4.2vw,46px)!important;
+  font-weight:600!important;
+  letter-spacing:-0.023em!important;
+  line-height:1.1!important;
+  font-variation-settings:normal!important;
+}
+
+/* Radius: the surface list above missed the two biggest interactive
+   surfaces, so the retired 20px was still on the contact block and
+   the two button families had drifted apart at 6px and 10px. */
+.cta-card{border-radius:var(--r)!important}
+.cta-link,.nr a,.section-head .count,.fn,.img-box img{border-radius:var(--r-sm)!important}
+
+/* Control boundaries need 3:1 under WCAG 1.4.11. --line-2 is 1.51:1,
+   which is fine for a decorative rule and not fine for the outline of
+   a button, so the buttons get a token of their own. */
+:root{--control-bd:#7C838D}
+.btn,.cta-link{border-color:var(--control-bd)!important}
+
+/* Labels. The list above missed four label classes that sit inches
+   from the ones it caught, leaving two competing label systems on the
+   same page. Font size was never set at all, so 9px values survived
+   under a system documented as 10.5 to 11px. */
+.sl,.wm,.tg,.mc dt,.imp-l,.exp-d,.context-label,.foot-col h3,
+.exp-slot-h,.rec-rel,.fd .sv,.pc .rl,.pc dl dt,.wh-item strong,
+.eyebrow,.more-h,.more-cat,.am-row dt{
+  font-family:var(--mono)!important;
+  letter-spacing:0.07em!important;
+  font-size:10.5px!important;
+}
+.tg,.wm{text-transform:uppercase!important}
+
+/* Standing rule, DESIGN.md: a left border above 1px is the tell this
+   site avoids. Ten case studies still carried 2px slabs. */
+.rolefact,.pc blockquote{border-left-width:1px!important}
+
+/* No italic file is loaded, so this rendered as a browser-slanted
+   upright. */
+.pc blockquote,.rolefact{font-style:normal!important}
+
+/* Standing rule, DESIGN.md: nothing is centered. The metric tiles are
+   the most visible element on a case study. */
+.mt,.bk,.img-caption,.metrics .mt{text-align:left!important}

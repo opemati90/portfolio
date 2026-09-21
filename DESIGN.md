@@ -19,6 +19,7 @@ The audience is product hiring managers and recruiters, who skim before they rea
 - **IBM Plex Sans** carries display and body. Headlines at `600`, tracking `-0.025em` on the home hero and `-0.021em` on section headings. Plex has a smaller x-height than the geometric grotesks and does not take very tight tracking, so it is set looser than a Geist or Inter setting would be. Body at `400`, 14 to 17px. The home hero tops out at 55px, well below the 94px the previous serif ran at, because a sans at that scale shouts where a serif reads as a masthead.
 - **IBM Plex Mono** is used only for small uppercase labels at 10.5 to 11px, letterspaced `0.07em`: section labels, tag chips, role-block keys, date columns. It is never used for body text, and no longer for metric captions, which were outweighing the figures they described.
 - **Numbers** are set with `font-variant-numeric: tabular-nums` wherever they appear as data, so columns of figures align.
+- **Label font size is 10.5px everywhere.** The page stylesheets carried 9px and 10px values that survived the first pass of this system, because it set family and tracking but never size.
 
 **Emphasis is colour, not italic.** `<em>` inside a headline renders as accent blue at the same weight. Plex has real italics, so this is a choice rather than a limitation: the previous system set the emphasised words in a serif italic, which is the most copied display move on the web right now. The accent word appears **once per page**, in the hero. Section headings are plain ink; the previous system put an accent word in every one, which turned emphasis into a pattern.
 
@@ -36,6 +37,9 @@ Home page and case studies use two parallel token vocabularies for the same pale
 | Secondary / tertiary ink | `--ink-2:#474F59` / `--ink-3:#5F6771` | `--tx2:#474F59` / `--tx3:#5F6771` |
 | Rules | `--line:#E2E6EB` / `--line-2:#C7CDD5` | `--bd:#E2E6EB` / `--bd2:#C7CDD5` |
 | Accent | `--accent:#1E3AC4` | `--ac:#1E3AC4` |
+| Control boundary | `--control-bd:#7C838D` | same |
+
+`--control-bd` exists because `--line-2` is 1.51:1 against the ground. That is correct for a decorative rule and fails WCAG 1.4.11, which asks 3:1 for the boundary of a control, so buttons take the darker token and everything else keeps the hairline.
 
 Semantic colors appear only on case-study finding callouts: `#B02A37` critical, `#2F6F4F` success, ink for informational. They tint the callout's label, never a border slab.
 
@@ -60,7 +64,9 @@ One spring, `cubic-bezier(0.22,1,0.36,1)`, and one ease, `cubic-bezier(0.4,0,0.2
 
 ## Scannability
 
-The case studies carry a **Contents** block, built at runtime by `assets/toc.js` from the headings already on the page and marked with the current section while reading. It is progressive enhancement: with JavaScript off the page is unchanged minus that block.
+Twelve of the thirteen case studies carry a **Contents** block, built at runtime by `assets/toc.js` from the headings already on the page. `design-system.html` is the exception: it has no labelled sections to build one from.
+
+The current section is marked by the last heading scrolled past, not by whichever heading happens to be inside a band near the top of the viewport. The band approach looks right until a section is taller than the band, at which point nothing is marked at all, which is most of the reading time. It is progressive enhancement: with JavaScript off the page is unchanged minus that block.
 
 It exists because the research on product-management portfolios agrees on one point. The first pass over a case study is a skim, and a reader who cannot see the shape of the page in one glance leaves before reaching the outcomes.
 
@@ -71,4 +77,5 @@ The home page hero carries a four-row facts column for the same reason: the firs
 - Two token vocabularies for one palette (`--ink` vs `--tx`). Both are now defined together in `assets/system.css`, so they cannot drift, but the seam is still there.
 - `design-system.html` shows no production UI, constrained by NDA. The button consolidation is now shown as an authored in-page artifact (the audit wall redrawn without client branding, plus the four replacement variants and their states); the remaining sections still rely on prose.
 - The Experience section lists five roles with no scope detail.
+- Ten archive case studies still show design roles in their role blocks. That is accurate history, those projects were design work, but a reader arriving from a product-management home page meets it without context.
 - `assets/system.css` leans on `!important` to beat the pages' inline styles. That is the cost of not rewriting 14 inline stylesheets; the alternative was 14 places to keep in sync.
