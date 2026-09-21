@@ -316,14 +316,14 @@ h1 em,.st em,.sh em,.about-lead em,.hero-p em,.foot-h em{
    ============================================================ */
 
 /* ---------- reading column ---------- */
-.w{max-width:780px}
-.sp{
+.case .w{max-width:780px}
+.case .sp{
   font-size:16.5px!important;
   line-height:1.68!important;
   color:var(--tx2);
   margin-bottom:18px!important;
 }
-.lead{
+.case .lead{
   font-size:19px!important;
   line-height:1.6!important;
   color:var(--tx2)!important;
@@ -331,15 +331,17 @@ h1 em,.st em,.sh em,.about-lead em,.hero-p em,.foot-h em{
 }
 
 /* ---------- section rhythm ----------
-   More air between sections than inside them, so the page reads
+.case More air between sections than inside them,
+.case so the page reads
    as a sequence of arguments rather than a wall. */
 hr{margin:72px 0!important}
-.sl{margin-bottom:10px!important}
-.sh{margin-bottom:16px!important}
+.case .sl{margin-bottom:10px!important}
+.case .sh{margin-bottom:16px!important}
 
 /* ---------- header meta ----------
-   Eight filled tiles became a hairline table. It is the same
-   information in a third of the visual weight, and it no longer
+.case Eight filled tiles became a hairline table. It is the same
+   information in a third of the visual weight,
+.case and it no longer
    competes with the title above it. */
 .mg{
   display:grid!important;
@@ -348,18 +350,18 @@ hr{margin:72px 0!important}
   border-top:1px solid var(--bd);
   margin-top:4px;
 }
-.mc{
+.case .mc{
   background:none!important;
   border:0!important;
   border-bottom:1px solid var(--bd)!important;
   border-radius:0!important;
   padding:14px 20px 14px 0!important;
 }
-.mc dt{margin-bottom:5px!important}
-.mc dd{font-size:14px!important;font-weight:400!important;line-height:1.45;color:var(--tx)}
+.case .mc dt{margin-bottom:5px!important}
+.case .mc dd{font-size:14px!important;font-weight:400!important;line-height:1.45;color:var(--tx)}
 
 /* ---------- outcome figures ----------
-   The boxed strip used a 1px grid gap to fake dividers. Now the
+.case The boxed strip used a 1px grid gap to fake dividers. Now the
    figures sit on a rule and carry their own weight. */
 .metrics{
   background:none!important;
@@ -372,64 +374,64 @@ hr{margin:72px 0!important}
   padding:26px 0!important;
   overflow:visible!important;
 }
-.mt{background:none!important;padding:0!important}
-.mt .n{font-size:32px!important;line-height:1.05!important}
-.mt .l{margin-top:6px!important;max-width:22ch}
+.case .mt{background:none!important;padding:0!important}
+.case .mt .n{font-size:32px!important;line-height:1.05!important}
+.case .mt .l{margin-top:6px!important;max-width:22ch}
 
 /* ---------- argument cards ----------
-   Hairline instead of fill. The fill was grouping the content and
+.case Hairline instead of fill. The fill was grouping the content and
    flattening it at the same time: everything in a grey box reads
    as equally weighted. */
 .cg{gap:0 28px!important;margin:24px 0 8px!important}
-.cd{
+.case .cd{
   background:none!important;
   border:0!important;
   border-top:1px solid var(--bd)!important;
   border-radius:0!important;
   padding:18px 0 22px!important;
 }
-.cd h3{font-size:15px!important;margin-bottom:7px!important;letter-spacing:-0.012em}
-.cd p{font-size:15px!important;line-height:1.6!important}
+.case .cd h3{font-size:15px!important;margin-bottom:7px!important;letter-spacing:-0.012em}
+.case .cd p{font-size:15px!important;line-height:1.6!important}
 
 /* Finding callouts keep their fill: they are the one component
-   where the colour is carrying meaning rather than decoration. */
+.case where the colour is carrying meaning rather than decoration. */
 .fd{padding:20px 22px!important}
-.fd h3{font-size:15px!important}
-.fd p{font-size:14.5px!important;line-height:1.6!important}
+.case .fd h3{font-size:15px!important}
+.case .fd p{font-size:14.5px!important;line-height:1.6!important}
 
 /* ---------- comparison columns ---------- */
-.tc{background:none!important;border:0!important;border-top:1px solid var(--bd)!important;border-radius:0!important;padding:20px 0 0!important}
-.tc h3{font-size:14px!important;margin-bottom:14px!important}
-.tg2{gap:0 32px!important}
+.case .tc{background:none!important;border:0!important;border-top:1px solid var(--bd)!important;border-radius:0!important;padding:20px 0 0!important}
+.case .tc h3{font-size:14px!important;margin-bottom:14px!important}
+.case .tg2{gap:0 32px!important}
 
 /* ---------- role cards ---------- */
-.pc{background:none!important;border:0!important;border-top:1px solid var(--bd)!important;border-radius:0!important;padding:18px 0 20px!important}
-.wh-item{background:none!important;border:0!important;border-top:1px solid var(--bd)!important;border-radius:0!important;padding:16px 0 18px!important}
+.case .pc{background:none!important;border:0!important;border-top:1px solid var(--bd)!important;border-radius:0!important;padding:18px 0 20px!important}
+.case .wh-item{background:none!important;border:0!important;border-top:1px solid var(--bd)!important;border-radius:0!important;padding:16px 0 18px!important}
 
 /* ---------- confidentiality note ---------- */
-.nda{background:none!important;border:0!important;border-left:1px solid var(--bd2)!important;border-radius:0!important;padding:4px 0 4px 18px!important}
-.nda p{font-size:14px!important;line-height:1.6!important}
-.nda .nda-t{margin-bottom:4px!important}
+.case .nda{background:none!important;border:0!important;border-left:1px solid var(--bd2)!important;border-radius:0!important;padding:4px 0 4px 18px!important}
+.case .nda p{font-size:14px!important;line-height:1.6!important}
+.case .nda .nda-t{margin-bottom:4px!important}
 
 /* ---------- contents ----------
-   Same move: the filled panel became a ruled block. */
+.case Same move: the filled panel became a ruled block. */
 .toc{background:none!important;border:0!important;border-top:1px solid var(--bd)!important;border-bottom:1px solid var(--bd)!important;border-radius:0!important;padding:22px 0 24px!important;margin-bottom:0!important}
 
 @media(max-width:768px){
-  .toc{padding:20px 0 22px!important}
-  .mg{grid-template-columns:1fr 1fr!important}
-  .metrics{gap:24px!important}
-  .sp{font-size:16px!important}
+.case .toc{padding:20px 0 22px!important}
+.case .mg{grid-template-columns:1fr 1fr!important}
+.case .metrics{gap:24px!important}
+.case .sp{font-size:16px!important}
 }
 
 /* Tightening pass on the detail template. */
 
 /* The contents block sat under the meta table's closing rule, so two
-   full-width rules framed an empty band. It keeps the lower rule only. */
+.case full-width rules framed an empty band. It keeps the lower rule only. */
 .toc{border-top:0!important;padding-top:4px!important}
 
 /* Tag chips were the last filled boxes on the page. */
-.tg{
+.case .tg{
   background:none!important;
   border:1px solid var(--bd2);
   padding:4px 9px!important;
