@@ -274,40 +274,39 @@ hr{border:none;height:1px;background:var(--bd);margin:48px 0}
 <div class="w"><hr>
 <div class="sl">Prioritisation</div>
 <h2 class="sh">The question that decided what got built</h2>
-<p class="sp">A recovery platform can absorb an unlimited amount of feature work, and the failure mode for a 0-to-1 product is building the version that is safe enough for the founder rather than the version that is trusted enough for the user. I needed a rule that could settle a scope argument in one sentence, so every candidate feature was put against a single question.</p>
-<p class="sp"><strong>What is the minimum viable trust?</strong> The smallest set of features that makes a stranger comfortable handing your belongings back to you. Not the most trust achievable. The least that still gets the item moving.</p>
-<p class="sp">The rule cuts in both directions, which is what made it useful rather than decorative. It admitted work that looks expensive and is not optional, and it cut work that looks valuable and does not change whether the handover happens.</p>
+<p class="sp">A recovery platform can absorb unlimited feature work, so every candidate went against one question.</p>
+<p class="sp"><strong>What is the minimum viable trust?</strong> The smallest set of features that makes a stranger comfortable handing your belongings back to you. Not the most trust achievable, the least that still gets the item moving.</p>
 <div class="cg">
-<div class="cd"><h3>Admitted: three-stage ownership verification</h3><p>The most complex thing in the MVP, and the one feature the product cannot be launched without. Found-property law requires proof before release, and without it the platform is a way to help strangers take each other's property. It is the reason the loop can exist at all.</p></div>
+<div class="cd"><h3>Admitted: three-stage ownership verification</h3><p>The most complex thing in the MVP and the one feature it cannot launch without. Found-property law requires proof before release. Without it the platform helps strangers take each other's property.</p></div>
 <div class="cd"><h3>Admitted: the handover code</h3><p>A small, cheap mechanic that closes the loop. Both sides need a moment where the exchange is confirmed and the claim is settled, or neither side knows the transaction ended.</p></div>
-<div class="cd"><h3>Admitted: the match confidence score</h3><p>Not scoped as a trust feature at first. Testing moved it: 5 of the 6 moderated testers named the visible confidence indicator as the thing that convinced them the system was working. Without it they questioned whether the match was real.</p></div>
-<div class="cd"><h3>Cut back: the ownership upload itself</h3><p>The first version asked for several proof types at once through a multi-select interface. 21% of testers struggled with it. More proof is more trust in theory, and in practice it was the step people abandoned. It was reduced to one proof type at a time.</p></div>
+<div class="cd"><h3>Admitted: the match confidence score</h3><p>Not scoped as a trust feature at first. Testing moved it: 5 of 6 moderated testers named it as the thing that convinced them the system was working.</p></div>
+<div class="cd"><h3>Cut back: the ownership upload</h3><p>The first version asked for several proof types at once. 21% of testers struggled with it. More proof is more trust in theory; in practice it was the step people abandoned. Reduced to one proof type at a time.</p></div>
 </div>
-<p class="sp">Three of the four decisions above are the expensive answers. That is the point of the rule: it does not shrink the product, it stops the product growing in the places that do not carry trust.</p>
+<p class="sp">Three of those four are the expensive answer. The rule was not there to shrink the product, it was there to stop it growing where growth did not buy trust.</p>
 </div>
 
 <!-- MEASUREMENT -->
 <div class="w"><hr>
 <div class="sl">Measurement</div>
 <h2 class="sh">What this product has to move</h2>
-<p class="sp">Usability scores tell you whether a screen works. They do not tell you whether a recovery platform is working, because the thing being tested is a loop between two strangers and an operator, and it only succeeds when an item physically changes hands. The KPI framework is built on the loop rather than on the interface.</p>
+<p class="sp">Usability scores tell you whether a screen works, not whether a recovery platform does. The loop only succeeds when an item changes hands, so the KPI framework is built on the loop rather than the interface.</p>
 <div class="tg2">
 <div class="tc"><h3>The outcome</h3>
-<p class="sp"><strong>Verified returns.</strong> The single number the product exists to move. A match that is never collected is not a return, so the metric is counted at handover, not at match.</p>
-<p class="sp"><strong>Time to match.</strong> Interviewees described giving up the active search within the first day, so the window in which the product is useful is short. Speed here is not a performance metric, it is the difference between a return and an abandonment.</p>
+<p class="sp"><strong>Verified returns.</strong> The number the product exists to move. A match that is never collected is not a return, so it is counted at handover.</p>
+<p class="sp"><strong>Time to match.</strong> Interviewees gave up the active search within the first day, so the useful window is short.</p>
 </div>
 <div class="tc"><h3>The operating cost</h3>
-<p class="sp"><strong>Partner processing time.</strong> Lost-and-found offices carry the storage and the manual matching. If the platform does not reduce the time they spend per item, it is another system for them to maintain rather than a replacement.</p>
-<p class="sp"><strong>Support demand.</strong> A trust product generates support the moment people are unsure, so support volume per return reads as a direct measure of how much the flow is explaining itself.</p>
+<p class="sp"><strong>Partner processing time.</strong> Offices carry the storage and the manual matching. If the platform does not cut time per item, it is one more system to maintain.</p>
+<p class="sp"><strong>Support demand per return.</strong> People contact support the moment they are unsure, so the volume tracks how well the flow explains itself.</p>
 </div></div>
-<p class="sp">The first two are the user case, the second two are the partner case, and the product is only viable when both hold at once. A version that returns more items by pushing work onto operators does not survive contact with the people who have to run it.</p>
+<p class="sp">The first two are the user case, the last two the partner case. A version that returns more items by pushing work onto operators does not survive contact with the people running it.</p>
 </div>
 
 <!-- USER FLOW -->
 <div class="w"><hr>
 <div class="sl">Core User Flow</div>
 <h2 class="sh">The return loop: balancing speed with security</h2>
-<p class="sp">The critical design challenge was creating a flow that is fast (users want immediate resolution) while remaining secure (ownership must be verified to prevent fraud). Every step had to build trust incrementally.</p>
+<p class="sp">Fast enough that people do not give up, secure enough that ownership is proven before anything is released.</p>
 
 <div class="flow">
 <div class="fn fn-s">Item reported</div><span class="fa">→</span>
@@ -323,7 +322,7 @@ hr{border:none;height:1px;background:var(--bd);margin:48px 0}
 <div class="w"><hr>
 <div class="sl">Final Designs</div>
 <h2 class="sh">Walking the return loop</h2>
-<p class="sp">The product is one loop with six moments, and each one either builds trust or spends it. What follows is that loop in order, from the minute someone realises an item is gone to the moment it is back, including the path where the claim is refused.</p>
+<p class="sp">One loop, six moments, in order: from realising an item is gone to getting it back, including the path where the claim is refused.</p>
 </div>
 
 <div class="w">
@@ -335,7 +334,7 @@ hr{border:none;height:1px;background:var(--bd);margin:48px 0}
 
 <div class="w">
 <h3 class="sh">The match, and a private channel</h3>
-<p class="sp">When the AI finds a candidate, both sides see a match confidence score rather than a bare yes. In-app messaging then coordinates the return without either party handing over a phone number or an address, which is the single biggest objection finders raised in research.</p>
+<p class="sp">When the AI finds a candidate, both sides see a confidence score rather than a bare yes. In-app messaging coordinates the return without either party sharing a phone number or address, the biggest objection finders raised in research.</p>
 </div>
 <div class="ww"><div class="img-box img-dark"><img width="1500" height="1125" loading="lazy" decoding="async" src="../assets/renuir-chat-match.png" alt="AI match confidence score and the in-app chat"></div>
 <p class="img-caption">Match confidence, then a private chat that never exposes contact details.</p></div>
@@ -349,21 +348,21 @@ hr{border:none;height:1px;background:var(--bd);margin:48px 0}
 
 <div class="w">
 <h3 class="sh">Handing it over in person</h3>
-<p class="sp">For an in-person return, the app suggests a safe public place and confirms the handover with a four-digit code, so neither person has to judge whether a stranger is trustworthy on the spot. The code is the proof that the item actually changed hands.</p>
+<p class="sp">For an in-person return the app suggests a safe public place and confirms the handover with a four-digit code, so neither person has to judge a stranger on the spot. The code is the proof the item changed hands.</p>
 </div>
 <div class="ww"><div class="img-box img-dark"><img width="2000" height="823" loading="lazy" decoding="async" src="../assets/renuir-meetup.png" alt="Safe meetup coordination with a location suggestion and a four-digit handover code"></div>
 <p class="img-caption">A suggested public location, then a four-digit code to confirm the handover.</p></div>
 
 <div class="w">
 <h3 class="sh">Or shipping it, tracked</h3>
-<p class="sp">Not everyone wants to meet. The second path ships through an integrated delivery partner with live tracking, so a finder can return an item without ever meeting the owner. Offering both is what makes the loop work for people with opposite comfort levels.</p>
+<p class="sp">Not everyone wants to meet. The second path ships through a delivery partner with live tracking, so a finder can return an item without meeting the owner.</p>
 </div>
 <div class="ww"><div class="img-box img-dark"><img width="2000" height="653" loading="lazy" decoding="async" src="../assets/renuir-delivery.png" alt="The shipping return path with label, tracking, and confirmation"></div>
 <p class="img-caption">The shipping path, for finders who would rather not meet anyone.</p></div>
 
 <div class="w">
 <h3 class="sh">When the evidence does not add up</h3>
-<p class="sp">A claim can be wrong, or dishonest. The finder can decline, and the claimant is told respectfully rather than left guessing. Designing the refusal properly matters more than it sounds: it is the moment the platform either protects both sides or makes an enemy of one.</p>
+<p class="sp">A claim can be wrong, or dishonest. The finder can decline and the claimant is told, rather than left guessing. This is the moment the platform either protects both sides or makes an enemy of one.</p>
 </div>
 <div class="ww"><div class="img-box" style="background:#c2cbd2"><img width="1500" height="1125" loading="lazy" decoding="async" src="../assets/renuir-reject.png" alt="A respectful claim-rejection moment"></div>
 <p class="img-caption">The decline path, written to protect the finder without accusing the claimant.</p></div>
@@ -406,10 +405,10 @@ hr{border:none;height:1px;background:var(--bd);margin:48px 0}
 <h2 class="sh">Designing for trust is the hardest problem</h2>
 
 <div class="cg">
-<div class="cd"><p>Strangers hand each other belongings through this product, so the interface is doing two jobs at once: moving the item, and giving both sides a reason to believe the other will show up. No single screen carries that. It is built out of the wording on the claim form, the proof we ask for, the meetup place we suggest, and the code exchanged at handover.</p></div>
+<div class="cd"><p>Strangers hand each other belongings through this product, so the interface has to move the item and give both sides a reason to believe the other will show up. No single screen carries that. It comes from the wording on the claim form, the proof asked for, the meetup place suggested and the code exchanged at handover.</p></div>
 <div class="cd"><h3>A scope rule is only useful if it can say no</h3><p>The minimum viable trust question earned its place because it rejected things I wanted to build. A prioritisation framework that only ever confirms the roadmap is a description of the roadmap, not a rule.</p></div>
-<div class="cd"><h3>The design system scales the product</h3><p>The component library I designed supports the mobile app, a B2B admin dashboard, and API documentation from the same token set. New flows can be assembled in hours, not weeks.</p></div>
-<div class="cd"><h3>Regulatory constraints improve design</h3><p>Found-property law and GDPR initially felt like obstacles. Both push in the same direction as the product: prove ownership before releasing an item, and hold no more personal data than the handover needs. Where they conflicted, the law set the ceiling and the flow was designed under it.</p></div>
+<div class="cd"><h3>One component library, three surfaces</h3><p>The mobile app, the B2B admin dashboard and the API documentation run off the same token set, so new flows are assembled in hours rather than weeks.</p></div>
+<div class="cd"><h3>The regulation and the product wanted the same thing</h3><p>Found-property law and GDPR looked like obstacles. Both push where the product already needed to go: prove ownership before release, hold no more personal data than the handover needs.</p></div>
 </div>
 </div>
 
