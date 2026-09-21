@@ -353,9 +353,17 @@ h1{
   background:var(--paper);
   border:1px solid var(--line);
   border-radius:20px;
-  padding:80px 56px;
+  padding:60px 56px;
   position:relative;overflow:hidden;
 }
+.cta-inner{display:grid;grid-template-columns:minmax(0,1fr) 384px;gap:64px;align-items:center}
+.cta-side{display:flex;flex-direction:column;gap:26px}
+.cta-facts{border-top:1px solid var(--line-2);padding-top:4px}
+.cta-facts>div{display:grid;grid-template-columns:86px 1fr;gap:14px;padding:11px 0;border-bottom:1px solid var(--line-2)}
+.cta-facts>div:last-child{border-bottom:0}
+.cta-facts dt{font-family:var(--mono);font-size:10.5px;font-weight:500;text-transform:uppercase;letter-spacing:0.07em;color:var(--ink-3);padding-top:2px}
+.cta-facts dd{font-size:14px;line-height:1.45;color:var(--ink-2)}
+@media(max-width:900px){.cta-inner{grid-template-columns:1fr;gap:36px;align-items:start}}
 
 .cta-card h2{
   font-family:var(--serif);font-size:clamp(34px,5vw,56px);font-weight:500;
@@ -364,7 +372,7 @@ h1{
   position:relative;
 }
 .cta-card h2 em{font-style:italic;font-weight:400;color:var(--accent)}
-.cta-card p{font-size:16px;color:var(--ink-2);line-height:1.6;max-width:50ch;margin:0 0 32px;position:relative}
+.cta-card p{font-size:16px;color:var(--ink-2);line-height:1.6;max-width:46ch;margin:0;position:relative}
 .cta-card .links{display:flex;gap:8px;flex-wrap:wrap;position:relative}
 .cta-link{
   font-size:13.5px;font-weight:500;padding:11px 18px;
@@ -803,8 +811,12 @@ footer{
 <section class="cta-wrap" id="contact">
   <div class="w">
     <div class="cta-card rv">
+      <div class="cta-inner">
+      <div class="cta-msg">
       <h2>If the problem is hard,<br>I am <em>interested</em>.</h2>
       <p>I am open to Product Manager and Product Owner roles anywhere in Europe, with a soft spot for regulated, data-heavy products in climate, fintech, health and AI. If that is the kind of work you have, get in touch.</p>
+      </div>
+      <div class="cta-side">
       <div class="links">
         <a href="mailto:o.ajimati@yahoo.com" class="cta-link primary">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 7 9-7"/></svg>
@@ -814,6 +826,13 @@ footer{
           <svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.22 8h4.56v14H.22V8zM8.34 8h4.37v1.92h.06c.61-1.15 2.1-2.36 4.32-2.36 4.62 0 5.47 3.04 5.47 6.99V22h-4.56v-6.18c0-1.47-.03-3.36-2.05-3.36-2.05 0-2.36 1.6-2.36 3.25V22H8.34V8z"/></svg>
           LinkedIn
         </a>
+      </div>
+      <dl class="cta-facts">
+        <div><dt>Roles</dt><dd>Product Manager, Product Owner</dd></div>
+        <div><dt>Working</dt><dd>Anywhere in Europe, remote or on site</dd></div>
+        <div><dt>Languages</dt><dd>English (native), German (B2)</dd></div>
+      </dl>
+      </div>
       </div>
     </div>
   </div>
@@ -838,7 +857,7 @@ footer{
       <h3>Availability</h3>
       <ul>
         <li><a href="#contact" class="foot-status">Open to PM and PO roles</a></li>
-        <li>Anywhere in Europe, remote or on site</li>
+        <li>Notice period on request</li>
       </ul>
     </div>
   </div>
