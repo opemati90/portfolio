@@ -202,8 +202,9 @@ hr{border:none;height:1px;background:var(--bd);margin:48px 0}
 <div class="w"><hr>
 <div class="sl">The Problem</div>
 <h2 class="sh">Context and business problem</h2>
-<p class="sp">Sustainability managers, analysts, and regulatory leads at large enterprises came to this platform to submit climate commitments, but the platform treated a multi-session, expert task as a single rigid form. Fourteen sequential steps, no progress saving, and requirements that only surfaced as errors meant most people gave up partway and rebuilt their progress in spreadsheets on the side.</p>
-<p class="sp">My read going in: the data was not the problem, the workflow was. The job was to consolidate the steps that legacy process had accumulated, make progress legible, and let people leave and return without losing work, without weakening anything compliance actually required.</p>
+<p class="sp">Sustainability managers, analysts and regulatory leads at large enterprises use this platform to submit climate commitments. It treated a multi-session expert task as one rigid form: fourteen sequential steps, no progress saving, and requirements that only surfaced as errors. Most people gave up partway and rebuilt their progress in spreadsheets.</p>
+<p class="sp">Two figures were already instrumented and nobody disputed them: a <strong>67% abandon rate</strong> and a <strong>4.5-hour median completion time</strong>. What was disputed was the fix. The redesign had stalled once already, because product, engineering and climate policy each held a different assumption about which of the fourteen steps the regulation actually required, and nobody could concede without proof.</p>
+<p class="sp">So the first job was not to design anything. It was to find out which steps were legally required and which were habit.</p>
 </div>
 
 <div class="ww">
@@ -217,7 +218,8 @@ hr{border:none;height:1px;background:var(--bd);margin:48px 0}
 <div class="w"><hr>
 <div class="sl">Research</div>
 <h2 class="sh">30+ sessions with enterprise users</h2>
-<p class="sp">I ran moderated sessions with sustainability managers, analysts, and regulatory leads across energy, finance, manufacturing, and tech. There was no prior design work to build on, but the product was instrumented: the 67% abandon rate and the 4.5-hour median completion time came from product analytics and the recurring complaints in the support queue, which is what made the case for the rebuild concrete.</p>
+<p class="sp">Moderated sessions with sustainability managers, analysts and regulatory leads across energy, finance, manufacturing and tech, run alongside an audit of the flow against the regulation itself. Each of the fourteen steps was put to the policy specialists as a claim to be checked, rather than as an opinion to be argued.</p>
+<p class="sp">That settled it. <strong>8 of the 14 steps were legacy artifacts, not legal requirements.</strong> The scope argument ended in one session and three squads committed to the same six-step target.</p>
 <div class="cg">
 <div class="cd"><h3>User interviews (n=16)</h3><p>Users were not confused by the data itself, but by the system's inability to show where they were and what came next. Progress visibility was the #1 request.</p></div>
 <div class="cd"><h3>Task analysis (n=8)</h3><p>Observed real submissions. Most common workaround: spreadsheets maintained alongside the platform to track progress manually.</p></div>
@@ -226,19 +228,10 @@ hr{border:none;height:1px;background:var(--bd);margin:48px 0}
 </div></div>
 
 <div class="w"><hr>
-<div class="w"><hr>
-<div class="sl">Alignment</div>
-<h2 class="sh">The redesign was stalled before it was a design problem</h2>
-<p class="sp">The redesign had stalled on scope before I joined it, and the disagreement was between functions rather than between people: product, engineering and climate policy each held a different assumption about which of the fourteen steps were legally required. Nobody could concede ground because nobody could prove their assumption.</p>
-<p class="sp">I ran the workshops as assumption testing rather than as prioritisation. Each step was put on the table as a claim to be checked against the regulation with the policy specialists in the room, which converted an argument about opinion into an audit against a document. That produced the number the whole project then hung on: <strong>8 of the 14 steps were legacy artifacts, not legal requirements</strong>. Once that was on paper the scope argument ended, and three squads committed to the same six-step target.</p>
-<p class="sp">The analytics did the other half of the work. A 67% abandon rate and a 4.5-hour median completion time, both already instrumented, made the case concrete enough that the rebuild stopped being a design preference and became a business problem.</p>
-</div>
-
-<div class="w"><hr>
-<div class="sl">Synthesis</div>
-<h2 class="sh">The root cause, and the diagnosis I rejected</h2>
-<p class="sp">The obvious reading of a 67% abandon rate on a climate-data tool is that the data is too hard. The research did not support that. Users were not confused by the numbers they were being asked for; they were confused about where they were in a process and whether their work still existed. The spreadsheets people maintained alongside the platform were not shadow data, they were shadow <em>progress tracking</em>, which is the capability the product was missing.</p>
-<p class="sp">That reframed the causal chain. A multi-session expert task had been built as a single rigid form, so requirements surfaced only as errors, there was nowhere to stop safely, and people left and rebuilt their state elsewhere. The failure was continuity and orientation, not comprehension. Everything after this followed from that one distinction, and the outcome supported it: progress indication, auto-save and explicit confirmations moved completion more than any change to the form fields themselves.</p>
+<div class="sl">Diagnosis</div>
+<h2 class="sh">The diagnosis I rejected</h2>
+<p class="sp">The obvious reading of a 67% abandon rate on a climate-data tool is that the data is too hard, and the fix is to ask for less. The research did not support it. People were not confused by the numbers they were asked for. They were confused about where they were in the process and whether their work still existed.</p>
+<p class="sp">The spreadsheets kept alongside the platform were not a workaround for the data. They were a workaround for progress tracking, which the product did not have. That is a continuity problem, not a comprehension problem, and the outcome supported it: progress indication, auto-save and explicit confirmation moved completion more than any change to the fields.</p>
 <div class="cg">
 <div class="cd"><h3>Symptom</h3><p>67% abandon rate, 4.5-hour median completion, recurring support complaints.</p></div>
 <div class="cd"><h3>The tempting diagnosis</h3><p>The data model is too complex for the people submitting it. Simplify what is asked.</p></div>
@@ -247,10 +240,10 @@ hr{border:none;height:1px;background:var(--bd);margin:48px 0}
 </div>
 </div>
 
+<div class="w"><hr>
 <div class="sl">Users</div>
 <h2 class="sh">Three roles, one workflow</h2>
-<p class="sp">These are synthesised archetypes built from the research sessions, not individual participants. Each one summarises a role, what it owns, and what blocks it.</p>
-<p class="sp">The 30 sessions clustered into three working roles, each with a different relationship to the submission. I designed for all three, which is the trade-off covered below.</p>
+<p class="sp">The sessions clustered into three working roles, each with a different relationship to the submission. These are summaries built from the research, not individual participants. I designed for all three, which is the trade-off below.</p>
 <div class="pr">
 <div class="pc"><h3>The Submission Owner</h3><div class="rl">Sustainability Manager</div><p class="rolefact">Spends more time working around the tool than doing the analysis.</p><dl><dt>Owns</dt><dd>Getting the submission complete and on time</dd><dt>Blocked by</dt><dd>No progress saving, requirements that surface late</dd></dl></div>
 <div class="pc"><h3>The Data Provider</h3><div class="rl">Climate Analyst</div><p class="rolefact">Knows what data is required, but the system makes it hard to supply.</p><dl><dt>Owns</dt><dd>Document accuracy and scope coverage</dd><dt>Blocked by</dt><dd>Rigid input formats, no inline guidance</dd></dl></div>
@@ -274,48 +267,46 @@ hr{border:none;height:1px;background:var(--bd);margin:48px 0}
 <div class="sl">Trade-offs</div>
 <h2 class="sh">Two directions I turned down</h2>
 <div class="cg">
-<div class="cd"><h3>Rejected: design for one primary user</h3><p>The 30 sessions clustered into three working roles with genuinely opposed needs. The submission owner wants to stop and resume, the analyst wants input guidance, the reviewer wants status at a glance. Optimising for the submission owner alone would have produced a cleaner flow and a faster build.</p><p><strong>Why not:</strong> the reviewer is the reason a submission completes at all, and leaving them on manual status tracking would have moved the bottleneck rather than removed it. I designed for all three and accepted a wider surface.</p></div>
-<div class="cd"><h3>Rejected: let the AI decide</h3><p>The scope analysis could have filled the step directly instead of recommending. That version demos better and saves the user more time.</p><p><strong>Why not:</strong> testing showed reviewers would not accept a recommendation they could not audit. Trust scored 3.8 out of 5, the lowest of the validated findings, and this is a submission a company answers for publicly. The AI recommends, shows its source, explains itself and can be overridden; the decision stays with the person accountable for it.</p></div>
+<div class="cd"><h3>Rejected: design for one primary user</h3><p>The 30 sessions clustered into three working roles with genuinely opposed needs. The submission owner wants to stop and resume, the analyst wants input guidance, the reviewer wants status at a glance. Optimising for the owner alone would have meant a cleaner flow and a faster build.</p><p><strong>Why not:</strong> the reviewer is the reason a submission completes at all. Leaving them on manual status tracking would have moved the bottleneck, not removed it.</p></div>
+<div class="cd"><h3>Rejected: let the AI decide</h3><p>The scope analysis could have filled the step directly instead of recommending. That version demos better and saves more time.</p><p><strong>Why not:</strong> reviewers would not accept a recommendation they could not audit, and trust scored 3.8 of 5, the lowest of the validated findings. This is a submission a company answers for publicly, so the AI recommends and the accountable person decides.</p></div>
 </div>
-<p class="pm-note">Both rejections cost something. Three roles meant more screens and a longer build. Recommendation over automation meant the most impressive version of the AI feature is the one that did not ship.</p>
+<p class="pm-note">Both cost something. Three roles meant more screens and a longer build, and the most impressive version of the AI feature is the one that did not ship.</p>
 </div>
 
 <div class="w"><hr>
 <div class="sl">Delivery</div>
 <h2 class="sh">Running it across three squads</h2>
-<p class="sp">A six-step target is a product decision; holding it through delivery is a different job. The work ran in two-week sprints across three squads, so most weeks the question was which part of the flow could ship next without leaving a half-migrated submission in production.</p>
+<p class="sp">Delivery ran in two-week sprints across three squads. The recurring question was which part of the flow could ship next without leaving a submission half-migrated in production.</p>
 <div class="cg">
-<div class="cd"><h3>Requirements the squads could build from</h3><p>Customer interviews, product data, support issues, policy rules and technical constraints became roadmap priorities, then user stories with acceptance criteria. Where a compliance checkpoint could not move, the acceptance criteria said so explicitly rather than leaving engineering to discover it in review.</p></div>
-<div class="cd"><h3>Scope trade-offs in the open</h3><p>Backlog refinement, sprint planning and release readiness ran with product, engineering and policy in the same room. Delivery decisions stayed tied to the regulatory constraint and to the measures we had agreed, which is what kept the step count from creeping back up under pressure.</p></div>
+<div class="cd"><h3>Requirements the squads could build from</h3><p>Where a compliance checkpoint could not move, the acceptance criteria said so explicitly, rather than leaving engineering to find out in review.</p></div>
 <div class="cd"><h3>AI search and recommendation</h3><p>I defined and shipped search and recommendation over unstructured documents, including the requirements for confidence, explanation, human review and manual override, and partnered with engineering through implementation and acceptance.</p></div>
 <div class="cd"><h3>After launch</h3><p>I rebuilt the target dashboard using funnel behaviour and support signals to decide what to change, rather than treating launch as the end of the work. Related support tickets fell by about 40% in the following quarter.</p></div>
 </div>
 <h3 style="font-size:15px;font-weight:600;margin:34px 0 4px">How the five months were sequenced</h3>
 <div class="roadmap">
-<div class="roadmap-row"><div class="roadmap-when">Weeks 1 to 6</div><div><h3>Establish the problem in numbers</h3><p>30+ moderated sessions across energy, finance, manufacturing and tech, read against the instrumented abandon rate and completion time. Nothing was designed in this period.<span class="why">Sequenced first because the rebuild had already stalled once on opinion. A number the whole room accepted was the cheapest way to end that.</span></p></div></div>
-<div class="roadmap-row"><div class="roadmap-when">Then</div><div><h3>Settle the scope with policy in the room</h3><p>Each of the 14 steps put on the table as a claim to be checked against the regulation. 8 were legacy artifacts, not legal requirements, and three squads committed to the same six-step target.<span class="why">This had to happen before a single sprint was planned. Scope disputed mid-build is scope that creeps back.</span></p></div></div>
-<div class="roadmap-row"><div class="roadmap-when">Build, 2-week Scrum</div><div><h3>Ship the flow in pieces that can stand alone</h3><p>The ordering constraint was not value, it was migration: each release had to leave no submission half-migrated in production. That ruled out sequencing by what was most visible.<span class="why">A regulated submission in an inconsistent state is a compliance incident, not a bug.</span></p></div></div>
-<div class="roadmap-row"><div class="roadmap-when">After launch</div><div><h3>Rebuild the dashboard on what shipping revealed</h3><p>Funnel behaviour and support signals decided what changed next, rather than the pre-launch backlog. Related support tickets fell about 40% in the following quarter.<span class="why">The backlog was written before anyone had used the six-step flow. Keeping it would have meant building for a product that no longer existed.</span></p></div></div>
+<div class="roadmap-row"><div class="roadmap-when">Weeks 1 to 6</div><div><h3>Establish the problem in numbers</h3><p>30+ moderated sessions, read against the instrumented abandon rate and completion time. Nothing was designed in this period.<span class="why">First, because the rebuild had already stalled once on opinion.</span></p></div></div>
+<div class="roadmap-row"><div class="roadmap-when">Then</div><div><h3>Settle the scope with policy in the room</h3><p>Each step checked against the regulation with policy in the room. 8 of 14 were legacy artifacts, and three squads committed to the six-step target.<span class="why">Before any sprint was planned. Scope disputed mid-build is scope that creeps back.</span></p></div></div>
+<div class="roadmap-row"><div class="roadmap-when">Build, 2-week Scrum</div><div><h3>Ship the flow in pieces that can stand alone</h3><p>The ordering constraint was migration, not value. That ruled out sequencing by what was most visible.<span class="why">A regulated submission in an inconsistent state is a compliance incident, not a bug.</span></p></div></div>
+<div class="roadmap-row"><div class="roadmap-when">After launch</div><div><h3>Rebuild the dashboard on what shipping revealed</h3><p>Funnel behaviour and support signals decided what changed next. Related support tickets fell about 40% the following quarter.<span class="why">The backlog predated the six-step flow, so most of it was written for a product that no longer existed.</span></p></div></div>
 </div>
 </div>
 
 <div class="w"><hr>
-<div class="sl">Measurement</div>
-<h2 class="sh">How six steps reach a business outcome</h2>
-<p class="sp">Step count is not an outcome. It was the lever, and it only mattered if it moved submission completion, because an incomplete submission is a company that has not filed its climate target and a review team with nothing to review. The chain below is the one I committed to before the rebuild, with the figure each link was measured on after it.</p>
+<div class="sl">Results</div>
+<h2 class="sh">From the lever to the outcome</h2>
+<p class="sp">Step count was the lever, not the outcome. It only mattered if it moved submission completion, because an incomplete submission is a company that has not filed its climate target. This is the chain I committed to before the rebuild, with what each link measured after it.</p>
 <div class="cg">
 <div class="cd"><h3>1. Remove the steps that are not legal requirements</h3><p>Audited with policy against the regulation, not negotiated. <strong>8 of 14 steps were legacy artifacts.</strong> Measured: 14 steps to 6.</p></div>
 <div class="cd"><h3>2. Make a long task survivable</h3><p>The task is multi-session and expert. Progress saving, progress indication and explicit confirmation let people stop and return instead of restarting. Measured: <strong>4.5 hours to 1.2 hours</strong> median, production analytics.</p></div>
 <div class="cd"><h3>3. Fewer, survivable steps means fewer people give up</h3><p>The failure was abandonment partway, then rebuilding progress in spreadsheets. Measured: <strong>67% to 18% abandon rate</strong>, production analytics, quarter before against quarter after.</p></div>
 <div class="cd"><h3>4. Completion is the business outcome</h3><p>More submissions completed is more targets validated, and the workload moves off the support queue and onto the platform. Measured: <strong>engagement up 30%</strong> and <strong>related support tickets down about 40%</strong> in the following quarter.</p></div>
 </div>
-<p class="sp">Links 1 and 2 are the ones I could control directly. Links 3 and 4 are the claims the rebuild was funded on, which is why they are measured in production analytics rather than in the usability round. The counterfactual is not clean: a regulatory deadline sits in the same quarter as the launch, and some of the engagement lift belongs to it. The step count and the completion time are attributable. The abandon rate and the ticket volume are directional.</p>
+<p class="sp">The counterfactual is not clean. A regulatory deadline falls in the same quarter as the launch, so some of the engagement lift belongs to it. Step count and completion time are attributable. Abandon rate and ticket volume are directional.</p>
 </div>
 
 <div class="w"><hr>
-<div class="sl">Results</div>
-<h2 class="sh">Outcomes</h2>
-<p class="sp">The left column is production analytics from the instrumented platform, comparing the quarter before launch with the quarter after. The right column is moderated usability testing with eight enterprise users on the redesigned flow. The two are not combined.</p>
+<h3 style="font-size:15px;font-weight:600;margin:34px 0 6px">Measured two ways, not combined</h3>
+<p class="sp">Production analytics compares the quarter before launch with the quarter after. The usability round is eight enterprise users on the redesigned flow.</p>
 <div class="tg2">
 <div class="tc"><h3>Production analytics, before and after</h3>
 <div class="br"><div class="bl"><span>Submission time</span><span class="v">4.5hrs → 1.2hrs</span></div><div class="bar"><div class="bf bg" style="width:73%"></div></div></div>

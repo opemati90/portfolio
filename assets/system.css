@@ -463,3 +463,60 @@ hr{margin:72px 0!important}
 /* The contents block and the figures below it were each drawing a
    full-width rule with dead space between them. One rule is enough. */
 .toc{border-bottom:0!important;padding-bottom:6px!important}
+
+/* ============================================================
+   CASE STUDY: WIDE-SCREEN LAYOUT
+
+   A 780px reading column centred on a 1440px screen leaves 330px
+   of nothing on each side, which reads as a narrow page floating
+   in a wide window rather than as a considered measure.
+
+   Above 1200px the contents block leaves the flow and becomes a
+   sticky rail in the left margin. The dead space now does a job,
+   the reader can see where they are in a 2,000-word page without
+   scrolling back, and the measure stays where it should be for
+   reading. Below 1200px it returns to a block under the hero.
+   ============================================================ */
+@media(min-width:1200px){
+  /* Rail 210 + 60 gap + 800 content = 1070, centred. */
+  :root{--rail:210px;--gutter:60px;--col:800px}
+
+  .case .w.toc-wrap{
+    position:fixed;
+    top:104px;
+    left:max(28px, calc(50% - 535px));
+    width:var(--rail);
+    margin:0;padding:0;
+    max-height:calc(100vh - 150px);
+    overflow-y:auto;
+    overscroll-behavior:contain;
+  }
+  .case .toc{
+    border:0!important;padding:0!important;margin:0!important;
+    background:none!important;
+  }
+  .case .toc-h{margin-bottom:14px!important}
+  .case .toc ol{columns:1!important}
+  .case .toc li{border-left:1px solid var(--bd);padding-left:14px}
+  .case .toc a{padding:6px 0!important}
+  /* The current section is marked on the rule as well as in the text,
+     so position is readable from the edge of the eye. */
+  .case .toc li:has(a.is-current){border-left-color:var(--ac);border-left-width:2px;padding-left:13px}
+
+  .case .w:not(.toc-wrap){
+    max-width:var(--col);
+    margin-left:max(calc(28px + var(--rail) + var(--gutter)), calc(50% - 265px));
+    margin-right:0;
+  }
+  .case .ww{
+    max-width:calc(var(--col) + 120px);
+    margin-left:max(calc(28px + var(--rail) + var(--gutter)), calc(50% - 265px));
+    margin-right:0;
+  }
+  .case main{padding-bottom:40px}
+}
+
+/* Older engines without :has() still get the text mark, just not the rule. */
+@supports not selector(:has(*)){
+  .case .toc li{border-left-color:var(--bd)}
+}
