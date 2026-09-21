@@ -10,15 +10,17 @@ The audience is product hiring managers and recruiters, who skim before they rea
 
 **The register changed on 2026-09-21.** It was previously an editorial monograph, built on a serif display face and a film-grain overlay. That read as a creative-studio signal, which works against a product-management application, and the serif-plus-Inter pairing is the most recognisable AI-generated-portfolio combination in circulation. Both are gone.
 
+**Why Plex and not Geist or Inter.** The first pass of this revamp used Geist, and that was wrong for the same reason Inter was wrong. Both are faces that generated interfaces converge on, Geist especially so as the default of the current tooling wave. Plex was drawn for IBM as a corporate face, which is the register this site wants, and it carries no such signal. A face that reads as enterprise software is an asset here, not a liability, because the case studies are enterprise software.
+
 ## Typography
 
-**One family, self-hosted.** Geist for everything, Geist Mono for small labels. The files live in `assets/fonts/` and are declared in `assets/system.css`. There is no Google Fonts request and no third-party font dependency anywhere on the site.
+**One family, self-hosted.** IBM Plex Sans for everything, IBM Plex Mono for small labels. The files live in `assets/fonts/` and are declared in `assets/system.css`. There is no Google Fonts request and no third-party font dependency anywhere on the site.
 
-- **Geist** carries display and body. Headlines at `600`, tracking `-0.034em` on the home hero and `-0.028em` on section headings. Body at `400`, 14 to 17px. The home hero tops out at 53px, well below the 94px the previous serif ran at, because a grotesk at that scale shouts where a serif reads as a masthead.
-- **Geist Mono** is used only for small uppercase labels at 10.5 to 11px, letterspaced `0.07em`: section labels, tag chips, role-block keys, date columns. It is never used for body text, and no longer for metric captions, which were outweighing the figures they described.
+- **IBM Plex Sans** carries display and body. Headlines at `600`, tracking `-0.025em` on the home hero and `-0.021em` on section headings. Plex has a smaller x-height than the geometric grotesks and does not take very tight tracking, so it is set looser than a Geist or Inter setting would be. Body at `400`, 14 to 17px. The home hero tops out at 55px, well below the 94px the previous serif ran at, because a sans at that scale shouts where a serif reads as a masthead.
+- **IBM Plex Mono** is used only for small uppercase labels at 10.5 to 11px, letterspaced `0.07em`: section labels, tag chips, role-block keys, date columns. It is never used for body text, and no longer for metric captions, which were outweighing the figures they described.
 - **Numbers** are set with `font-variant-numeric: tabular-nums` wherever they appear as data, so columns of figures align.
 
-**Emphasis is colour, not italic.** Geist ships no italic, so `<em>` inside a headline renders as accent blue at the same weight. A synthesised oblique would be a slanted regular, which is the thing that makes web type look cheap. The accent word appears **once per page**, in the hero. Section headings are plain ink; the previous system put an accent word in every one, which turned emphasis into a pattern.
+**Emphasis is colour, not italic.** `<em>` inside a headline renders as accent blue at the same weight. Plex has real italics, so this is a choice rather than a limitation: the previous system set the emphasised words in a serif italic, which is the most copied display move on the web right now. The accent word appears **once per page**, in the hero. Section headings are plain ink; the previous system put an accent word in every one, which turned emphasis into a pattern.
 
 `assets/system.css` is loaded last on all 14 pages, after each page's inline `<style>`, and owns typography, tokens and radii for the whole site. Retuning the site is a one-file job.
 

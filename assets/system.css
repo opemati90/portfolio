@@ -10,20 +10,25 @@
    stack. That pairing carried an editorial-monograph register,
    which reads as a creative-studio signal. The audience here is
    product hiring managers and recruiters who skim first, so the
-   register is now a plain professional product site: one neutral
-   grotesk, doing display and body, with its mono for labels.
+   register is now a plain professional product site: one family
+   doing display and body, with its mono for labels.
+
+   The family is IBM Plex. It was drawn for IBM as a corporate
+   face, which is the register this site wants, and it is not one
+   of the faces every generated interface converges on. Inter and
+   Geist both are, and Geist in particular is now the default of
+   the current tooling wave, which is exactly the signal this
+   site is trying not to send.
    ============================================================ */
 
 /* ---------- faces ----------
-   Self-hosted so the site has no third-party font dependency.
-   Geist ships no italic, which is why the accent emphasis below
-   is set in colour and weight rather than in italic. */
-@font-face{font-family:'Geist';src:url('fonts/Geist-Regular.woff2') format('woff2');font-weight:400;font-style:normal;font-display:swap}
-@font-face{font-family:'Geist';src:url('fonts/Geist-Medium.woff2') format('woff2');font-weight:500;font-style:normal;font-display:swap}
-@font-face{font-family:'Geist';src:url('fonts/Geist-SemiBold.woff2') format('woff2');font-weight:600;font-style:normal;font-display:swap}
-@font-face{font-family:'Geist';src:url('fonts/Geist-Bold.woff2') format('woff2');font-weight:700;font-style:normal;font-display:swap}
-@font-face{font-family:'Geist Mono';src:url('fonts/GeistMono-Regular.woff2') format('woff2');font-weight:400;font-style:normal;font-display:swap}
-@font-face{font-family:'Geist Mono';src:url('fonts/GeistMono-Medium.woff2') format('woff2');font-weight:500;font-style:normal;font-display:swap}
+   Self-hosted so the site has no third-party font dependency. */
+@font-face{font-family:'Plex';src:url('fonts/IBMPlexSans-Regular.woff2') format('woff2');font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:'Plex';src:url('fonts/IBMPlexSans-Medium.woff2') format('woff2');font-weight:500;font-style:normal;font-display:swap}
+@font-face{font-family:'Plex';src:url('fonts/IBMPlexSans-SemiBold.woff2') format('woff2');font-weight:600;font-style:normal;font-display:swap}
+@font-face{font-family:'Plex';src:url('fonts/IBMPlexSans-Bold.woff2') format('woff2');font-weight:700;font-style:normal;font-display:swap}
+@font-face{font-family:'Plex Mono';src:url('fonts/IBMPlexMono-Regular.woff2') format('woff2');font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:'Plex Mono';src:url('fonts/IBMPlexMono-Medium.woff2') format('woff2');font-weight:500;font-style:normal;font-display:swap}
 
 /* ---------- tokens ----------
    Both token vocabularies are redefined. The home page uses
@@ -31,10 +36,10 @@
    / --mono. Pointing every display token at the same grotesk is
    what removes the serif from the site in one move. */
 :root{
-  --sans:'Geist',system-ui,-apple-system,'Segoe UI',sans-serif;
-  --f:'Geist',system-ui,-apple-system,'Segoe UI',sans-serif;
-  --serif:'Geist',system-ui,-apple-system,'Segoe UI',sans-serif;
-  --mono:'Geist Mono',ui-monospace,SFMono-Regular,Menlo,monospace;
+  --sans:'Plex',system-ui,-apple-system,'Segoe UI',sans-serif;
+  --f:'Plex',system-ui,-apple-system,'Segoe UI',sans-serif;
+  --serif:'Plex',system-ui,-apple-system,'Segoe UI',sans-serif;
+  --mono:'Plex Mono',ui-monospace,SFMono-Regular,Menlo,monospace;
 
   /* One radius scale. Cards 10, inner elements 6, nothing else. */
   --r:10px;
@@ -54,7 +59,7 @@ body{
   font-family:var(--sans);
   -webkit-font-smoothing:antialiased;
   -moz-osx-font-smoothing:grayscale;
-  font-feature-settings:"cv11","ss01";
+  font-feature-settings:"ss02";
   letter-spacing:-0.006em;
 }
 
@@ -75,24 +80,24 @@ h1,h2,h3,h4,.logo,.feat .name,.exp-r,.sh,.st,.about-lead,
 }
 
 h1{
-  font-size:clamp(33px,4.6vw,53px)!important;
+  font-size:clamp(34px,4.8vw,55px)!important;
   font-weight:600!important;
-  letter-spacing:-0.034em!important;
+  letter-spacing:-0.025em!important;
   line-height:1.06!important;
   text-wrap:balance;
 }
 .st,.sh{
   font-weight:600!important;
-  letter-spacing:-0.028em!important;
+  letter-spacing:-0.021em!important;
   line-height:1.15!important;
 }
 .st{font-size:clamp(27px,3.4vw,38px)!important}
 .sh{font-size:clamp(20px,2.3vw,25px)!important}
 
-/* Emphasis inside a headline. Geist has no italic, so the accent
-   is carried by colour alone at the same weight. A synthesised
-   oblique would be a slanted regular, which is the thing that
-   makes web type look cheap. */
+/* Emphasis inside a headline. Carried by colour at the same
+   weight, not by italic. The previous system set the emphasised
+   words in a serif italic, which is the most copied display move
+   on the web right now. */
 h1 em,.st em,.sh em,.about-lead em,.hero-p em,.foot-h em{
   font-style:normal;
   font-weight:600;
@@ -119,9 +124,9 @@ h1 em,.st em,.sh em,.about-lead em,.hero-p em,.foot-h em{
    lining so columns of them line up and read as data. */
 .imp-n,.n,.v,.mt .n,.exp-d,.plainmetrics dd,.rec-n{
   font-variant-numeric:tabular-nums;
-  font-feature-settings:"tnum","cv11";
+  font-feature-settings:"tnum";
 }
-.imp-n,.mt .n{font-weight:600!important;letter-spacing:-0.02em!important}
+.imp-n,.mt .n{font-weight:600!important;letter-spacing:-0.015em!important}
 
 /* ---------- surfaces ----------
    One radius everywhere, hairline borders, elevation only on
