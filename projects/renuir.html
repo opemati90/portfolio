@@ -184,7 +184,7 @@ hr{border:none;height:1px;background:var(--bd);margin:48px 0}
 <section class="hero"><div class="w">
 <div class="tags"><span class="tg">Founder and Product Lead</span><span class="tg">Mobile App</span><span class="tg">In TestFlight</span><span class="tg">B2C + B2B</span></div>
 <h1>Renuir: reuniting people with their lost belongings</h1>
-<p class="lead">I own product strategy and MVP scope for Renuir, a mobile platform for Europe's lost-and-found ecosystem, and led the design of it: onboarding, item reporting, AI-powered matching, ownership verification, secure delivery coordination, and trust-building features. 47 screens, end to end, across B2C and B2B. It is in TestFlight with pilot users.</p>
+<p class="lead">I own product strategy and MVP definition for Renuir, a multi-sided recovery platform for Europe's lost-and-found ecosystem: matching, three-stage verification, notifications and partner API workflows. I set the scope, the KPI framework and the release requirements, and led the design of the 47 screens that carry them across B2C and B2B.</p>
 <div class="mg">
 <div class="mc"><dt>Role</dt><dd>Founder and Product Lead</dd></div>
 <div class="mc"><dt>Platform</dt><dd>iOS + Android</dd></div>
@@ -268,6 +268,39 @@ hr{border:none;height:1px;background:var(--bd);margin:48px 0}
 <dt>Trust need</dt><dd>Institutional. Needs data security proof and GDPR compliance</dd></dl>
 </div>
 </div>
+</div>
+
+<!-- PRIORITISATION -->
+<div class="w"><hr>
+<div class="sl">Prioritisation</div>
+<h2 class="sh">The question that decided what got built</h2>
+<p class="sp">A recovery platform can absorb an unlimited amount of feature work, and the failure mode for a 0-to-1 product is building the version that is safe enough for the founder rather than the version that is trusted enough for the user. I needed a rule that could settle a scope argument in one sentence, so every candidate feature was put against a single question.</p>
+<p class="sp"><strong>What is the minimum viable trust?</strong> The smallest set of features that makes a stranger comfortable handing your belongings back to you. Not the most trust achievable. The least that still gets the item moving.</p>
+<p class="sp">The rule cuts in both directions, which is what made it useful rather than decorative. It admitted work that looks expensive and is not optional, and it cut work that looks valuable and does not change whether the handover happens.</p>
+<div class="cg">
+<div class="cd"><h3>Admitted: three-stage ownership verification</h3><p>The most complex thing in the MVP, and the one feature the product cannot be launched without. Found-property law requires proof before release, and without it the platform is a way to help strangers take each other's property. It is the reason the loop can exist at all.</p></div>
+<div class="cd"><h3>Admitted: the handover code</h3><p>A small, cheap mechanic that closes the loop. Both sides need a moment where the exchange is confirmed and the claim is settled, or neither side knows the transaction ended.</p></div>
+<div class="cd"><h3>Admitted: the match confidence score</h3><p>Not scoped as a trust feature at first. Testing moved it: 5 of the 6 moderated testers named the visible confidence indicator as the thing that convinced them the system was working. Without it they questioned whether the match was real.</p></div>
+<div class="cd"><h3>Cut back: the ownership upload itself</h3><p>The first version asked for several proof types at once through a multi-select interface. 21% of testers struggled with it. More proof is more trust in theory, and in practice it was the step people abandoned. It was reduced to one proof type at a time.</p></div>
+</div>
+<p class="sp">Three of the four decisions above are the expensive answers. That is the point of the rule: it does not shrink the product, it stops the product growing in the places that do not carry trust.</p>
+</div>
+
+<!-- MEASUREMENT -->
+<div class="w"><hr>
+<div class="sl">Measurement</div>
+<h2 class="sh">What this product has to move</h2>
+<p class="sp">Usability scores tell you whether a screen works. They do not tell you whether a recovery platform is working, because the thing being tested is a loop between two strangers and an operator, and it only succeeds when an item physically changes hands. The KPI framework is built on the loop rather than on the interface.</p>
+<div class="tg2">
+<div class="tc"><h3>The outcome</h3>
+<p class="sp"><strong>Verified returns.</strong> The single number the product exists to move. A match that is never collected is not a return, so the metric is counted at handover, not at match.</p>
+<p class="sp"><strong>Time to match.</strong> Interviewees described giving up the active search within the first day, so the window in which the product is useful is short. Speed here is not a performance metric, it is the difference between a return and an abandonment.</p>
+</div>
+<div class="tc"><h3>The operating cost</h3>
+<p class="sp"><strong>Partner processing time.</strong> Lost-and-found offices carry the storage and the manual matching. If the platform does not reduce the time they spend per item, it is another system for them to maintain rather than a replacement.</p>
+<p class="sp"><strong>Support demand.</strong> A trust product generates support the moment people are unsure, so support volume per return reads as a direct measure of how much the flow is explaining itself.</p>
+</div></div>
+<p class="sp">The first two are the user case, the second two are the partner case, and the product is only viable when both hold at once. A version that returns more items by pushing work onto operators does not survive contact with the people who have to run it.</p>
 </div>
 
 <!-- USER FLOW -->
@@ -374,7 +407,7 @@ hr{border:none;height:1px;background:var(--bd);margin:48px 0}
 
 <div class="cg">
 <div class="cd"><p>Strangers hand each other belongings through this product, so the interface is doing two jobs at once: moving the item, and giving both sides a reason to believe the other will show up. No single screen carries that. It is built out of the wording on the claim form, the proof we ask for, the meetup place we suggest, and the code exchanged at handover.</p></div>
-<div class="cd"><h3>0 to 1 requires ruthless prioritization</h3><p>With limited resources, I developed the framework "What is the minimum viable trust?" The smallest set of features that makes someone comfortable handing belongings to a stranger through the platform.</p></div>
+<div class="cd"><h3>A scope rule is only useful if it can say no</h3><p>The minimum viable trust question earned its place because it rejected things I wanted to build. A prioritisation framework that only ever confirms the roadmap is a description of the roadmap, not a rule.</p></div>
 <div class="cd"><h3>The design system scales the product</h3><p>The component library I designed supports the mobile app, a B2B admin dashboard, and API documentation from the same token set. New flows can be assembled in hours, not weeks.</p></div>
 <div class="cd"><h3>Regulatory constraints improve design</h3><p>Found-property law and GDPR initially felt like obstacles. Both push in the same direction as the product: prove ownership before releasing an item, and hold no more personal data than the handover needs. Where they conflicted, the law set the ceiling and the flow was designed under it.</p></div>
 </div>

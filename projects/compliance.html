@@ -247,7 +247,7 @@ hr{border:none;height:1px;background:var(--bd);margin:48px 0}
 </div>
 </div>
 
-<div class="sl">Archetypes</div>
+<div class="sl">Users</div>
 <h2 class="sh">Three roles, one workflow</h2>
 <p class="sp">These are synthesised archetypes built from the research sessions, not individual participants. Each one summarises a role, what it owns, and what blocks it.</p>
 <p class="sp">The 30 sessions clustered into three working roles, each with a different relationship to the submission. I designed for all three, which is the trade-off covered below.</p>
@@ -289,7 +289,28 @@ hr{border:none;height:1px;background:var(--bd);margin:48px 0}
 <div class="cd"><h3>Scope trade-offs in the open</h3><p>Backlog refinement, sprint planning and release readiness ran with product, engineering and policy in the same room. Delivery decisions stayed tied to the regulatory constraint and to the measures we had agreed, which is what kept the step count from creeping back up under pressure.</p></div>
 <div class="cd"><h3>AI search and recommendation</h3><p>I defined and shipped search and recommendation over unstructured documents, including the requirements for confidence, explanation, human review and manual override, and partnered with engineering through implementation and acceptance.</p></div>
 <div class="cd"><h3>After launch</h3><p>I rebuilt the target dashboard using funnel behaviour and support signals to decide what to change, rather than treating launch as the end of the work. Related support tickets fell by about 40% in the following quarter.</p></div>
-</div></div>
+</div>
+<h3 style="font-size:15px;font-weight:600;margin:34px 0 4px">How the five months were sequenced</h3>
+<div class="roadmap">
+<div class="roadmap-row"><div class="roadmap-when">Weeks 1 to 6</div><div><h3>Establish the problem in numbers</h3><p>30+ moderated sessions across energy, finance, manufacturing and tech, read against the instrumented abandon rate and completion time. Nothing was designed in this period.<span class="why">Sequenced first because the rebuild had already stalled once on opinion. A number the whole room accepted was the cheapest way to end that.</span></p></div></div>
+<div class="roadmap-row"><div class="roadmap-when">Then</div><div><h3>Settle the scope with policy in the room</h3><p>Each of the 14 steps put on the table as a claim to be checked against the regulation. 8 were legacy artifacts, not legal requirements, and three squads committed to the same six-step target.<span class="why">This had to happen before a single sprint was planned. Scope disputed mid-build is scope that creeps back.</span></p></div></div>
+<div class="roadmap-row"><div class="roadmap-when">Build, 2-week Scrum</div><div><h3>Ship the flow in pieces that can stand alone</h3><p>The ordering constraint was not value, it was migration: each release had to leave no submission half-migrated in production. That ruled out sequencing by what was most visible.<span class="why">A regulated submission in an inconsistent state is a compliance incident, not a bug.</span></p></div></div>
+<div class="roadmap-row"><div class="roadmap-when">After launch</div><div><h3>Rebuild the dashboard on what shipping revealed</h3><p>Funnel behaviour and support signals decided what changed next, rather than the pre-launch backlog. Related support tickets fell about 40% in the following quarter.<span class="why">The backlog was written before anyone had used the six-step flow. Keeping it would have meant building for a product that no longer existed.</span></p></div></div>
+</div>
+</div>
+
+<div class="w"><hr>
+<div class="sl">Measurement</div>
+<h2 class="sh">How six steps reach a business outcome</h2>
+<p class="sp">Step count is not an outcome. It was the lever, and it only mattered if it moved submission completion, because an incomplete submission is a company that has not filed its climate target and a review team with nothing to review. The chain below is the one I committed to before the rebuild, with the figure each link was measured on after it.</p>
+<div class="cg">
+<div class="cd"><h3>1. Remove the steps that are not legal requirements</h3><p>Audited with policy against the regulation, not negotiated. <strong>8 of 14 steps were legacy artifacts.</strong> Measured: 14 steps to 6.</p></div>
+<div class="cd"><h3>2. Make a long task survivable</h3><p>The task is multi-session and expert. Progress saving, progress indication and explicit confirmation let people stop and return instead of restarting. Measured: <strong>4.5 hours to 1.2 hours</strong> median, production analytics.</p></div>
+<div class="cd"><h3>3. Fewer, survivable steps means fewer people give up</h3><p>The failure was abandonment partway, then rebuilding progress in spreadsheets. Measured: <strong>67% to 18% abandon rate</strong>, production analytics, quarter before against quarter after.</p></div>
+<div class="cd"><h3>4. Completion is the business outcome</h3><p>More submissions completed is more targets validated, and the workload moves off the support queue and onto the platform. Measured: <strong>engagement up 30%</strong> and <strong>related support tickets down about 40%</strong> in the following quarter.</p></div>
+</div>
+<p class="sp">Links 1 and 2 are the ones I could control directly. Links 3 and 4 are the claims the rebuild was funded on, which is why they are measured in production analytics rather than in the usability round. The counterfactual is not clean: a regulatory deadline sits in the same quarter as the launch, and some of the engagement lift belongs to it. The step count and the completion time are attributable. The abandon rate and the ticket volume are directional.</p>
+</div>
 
 <div class="w"><hr>
 <div class="sl">Results</div>

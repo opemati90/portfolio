@@ -331,6 +331,12 @@ h1{
 
 /* PEER RECOMMENDATIONS */
 .rec-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.rec-lead{grid-column:1 / -1;padding:30px 32px 24px}
+.rec-lead blockquote{font-size:19px;line-height:1.55;max-width:74ch;margin-bottom:22px}
+.rec-lead .rec-by{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap}
+.rec-lead .rec-r{margin-top:0}
+.rec-lead .rec-rel{margin-top:0}
+@media(max-width:720px){.rec-lead{padding:24px 22px 20px}.rec-lead blockquote{font-size:17px}}
 .rec{border:1px solid var(--line);border-radius:var(--r);padding:26px 26px 22px;background:var(--bg);display:flex;flex-direction:column}
 .rec blockquote{font-family:var(--serif);font-size:17px;line-height:1.5;letter-spacing:-0.01em;color:var(--ink);margin-bottom:20px;flex:1}
 .rec-by{border-top:1px solid var(--line);padding-top:14px}
@@ -548,6 +554,30 @@ footer{
         </div>
       </a>
 
+      <a href="projects/renuir.html" class="feat rv">
+        <div class="thumb" style="background:linear-gradient(135deg,#0A0A0A 0%,#1A1A1A 100%)">
+          <img width="1500" height="1125" loading="lazy" decoding="async" src="assets/renuir-chat-match.png" alt="Renuir">
+        </div>
+        <div class="info">
+          <div class="info-top">
+            <div class="meta">
+              <span class="wm">Founder and Product Lead</span>
+              <span class="wm">0 to 1</span>
+              <span class="wm">In TestFlight</span>
+            </div>
+            <div class="name">Renuir</div>
+            <p class="desc">Founder-owned 0-to-1 product for Europe's lost-and-found ecosystem. I set the MVP scope against one question, what is the minimum viable trust, and the KPI framework the platform runs on. Matching, three-stage verification and partner workflows, across B2C and B2B.</p>
+          </div>
+          <div class="info-bot">
+            <div class="impact">
+              <div class="imp-i"><div class="imp-n">4</div><div class="imp-l">KPIs owned</div></div>
+              <div class="imp-i"><div class="imp-n">94%</div><div class="imp-l">Task completion</div></div>
+              <div class="imp-i"><div class="imp-n">84</div><div class="imp-l">SUS score</div></div>
+            </div>
+            <span class="read">Read case study →</span>
+          </div>
+        </div>
+      </a>
       <a href="projects/design-system.html" class="feat rv">
         <div class="thumb" style="background:linear-gradient(135deg,#FAFBFC 0%,#EDEFF2 100%)">
           <img width="1200" height="800" loading="lazy" decoding="async" src="assets/design-system-thumb.png" alt="Enterprise Design System">
@@ -573,30 +603,6 @@ footer{
         </div>
       </a>
 
-      <a href="projects/renuir.html" class="feat rv">
-        <div class="thumb" style="background:linear-gradient(135deg,#0A0A0A 0%,#1A1A1A 100%)">
-          <img width="1500" height="1125" loading="lazy" decoding="async" src="assets/renuir-chat-match.png" alt="Renuir">
-        </div>
-        <div class="info">
-          <div class="info-top">
-            <div class="meta">
-              <span class="wm">Founder and Product Lead</span>
-              <span class="wm">Mobile App</span>
-              <span class="wm">In TestFlight</span>
-            </div>
-            <div class="name">Renuir</div>
-            <p class="desc">Product strategy, MVP scope and design for a lost-and-found platform for Europe. 47 screens covering AI matching, ownership verification, safe meetups and a gamified return flow, across B2C and B2B. Now in TestFlight with pilot users.</p>
-          </div>
-          <div class="info-bot">
-            <div class="impact">
-              <div class="imp-i"><div class="imp-n">47</div><div class="imp-l">Screens</div></div>
-              <div class="imp-i"><div class="imp-n">94%</div><div class="imp-l">Task completion</div></div>
-              <div class="imp-i"><div class="imp-n">84</div><div class="imp-l">SUS score</div></div>
-            </div>
-            <span class="read">Read case study →</span>
-          </div>
-        </div>
-      </a>
     </div>
 
     <div class="exp-slot">
@@ -752,10 +758,18 @@ footer{
     <div class="section-head">
       <div class="left">
         <h2 class="st rv">What the people I worked with say</h2>
-        <p class="sd rv">Selected excerpts from public LinkedIn recommendations, with the working relationship stated.</p>
+        <p class="sd rv">Recommendations from people I worked with, with the working relationship stated. Excerpts are verbatim and uncut except for length.</p>
       </div>
     </div>
     <div class="rec-grid">
+    <div class="rec rec-lead rv">
+        <blockquote>&ldquo;Opeyemi has strong product judgement and a clear ability to turn complex problems into practical product decisions. He works effectively across engineering, design, and stakeholders, brings structure to ambiguity, and keeps teams focused on the priorities that deliver the most value. He combines a strong understanding of user needs with technical awareness and takes genuine ownership from problem definition through delivery.&rdquo;</blockquote>
+        <div class="rec-by">
+          <div class="rec-n">Adam Valois</div>
+          <div class="rec-r">Head of Technology, Science Based Targets initiative</div>
+          <div class="rec-rel">Opeyemi reported to Adam</div>
+        </div>
+      </div>
       <div class="rec rv">
         <blockquote>&ldquo;Opeyemi has a quick understanding and has the ability to adapt functions and patterns across different screen flows effectively.&rdquo;</blockquote>
         <div class="rec-by">
@@ -781,7 +795,7 @@ footer{
         </div>
       </div>
     </div>
-    <p class="rec-src rv">All three are verifiable on <a href="https://www.linkedin.com/in/ajimatiopeyemi/details/recommendations/" target="_blank" rel="noopener">LinkedIn &#8599;</a></p>
+    <p class="rec-src rv">More recommendations on <a href="https://www.linkedin.com/in/ajimatiopeyemi/details/recommendations/" target="_blank" rel="noopener">LinkedIn &#8599;</a></p>
   </div>
 </section>
 
