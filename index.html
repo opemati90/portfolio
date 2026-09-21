@@ -44,9 +44,6 @@
 <link rel="manifest" href="site.webmanifest">
 
 <!-- Performance -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 
 <!-- Structured data: Person + WebSite -->
 <script type="application/ld+json">
@@ -95,6 +92,8 @@
   ]
 }
 </script>
+<link rel="preload" as="font" type="font/woff2" crossorigin href="assets/fonts/Geist-Regular.woff2">
+<link rel="preload" as="font" type="font/woff2" crossorigin href="assets/fonts/Geist-SemiBold.woff2">
 <style>
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
 :root{
@@ -110,9 +109,9 @@
   --accent-soft:#DEE3FA;
   --r:14px;
   --r-sm:8px;
-  --serif:'Newsreader',Georgia,'Times New Roman',serif;
-  --sans:'Inter',system-ui,-apple-system,'Helvetica Neue',sans-serif;
-  --mono:'JetBrains Mono',ui-monospace,Menlo,monospace;
+  --serif:'Geist',system-ui,-apple-system,'Segoe UI',sans-serif;
+  --sans:'Geist',system-ui,-apple-system,'Segoe UI',sans-serif;
+  --mono:'Geist Mono',ui-monospace,SFMono-Regular,Menlo,monospace;
   --spring:cubic-bezier(0.22,1,0.36,1);
   --ease:cubic-bezier(0.4,0,0.2,1);
   --d-fast:0.18s;
@@ -441,8 +440,20 @@ footer{
   .context .row{gap:18px}
   .context-list{gap:20px}
 }
+/* Hero: copy on the left, the facts a recruiter screens for on
+   the right. The facts column exists because the first question
+   on a PM application is scope, not narrative. */
+.hero-grid{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:64px;align-items:start}
+.hero-facts{border-top:1px solid var(--line);padding-top:20px;margin-top:10px}
+.hero-facts>div{display:grid;grid-template-columns:96px 1fr;gap:16px;padding:13px 0;border-bottom:1px solid var(--line)}
+.hero-facts>div:last-child{border-bottom:0}
+.hero-facts dt{font-family:var(--mono);font-size:10.5px;font-weight:500;text-transform:uppercase;letter-spacing:0.07em;color:var(--ink-3);padding-top:3px}
+.hero-facts dd{font-size:14.5px;line-height:1.5;color:var(--ink-2)}
+@media(max-width:900px){.hero-grid{grid-template-columns:1fr;gap:44px}}
+@media(max-width:560px){.hero-facts>div{grid-template-columns:1fr;gap:4px}}
 </style>
 <link rel="stylesheet" href="assets/a11y.css">
+<link rel="stylesheet" href="assets/system.css">
 <link rel="stylesheet" media="print" href="assets/print.css">
 <script>document.documentElement.classList.add('js');</script>
 <!-- Microsoft Clarity -->
@@ -473,13 +484,21 @@ footer{
 
 <!-- HERO -->
 <section class="hero">
-  <div class="w">
-    <h1 class="rv">I take complex products from <em>user problem to release</em>.</h1>
-    <p class="hero-p rv">Product Manager at the <em>Science Based Targets initiative</em> for three and a half years, owning discovery and requirements across three engineering squads on the platform thousands of companies use to submit climate targets. Before that, six years designing products in fintech, payments and consumer apps. I work where the process is regulated, the data is dense, and being wrong is expensive.</p>
-    <div class="btns rv">
-      <a href="#work" class="btn btn-p">View selected work <span class="ic">↗</span></a>
-      <a href="#contact" class="btn">Get in touch</a>
+  <div class="w hero-grid">
+    <div class="hero-copy">
+      <h1 class="rv">I take complex products from <em>user problem to release</em>.</h1>
+      <p class="hero-p rv">Product Manager and Product Owner. Nine years turning regulated, data-heavy workflows into products people finish.</p>
+      <div class="btns rv">
+        <a href="#work" class="btn btn-p">View selected work <span class="ic">&#8599;</span></a>
+        <a href="#contact" class="btn">Get in touch</a>
+      </div>
     </div>
+    <dl class="hero-facts rv">
+      <div><dt>Now</dt><dd>Product Manager and Product Owner, open to roles across Europe</dd></div>
+      <div><dt>Last role</dt><dd>Science Based Targets initiative, 3.5 years, 3 engineering squads</dd></div>
+      <div><dt>Background</dt><dd>6 years in product design before product management</dd></div>
+      <div><dt>Certified</dt><dd>PMI-ACP, PSPO I, PSM I</dd></div>
+    </dl>
   </div>
 </section>
 
@@ -502,7 +521,7 @@ footer{
   <div class="w">
     <div class="section-head">
       <div class="left">
-        <h2 class="st rv">Selected <em>case studies</em></h2>
+        <h2 class="st rv">Selected case studies</h2>
         <p class="sd rv">Regulated workflows, design systems and 0-to-1 products. Three in depth, with the discovery, the trade-offs and the decisions that did not survive delivery.</p>
       </div>
     </div>
@@ -657,7 +676,7 @@ footer{
   <div class="w">
     <div class="section-head">
       <div class="left">
-        <h2 class="st rv">How I <em>work</em></h2>
+        <h2 class="st rv">How I work</h2>
       </div>
     </div>
     <div class="about-wrap">
@@ -690,7 +709,7 @@ footer{
   <div class="w">
     <div class="section-head">
       <div class="left">
-        <h2 class="st rv">Where I've <em>worked</em>.</h2>
+        <h2 class="st rv">Where I have worked</h2>
       </div>
     </div>
     <div class="exp-list">
@@ -738,13 +757,13 @@ footer{
   <div class="w">
     <div class="section-head">
       <div class="left">
-        <h2 class="st rv">What the people I worked with say.</h2>
+        <h2 class="st rv">What the people I worked with say</h2>
         <p class="sd rv">Selected excerpts from public LinkedIn recommendations, with the working relationship stated.</p>
       </div>
     </div>
     <div class="rec-grid">
       <div class="rec rv">
-        <blockquote>&ldquo;Together, we have crafted dashboards and intricate user flows. Opeyemi has a quick understanding and has the ability to adapt functions and patterns across different screen flows effectively.&rdquo;</blockquote>
+        <blockquote>&ldquo;Opeyemi has a quick understanding and has the ability to adapt functions and patterns across different screen flows effectively.&rdquo;</blockquote>
         <div class="rec-by">
           <div class="rec-n">Judith Biedenkapp</div>
           <div class="rec-r">Senior Product Designer for Enterprises</div>
@@ -752,7 +771,7 @@ footer{
         </div>
       </div>
       <div class="rec rv">
-        <blockquote>&ldquo;He combines an innate understanding of user needs with business goals, creating intuitive and visually compelling designs. His data-driven approach and fluency in design tools bring innovation to the team.&rdquo;</blockquote>
+        <blockquote>&ldquo;He combines an innate understanding of user needs with business goals, creating intuitive and visually compelling designs.&rdquo;</blockquote>
         <div class="rec-by">
           <div class="rec-n">Stanley Agu</div>
           <div class="rec-r">Entrepreneur and Business Architect, two-time founder</div>
@@ -760,7 +779,7 @@ footer{
         </div>
       </div>
       <div class="rec rv">
-        <blockquote>&ldquo;A professional who stands out with his ability to translate intricate user and business needs into intuitive and meaningful designs, a testament to his expertise in User Experience and User Interface Design.&rdquo;</blockquote>
+        <blockquote>&ldquo;A professional who stands out with his ability to translate intricate user and business needs into intuitive and meaningful designs.&rdquo;</blockquote>
         <div class="rec-by">
           <div class="rec-n">Oyindamola Akinleye</div>
           <div class="rec-r">Senior Product Designer at Zalando, design mentor</div>
@@ -776,8 +795,8 @@ footer{
 <section class="cta-wrap" id="contact">
   <div class="w">
     <div class="cta-card rv">
-      <h2>If the problem is hard,<br>I'm <em>interested</em>.</h2>
-      <p>I'm open to senior product design roles anywhere in Europe, with a soft spot for fintech, climate, health, and AI. If that's the kind of work you have, let's talk.</p>
+      <h2>If the problem is hard,<br>I am <em>interested</em>.</h2>
+      <p>I am open to Product Manager and Product Owner roles anywhere in Europe, with a soft spot for regulated, data-heavy products in climate, fintech, health and AI. If that is the kind of work you have, get in touch.</p>
       <div class="links">
         <a href="mailto:o.ajimati@yahoo.com" class="cta-link primary">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 7 9-7"/></svg>
@@ -810,7 +829,7 @@ footer{
     <div class="foot-col">
       <h3>Availability</h3>
       <ul>
-        <li><a href="#contact" class="foot-status">Open to senior roles</a></li>
+        <li><a href="#contact" class="foot-status">Open to PM and PO roles</a></li>
         <li>Anywhere in Europe, remote or on site</li>
       </ul>
     </div>

@@ -1,0 +1,238 @@
+/* ============================================================
+   system.css - the site's type and surface system.
+
+   Loaded LAST on every page, after each page's inline <style>,
+   so it retunes the whole site from one file. The pages keep
+   their own layout rules; this file owns typography, tokens,
+   radii and the small amount of decoration that survives.
+
+   Replaces the previous Newsreader + Inter + JetBrains Mono
+   stack. That pairing carried an editorial-monograph register,
+   which reads as a creative-studio signal. The audience here is
+   product hiring managers and recruiters who skim first, so the
+   register is now a plain professional product site: one neutral
+   grotesk, doing display and body, with its mono for labels.
+   ============================================================ */
+
+/* ---------- faces ----------
+   Self-hosted so the site has no third-party font dependency.
+   Geist ships no italic, which is why the accent emphasis below
+   is set in colour and weight rather than in italic. */
+@font-face{font-family:'Geist';src:url('fonts/Geist-Regular.woff2') format('woff2');font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:'Geist';src:url('fonts/Geist-Medium.woff2') format('woff2');font-weight:500;font-style:normal;font-display:swap}
+@font-face{font-family:'Geist';src:url('fonts/Geist-SemiBold.woff2') format('woff2');font-weight:600;font-style:normal;font-display:swap}
+@font-face{font-family:'Geist';src:url('fonts/Geist-Bold.woff2') format('woff2');font-weight:700;font-style:normal;font-display:swap}
+@font-face{font-family:'Geist Mono';src:url('fonts/GeistMono-Regular.woff2') format('woff2');font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:'Geist Mono';src:url('fonts/GeistMono-Medium.woff2') format('woff2');font-weight:500;font-style:normal;font-display:swap}
+
+/* ---------- tokens ----------
+   Both token vocabularies are redefined. The home page uses
+   --sans / --serif / --mono, the case studies use --f / --serif
+   / --mono. Pointing every display token at the same grotesk is
+   what removes the serif from the site in one move. */
+:root{
+  --sans:'Geist',system-ui,-apple-system,'Segoe UI',sans-serif;
+  --f:'Geist',system-ui,-apple-system,'Segoe UI',sans-serif;
+  --serif:'Geist',system-ui,-apple-system,'Segoe UI',sans-serif;
+  --mono:'Geist Mono',ui-monospace,SFMono-Regular,Menlo,monospace;
+
+  /* One radius scale. Cards 10, inner elements 6, nothing else. */
+  --r:10px;
+  --r-sm:6px;
+
+  /* Slightly cooler, slightly deeper ink. The old #14161A sat
+     warm against the blue accent. */
+  --ink:#101418;   --tx:#101418;
+  --ink-2:#474F59;  --tx2:#474F59;
+  --ink-3:#5F6771;  --tx3:#5F6771;
+  --line:#E2E6EB;   --bd:#E2E6EB;
+  --line-2:#C7CDD5;  --bd2:#C7CDD5;
+  --accent:#1E3AC4;  --ac:#1E3AC4;
+}
+
+body{
+  font-family:var(--sans);
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  font-feature-settings:"cv11","ss01";
+  letter-spacing:-0.006em;
+}
+
+/* Decoration removed. The film grain was doing nothing the
+   hairlines were not already doing, and it cost a fixed
+   composite layer on every scroll. */
+body::after{display:none!important}
+
+/* ---------- display type ----------
+   Sizes come down from the serif settings. A grotesk at 94px
+   shouts where a serif at 94px reads as a masthead, so the home
+   hero tops out lower and carries its weight in the letterform,
+   not the scale. Tracking tightens as size grows. */
+h1,h2,h3,h4,.logo,.feat .name,.exp-r,.sh,.st,.about-lead,
+.foot-brand h3,.rec blockquote,.context-list span,.feat .imp-n{
+  font-family:var(--sans);
+  font-variation-settings:normal;
+}
+
+h1{
+  font-size:clamp(33px,4.6vw,53px)!important;
+  font-weight:600!important;
+  letter-spacing:-0.034em!important;
+  line-height:1.06!important;
+  text-wrap:balance;
+}
+.st,.sh{
+  font-weight:600!important;
+  letter-spacing:-0.028em!important;
+  line-height:1.15!important;
+}
+.st{font-size:clamp(27px,3.4vw,38px)!important}
+.sh{font-size:clamp(20px,2.3vw,25px)!important}
+
+/* Emphasis inside a headline. Geist has no italic, so the accent
+   is carried by colour alone at the same weight. A synthesised
+   oblique would be a slanted regular, which is the thing that
+   makes web type look cheap. */
+h1 em,.st em,.sh em,.about-lead em,.hero-p em,.foot-h em{
+  font-style:normal;
+  font-weight:600;
+  color:var(--accent);
+}
+
+/* ---------- body type ---------- */
+.hero-p,.sd,.sp,.about-col p,.exp-c,.desc,p{
+  letter-spacing:-0.004em;
+}
+.hero-p{font-size:17px!important;line-height:1.6!important}
+
+/* ---------- labels ----------
+   Mono, uppercase, wide. These are the only uppercase text on
+   the site and they stay small so they read as metadata. */
+.sl,.wm,.tg,.mc dt,.imp-l,.exp-d,.context-label,.foot-col h4,
+.exp-slot-h,.rec-rel{
+  font-family:var(--mono)!important;
+  letter-spacing:0.07em!important;
+}
+
+/* ---------- numbers ----------
+   Every figure on the site is a claim, so figures get tabular
+   lining so columns of them line up and read as data. */
+.imp-n,.n,.v,.mt .n,.exp-d,.plainmetrics dd,.rec-n{
+  font-variant-numeric:tabular-nums;
+  font-feature-settings:"tnum","cv11";
+}
+.imp-n,.mt .n{font-weight:600!important;letter-spacing:-0.02em!important}
+
+/* ---------- surfaces ----------
+   One radius everywhere, hairline borders, elevation only on
+   hover. No filled panels, no glows. */
+.feat,.card,.cd,.tc,.pc,.mc,.rec,.fd,.nda,.wh-item,.exp-slot{
+  border-radius:var(--r);
+}
+.btn,.bk-btn,input,textarea,select{border-radius:var(--r-sm)}
+
+/* ---------- focus ----------
+   Kept from the accessibility layer, restated here because the
+   accent token moved. */
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+
+/* ---------- motion ----------
+   The dial is low on purpose. A hiring manager scanning on a
+   train does not need choreography, and every extra transition
+   is one more thing that can stutter. What remains: a single
+   reveal on scroll, and small hover feedback. */
+@media(prefers-reduced-motion:reduce){
+  .rv{opacity:1!important;transform:none!important;filter:none!important}
+}
+
+/* ---------- overrides for page-level rules ----------
+   The inline stylesheets set these with higher specificity, so
+   they are restated here rather than edited in 14 places. */
+
+/* Accent emphasis: colour only, never a synthesised oblique. */
+.hero h1 em,.st em,.about-lead em,.cta-card h2 em,.hero-p em{
+  font-style:normal!important;
+  font-weight:600!important;
+  color:var(--accent)!important;
+}
+.hero-p em,.about-lead em{font-weight:500!important}
+
+/* Two lines of headline, never three. The measure was set for a
+   serif, which sets narrower per character than this grotesk. */
+.hero h1{max-width:28ch!important;margin-bottom:28px!important}
+.hero{padding:104px 0 56px!important}
+.cta-card h2{max-width:20ch}
+
+/* Tag and label chips. Mono at this size needs a touch less
+   tracking than the section labels or the chips grow too wide. */
+.wm,.tg{letter-spacing:0.04em!important;font-size:10.5px!important}
+
+/* ---------- case study contents ----------
+   Built by assets/toc.js from the headings already on the page.
+   Two columns on desktop so a nine-section case study still reads
+   as one glanceable block rather than a long ladder. */
+.toc{
+  /* The case-study pages style every <nav> as the fixed page header,
+     so every one of those properties is reset here. */
+  position:static;inset:auto;z-index:auto;height:auto;
+  display:block;backdrop-filter:none;border-bottom:0;
+  margin:0 0 12px;padding:22px 26px 24px;
+  border:1px solid var(--bd);border-radius:var(--r);background:var(--sf);
+}
+.toc-h{
+  font-family:var(--mono);font-size:10.5px;font-weight:500;
+  text-transform:uppercase;letter-spacing:0.07em;color:var(--tx3);
+  margin:0 0 12px;
+}
+.toc ol{list-style:none;margin:0;padding:0;columns:2;column-gap:40px}
+.toc li{break-inside:avoid;counter-increment:toc}
+.toc a{
+  display:block;padding:5px 0;font-size:14px;line-height:1.45;
+  color:var(--tx2);text-decoration:none;
+  border-bottom:1px solid transparent;
+  transition:color .18s cubic-bezier(.4,0,.2,1);
+}
+.toc a::before{
+  content:counter(toc,decimal-leading-zero);
+  font-family:var(--mono);font-size:10.5px;color:var(--tx3);
+  margin-right:10px;
+}
+.toc a:hover{color:var(--ac)}
+.toc a.is-current{color:var(--tx);font-weight:500}
+.toc a.is-current::before{color:var(--ac)}
+.toc ol{counter-reset:toc}
+
+/* The heading a contents link jumps to must clear the fixed nav. */
+h2.sh{scroll-margin-top:84px}
+
+@media(max-width:768px){
+  .toc{margin-left:20px;margin-right:20px;padding:18px 20px 20px}
+  .toc ol{columns:1}
+}
+
+/* Metric captions. These sit under a large figure, so they stay
+   sans and small: a mono caption at this length outweighed the
+   number it was describing. */
+.mt .l,.metrics .l{
+  font-family:var(--sans)!important;
+  font-size:11.5px!important;letter-spacing:0!important;
+  line-height:1.4!important;color:var(--tx3)!important;
+  text-transform:none!important;
+}
+.nda-t{font-family:var(--sans)!important;letter-spacing:-0.005em!important}
+
+/* ---------- small screens ----------
+   The hero padding above is set with !important so it beats the
+   page rules, which means the mobile value has to be restated
+   here rather than left to the page's own media query. */
+@media(max-width:720px){
+  .hero{padding:96px 0 40px!important}
+  .hero h1{max-width:100%!important}
+  /* The mobile nav previously dropped every link and left only the
+     CTA, which is a header with no navigation in it. One anchor to
+     the work is enough to keep it a nav without a menu button. */
+  nav .nr a[href="#work"]{display:inline-flex!important;font-size:14px}
+}
+@media(max-width:440px){
+  nav .nr a[href="#work"]{display:none!important}
+}

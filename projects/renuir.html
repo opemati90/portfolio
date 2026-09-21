@@ -50,10 +50,11 @@
   }
 }
 </script>
-<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Inter:ital,opsz,wght@0,14..32,300;0,14..32,400;0,14..32,500;0,14..32,600;0,14..32,700;1,14..32,400&display=swap" rel="stylesheet">
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../assets/fonts/Geist-Regular.woff2">
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../assets/fonts/Geist-SemiBold.woff2">
 <style>
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
-:root{--bg:#F7F8F9;--sf:#EDEFF2;--sf2:#E3E7EC;--tx:#14161A;--tx2:#4B535C;--tx3:#606872;--bd:#DEE2E8;--bd2:#C4CBD4;--ac:#1E3AC4;--r:12px;--f:'Inter',system-ui,-apple-system,'Helvetica Neue',Helvetica,sans-serif;--serif:'Newsreader',Georgia,'Times New Roman',serif}
+:root{--bg:#F7F8F9;--sf:#EDEFF2;--sf2:#E3E7EC;--tx:#14161A;--tx2:#4B535C;--tx3:#606872;--bd:#DEE2E8;--bd2:#C4CBD4;--ac:#1E3AC4;--r:12px;--f:'Geist',system-ui,-apple-system,'Segoe UI',sans-serif;--serif:'Geist',system-ui,-apple-system,'Segoe UI',sans-serif}
 html{scroll-behavior:smooth}
 body{font-family:var(--f);background:var(--bg);color:var(--tx);-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;font-feature-settings:'ss01','ss02','cv01';line-height:1.55}
 a{color:inherit;text-decoration:none}img{display:block;max-width:100%;height:auto}
@@ -166,6 +167,7 @@ hr{border:none;height:1px;background:var(--bd);margin:48px 0}
 @media(max-width:768px){.w,.ww{padding:0 20px}.mg,.metrics{grid-template-columns:1fr 1fr}.cg,.tg2,.img-row{grid-template-columns:1fr}.img-row-3{grid-template-columns:1fr 1fr}.wh{grid-template-columns:1fr}nav{padding:0 20px}}
 </style>
 <link rel="stylesheet" href="../assets/a11y.css">
+<link rel="stylesheet" href="../assets/system.css">
 <link rel="stylesheet" media="print" href="../assets/print.css"><!-- Microsoft Clarity -->
 <script type="text/javascript">
     (function(c,l,a,r,i,t,y){
@@ -182,7 +184,7 @@ hr{border:none;height:1px;background:var(--bd);margin:48px 0}
 <section class="hero"><div class="w">
 <div class="tags"><span class="tg">Founder and Product Lead</span><span class="tg">Mobile App</span><span class="tg">In TestFlight</span><span class="tg">B2C + B2B</span></div>
 <h1>Renuir: reuniting people with their lost belongings</h1>
-<p class="lead">I led product design for Renuir, a complete mobile platform for Europe's lost-and-found ecosystem: onboarding, item reporting, AI-powered matching, ownership verification, secure delivery coordination, and trust-building features. 47 screens, end to end, across B2C and B2B. It is in TestFlight with pilot users.</p>
+<p class="lead">I own product strategy and MVP scope for Renuir, a mobile platform for Europe's lost-and-found ecosystem, and led the design of it: onboarding, item reporting, AI-powered matching, ownership verification, secure delivery coordination, and trust-building features. 47 screens, end to end, across B2C and B2B. It is in TestFlight with pilot users.</p>
 <div class="mg">
 <div class="mc"><dt>Role</dt><dd>Founder and Product Lead</dd></div>
 <div class="mc"><dt>Platform</dt><dd>iOS + Android</dd></div>
@@ -380,4 +382,5 @@ hr{border:none;height:1px;background:var(--bd);margin:48px 0}
 
 <div class="bk"><a href="../index.html" class="bk-btn">← Back to portfolio</a></div>
 </main>
+<script src="../assets/toc.js" defer></script>
 </body></html>

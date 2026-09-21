@@ -4,21 +4,23 @@
 
 ## Visual world
 
-An editorial paper world. Off-white ground, near-black ink, hairline rules, and a single blue accent used sparingly. Composition is left-aligned and asymmetric throughout; nothing on the site is centered. Depth comes from hairlines and soft elevation on hover, never from filled panels or glows. A film-grain SVG turbulence overlay sits over the page at `0.028` opacity, which is what keeps the flat ground from reading as a blank canvas.
+A plain professional product site. Off-white ground, near-black ink, hairline rules, and a single blue accent used once per page. Composition is left-aligned throughout; nothing is centered. Depth comes from hairlines and soft elevation on hover, never from filled panels or glows.
 
-The register is a printed monograph, not a SaaS marketing page. Where a category default would add a card, a gradient, or a centered CTA block, this world uses a rule and a change of type.
+The audience is product hiring managers and recruiters, who skim before they read. Every choice is subordinate to that: the page has to be legible in a ten-second scan and still hold up in a ten-minute read. Where a category default would add a card, a gradient, or a centered CTA block, this world uses a rule and a change of type.
+
+**The register changed on 2026-09-21.** It was previously an editorial monograph, built on a serif display face and a film-grain overlay. That read as a creative-studio signal, which works against a product-management application, and the serif-plus-Inter pairing is the most recognisable AI-generated-portfolio combination in circulation. Both are gone.
 
 ## Typography
 
-Three faces, each with one job:
+**One family, self-hosted.** Geist for everything, Geist Mono for small labels. The files live in `assets/fonts/` and are declared in `assets/system.css`. There is no Google Fonts request and no third-party font dependency anywhere on the site.
 
-- **Newsreader** (serif) — display voice. Headlines, case-study titles, section statements, and the emphasized `<em>` inside them, which is set italic in the accent blue. Optical sizing is set per size via `font-variation-settings:"opsz"`, up to 94px on the home hero. Carries the identity.
-- **Inter** (sans) — body and UI, 10 to 18px. About three-quarters of the visible text.
-- **JetBrains Mono** — small uppercase labels only, 11 to 12px, letterspaced. Category labels, metric labels, footer headings, table-style keys.
+- **Geist** carries display and body. Headlines at `600`, tracking `-0.034em` on the home hero and `-0.028em` on section headings. Body at `400`, 14 to 17px. The home hero tops out at 53px, well below the 94px the previous serif ran at, because a grotesk at that scale shouts where a serif reads as a masthead.
+- **Geist Mono** is used only for small uppercase labels at 10.5 to 11px, letterspaced `0.07em`: section labels, tag chips, role-block keys, date columns. It is never used for body text, and no longer for metric captions, which were outweighing the figures they described.
+- **Numbers** are set with `font-variant-numeric: tabular-nums` wherever they appear as data, so columns of figures align.
 
-**Inter is a deliberate, confirmed choice, not a default.** Detectors flag it as a saturated typeface, and that flag is understood and declined here: the identity is carried by Newsreader at display sizes and by the mono labels, while Inter does quiet supporting work at 10-18px where its legibility is the point. Alternatives (IBM Plex Sans, Instrument Sans, Archivo) were evaluated and rejected in favour of the incumbent. Do not re-raise this or swap the body face without the owner asking.
+**Emphasis is colour, not italic.** Geist ships no italic, so `<em>` inside a headline renders as accent blue at the same weight. A synthesised oblique would be a slanted regular, which is the thing that makes web type look cheap. The accent word appears **once per page**, in the hero. Section headings are plain ink; the previous system put an accent word in every one, which turned emphasis into a pattern.
 
-Display headings use tight tracking, `-0.025em` to `-0.03em`. Body measure runs 41 to 71ch depending on column.
+`assets/system.css` is loaded last on all 14 pages, after each page's inline `<style>`, and owns typography, tokens and radii for the whole site. Retuning the site is a one-file job.
 
 ## Color
 
@@ -28,16 +30,16 @@ Home page and case studies use two parallel token vocabularies for the same pale
 |---|---|---|
 | Ground | `--bg:#F7F8F9` | `--bg:#F7F8F9` |
 | Raised surface | `--paper:#EDEFF2` / `--paper-2:#E3E7EC` | `--sf:#EDEFF2` / `--sf2:#E3E7EC` |
-| Ink | `--ink:#14161A` | `--tx:#14161A` |
-| Secondary / tertiary ink | `--ink-2:#4B535C` / `--ink-3:#606872` | `--tx2:#4B535C` / `--tx3:#606872` |
-| Rules | `--line:#DEE2E8` / `--line-2:#C4CBD4` | `--bd:#DEE2E8` / `--bd2:#C4CBD4` |
+| Ink | `--ink:#101418` | `--tx:#101418` |
+| Secondary / tertiary ink | `--ink-2:#474F59` / `--ink-3:#5F6771` | `--tx2:#474F59` / `--tx3:#5F6771` |
+| Rules | `--line:#E2E6EB` / `--line-2:#C7CDD5` | `--bd:#E2E6EB` / `--bd2:#C7CDD5` |
 | Accent | `--accent:#1E3AC4` | `--ac:#1E3AC4` |
 
 Semantic colors appear only on case-study finding callouts: `#B02A37` critical, `#2F6F4F` success, ink for informational. They tint the callout's label, never a border slab.
 
 ## Spacing and rhythm
 
-29 distinct px values on a deliberate 2px-refined scale (6, 10, 14, 18, 22, 26 alongside the 4px steps). Sections run `104px 0` with a hairline between them. Containers: `1120px` on the home page, `760px` for case-study prose with `1040px` for full-bleed imagery. Radii: `14px` cards, `8-12px` inner elements, `20px` on the contact block.
+29 distinct px values on a deliberate 2px-refined scale (6, 10, 14, 18, 22, 26 alongside the 4px steps). Sections run `104px 0` with a hairline between them. Containers: `1120px` on the home page, `760px` for case-study prose with `1040px` for full-bleed imagery. Radii: one scale only, `10px` on cards and `6px` on inner elements. The previous three-value system (14 / 8-12 / 20) is retired.
 
 ## Motion
 
@@ -54,8 +56,17 @@ One spring, `cubic-bezier(0.22,1,0.36,1)`, and one ease, `cubic-bezier(0.4,0,0.2
 - **Heading outline stays unbroken** — no level skips; `h3` is the subsection level in case studies.
 - **Images ship with intrinsic width/height** and lazy loading below the fold.
 
+## Scannability
+
+The case studies carry a **Contents** block, built at runtime by `assets/toc.js` from the headings already on the page and marked with the current section while reading. It is progressive enhancement: with JavaScript off the page is unchanged minus that block.
+
+It exists because the research on product-management portfolios agrees on one point. The first pass over a case study is a skim, and a reader who cannot see the shape of the page in one glance leaves before reaching the outcomes.
+
+The home page hero carries a four-row facts column for the same reason: the first question on a product application is scope, not narrative.
+
 ## Known debt
 
-- Two token vocabularies for one palette (`--ink` vs `--tx`), reconciled only by fallback chains in `assets/a11y.css`.
+- Two token vocabularies for one palette (`--ink` vs `--tx`). Both are now defined together in `assets/system.css`, so they cannot drift, but the seam is still there.
 - `design-system.html` shows no production UI, constrained by NDA. The button consolidation is now shown as an authored in-page artifact (the audit wall redrawn without client branding, plus the four replacement variants and their states); the remaining sections still rely on prose.
-- The Experience section lists three roles with no scope detail.
+- The Experience section lists five roles with no scope detail.
+- `assets/system.css` leans on `!important` to beat the pages' inline styles. That is the cost of not rewriting 14 inline stylesheets; the alternative was 14 places to keep in sync.
