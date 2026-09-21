@@ -95,7 +95,8 @@ hr{border:none;height:1px;background:var(--bd);margin:48px 0}
 
 /* SECTION TEXT */
 .slab{font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:1.5px;color:var(--tx3);margin-bottom:6px}
-.stitle{font-family:var(--serif);font-size:clamp(20px,2.5vw,26px);font-weight:500;letter-spacing:-0.02em;line-height:1.25;margin-bottom:10px}
+.sh,.stitle{font-family:var(--f);font-size:clamp(20px,2.5vw,26px);font-weight:600;letter-spacing:-0.02em;line-height:1.25;margin-bottom:10px}
+.sl{font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:1.5px;color:var(--tx3);margin-bottom:6px}
 .stext{font-size:14px;color:var(--tx2);line-height:1.7;margin-bottom:20px}
 
 /* CARDS */
@@ -291,7 +292,8 @@ hr{border:none;height:1px;background:var(--bd);margin:48px 0}
 <div class="w">
   <hr>
   <div class="slab">The Problem</div>
-  <h2 class="stitle">Three squads, three different design languages</h2>
+  <div class="sl">The Problem</div>
+<h2 class="sh">Three squads, three design languages</h2>
   <p class="stext">When I joined, the enterprise platform had no shared design system. Each of the 3 product squads had developed their own patterns independently. Buttons looked different across modules. Spacing was inconsistent. Form patterns varied. Engineers spent 30% of their time recreating UI that already existed somewhere else in the product.</p>
 
   <div class="card-grid">
@@ -306,7 +308,8 @@ hr{border:none;height:1px;background:var(--bd);margin:48px 0}
 <div class="w">
   <hr>
   <div class="slab">Interface Audit</div>
-  <h2 class="stitle">Cataloging the chaos</h2>
+  <div class="sl">Audit</div>
+<h2 class="sh">What the audit found</h2>
   <p class="stext">Before building anything, I conducted a comprehensive interface audit. I screenshotted every unique UI pattern across the platform, categorized them, and created a visual inventory. This became the foundation for stakeholder alignment: showing leadership the inconsistency made the case for investment self-evident.</p>
 
   <div class="card-grid">
@@ -375,13 +378,14 @@ hr{border:none;height:1px;background:var(--bd);margin:48px 0}
 <div class="w">
   <hr>
   <div class="slab">Design Principles</div>
-  <h2 class="stitle">What this system stands for</h2>
+  <div class="sl">Principles</div>
+<h2 class="sh">What the system stands for</h2>
   <p class="stext">Before designing a single component, I facilitated a workshop with all 3 squad leads, the PM, and 2 senior engineers to define the principles that would guide every design decision. These became our north star for trade-off discussions.</p>
 
   <div class="principle-list">
     <div class="principle"><div class="principle-num">01</div><div><h3>Clarity over cleverness</h3><p>Enterprise users handle complex regulatory data. Every component must communicate its purpose instantly. No ambiguity, no decoration for its own sake.</p></div></div>
     <div class="principle"><div class="principle-num">02</div><div><h3>Consistency is trust</h3><p>Submission forms in this product run to fourteen steps. When a control behaves the same on step twelve as it did on step two, people stop reading it and start using it. Inconsistency costs attention exactly where the data gets hard.</p></div></div>
-    <div class="principle"><div class="principle-num">03</div><div><h3>Accessible by default</h3><p>WCAG 2.1 AA compliance is not a feature request, it is a baseline. Every component ships with proper contrast ratios, keyboard navigation, and screen reader support.</p></div></div>
+    <div class="principle"><div class="principle-num">03</div><div><h3>Accessible by default</h3><p>WCAG 2.1 AA is the floor, not an enhancement. Every component ships with proper contrast ratios, keyboard navigation, and screen reader support.</p></div></div>
     <div class="principle"><div class="principle-num">04</div><div><h3>Composable, not prescriptive</h3><p>Components should combine freely to serve use cases we haven't imagined yet. Atomic building blocks over rigid templates.</p></div></div>
     <div class="principle"><div class="principle-num">05</div><div><h3>Document everything</h3><p>Undocumented components got rebuilt by whoever could not find them. Usage guidelines, do and don't examples, and interaction specs ship with every component so the second squad to need one does not redraw it.</p></div></div>
   </div>
@@ -392,7 +396,8 @@ hr{border:none;height:1px;background:var(--bd);margin:48px 0}
   <div class="w" style="padding:0">
     <hr>
     <div class="slab">Design Tokens</div>
-    <h2 class="stitle">Separating primitive values from meaning</h2>
+    <div class="sl">Tokens</div>
+<h2 class="sh">Separating raw values from meaning</h2>
     <p class="stext">The architecture separates primitive values from semantic tokens. Primitives are raw colours and pixel sizes; semantic tokens name what a value means in context. Engineers consume the semantic layer only, so the visual language can change without touching product code, and a designer and an engineer arguing about a state are arguing about the same named thing.</p>
   </div>
 
@@ -420,7 +425,8 @@ hr{border:none;height:1px;background:var(--bd);margin:48px 0}
 <div class="w">
   <hr>
   <div class="slab">Component Architecture</div>
-  <h2 class="stitle">Atomic building blocks</h2>
+  <div class="sl">Components</div>
+<h2 class="sh">The component layer</h2>
   <p class="stext">I structured the library using atomic design principles: tokens feed into primitives (buttons, inputs), primitives compose into patterns (form groups, card layouts), and patterns assemble into templates (page layouts, workflow steps). Every component includes states, variants, and responsive behavior.</p>
 
   <div class="anatomy">
@@ -467,7 +473,8 @@ hr{border:none;height:1px;background:var(--bd);margin:48px 0}
 <div class="w">
   <hr>
   <div class="slab">The System in Production</div>
-  <h2 class="stitle">How it all comes together</h2>
+  <div class="sl">Composition</div>
+<h2 class="sh">Putting it together</h2>
   <p class="stext">The design system now powers every screen in the platform. Here is where the components live in context. Due to NDA, I cannot show the actual product UI, but I can share the structural patterns.</p>
 
   <div class="redacted">
@@ -500,7 +507,8 @@ hr{border:none;height:1px;background:var(--bd);margin:48px 0}
 <div class="w">
   <hr>
   <div class="slab">Rollout Process</div>
-  <h2 class="stitle">How I shipped it across 3 squads</h2>
+  <div class="sl">Adoption</div>
+<h2 class="sh">Shipping it across three squads</h2>
   <p class="stext">Building the system was only half the challenge. Adoption required buy-in, education, and ongoing support. Here is the phased rollout approach I designed and executed.</p>
 
   <div class="timeline">
@@ -517,7 +525,8 @@ hr{border:none;height:1px;background:var(--bd);margin:48px 0}
 <div class="w">
   <hr>
   <div class="slab">Results</div>
-  <h2 class="stitle">Measurable impact</h2>
+  <div class="sl">Results</div>
+<h2 class="sh">Measurable impact</h2>
 
   <div class="card-grid">
     <div class="crd"><div class="stat">Faster</div><h3>Design-to-dev handoff</h3><p>Shared component names between Figma and code removed most translation overhead. Engineers reported pulling components by name instead of rebuilding them from screenshots.</p></div>
@@ -531,7 +540,8 @@ hr{border:none;height:1px;background:var(--bd);margin:48px 0}
 <div class="w">
   <hr>
   <div class="slab">Reflections</div>
-  <h2 class="stitle">What I learned</h2>
+  <div class="sl">Reflections</div>
+<h2 class="sh">Running a system alone</h2>
 
   <div class="card-grid">
     <div class="crd">

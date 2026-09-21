@@ -200,7 +200,7 @@ hr{border:none;height:1px;background:var(--bd);margin:48px 0}
 </div></div>
 
 <div class="w"><hr>
-<div class="sl">Problem & Context</div>
+<div class="sl">The Problem</div>
 <h2 class="sh">Trip planning is fragmented, and most people quit it</h2>
 <p class="sp">Planning a trip means juggling a dozen browser tabs, a notes app, a spreadsheet, and three booking sites that do not talk to each other. The hardest moment is the blank page: deciding where to go and what a day should actually look like. Travelers stall there, save a few links, and never finish. The plan ends up half-built in screenshots and group chats, and the trip either gets booked last-minute or not at all.</p>
 <p class="sp">Outbound starts from a different premise. AI can remove the blank page by drafting a full, day-by-day itinerary in seconds, so the user edits and reacts instead of building from zero. The design problem was not "add AI" but deciding where the AI leads and where the person stays in control, then keeping a live product simple enough that planning, booking, and the trip itself live in one place.</p>
@@ -215,7 +215,7 @@ hr{border:none;height:1px;background:var(--bd);margin:48px 0}
 </div>
 
 <div class="w"><hr>
-<div class="sl">Research & Discovery</div>
+<div class="sl">Research</div>
 <h2 class="sh">Where planning breaks down</h2>
 <p class="sp">I ran nine interviews with people who had planned a trip in the last three months, walked the planning-to-booking path on the four tools they reached for most, and mapped where intent leaked out of the funnel. Three patterns held across almost everyone.</p>
 <div class="cg">
@@ -228,7 +228,7 @@ hr{border:none;height:1px;background:var(--bd);margin:48px 0}
 </div>
 
 <div class="w"><hr>
-<div class="sl">Personas</div>
+<div class="sl">Users</div>
 <h2 class="sh">Designing for different traveler types</h2>
 <div class="pr">
 <div class="pc"><h3>Yuki, 26</h3><div class="rl">Solo Traveler</div><blockquote>"I plan trips on the fly. I do not want to spend 20 minutes setting up an app."</blockquote><dl><dt>Context</dt><dd>Books long weekends on short notice, often deciding the destination days before flying. Plans entirely on her phone, usually in transit.</dd><dt>Goals</dt><dd>See a credible plan in the first minute and judge whether the app gets her taste before committing anything.</dd><dt>Frustrations</dt><dd>Sign-up walls and preference quizzes that demand effort before showing a single result.</dd></dl></div>
@@ -238,7 +238,7 @@ hr{border:none;height:1px;background:var(--bd);margin:48px 0}
 
 <div class="w"><hr>
 <div class="sl">Final Designs</div>
-<h2 class="sh">AI-powered, warm, adventure-ready</h2>
+<h2 class="sh">The planning flow</h2>
 <p class="sp">The orange-and-white palette evokes warmth and adventure. AI generates complete itineraries from natural language prompts. The passport feature tracks trips and collects continent stamps, creating engagement beyond trip planning.</p>
 </div>
 <div class="ww">
@@ -281,12 +281,12 @@ hr{border:none;height:1px;background:var(--bd);margin:48px 0}
 <div class="br"><div class="bl"><span>Delight rating</span><span class="v">4.6 / 5</span></div><div class="bar"><div class="bf bg" style="width:92%"></div></div></div>
 <div class="br"><div class="bl"><span>Would recommend</span><span class="v">91%</span></div><div class="bar"><div class="bf bg" style="width:91%"></div></div></div>
 </div></div>
-<div class="fd s"><div class="sv">Validation</div><h3>The passport screen was the emotional peak</h3><p>Finding: nearly every tester reacted out loud at the Passport screen, the only point in the flow where that happened. Decision: I treated it as the app's signature moment rather than a side feature, pulling the continent stamp into onboarding so people meet it before they have even taken a trip. Result: the moment now anchors the product's identity, and "Passport Approved" became the single most-commented-on detail in later sessions.</p></div>
+<div class="fd s"><div class="sv">Validation</div><h3>The passport screen was the emotional peak</h3><p>Finding: nearly every tester reacted out loud at the Passport screen, the only point in the flow where that happened. Decision: I treated it as the app's signature moment rather than a side feature, pulling the continent stamp into onboarding so people meet it before they have even taken a trip. Result: the moment now anchors the product's identity, and "Passport Approved" was the detail testers brought up most.</p></div>
 <div class="fd c"><div class="sv">Critical</div><h3>Auth errors lost people at the worst moment</h3><p>Finding: a generic "Invalid code" on the OTP step left testers stuck and unsure whether to wait, retry, or restart. Decision: I rewrote the copy to say what to do next, "Code does not match, check your email," and added a visible resend timer so the path forward was never ambiguous. Result: testers in the follow-up round recovered from a bad code without dropping out, turning a dead end into a self-service fix.</p></div>
 </div>
 
 <div class="w"><hr>
-<div class="sl">Results & Impact</div>
+<div class="sl">Results</div>
 <h2 class="sh">Where it landed</h2>
 <p class="sp">Outbound is live and early. These are design and testing outcomes, not adoption claims: the product is still small and the numbers below come from the moderated sessions and the first weeks of real use, so I am reporting them as directional, not proven at scale.</p>
 <div class="cg">
@@ -299,10 +299,10 @@ hr{border:none;height:1px;background:var(--bd);margin:48px 0}
 
 <div class="w"><hr>
 <div class="sl">Reflections</div>
-<h2 class="sh">AI should draft, not decide</h2>
+<h2 class="sh">Where AI helped, and where it did not</h2>
 <div class="cg">
 <div class="cd"><p>The strongest version of the product was not the most automated one. People trusted the AI more when they could overrule it. The control I gave back through editable, lockable blocks was what made the speed feel safe instead of pushy.</p></div>
-<div class="cd"><h3>Emotional milestones in onboarding</h3><p>The "Passport Approved" moment was the single most commented-on decision. Onboarding should not just be functional. It should make users feel something.</p></div>
+<div class="cd"><h3>Emotional milestones in onboarding</h3><p>The "Passport Approved" moment was the one testers named unprompted. Onboarding should not just be functional. It should make users feel something.</p></div>
 <div class="cd"><h3>Error states are conversations</h3><p>"Oops!" is not helpful. "The code does not match, we just sent a new one" is. Every error state is a conversation with an anxious user.</p></div>
 <div class="cd"><h3>Shipping changes the questions</h3><p>Testing told me what confused people; living traffic tells me what they ignore. The next round is less about polish and more about earning the second session.</p></div>
 </div></div>
