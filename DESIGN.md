@@ -59,7 +59,7 @@ One spring, `cubic-bezier(0.22,1,0.36,1)`, and one ease, `cubic-bezier(0.4,0,0.2
 - **Every number carries its source** in the same visual unit, following the pattern in `compliance.html`. A figure without a source becomes a sentence, not a stat tile.
 - **Headings name, they do not summarize.** "Proving the item is yours", not "The solution, delivered".
 - **Real work only.** No invented testimonials, metrics, clients, or outcomes. See PRODUCT.md.
-- **Heading outline stays unbroken** — no level skips; `h3` is the subsection level in case studies.
+- **Heading outline stays unbroken.** No level skips; `h3` is the subsection level in case studies.
 - **Images ship with intrinsic width/height** and lazy loading below the fold.
 
 ## Scannability
@@ -68,7 +68,7 @@ All thirteen case studies carry a **Contents** block, built at runtime by `asset
 
 The current section is marked by the last heading scrolled past, not by whichever heading happens to be inside a band near the top of the viewport. The band approach looks right until a section is taller than the band, at which point nothing is marked at all, which is most of the reading time. It is progressive enhancement: with JavaScript off the page is unchanged minus that block.
 
-It exists because the research on product-management portfolios agrees on one point. The first pass over a case study is a skim, and a reader who cannot see the shape of the page in one glance leaves before reaching the outcomes.
+It exists because the first pass over a case study is a skim, and a reader who cannot see the shape of the page in one glance leaves before reaching the outcomes.
 
 The home page hero carries a four-row facts column for the same reason: the first question on a product application is scope, not narrative.
 
