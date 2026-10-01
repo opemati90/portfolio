@@ -6,7 +6,7 @@
 
 A plain professional product site. Off-white ground, near-black ink, hairline rules, and a single blue accent used once per page. Composition is left-aligned throughout; nothing is centered. Depth comes from hairlines and soft elevation on hover, never from filled panels or glows.
 
-The audience is product hiring managers and recruiters, who skim before they read. Every choice is subordinate to that: the page has to be legible in a ten-second scan and still hold up in a ten-minute read. Where a category default would add a card, a gradient, or a centered CTA block, this world uses a rule and a change of type.
+The audience is design hiring managers and recruiters, who skim before they read. Every choice is subordinate to that: the page has to be legible in a ten-second scan and still hold up in a ten-minute read. Where a category default would add a card, a gradient, or a centered CTA block, this world uses a rule and a change of type.
 
 **The register changed on 2026-09-21.** It was previously an editorial monograph, built on a serif display face and a film-grain overlay. That read as a creative-studio signal, which works against a product-management application, and the serif-plus-Inter pairing is the most recognisable AI-generated-portfolio combination in circulation. Both are gone.
 
@@ -77,5 +77,6 @@ The home page hero carries a four-row facts column for the same reason: the firs
 - Two token vocabularies for one palette (`--ink` vs `--tx`). Both are now defined together in `assets/system.css`, so they cannot drift, but the seam is still there.
 - `design-system.html` shows no production UI, constrained by NDA. The button consolidation is now shown as an authored in-page artifact (the audit wall redrawn without client branding, plus the four replacement variants and their states); the remaining sections still rely on prose.
 - The Experience section lists five roles with no scope detail.
+- The case studies carry delivery and measurement sections written during the product-management positioning. They were re-voiced rather than removed, because a designer who stays through build and measures the result is the differentiator, not a liability.
 - Ten archive case studies still show design roles in their role blocks. That is accurate history, those projects were design work, but a reader arriving from a product-management home page meets it without context.
 - `assets/system.css` leans on `!important` to beat the pages' inline styles. That is the cost of not rewriting 14 inline stylesheets; the alternative was 14 places to keep in sync.
