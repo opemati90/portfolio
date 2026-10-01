@@ -520,3 +520,46 @@ hr{margin:72px 0!important}
 @supports not selector(:has(*)){
   .case .toc li{border-left-color:var(--bd)}
 }
+
+/* ---------- design-system.html ----------
+   That page predates the shared case-study vocabulary and uses its own
+   class names: .meta-cell for the role block, .crd for argument cards,
+   .stext for body copy. The detail-template layer above therefore never
+   reached it, so it was the one case study still rendering filled grey
+   boxes while the other twelve were on hairlines.
+
+   Mapping its classes onto the same treatment is a smaller change than
+   renaming them in the markup, and it leaves its own stylesheet intact
+   as the fallback. */
+.case .meta-grid{
+  grid-template-columns:repeat(4,1fr)!important;
+  gap:0!important;
+  border-top:1px solid var(--bd);
+  margin-top:4px;
+}
+.case .meta-cell{
+  background:none!important;
+  border:0!important;
+  border-bottom:1px solid var(--bd)!important;
+  border-radius:0!important;
+  padding:14px 20px 14px 0!important;
+}
+.case .crd{
+  background:none!important;
+  border:0!important;
+  border-top:1px solid var(--bd)!important;
+  border-radius:0!important;
+  padding:18px 0 22px!important;
+}
+.case .crd h3{font-size:15px!important;margin-bottom:7px!important;letter-spacing:-0.012em}
+.case .crd p{font-size:15px!important;line-height:1.6!important}
+.case .stext{font-size:16.5px!important;line-height:1.68!important;margin-bottom:18px!important}
+@media(max-width:768px){.case .meta-grid{grid-template-columns:1fr 1fr!important}}
+
+/* design-system.html continued: .mtr is its name for the figure strip and
+   .nda-icon is an empty box that only renders as a grey square. */
+.case .mtr{background:none!important;padding:0!important;text-align:left!important}
+.case .mtr .n{font-size:32px!important;line-height:1.05!important}
+.case .mtr .l{margin-top:6px!important;max-width:22ch}
+.case .nda-icon{display:none!important}
+.case .nda{gap:0!important}

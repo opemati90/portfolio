@@ -5,10 +5,9 @@
    exactly what it was before, minus the contents block. Nothing in the
    case study depends on this running.
 
-   It exists because the research on product-management portfolios is
-   consistent on one point: the first pass over a case study is a skim,
-   and a reader who cannot see the shape of the page in one glance
-   leaves before the outcomes. */
+   It exists because the first pass over a case study is a skim, and a
+   reader who cannot see the shape of the page in one glance leaves
+   before reaching the outcomes. */
 (function () {
   'use strict';
 

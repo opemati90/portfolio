@@ -64,7 +64,7 @@ One spring, `cubic-bezier(0.22,1,0.36,1)`, and one ease, `cubic-bezier(0.4,0,0.2
 
 ## Scannability
 
-Twelve of the thirteen case studies carry a **Contents** block, built at runtime by `assets/toc.js` from the headings already on the page. `design-system.html` is the exception: it has no labelled sections to build one from.
+All thirteen case studies carry a **Contents** block, built at runtime by `assets/toc.js` from the headings already on the page. It needs four or more section labels, each immediately followed by its heading, so a page that drops below that silently loses its rail.
 
 The current section is marked by the last heading scrolled past, not by whichever heading happens to be inside a band near the top of the viewport. The band approach looks right until a section is taller than the band, at which point nothing is marked at all, which is most of the reading time. It is progressive enhancement: with JavaScript off the page is unchanged minus that block.
 
@@ -77,6 +77,6 @@ The home page hero carries a four-row facts column for the same reason: the firs
 - Two token vocabularies for one palette (`--ink` vs `--tx`). Both are now defined together in `assets/system.css`, so they cannot drift, but the seam is still there.
 - `design-system.html` shows no production UI, constrained by NDA. The button consolidation is now shown as an authored in-page artifact (the audit wall redrawn without client branding, plus the four replacement variants and their states); the remaining sections still rely on prose.
 - The Experience section lists five roles with no scope detail.
-- The case studies carry delivery and measurement sections written during the product-management positioning. They were re-voiced rather than removed, because a designer who stays through build and measures the result is the differentiator, not a liability.
-- Ten archive case studies still show design roles in their role blocks. That is accurate history, those projects were design work, but a reader arriving from a product-management home page meets it without context.
+- The case studies carry delivery and measurement sections written during the product-management positioning. They were re-voiced rather than removed, because staying through build and showing the result in production analytics is something almost no design portfolio can evidence.
+- Ten archive case studies show design roles from 2017 to 2022 in their role blocks. That is accurate history and it sits correctly under the current positioning.
 - `assets/system.css` leans on `!important` to beat the pages' inline styles. That is the cost of not rewriting 14 inline stylesheets; the alternative was 14 places to keep in sync.

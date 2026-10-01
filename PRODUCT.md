@@ -29,7 +29,7 @@ Three claims a peer product manager could not truthfully copy:
 
 - **Regulated, data-heavy workflow depth.** Real design work in climate (ex-SBTi), compliance and fintech, domains most product designers cannot speak to with specifics.
 - **Outcomes measured in production.** The flow rebuild is evidenced in production analytics rather than in a deck, which almost no design portfolio can show.
-- **Design that survives the build.** Specifications engineers can work from, and prototypes taken to functional builds with AI-assisted tooling, so interaction decisions are tested against real behaviour.
+- **Design checked against the built product.** Specifications engineers can work from, plus prototypes taken to functional builds with AI-assisted tooling, so interaction decisions are tested against real behaviour rather than against a static mock.
 
 ## Operating Context
 
@@ -79,5 +79,5 @@ What that episode is worth remembering for: `jobTitle` in JSON-LD, the `<head>` 
 
 ## Known Debt
 
-- Ten archive case studies show design roles in their role blocks. That is accurate history, since those projects were design work, but a reader arriving from a product-management home page meets it without context.
+- Ten archive case studies show design roles from 2017 to 2022 in their role blocks. That is accurate history and it sits correctly under the current positioning.
 - Eleven unreferenced images remain in `assets/` (roughly 2.1MB), several of them left over from four case studies that no longer exist: `martly.jpg`, `sportipb-full.jpg`, `dashboard.jpg`, and orphans from Anstoss, Climate Compass, EduApp, Outbound and Renuir.
